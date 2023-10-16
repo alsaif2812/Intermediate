@@ -7,21 +7,61 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+ @media ((max-width: 1150px) and (min-width:768px)) {
+  #nav2 {
+    display: none;
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  #nav1,
+  #nav3 {
+    margin-top: 5vw;
+  }
+  #nav3 {
+    margin-left: 37vw;
+    margin-right: 1vw;
+  }
+  #content #right {
+    height: 100%;
+    width: 95vw;
+  }
+  #content #left {
+    width: 100%;
+    margin-top: 5vw;
+  
+  }
+  #content {
+    margin-left: -5vw;
+  }
+  #content #left h1 {
+    width: 100%;
+  }
+  #content #left input {
+    width: 75%;
+  }
+  #content #left {
+    width: 70%;
+  }
+  #logo {
+    height: 6vw;
+    width: 9vw;
+    margin-top: 0vw;
+  }
+  #mobileMenu {
+    display: block;
+    margin-top: 5vw;
+    margin-right: -5vw;
+    margin-left: -4vw;
+  }
+  #content #left a button {
+    width: 50%;
+  }
+  #content #left a button span {
+    font-size: 1.5vw;
+  }
+  #page-2 {
+    background-color: transparent;
+    margin-top: 20vw;
+  }
+  #page-2 #hero2 Image{
+   margin-top: 10vw;
+  }
 }
