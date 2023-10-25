@@ -7,61 +7,211 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
- @media ((max-width: 1150px) and (min-width:768px)) {
+
+@keyframes changeText {
+  0%,
+  100% {
+    
+    content: 'to run your business';
+  }
+  25% {
+    
+    content: 'streamline business operations';
+  }
+  50% {
+    
+    content: 'increase profit';
+  }
+  75% {
+  
+    content: 'improve employee conduct';
+  }
+}
+
+.typed::before {
+  content: 'to run your business';
+  background: -webkit-linear-gradient(208deg, rgba(70,149,240,1) 0%, rgba(252,66,206,1) 78%); 
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: changeText 5s infinite;
+}
+
+@media (max-width: 767px) {
+  #content #left {
+    /* background-color: rgb(80, 75, 75); */
+    width: 100%;
+    padding: 0vw 10vw;
+    max-height: 1500vw;
+  }
+  #maintext {
+    /* background-color: blue; */
+
+    max-height: 60vw;
+    border-radius: 10px;
+    padding: 4vw -3vw;
+  }
+  #content {
+    max-height: 100rem;
+    /* background: #000; */
+  }
+  #top-image {
+    /* background: #000; */
+    width: 100%;
+    padding: 8vw;
+  }
+  #btn {
+    /* background: #000; */
+    margin: 0;
+    width: 100%;
+    max-height: 100vw;
+    padding: 2vw 5vw;
+    margin-top: 5vw;
+  }
+  #email {
+    width: 90%;
+  }
+  #getquote {
+    width: 70%;
+    padding: 2vw 4vw;
+    /* background: #000; */
+    margin-left: 1rem;
+  }
+}
+@media (max-width: 1150px) and (min-width: 768px) {
   #nav2 {
     display: none;
   }
   #nav1,
-  #nav3 {
-    margin-top: 5vw;
+  #nav3,
+  #mobileMenu {
+    margin-top: 3rem;
   }
   #nav3 {
-    margin-left: 37vw;
-    margin-right: 1vw;
+    padding-right: -30rem;
   }
-  #content #right {
-    height: 100%;
-    width: 95vw;
+  #nav1 {
+    font-size: 2rem;
   }
-  #content #left {
+  #navbar {
+    display: flex;
+    align-items: center;
+  }
+  #left {
+    /* background: #000; */
+    margin-left: 0;
+    padding: auto;
     width: 100%;
-    margin-top: 5vw;
-  
+    margin-top: -3rem;
+  }
+  #right {
+    display: none;
+  }
+  #top-image {
+    display: block;
+    width: 100%;
+    padding: 8vw;
+  }
+  #maintext {
+    /* background-color: blue; */
+
+    border-radius: 10px;
+    padding: 4vw;
   }
   #content {
-    margin-left: -5vw;
-  }
-  #content #left h1 {
+    margin-left: 0;
+    /* background: #000; */
+    padding: 0;
+    margin-top: -5rem;
     width: 100%;
+    max-height: 100rem;
   }
-  #content #left input {
-    width: 75%;
-  }
-  #content #left {
-    width: 70%;
-  }
-  #logo {
-    height: 6vw;
-    width: 9vw;
-    margin-top: 0vw;
-  }
-  #mobileMenu {
-    display: block;
+
+  #btn {
+    /* background: red; */
+    margin: 0;
+    width: 100%;
+    max-height: 70vw;
+    padding: 2vw 5vw;
     margin-top: 5vw;
-    margin-right: -5vw;
-    margin-left: -4vw;
+    font-size: 2rem;
   }
-  #content #left a button {
-    width: 50%;
+  #email {
+    width: 90%;
+    margin-left: 1.5rem;
+    margin-top: 2rem;
+    padding: 2vw 3vw;
   }
-  #content #left a button span {
-    font-size: 1.5vw;
+  #getquote {
+    width: 40%;
+    padding: 1vw 2vw;
+    /* background: blue; */
+    margin-left: 2rem;
+
+    margin-left: 22vw;
   }
-  #page-2 {
-    background-color: transparent;
-    margin-top: 20vw;
+  #getquote2 {
+    /* background: red; */
+    font-size: 1.7rem;
   }
-  #page-2 #hero2 Image{
-   margin-top: 10vw;
+  #qualifications {
+    /* background: red; */
+    padding-left: 27vw;
+    margin-top: 2rem;
+  }
+ 
+}
+@media (max-width: 1100px) {
+  /* Add these styles outside of your component code */
+  .marquee-container {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .marquee-content {
+    white-space: nowrap;
+    display: inline-block;
+    animation: marquee 8s linear infinite;
+  }
+
+  .logo {
+    display: inline-block;
+    margin-right: 20px; /* Adjust the spacing between logos */
+  }
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
   }
 }
+@media (min-width: 1101px) {
+  /* Add these styles outside of your component code */
+  .marquee-container {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .marquee-content {
+    white-space: nowrap;
+    display: flex;
+    animation: marquee 8s linear infinite;
+  }
+
+  .logo {
+    display: inline-block;
+    margin-right: 20px; /* Adjust the spacing between logos */
+  }
+}
+@media (max-width: 1400px) and (min-width: 720px){
+ #bottomimg{
+  display: none;
+ }
+ #topimg{
+  display: block;
+ }
+}
+
+  
+

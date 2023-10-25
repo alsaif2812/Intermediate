@@ -12,7 +12,6 @@ import {
   Button
 } from "@material-tailwind/react";
 import { ChevronDownIcon } from "@heroicons/react/outline";
-
 function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openMenu, setOpenMenu] = React.useState(false);
@@ -21,10 +20,8 @@ function Navbar() {
   const handleMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
-
   useEffect(() => {
     const mobileMenu = document.querySelector('#mobileMenu');
-
     if (mobileMenu) {
       if (isMobileMenuOpen) {
         mobileMenu.style.height = 'auto'; // Open the menu
@@ -33,10 +30,8 @@ function Navbar() {
       }
     }
   }, [isMobileMenuOpen]);
-
   return (
     <>
-
       <div
         id="navbar"
         className="bg-transparent py-1 px-6 md:px-12 flex items-center justify-between md:h-[6vw] max-h-[18vw] mt-[0vw] md:mt-[0vw] mr-[2vw] w-[100%]"
@@ -135,42 +130,38 @@ function Navbar() {
                       </div>
                       <div>
                         <div className='flex items-center  gap-7 mt-[1vw]'>
-                          <Image 
-                          src={photogrid} 
-                          alt='img'
-                          height = {100}
-                          width={100}
-                          className='rounded-lg'
-                           />
-                        
+                          <Image
+                            src={photogrid}
+                            alt='img'
+                            height={100}
+                            width={100}
+                            className='rounded-lg'
+                          />
                           <h1 className='capitalize font-semibold text-lg tracking-wider leading-tight text-[#212121]'>12 benefits that make wahni unique</h1>
                         </div>
                         <div className='flex items-center  gap-7 mt-[1vw]'>
-                          <Image 
-                          src={photogrid} 
-                          alt='img'
-                          height = {100}
-                          width={100}
-                          className='rounded-lg'
-                           />
-                        
+                          <Image
+                            src={photogrid}
+                            alt='img'
+                            height={100}
+                            width={100}
+                            className='rounded-lg'
+                          />
                           <h1 className='capitalize font-semibold text-lg tracking-wider leading-tight text-[#212121]'>How to write effective OKRs(with  <br /> 60+ OKR examples)</h1>
                         </div>
                         <div className='flex items-center  gap-7 mt-[1vw]'>
-                          <Image 
-                          src={photogrid} 
-                          alt='img'
-                          height = {100}
-                          width={100}
-                          className='rounded-lg'
-                           />
-                        
+                          <Image
+                            src={photogrid}
+                            alt='img'
+                            height={100}
+                            width={100}
+                            className='rounded-lg'
+                          />
                           <h1 className='capitalize font-semibold text-lg tracking-wider leading-tight text-[#212121]'>Top 18 project Management <br /> methodologies</h1>
                         </div>
                       </div>
                     </div>
                   </div>
-
                 </MenuItem>
               </MenuList>
             </Menu>
@@ -195,39 +186,31 @@ function Navbar() {
                   <div className='md:flex mt-[-1vw]  hidden text-zinc-900 '>
                     <div id='iconsleft' className=' items-center justify-center flex-wrap w-[48%]  h-[15vw] py-[1vw] px-[2vw] ml-[9vw]'>
                       <h3 className='text-md font-bold mt-[2vw] uppercase'>Product</h3>
-
                       <div className='flex ml-[0vw] mt-[2vw] gap-[5vw]'>
                         <div id="icon1" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-green-50 transition duration 200 hover:rounded-2xl'>
                           <Link href="/products/erpnext">
                             <h1 className='font-bold text-md'><i class="ri-task-line mr-[0.3vw] text-green-300 text-left text-xl"></i>ERPNext</h1>
                             <p className='text-sm font-[500] mt-[0.5vw] opacity-90'>Break down any size projectinto customized tasks</p>
                           </Link>
-
                         </div>
                         <div id="icon2" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-blue-50 transition duration 200 hover:rounded-2xl'>
                           <Link href="/products/mobileapp">
                             <h1 className='font-bold text-md'><i class="ri-file-text-line mr-[0.3vw] text-blue-400 text-left text-xl"></i>Mobile App</h1>
                             <p className='text-sm font-[500] mt-[0.5vw] opacity-90'>Create beautiful docs and connect them to tasks</p>
-
                           </Link>
                         </div>
                         <div id="icon3" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-pink-50 transition duration 200 hover:rounded-2xl'>
                           <Link href="/products/neupos">
                             <h1 className='font-semibold text-md'><i class="ri-trophy-line mr-[0.3vw] text-pink-400 text-left text-xl"></i>NeuPOS</h1>
                             <p className='text-sm font-[500] mt-[0.5vw] opacity-90'>Track work against strategy with measurable targets</p>
-
                           </Link>
                         </div>
                       </div>
                       <br />
-
                     </div>
                     <hr />
-
                   </div>
-
                 </MenuItem>
-
               </MenuList>
             </Menu>
           </div>
@@ -328,7 +311,7 @@ function Navbar() {
             className={`block text-gray-600 hover:text-gray-900 focus:outline-none ${isMobileMenuOpen ? 'hidden' : ''}`}
             onClick={handleMenu}
           >
-            <i id="menuIcon" className="ri-menu-3-line text-3xl mr-[1vw]  mt-[1vw]"></i>
+            <i id="menuIcon" className="ri-menu-3-line text-3xl"></i>
           </button>
           <div
             id="menu"
@@ -450,11 +433,12 @@ function Navbar() {
             >
               Careers
             </Link>
+            <button className='capitalize my-[1.9vw] ml-[-3vw] px-[4vw] py-[2vw] bg-deep-purple-300 rounded-lg font-semibold text-sm text-[#212121]'>free demo</button>
+            <button className='capitalize my-[1.9vw] ml-[-3vw] px-[4vw] py-[2vw] bg-deep-purple-300 rounded-lg font-semibold text-sm text-[#212121]'>Contact sales</button>
           </div>
         </div>
       </div>
     </>
-
   );
 }
 export default Navbar;

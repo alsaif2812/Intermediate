@@ -117,7 +117,6 @@ const Page = () => {
   <div id="advantage3" className='md:text-xl md:flex items-center'><i class="ri-speed-up-fill md:text-5xl md:mr-[0.3vw] md:text-center text-gray-600"></i><span className='font-bold hover:border-b-[2px] hover:border-slate-800 transition duration-100 md:mx-[0.5vw]'>Highest levels of uptime </span> the last 12 months</div>
        </div>
        <div className='ml-[20vw] mr-[-10vw]'>
-    
        </div> 
        <Footer/>
     </>
