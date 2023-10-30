@@ -5,6 +5,7 @@ import cardData from '../../../textContent/manufacturing/cardOne.json';
 import card2Data from '../../../textContent/manufacturing/cardTwo.json';
 import card3Data from '../../../textContent/manufacturing/cardThree.json';
 import Hero from '@/components/Hero';
+import Navbar from '@/components/Navbar';
 
 
 const Page = () => {
@@ -13,6 +14,7 @@ const Page = () => {
   const [selectedTab3, setSelectedTab3] = useState('Multi Level BOM');
   return (
     <>
+  
       <Hero />
       <div
         id="main"
