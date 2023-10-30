@@ -4,9 +4,9 @@ function VideoTextCard(props) {
   
   return (
     <React.Fragment>
-      <div className="md:mt-[0.6vw] md:flex">
-        <div className=' md:w-full'>
-          <div id="image" className='rounded-2xl md:p-4 md:mt-3 mt-6'>
+      <div className="md:mt-[0.6vw] md:flex  w-full">
+        <div className=' '>
+          <div id="video" className='rounded-2xl md:p-4 md:mt-3 mt-6 p-10'>
             <video
               src={props.data.video}
               alt="img"
@@ -15,7 +15,7 @@ function VideoTextCard(props) {
               muted
               width={1000}
               height={100}
-              className="md:w-full md:h-full object-cover cursor-pointer rounded-xl  md:hidden block "
+              className="md:w-full md:h-full object-cover cursor-pointer w- rounded-xl bg-black md:hidden block "
               id="topimg"
             />
           </div>
@@ -48,18 +48,21 @@ function VideoTextCard(props) {
             </button>
           </div>
         </div>
+        <div className='md:w-100vw bgblack md:pb-10 md:px-16'>
         <video
           src={props.data.video}
           alt="img"
           autoPlay
           loop
           muted
-          width={1000}
+          width={100}
           height={100}
-          className="md:w-[45%] md:h-full rounded-xl bg mt-9 ml-8 cursor-pointer  md:block hidden"
+          className="md:w-[100%] md:h-full rounded-2xl bg mt-9 ml-8 cursor-pointer   md:block hidden"
           id="bottomimg"
         />
+        </div>
       </div>
+      
     </React.Fragment>
   );
 }

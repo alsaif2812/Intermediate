@@ -110,7 +110,7 @@ export default function Home() {
             id="footer-page-1"
             className="flex items-center justify-center flex-col md:mt-auto p-10 md:opacity-60 opacity-50 md:items-center md:justify-center md:flex-col bg-transparent mb-[5vw]"
           >
-            <p className="text-sm md:text-xl md:mb-[2vw] mb-[8vw] text-center"> our 50+ Successful Implementation stories</p>
+            <p className="text-sm md:text-xl md:mb-[2vw] mb-[8vw] text-center">join our 50+ Successful Implementation stories</p>
 
             <div className="marquee-container">
               <div className="marquee-content md:flex md:items-center md:justify-center">

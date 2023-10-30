@@ -93,11 +93,17 @@ function Navbar() {
                             <p className='font-[500] text-sm opacity-75'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                           </Link>
                         </div>
+                        <div id="icon4" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-blue-50 transition duration 200 hover:rounded-2xl'>
+                          <Link href="/solutions/education">
+                            <h1 className='font-semibold text-md'><i class="ri-hospital-fill mr-[0.3vw] text-blue-400 text-left text-xl"></i>Education</h1>
+                            <p className='font-[500] text-sm opacity-75'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                          </Link>
+                        </div>
                       </div>
                       <br />
                       <div className='flex ml-[0vw] mt-[2vw] gap-[5vw]'>
                         <div id="icon4" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-blue-50 transition duration 200 hover:rounded-2xl'>
-                          <Link href="/solutions/Manufacturing">
+                          <Link href="/solutions/manufacturing">
                             <h1 className='font-semibold text-md'><i class="ri-tools-fill mr-[0.3vw] text-blue-400 text-left text-xl"></i>Manufacturing</h1>
                             <p className='font-[500] text-sm opacity-75'>Lorem ipsum dolor sit amet consectetur </p>
                           </Link>
@@ -137,7 +143,7 @@ function Navbar() {
                             width={100}
                             className='rounded-lg'
                           />
-                          <h1 className='capitalize font-semibold text-lg tracking-wider leading-tight text-[#212121]'>12 benefits that make wahni unique</h1>
+                          <h1 className='capitalize  text-lg tracking-wider leading-tight text-[#212121]'>12 benefits that make wahni unique</h1>
                         </div>
                         <div className='flex items-center  gap-7 mt-[1vw]'>
                           <Image
@@ -147,7 +153,7 @@ function Navbar() {
                             width={100}
                             className='rounded-lg'
                           />
-                          <h1 className='capitalize font-semibold text-lg tracking-wider leading-tight text-[#212121]'>How to write effective OKRs(with  <br /> 60+ OKR examples)</h1>
+                          <h1 className='capitalize  text-lg tracking-wider leading-tight text-[#212121]'>How to write effective OKRs(with  <br /> 60+ OKR examples)</h1>
                         </div>
                         <div className='flex items-center  gap-7 mt-[1vw]'>
                           <Image
@@ -157,7 +163,7 @@ function Navbar() {
                             width={100}
                             className='rounded-lg'
                           />
-                          <h1 className='capitalize font-semibold text-lg tracking-wider leading-tight text-[#212121]'>Top 18 project Management <br /> methodologies</h1>
+                          <h1 className='capitalize  text-lg tracking-wider leading-tight text-[#212121]'>Top 18 project Management <br /> methodologies</h1>
                         </div>
                       </div>
                     </div>
