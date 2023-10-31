@@ -44,7 +44,7 @@ function VideoTextCard(props) {
             className="flex items-center justify-center md:block p-3"
           >
             <button className="bg-blue-300 py-2 px-4 md:py-3 md:px-7 rounded-lg font-bold text-white">
-              Dummy
+              Dummybtn
             </button>
           </div>
         </div>
@@ -62,7 +62,6 @@ function VideoTextCard(props) {
         />
         </div>
       </div>
-      
     </React.Fragment>
   );
 }
