@@ -7,7 +7,7 @@ import img from '../../public/images/Team.jpg';
 const Cards = () => {
   return (
     <>
-      <div id="main" className='p-5 md:flex md:items-center md:justify-center  md:px-[18vw] md:mt-96 mt-[40rem]'>
+      <div id="main" className='p-5 md:flex md:items-center md:justify-center  md:px-[18vw] md:mt-10'>
         <div id="hero" className='bg-blue-500 bg-opacity-20 max-h-[100rem] md:flex md:items-center md:justify-center mb-16 mt-10 py-10 px-5 rounded-3xl md:max-w-[100vw] md:px-8'>
           <div className='md:mt-[0.6vw]'>
             <div id="tab" className='flex items-center justify-around md:justify-start md:gap-10 text-sm font-bold gap-5 overflow-x-auto'>

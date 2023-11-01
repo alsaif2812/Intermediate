@@ -46,7 +46,7 @@ function Navbar() {
         </div>
         <div
           id="nav2"
-          className="hidden md:flex items-center justify-between gap-5 font-bold text-[#20262e]"
+          className="hidden md:flex items-center justify-between gap-5 font-extrabold text-[#20262e]"
         >
           <Link
             href="/"
@@ -54,7 +54,7 @@ function Navbar() {
           >
             Home
           </Link>
-          <div id="solutions" className='mx-[-1vw]'>
+          <div id="solutions" className='mx-[-1vw] bg-inherit'>
             <Menu open={openMenu} handler={setOpenMenu} >
               <MenuHandler>
                 <Button
@@ -69,7 +69,7 @@ function Navbar() {
                   />
                 </Button>
               </MenuHandler>
-              <MenuList className="hidden bg-white lg:grid rounded-2xl mt-[1vw]">
+              <MenuList className="hidden bg-white lg:grid rounded-2xl mt-[1vw] hover:bg-white p-3">
                 <MenuItem>
                   <div className='md:flex mt-[-1vw] bg-white hidden w-[100vw] p-[1vw]'>
                     <div id='iconsleft' className='items-center justify-center flex-wrap w-[60%] h-[25vw] py-[1vw] px-[2vw] max-w-full md:border-r-2 md:border-gray-100'>
@@ -187,7 +187,7 @@ function Navbar() {
                   />
                 </Button>
               </MenuHandler>
-              <MenuList className="hidden w-[100%] bg-white lg:grid mt-[3vw]">
+              <MenuList className="hidden w-[100%] bg-white lg:grid mt-[3vw] ">
                 <MenuItem>
                   <div className='md:flex mt-[-1vw]  hidden text-zinc-900 '>
                     <div id='iconsleft' className=' items-center justify-center flex-wrap w-[48%]  h-[15vw] py-[1vw] px-[2vw] ml-[9vw]'>
@@ -333,7 +333,7 @@ function Navbar() {
             </button>
             <Link
               href="/"
-              className="flex items-center justify-center py-3 px-4 text-gray-800 hover:bg-gray-200  "
+              className="flex items-center justify-center py-3 px-4 text-gray-800 hover:bg-gray-200"
             >
               Home
             </Link>
@@ -356,13 +356,28 @@ function Navbar() {
                   </Button>
                 </MenuHandler>
                 <MenuList>
+                  <Link href= '/solutions/retail'>
                   <MenuItem>Retail</MenuItem>
+                  </Link>
+                  <Link href= '/solutions/services'>
                   <MenuItem>Services</MenuItem>
+                  </Link>
+                  <Link href = '/solutions/healthcare'>
+
                   <MenuItem>Healthcare</MenuItem>
+                  </Link>
+                     <Link href = '/solutions/manufacturing' >
                   <MenuItem>Manufacturing</MenuItem>
+                     </Link>
+                     <Link href = '/solutions/realestate'>
                   <MenuItem>Real Estate</MenuItem>
+                     </Link>
+                     <Link  href = '/solutions/distribution'>
                   <MenuItem>Distribution</MenuItem>
+                     </Link>
+                     <Link  href = '/solutions/agriculture'>
                   <MenuItem>Agriculture</MenuItem>
+                     </Link>
                 </MenuList>
               </Menu>
 
@@ -386,9 +401,15 @@ function Navbar() {
                   </Button>
                 </MenuHandler>
                 <MenuList>
+                  <Link  href = '/products/erpnext'>
                   <MenuItem>ERPNext</MenuItem>
+                  </Link>
+                  <Link  href = '/products/mobileapp'>
                   <MenuItem>Mobile App</MenuItem>
+                  </Link>
+                  <Link  href = '/products/neupos'>
                   <MenuItem>Neu POS</MenuItem>
+                  </Link>
                 </MenuList>
               </Menu>
 
@@ -412,10 +433,18 @@ function Navbar() {
                   </Button>
                 </MenuHandler>
                 <MenuList>
+                  <Link  href = '/Services/business'>
                   <MenuItem>Business Consulting</MenuItem>
+                  </Link>
+                  <Link  href = '/Services/ecommerce'>
                   <MenuItem>E-commerce</MenuItem>
+                  </Link>
+                  <Link  href = '/Services/implementation'>
                   <MenuItem>ERP Implementation</MenuItem>
+                  </Link>
+                  <Link  href = '/Services/workflow'>
                   <MenuItem>Workflow automation</MenuItem>
+                  </Link>
 
                 </MenuList>
               </Menu>

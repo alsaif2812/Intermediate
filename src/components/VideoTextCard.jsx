@@ -6,7 +6,7 @@ function VideoTextCard({ data }) {
   return (
     <div
       id="hero"
-      className="bg-blue-500 bg-opacity-20 max-h-[100rem] md:flex md:items-center md:justify-center mb-16 mt-10 py-10 px-5 rounded-3xl md:max-w-[100vw] md:px-8 "
+      className="bg-blue-500 bg-opacity-20 max-h-[100rem] md:flex md:items-center md:justify-center md:mt-3 mb-[-5rem] md:mb-0  mt-28 py-10 px-5 rounded-3xl md:max-w-[1000rem] md:px-8 "
     >
       <div className="md:mt-[0.6vw]">
         {tabs.length > 1 ? (
@@ -20,7 +20,7 @@ function VideoTextCard({ data }) {
                 onClick={() => setSelectedTab(tab)}
                 className={`${
                   selectedTab === tab ? 'border-b-4 border-blue-gray-800' : ''
-                } hover:border-b-4 transition duration-500 hover:border-blue-gray-800`}
+                } hover:border-b-4 transition duration-500 hover:border-blue-gray-800 cursor-pointer`}
               >
                 {tab}
               </h1>

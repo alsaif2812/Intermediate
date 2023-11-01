@@ -1,11 +1,10 @@
 'use client';
-import React, { useState } from 'react';
+import React from 'react';
 import VideoTextCard from '@/components/VideoTextCard';
 import cardData from '../../../textContent/manufacturing/cardOne.json';
 import card2Data from '../../../textContent/manufacturing/cardTwo.json';
 import card3Data from '../../../textContent/manufacturing/cardThree.json';
 import Hero from '@/components/Hero';
-import Navbar from '@/components/Navbar';
 
 const Page = () => {
   return (
