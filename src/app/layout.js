@@ -3,6 +3,7 @@ import './globals.css';
 import { Nunito } from 'next/font/google'
 import 'remixicon/fonts/remixicon.css'
 import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 const nunito = Nunito({
   subsets: ['latin'],
   display: 'swap',
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         {children}
         </div>
+        <Footer/>
       </body>
     </html>
   );
