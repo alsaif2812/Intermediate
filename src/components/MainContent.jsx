@@ -9,7 +9,7 @@ import fertech from '../../public/images/fertech.png';
 import mealis from '../../public/images/mealis.png';
 import shalcos from '../../public/images/shalcos.png';
 import swarnam from '../../public/images/swarnam.png';
-
+import Link from 'next/link';
 import Cards from './Cards';
 
 export default function Home() {
@@ -36,10 +36,12 @@ export default function Home() {
               </h1>
               <div className="bg-transparent p-4 rounded-md mt-8" id="btn">
                 <div className="flex flex-wrap gap-4">
-                  <button className="py-2 px-4 bg-white rounded-md hover:shadow-2xl shadow-md font-semibold flex items-center transition">
+                <Link href = '/solutions/manufacturing'>
+                <button className="py-2 px-4 bg-white rounded-md hover:shadow-2xl shadow-md font-semibold flex items-center transition">
                     <i className="ri-government-fill text-blue-600 pr-2 opacity-90"></i>
                     Manufacturing
                   </button>
+                </Link>
                   <button className="py-2 px-4 bg-white rounded-md hover:shadow-2xl shadow-md font-semibold flex items-center transition">
                     <i className="ri-government-fill text-blue-600 pr-2 opacity-90"></i>
                     Trading
