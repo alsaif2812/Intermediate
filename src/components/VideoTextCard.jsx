@@ -30,7 +30,7 @@ function VideoTextCard({ data }) {
 
         <div className="md:mt-[0.6vw] md:flex w-full">
           <div className=" w-[100%] ">
-            <div id="video" className="rounded-2xl md:p-4 md:mt-3 mt-6 p-10">
+            <div id="video" className="rounded-2xl md:p-4 md:mt-3 mt-6 p-10 w-full">
               <video
                 src={data[selectedTab].video}
                 alt="img"
