@@ -1,10 +1,11 @@
+import Hero from '@/components/Hero'
 import React from 'react'
 
 const page = () => {
   return (
     <>
-    <h1>hello from business</h1>
-      
+<Hero/>
+
     </>
   )
 }

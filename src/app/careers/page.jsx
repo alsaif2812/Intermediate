@@ -1,12 +1,12 @@
+import Hero from '@/components/Hero'
 import React from 'react'
 
 
 const page = () => {
   return (
     <>
-    
-    <h1 className='flex items-center justify-center text-6xl mt-[15vw]'>This is career page</h1>
-      
+    <Hero/>
+      <h1 className='flex justify-center items-center'>this is career page</h1>
     </>
   )
 }

@@ -3,12 +3,14 @@ import React from 'react';
 import Image from 'next/image';
 import Teamimg from '../../../public/images/Team.jpg';
 import mission from '../../../public/images/mission.png';
-import Footer from '@/components/Footer';
+// import Footer from '@/components/Footer';
+import Hero from '@/components/Hero';
 
 
 const Page = () => {
   return (
     <>
+    <Hero/>
       <div id="top" className="md:flex md:w-full bg-blue-900 md:h-[30vw] h-[130vw]">
         <div id="leftabt" className='md:w-[50%]  md:pl-[10vw] pl-[3vw] md:pt-[4vw] pt-[10vw] md:mt-0 mt-[4vw] text-white'>
           <h1 className='md:text-6xl text-5xl font-extrabold md:tracking-wide md:leading-tight'>We are <br /> Wahni.</h1>
@@ -98,8 +100,6 @@ const Page = () => {
 
         </div>
       </div>
-
-
        <div id="photogrid" className='md:w-100% md:h-[100vh] md:pt-[1vw] w-full h-[100vh] bg-red-100 pt-[10vw] md:px-[0vw] px-[5vw]'>
         <p className='md:mx-[45vw] mx-[30vw] font-semibold md:text-sm tracking-widest uppercase text-purple-500'>Gallery</p>
         <h1 className='md:mx-[38vw] ml-[17vw] md:text-6xl text-4xl md:w-[50vw] mt-[2vw] md:my-[1.4vw] font-bold text-[#212121]'>Life at Wahni.</h1>
@@ -118,7 +118,6 @@ const Page = () => {
        </div>
        <div className='ml-[20vw] mr-[-10vw]'>
        </div> 
-       <Footer/>
     </>
 
   );

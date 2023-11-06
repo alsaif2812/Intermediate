@@ -30,9 +30,9 @@ export default function Home() {
         <div id="content">
           <div className="w-full max-h-screen flex flex-col md:flex-row mt-[-5vw] md:mt-[-2vw]">
             <div id="left" className="md:w-1/2 md:h-full md:px-12 md:py-12 md:ml-10">
-              <h1 className="text-3xl h-48 md:h-auto md:text-5xl font-bold mt-[5vw] md:mt-[3vw] w-full" id="maintext">
-                we have the solutions
-                <p><span className="typed"></span></p>
+              <h1 className="text-3xl h-auto  md:h-auto md:text-5xl font-bold mt-[5vw] md:mt-[3vw] w-full" id="maintext">
+                we have the solutions to
+                <p><span className="typed w-full"></span></p>
               </h1>
               <div className="bg-transparent p-4 rounded-md mt-8" id="btn">
                 <div className="flex flex-wrap gap-4">
@@ -62,7 +62,7 @@ export default function Home() {
                 type="email"
                 name="email"
                 id="email"
-                className="py-1 px-8 border-zinc-200 border-2 rounded-lg mt-6 text-lg placeholder-opacity-30 md:w-[18vw] md:ml-[0vw]"
+                className="py-1 px-3 border-zinc-200 border-2 rounded-lg mt-6 text-lg placeholder-opacity-30 md:w-[18vw] md:ml-[0vw]"
                 placeholder="Enter your work email"
               />
               <br />
@@ -80,7 +80,7 @@ export default function Home() {
                 <p>
                   <i className="ri-trophy-fill text-yellow-300 text-2xl"></i>
                   <span className="text-md text-gray-600">
-                    Frappe Certified partner
+                    Frappe Certified Partner
                   </span>
                 </p>
                 <p>
@@ -89,7 +89,7 @@ export default function Home() {
                   <i className="ri-star-fill text-yellow-300 text-2xl"></i>
                   <i className="ri-star-fill text-yellow-300 text-2xl"></i>
                   <span className="text-sm text-gray-600 ml-1">
-                    Based on Customer reviews
+                    Based on Customer Reviews
                   </span>
                 </p>
               </div>
@@ -112,7 +112,7 @@ export default function Home() {
             id="footer-page-1"
             className="flex items-center justify-center flex-col md:mt-auto p-10 md:opacity-60 opacity-50 md:items-center md:justify-center md:flex-col bg-transparent mb-[5vw]"
           >
-            <p className="text-sm md:text-xl md:mb-[2vw] mb-[8vw] text-center">join our 50+ Successful Implementation stories</p>
+            <p className="text-sm md:text-xl md:mb-[2vw] mb-[8vw] text-center">Join our 50+ Successful Implementation stories</p>
 
             <div className="marquee-container">
               <div className="marquee-content md:flex md:items-center md:justify-center">

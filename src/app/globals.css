@@ -9,24 +9,23 @@
 }
 
 @keyframes changeText {
-  0%,
+  0%, 20% {
+    content: 'streamline operations';
+  }
+  25%, 45% {
+    content: 'automate production';
+  }
+  50%, 70% {
+    content: 'increase profits';
+  }
+  75%, 95% {
+    content: 'reduce costs';
+  }
   100% {
-    
-    content: 'to run your business';
-  }
-  25% {
-    
-    content: 'streamline business operations';
-  }
-  50% {
-    
-    content: 'increase profit';
-  }
-  75% {
-  
-    content: 'improve employee conduct';
+    content: 'boost productivity';
   }
 }
+
 
 .typed::before {
   content: 'to run your business';

@@ -1,9 +1,10 @@
+import Hero from '@/components/Hero'
 import React from 'react'
-import Footer from '@/components/Footer' 
 
 const page = () => {
   return (
     <>
+    <Hero/>
     <div className=' flex bg-transparent mt-[-1vw]   text-zinc-900'>
     <div id='iconsleft' className=' items-center justify-center flex-wrap w-[48%]  h-[15vw] py-[1vw] px-[2vw] ml-[9vw]'>
 
@@ -30,10 +31,7 @@ const page = () => {
    <hr />
  
    </div>
-   <div className='md:block hidden'>
-
-   <Footer/>
-   
+   <div className='md:block hidden'>   
    </div>
 
     </>

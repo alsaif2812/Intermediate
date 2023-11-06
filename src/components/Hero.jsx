@@ -49,7 +49,7 @@ const Hero = () => {
           type="email"
           name="email"
           id="email"
-          className="py-1 px-8 border-zinc-200 border-2 rounded-lg mt-6 text-lg placeholder-opacity-30 md:w-[18vw] md:ml-[0vw]"
+          className="py-1 px-2 border-zinc-200 border-2 rounded-lg mt-6 text-lg placeholder-opacity-30 md:w-[1vw] md:ml-[0vw]"
           placeholder="Enter your work email"
         />
         <br />
@@ -67,7 +67,7 @@ const Hero = () => {
           <p>
             <i className="ri-trophy-fill text-yellow-300 text-2xl"></i>
             <span className="text-md text-gray-600">
-              Frappe Certified partner
+              Frappe Certified Partner
             </span>
           </p>
           <p>
@@ -76,7 +76,7 @@ const Hero = () => {
             <i className="ri-star-fill text-yellow-300 text-2xl"></i>
             <i className="ri-star-fill text-yellow-300 text-2xl"></i>
             <span className="text-sm text-gray-600 ml-1">
-              Based on Customer reviews
+              Based on Customer Reviews
             </span>
           </p>
         </div>
