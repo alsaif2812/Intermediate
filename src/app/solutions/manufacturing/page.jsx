@@ -1,4 +1,6 @@
-'use client';
+
+
+"use client"
 import React from 'react';
 import VideoTextCard from '@/components/VideoTextCard';
 import cardData from '../../../textContent/manufacturing/cardOne.json';
@@ -12,23 +14,23 @@ const Page = () => {
       <Hero />
       <div
         id="main"
-        className="p-5 md:flex md:items-center md:justify-center  md:px-[18vw]"
+        className="p-5 md:flex md:items-center md:justify-center md:px-[18vw]"
       >
-        <VideoTextCard data={card3Data} />
+        <VideoTextCard data={card3Data} bg="slate-300" />
       </div>
 
       <div
         id="main"
-        className="p-5 md:flex md:items-center md:justify-center  md:px-[18vw]"
+        className="p-5 md:flex md:items-center md:justify-center md:px-[18vw]"
       >
-        <VideoTextCard data={cardData} />
+        <VideoTextCard data={cardData} bg="blue-300" />
       </div>
 
       <div
         id="main"
-        className="p-5 md:flex md:items-center md:justify-center   md:px-[18vw]"
+        className="p-5 md:flex md:items-center md:justify-center md:px-[18vw]"
       >
-        <VideoTextCard data={card2Data} />
+        <VideoTextCard data={card2Data} bg="pink-50" />
       </div>
     </>
   );

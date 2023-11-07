@@ -18,7 +18,9 @@
       "--The number of items produced",
       "--The materials used",
       "--The labor hours spent"
+    
     ]
+    
   },
   "downtimeEntry": {
     "heading": "Track downtimes and identify root causes",
