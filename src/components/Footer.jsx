@@ -19,7 +19,7 @@ const Footer = () => {
         <span class="ml-3 text-2xl">Wahni</span>
       </a>
       <p class="mt-2 text-sm text-gray-500 ">
-      <p className='mt-5'>Contact us:- 298364913</p>
+      <p className='mt-5'><i class="ri-customer-service-2-fill"></i> 298364913</p>
       <p><i class="ri-mail-fill"></i> wahni@gmail.com</p>
       </p>
     </div>
