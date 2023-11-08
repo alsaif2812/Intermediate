@@ -69,8 +69,8 @@ function Navbar() {
                   />
                 </Button>
               </MenuHandler>
-              <MenuList className="hidden bg-white lg:grid rounded-2xl mt-[1vw] hover:bg-white p-3">
-                <MenuItem>
+              <MenuList className="hidden  lg:grid  p-1 bg-transparent border-none  ">
+                
                   <div className='md:flex mt-[-1vw] bg-white hidden w-[100vw] p-[1vw]'>
                     <div id='iconsleft' className='items-center justify-center flex-wrap w-[60%] h-[25vw] py-[1vw] px-[2vw] max-w-full md:border-r-2 md:border-gray-100'>
                       <h3 className='text-md font-bold mt-[2vw] uppercase'>Team</h3>
@@ -168,7 +168,51 @@ function Navbar() {
                       </div>
                     </div>
                   </div>
-                </MenuItem>
+                
+                {/* <div className="main h-[30rem]  w-[70vw] flex items-center bg-white rounded-2xl ">
+
+                  <div className="left h-full w-[20%] bg-gray-400   pt-6 flex flex-col gap-2 items-center">
+                    <div className="first  h-20 p-5 bg-red-100 flex flex-col items-start justify-center gap-1">
+                    <h1><i class="ri-hospital-fill  text-blue-400 text-left text-xl mr-3"></i><span className='text-lg '>Sales</span></h1>
+                    <p className='text-sm '>Lorem ipsum dolor, sit amet consectetur <br /> adipisicing elit. Excepturi, quasi?</p>
+                    </div>
+                    <div className="second  h-20 p-5 bg-red-100 flex flex-col items-start justify-center gap-1">
+                    <h1><i class="ri-hospital-fill  text-blue-400 text-left text-xl mr-3"></i><span className='text-lg '>Sales</span></h1>
+                    <p className='text-sm '>Lorem ipsum dolor, sit amet consectetur <br /> adipisicing elit. Excepturi, quasi?</p>
+                    </div>
+                    <div className="third  h-20 p-5 bg-red-100 flex flex-col items-start justify-center gap-1">
+                    <h1><i class="ri-hospital-fill  text-blue-400 text-left text-xl mr-3"></i><span className='text-lg '>Sales</span></h1>
+                    <p className='text-sm '>Lorem ipsum dolor, sit amet consectetur <br /> adipisicing elit. Excepturi, quasi?</p>
+                    </div>
+                    <div className="fourth  h-20 p-5 bg-red-100 flex flex-col items-start justify-center gap-1">
+                    <h1><i class="ri-hospital-fill  text-blue-400 text-left text-xl mr-3"></i><span className='text-lg '>Sales</span></h1>
+                    <p className='text-sm '>Lorem ipsum dolor, sit amet consectetur <br /> adipisicing elit. Excepturi, quasi?</p>
+                    </div>
+                  </div>
+                  <div className="right h-full w-[20%]  bg-gray-400  pt-6 flex flex-col gap-2 items-center">
+                  <div className="first  h-20 p-5 bg-red-100 flex flex-col items-start justify-center gap-1">
+                    <h1><i class="ri-hospital-fill  text-blue-400 text-left text-xl mr-3"></i><span className='text-lg '>Sales</span></h1>
+                    <p className='text-sm '>Lorem ipsum dolor, sit amet consectetur <br /> adipisicing elit. Excepturi, quasi?</p>
+                    </div>
+                    <div className="second  h-20 p-5 bg-red-100 flex flex-col items-start justify-center gap-1">
+                    <h1><i class="ri-hospital-fill  text-blue-400 text-left text-xl mr-3"></i><span className='text-lg '>Sales</span></h1>
+                    <p className='text-sm '>Lorem ipsum dolor, sit amet consectetur <br /> adipisicing elit. Excepturi, quasi?</p>
+                    </div>
+                    <div className="third  h-20 p-5 bg-red-100 flex flex-col items-start justify-center gap-1">
+                    <h1><i class="ri-hospital-fill  text-blue-400 text-left text-xl mr-3"></i><span className='text-lg '>Sales</span></h1>
+                    <p className='text-sm '>Lorem ipsum dolor, sit amet consectetur <br /> adipisicing elit. Excepturi, quasi?</p>
+                    </div>
+                    <div className="fourth  h-20 p-5 bg-red-100 flex flex-col items-start justify-center gap-1">
+                    <h1><i class="ri-hospital-fill  text-blue-400 text-left text-xl mr-3"></i><span className='text-lg '>Sales</span></h1>
+                    <p className='text-sm '>Lorem ipsum dolor, sit amet consectetur <br /> adipisicing elit. Excepturi, quasi?</p>
+                    </div>
+                  </div>
+                </div> */}
+
+
+
+
+
               </MenuList>
             </Menu>
           </div>
@@ -187,8 +231,7 @@ function Navbar() {
                   />
                 </Button>
               </MenuHandler>
-              <MenuList className="hidden w-[100%] bg-white lg:grid mt-[3vw] ">
-                <MenuItem>
+              <MenuList className="hidden w-[100%] bg-white lg:grid mt-[3vw] border-none">
                   <div className='md:flex mt-[-1vw]  hidden text-zinc-900 '>
                     <div id='iconsleft' className=' items-center justify-center flex-wrap w-[48%]  h-[15vw] py-[1vw] px-[2vw] ml-[9vw]'>
                       <h3 className='text-md font-bold mt-[2vw] uppercase'>Product</h3>
@@ -216,7 +259,6 @@ function Navbar() {
                     </div>
                     <hr />
                   </div>
-                </MenuItem>
               </MenuList>
             </Menu>
           </div>
@@ -235,8 +277,7 @@ function Navbar() {
                   />
                 </Button>
               </MenuHandler>
-              <MenuList className="hidden w-[100%] bg-white lg:grid mt-[3vw]">
-                <MenuItem>
+              <MenuList className="hidden w-[100%] bg-white lg:grid mt-[3vw] border-none">
                   <div className='md:flex mt-[-1vw]  hidden text-zinc-900'>
                     <div id='iconsleft' className=' items-center justify-center flex-wrap w-[70%]  h-[15vw] py-[1vw] px-[2vw] ml-[9vw]'>
 
@@ -276,7 +317,6 @@ function Navbar() {
 
                   </div>
 
-                </MenuItem>
 
               </MenuList>
             </Menu>
@@ -356,28 +396,28 @@ function Navbar() {
                   </Button>
                 </MenuHandler>
                 <MenuList>
-                  <Link href= '/solutions/retail'>
-                  <MenuItem>Retail</MenuItem>
+                  <Link href='/solutions/retail'>
+                    <MenuItem>Retail</MenuItem>
                   </Link>
-                  <Link href= '/solutions/services'>
-                  <MenuItem>Services</MenuItem>
+                  <Link href='/solutions/services'>
+                    <MenuItem>Services</MenuItem>
                   </Link>
-                  <Link href = '/solutions/healthcare'>
+                  <Link href='/solutions/healthcare'>
 
-                  <MenuItem>Healthcare</MenuItem>
+                    <MenuItem>Healthcare</MenuItem>
                   </Link>
-                     <Link href = '/solutions/manufacturing' >
-                  <MenuItem>Manufacturing</MenuItem>
-                     </Link>
-                     <Link href = '/solutions/realestate'>
-                  <MenuItem>Real Estate</MenuItem>
-                     </Link>
-                     <Link  href = '/solutions/distribution'>
-                  <MenuItem>Distribution</MenuItem>
-                     </Link>
-                     <Link  href = '/solutions/agriculture'>
-                  <MenuItem>Agriculture</MenuItem>
-                     </Link>
+                  <Link href='/solutions/manufacturing' >
+                    <MenuItem>Manufacturing</MenuItem>
+                  </Link>
+                  <Link href='/solutions/realestate'>
+                    <MenuItem>Real Estate</MenuItem>
+                  </Link>
+                  <Link href='/solutions/distribution'>
+                    <MenuItem>Distribution</MenuItem>
+                  </Link>
+                  <Link href='/solutions/agriculture'>
+                    <MenuItem>Agriculture</MenuItem>
+                  </Link>
                 </MenuList>
               </Menu>
 
@@ -401,14 +441,14 @@ function Navbar() {
                   </Button>
                 </MenuHandler>
                 <MenuList>
-                  <Link  href = '/products/erpnext'>
-                  <MenuItem>ERPNext</MenuItem>
+                  <Link href='/products/erpnext'>
+                    <MenuItem>ERPNext</MenuItem>
                   </Link>
-                  <Link  href = '/products/mobileapp'>
-                  <MenuItem>Mobile App</MenuItem>
+                  <Link href='/products/mobileapp'>
+                    <MenuItem>Mobile App</MenuItem>
                   </Link>
-                  <Link  href = '/products/neupos'>
-                  <MenuItem>Neu POS</MenuItem>
+                  <Link href='/products/neupos'>
+                    <MenuItem>Neu POS</MenuItem>
                   </Link>
                 </MenuList>
               </Menu>
@@ -433,17 +473,17 @@ function Navbar() {
                   </Button>
                 </MenuHandler>
                 <MenuList>
-                  <Link  href = '/Services/business'>
-                  <MenuItem>Business Consulting</MenuItem>
+                  <Link href='/Services/business'>
+                    <MenuItem>Business Consulting</MenuItem>
                   </Link>
-                  <Link  href = '/Services/ecommerce'>
-                  <MenuItem>E-commerce</MenuItem>
+                  <Link href='/Services/ecommerce'>
+                    <MenuItem>E-commerce</MenuItem>
                   </Link>
-                  <Link  href = '/Services/implementation'>
-                  <MenuItem>ERP Implementation</MenuItem>
+                  <Link href='/Services/implementation'>
+                    <MenuItem>ERP Implementation</MenuItem>
                   </Link>
-                  <Link  href = '/Services/workflow'>
-                  <MenuItem>Workflow automation</MenuItem>
+                  <Link href='/Services/workflow'>
+                    <MenuItem>Workflow automation</MenuItem>
                   </Link>
 
                 </MenuList>
