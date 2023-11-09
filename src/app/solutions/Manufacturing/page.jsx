@@ -1,5 +1,3 @@
-
-
 "use client"
 import React from 'react';
 import VideoTextCard from '@/components/VideoTextCard';
@@ -16,21 +14,21 @@ const Page = () => {
         id="main"
         className="p-5 md:flex md:items-center md:justify-center md:px-[18vw]"
       >
-        <VideoTextCard data={card3Data} bg="slate-300" />
+        <VideoTextCard data={card3Data} bgColor="[#212121]"  />
       </div>
 
       <div
         id="main"
         className="p-5 md:flex md:items-center md:justify-center md:px-[18vw]"
       >
-        <VideoTextCard data={cardData} bg="blue-300" />
+        <VideoTextCard data={cardData} bgColor="[#212121]" />
       </div>
 
       <div
         id="main"
         className="p-5 md:flex md:items-center md:justify-center md:px-[18vw]"
       >
-        <VideoTextCard data={card2Data} bg="pink-50" />
+        <VideoTextCard data={card2Data} bgColor="[#212121]" />
       </div>
     </>
   );

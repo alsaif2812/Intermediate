@@ -6,18 +6,16 @@ import logo from '../../public/images/wit-logo.png'
 const Footer = () => {
   return (
     <>
-<footer class="bg-gray-50 text-gray-600 body-font">
+<footer class=" text-gray-600 body-font ">
   <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
     <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
-      <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
        <Image
 
        src={logo}
        height={100}
-       width={60}
+       width={70}
        />
-        <span class="ml-3 text-2xl">Wahni</span>
-      </a>
+    
       <p class="mt-2 text-sm text-gray-500 ">
       <p className='mt-5'><i class="ri-customer-service-2-fill"></i> 298364913</p>
       <p><i class="ri-mail-fill"></i> wahni@gmail.com</p>
@@ -25,7 +23,7 @@ const Footer = () => {
     </div>
     <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
       <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">PRODUCTS</h2>
+        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3 capitalize">Products</h2>
         <nav class="list-none mb-10">
           <li>
             <a class="text-gray-600 hover:text-gray-800">ERPNext</a>
@@ -39,7 +37,7 @@ const Footer = () => {
         </nav>
       </div>
       <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3 uppercase">Solutions</h2>
+        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3 capitalize">Solutions</h2>
         <nav class="list-none mb-10">
           <li>
             <a class="text-gray-600 hover:text-gray-800">Retail</a>
@@ -68,7 +66,7 @@ const Footer = () => {
         </nav>
       </div>
       <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3 uppercase">Resources</h2>
+        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3 capitalize">Resources</h2>
         <nav class="list-none mb-10">
           <li>
             <a class="text-gray-600 hover:text-gray-800">Case Studies</a>
@@ -80,7 +78,7 @@ const Footer = () => {
         </nav>
       </div>
       <div class="lg:w-1/4 md:w-1/2 w-full px-4">
-        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3 uppercase">About</h2>
+        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3 capitalize">About</h2>
         <nav class="list-none mb-10">
           <li>
             <a class="text-gray-600 hover:text-gray-800">Company</a>
@@ -101,9 +99,9 @@ const Footer = () => {
 
   <hr />
 
-  <div>
-    <div class="container mx-auto py-4 px-5 flex  flex-wrap flex-col sm:flex-row  items-center mt-[-5rem]">
-      <p class="text-gray-500 text-sm text-center sm:text-left">© 2020 Wahni
+  <div class>
+    <div class="container mx-auto py-4 px-5 flex  flex-wrap flex-col sm:flex-row  items-center m">
+      <p class="text-gray-500 text-sm text-center sm:text-left ">© 2020 Wahni
       </p>
       <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
       <p className='mx-5'>Terms | Privacy Policy</p>

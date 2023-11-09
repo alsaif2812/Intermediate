@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
-function VideoTextCard({ data,bg }) {
+function VideoTextCard({ data, props }) {
   const tabs = Object.keys(data);
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
+  
 
   return (
     <div
       id="hero"
-      className={`bg-${bg} text-[#212121]  max-h-[100rem] md:flex md:items-center md:justify-center md:mt-3  md:mb-0  mt-28 py-10 px-5 rounded-3xl md:max-w-[1000rem] md:px-8`}
+      style={{ backgroundColor:`${props.bgColor}` }}
+      className={` text-[#3d3d3d]  max-h-[100rem] md:flex md:items-center md:justify-center md:mt-3  md:mb-0  mt-28 py-10 px-5 rounded-3xl md:max-w-[1000rem] md:px-8`}
     >
       <div className="md:mt-[0.6vw] ">
         {tabs.length > 1 ? (
