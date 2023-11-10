@@ -6,8 +6,8 @@ import logo from '../../public/images/wit-logo.png'
 const Footer = () => {
   return (
     <>
-<footer class=" text-gray-600 body-font ">
-  <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+<footer class=" text-gray-600 body-font mt-20">
+  <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col pt-10">
     <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
        <Image
 

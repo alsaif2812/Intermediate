@@ -143,38 +143,30 @@
   #getquote {
     width: 40%;
     padding: 1vw 2vw;
-    /* background: blue; */
     margin-left: 2rem;
 
     margin-left: 22vw;
   }
   #getquote2 {
-    /* background: red; */
     font-size: 1.7rem;
   }
   #qualifications {
-    /* background: red; */
     padding-left: 27vw;
     margin-top: 2rem;
   }
- 
 }
-@media (max-width: 1100px) {
-  /* Add these styles outside of your component code */
   .marquee-container {
-    width: 100%;
+    width: 1000vw;
     overflow: hidden;
   }
-
   .marquee-content {
     white-space: nowrap;
     display: inline-block;
-    animation: marquee 8s linear infinite;
+    animation: marquee 8s linear infinite; 
   }
-
   .logo {
     display: inline-block;
-    margin-right: 20px; /* Adjust the spacing between logos */
+    margin-right: 20px; 
   }
   @keyframes marquee {
     0% {
@@ -184,7 +176,8 @@
       transform: translateX(-100%);
     }
   }
-}
+
+
 @media (min-width: 1101px) {
   /* Add these styles outside of your component code */
   .marquee-container {

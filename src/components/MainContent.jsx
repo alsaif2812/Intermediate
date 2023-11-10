@@ -9,6 +9,24 @@ import fertech from '../../public/images/fertech.png';
 import mealis from '../../public/images/mealis.png';
 import shalcos from '../../public/images/shalcos.png';
 import swarnam from '../../public/images/swarnam.png';
+import aifer from '../../public/images/aifer.webp';
+import ben from '../../public/images/ben.webp';
+import bharath from '../../public/images/bharath.webp';
+import centroid from '../../public/images/centroid.webp';
+import chip from '../../public/images/chip-qatar.webp';
+import ets from '../../public/images/ets.webp';
+import gf from '../../public/images/gf.webp';
+import hadero from '../../public/images/hadero.webp';
+import intramedica from '../../public/images/intramedica.webp';
+import jd from '../../public/images/jd.webp';
+import nazeem from '../../public/images/nazeem.webp';
+import popular from '../../public/images/popular.webp';
+import q from '../../public/images/q-spices.webp';
+import reprolab from '../../public/images/reprolab.webp';
+import rumailah from '../../public/images/rumailah.webp';
+import suraj from '../../public/images/suraj-pressings.webp';
+import thaaram from '../../public/images/thaaram.webp';
+import wellworth from '../../public/images/wellworth.webp';
 import Link from 'next/link';
 import Cards from './Cards';
 
@@ -115,37 +133,92 @@ export default function Home() {
             <p className="text-sm md:text-xl md:mb-[2vw] mb-[8vw] text-center">Join our 50+ Successful Implementation stories</p>
 
             <div className="marquee-container">
-              <div className="marquee-content md:flex md:items-center md:justify-center">
+              <div className="marquee-content flex items-center justify-center  p-1 gap-1 w-[150vw] ">
                 <div className="logo">
-                  <Image width={100} height={100} src={amrita} alt="amrita logo" />
+                  <Image width={300} height={100} src={amrita} alt="amrita logo" />
                 </div>
                 <div className="logo">
-                  <Image width={100} height={100} src={bios} alt="bios logo" />
+                  <Image width={300} height={100} src={bios} alt="bios logo" />
                 </div>
                 <div className="logo">
-                  <Image width={100} height={100} src={cube} alt="cube logo" />
+                  <Image width={300} height={100} src={cube} alt="cube logo" />
                 </div>
                 <div className="logo">
-                  <Image width={100} height={100} src={deco} alt="deco logo" />
+                  <Image width={300} height={100} src={deco} alt="deco logo" />
                 </div>
                 <div className="logo">
-                  <Image width={100} height={100} src={dvcom} alt="dvcom logo" />
+                  <Image width={300} height={100} src={dvcom} alt="dvcom logo" />
                 </div>
                 <div className="logo">
-                  <Image width={100} height={100} src={emdad} alt="emdad logo" />
+                  <Image width={300} height={100} src={emdad} alt="emdad logo" />
                 </div>
                 <div className="logo">
-                  <Image width={100} height={100} src={fertech} alt="fertech logo" />
+                  <Image width={300} height={100} src={fertech} alt="fertech logo" />
                 </div>
                 <div className="logo">
-                  <Image width={100} height={100} src={mealis} alt="mealis logo" />
+                  <Image width={300} height={100} src={mealis} alt="mealis logo" />
                 </div>
                 <div className="logo">
-                  <Image width={100} height={100} src={shalcos} alt="shalcos logo" />
+                  <Image width={300} height={100} src={shalcos} alt="shalcos logo" />
                 </div>
                 <div className="logo">
-                  <Image width={100} height={100} src={swarnam} alt="swarnam logo" />
+                  <Image width={300} height={100} src={swarnam} alt="swarnam logo" />
                 </div>
+                <div className="logo">
+                  <Image width={300} height={100} src={aifer} alt="aifer logo" />
+                </div>
+                <div className="logo">
+                  <Image width={300} height={100} src={ben} alt="ben logo" />
+                </div>
+                <div className="logo">
+                  <Image width={300} height={100} src={bharath} alt="bharath logo" />
+                </div>
+                <div className="logo">
+                  <Image width={300} height={100} src={centroid} alt="centroid logo" />
+                </div>
+                <div className="logo">
+                  <Image width={300} height={100} src={chip} alt="chip-qatar logo" />
+                </div>
+                <div className="logo">
+                  <Image width={300} height={100} src={ets} alt="ets logo" />
+                </div>
+                <div className="logo">
+                  <Image width={300} height={100} src={gf} alt="gf logo" />
+                </div>
+                <div className="logo">
+                  <Image width={300} height={100} src={hadero} alt="hadero logo" />
+                </div>
+                <div className="logo">
+                  <Image width={300} height={100} src={intramedica} alt="hadero logo" />
+                </div>
+                <div className="logo">
+                  <Image width={300} height={100} src={jd} alt="hadero logo" />
+                </div>
+                <div className="logo">
+                  <Image width={300} height={100} src={nazeem} alt="hadero logo" />
+                </div>
+                <div className="logo">
+                  <Image width={300} height={100} src={popular} alt="hadero logo" />
+                </div>
+                <div className="logo">
+                  <Image width={300} height={100} src={q} alt="hadero logo" />
+                </div>
+                <div className="logo">
+                  <Image width={300} height={100} src={reprolab} alt="hadero logo" />
+                </div>
+                <div className="logo">
+                  <Image width={300} height={100} src={rumailah} alt="hadero logo" />
+                </div>
+                <div className="logo">
+                  <Image width={300} height={100} src={suraj} alt="hadero logo" />
+                </div>
+                <div className="logo">
+                  <Image width={300} height={100} src={thaaram} alt="hadero logo" />
+                </div>
+                <div className="logo">
+                  <Image width={300} height={100} src={wellworth} alt="hadero logo" />
+                </div>
+                
               </div>
             </div>
            
