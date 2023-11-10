@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-function VideoTextCard({ data, bgColor }) {
+function VideoTextCard({ data, bgColor, borderColor, btnColor }) {
   const tabs = Object.keys(data);
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
 
@@ -23,8 +23,8 @@ function VideoTextCard({ data, bgColor }) {
                 key={tab}
                 onClick={() => setSelectedTab(tab)}
                 className={`${
-                  selectedTab === tab ? 'border-b-4 border-blue-300' : ''
-                } hover:border-b-4 transition duration-500 hover:border-blue-300 cursor-pointer`}
+                  selectedTab === tab ? borderColor : ''
+                } hover:border-b-4 transition duration-500 ${borderColor} cursor-pointer`}
               >
                 {tab}
               </h1>
@@ -73,7 +73,7 @@ function VideoTextCard({ data, bgColor }) {
               id="btns"
               className="flex items-center justify-center md:block p-3"
             >
-              <button className="bg-blue-300 py-2 px-4 md:py-3 md:px-7 rounded-lg font-bold text-white">
+              <button className= {` ${btnColor} py-2 px-4 md:py-3 md:px-7 rounded-lg font-bold text-white`}>
                 Dummybtn
               </button>
             </div>
