@@ -73,8 +73,7 @@ function Navbar() {
                 
                   <div className='md:flex mt-[-1vw] bg-white hidden w-[100vw] p-[1vw]'>
                     <div id='iconsleft' className='items-center justify-center flex-wrap w-[60%] h-[25vw] py-[1vw] px-[2vw] max-w-full md:border-r-2 md:border-gray-100'>
-                      <h3 className='text-md font-bold mt-[2vw] uppercase'>Team</h3>
-                      <div className='flex ml-[0vw] mt-[2vw] gap-[5vw]'>
+                      <div className='flex ml-[0vw] mt-[4vw] gap-[5vw]'>
                         <div id="icon1" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-blue-50 transition duration 200 hover:rounded-2xl'>
                           <Link href="/solutions/retail">
                             <h1 className='font-semibold text-md'><i class="ri-store-2-line mr-[0.3vw] text-blue-400 text-left text-xl"></i>Retail </h1>

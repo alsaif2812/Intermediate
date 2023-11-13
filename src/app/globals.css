@@ -188,7 +188,7 @@
   .marquee-content {
     white-space: nowrap;
     display: flex;
-    animation: marquee 8s linear infinite;
+    animation: marquee 64s linear infinite;
   }
 
   .logo {
