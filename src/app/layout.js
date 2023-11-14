@@ -11,11 +11,6 @@ const nunito = Nunito({
   display: 'swap',
 })
 
-// export const metadata = {
-//   title: 'Wahni-IT',
-//   description: 'Wahni-It-Solutions',
-// };
-
 export default function RootLayout({ children }) {
   
   

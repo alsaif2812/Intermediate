@@ -25,7 +25,7 @@ function VideoTextCard({ data, bgColor, borderColor, btnColor }) {
 
         <div className="md:mt-[0.6vw] md:flex w-full">
           <div className="md:w-[60%] w-full">
-            <div id="video" className="rounded-2xl md:p-4 md:mt-3 mt-6 p-10 w-full">
+            <div id="video" className="rounded-2xl md:p-4 md:mt-3 mt-6 p-10 w-full ">
               <video
                 src={data[selectedTab].video}
                 alt="img"

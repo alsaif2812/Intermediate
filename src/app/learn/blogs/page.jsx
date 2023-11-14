@@ -1,10 +1,12 @@
+import BlogCard from '@/components/Blogs'
 import React from 'react'
 
 const page = () => {
   return (
     <>
-    <h1>hello alsaif from blogs</h1>
-      
+<div id="blogs" className=" flex flex-wrap gap-10 items-center justify-around">
+   <BlogCard/>
+  </div>   
     </>
   )
 }
