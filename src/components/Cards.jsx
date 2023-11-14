@@ -4,6 +4,8 @@ import Image from 'next/image';
 import img from '../../public/images/Team.jpg';
 
 
+
+
 const Cards = () => {
   return (
     <>
@@ -113,15 +115,15 @@ const Cards = () => {
         <div id="hero" className='bg-[#BEADFA] bg-opacity-20 max-h-[100rem] md:flex md:items-center md:justify-center mb-16 mt-10 py-10 px-5 rounded-3xl md:max-w-[100vw] md:px-8'>
           <div className='md:mt-[0.6vw]'>
             <div id="tab" className='flex items-center justify-around md:justify-start md:gap-10 text-sm font-bold gap-5 overflow-x-auto'>
-              <Link href='/solutions/Manufacturing'>          <h1 className='border-b-4 border-blue-gray-800 '>Work Order</h1>
+              <Link href='/'>          <h1 className='border-b-4 border-blue-gray-800 '>Work Order</h1>
               </Link>
-              <Link href='/solutions/Manufacturing/Nav2'>
+              <Link href='/'>
                 <h1 className='hover:border-b-4 transition duration-500 hover:border-blue-gray-800 '>Production Plan</h1>
               </Link>
-              <Link href='/solutions/Manufacturing/Nav3'>
+              <Link href='/'>
                 <h1 className='hover:border-b-4 transition duration-500 hover:border-blue-gray-800 ' >Job Card</h1>
               </Link>
-              <Link href='/solutions/Manufacturing/Nav4'>
+              <Link href='/'>
                 <h1 className='hover:border-b-4 transition duration-500 hover:border-blue-gray-800 '>Downtime Entry</h1>
               </Link>
             </div>

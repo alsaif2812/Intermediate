@@ -2,6 +2,8 @@ import Image from 'next/image';
 import logosData from '../textContent/logos/logosData.json';
 import Link from 'next/link';
 import Cards from './Cards';
+import Marquee from "react-fast-marquee";
+
 
 export default function Home() {
   return (
@@ -104,16 +106,15 @@ export default function Home() {
             className="flex items-center justify-center flex-col md:mt-auto p-10 md:opacity-60 opacity-50 md:items-center md:justify-center md:flex-col bg-transparent mb-[5vw]"
           >
             <p className="text-sm md:text-xl md:mb-[2vw] mb-[8vw] text-center">Join our 50+ Successful Implementation stories</p>
-
-            <div className="marquee-container">
-          <div className="marquee-content flex items-center justify-center p-1 gap-1 w-[150vw]">
-            {logosData.map((logo, index) => (
-              <div className="logo" key={index}>
-                <Image width={300} height={100} src={`/../textContent/logos/${logo.src}`} alt={logo.alt} />
+            <Marquee pauseOnHover  >
+              <div className='gap-[5rem] flex items-center  pt-12'>
+                {logosData.map((logo, index) => (
+                  <div className="logo" key={index}>
+                    <Image width={100} height={100} src={`/images/${logo.src}`} alt={`${logo.name} logo`} />
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-        </div>
+            </Marquee>
           </div>
 
 
