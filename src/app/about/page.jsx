@@ -8,8 +8,7 @@ import Hero from '@/components/Hero';
 
 
 const Page = () => {
-  return (
-    <>
+  return <>
     <Hero/>
       <div id="top" className="md:flex md:w-full bg-blue-900 md:h-[30vw] h-[130vw]">
         <div id="leftabt" className='md:w-[50%]  md:pl-[10vw] pl-[3vw] md:pt-[4vw] pt-[10vw] md:mt-0 mt-[4vw] text-white'>
@@ -119,8 +118,6 @@ const Page = () => {
        <div className='ml-[20vw] mr-[-10vw]'>
        </div> 
     </>
-
-  );
 };
 
 export default Page;
