@@ -1,9 +1,10 @@
 import React from 'react'
+import CaseStudies from '../../../components/CaseStudies.jsx'
 
 const page = () => {
   return (
     <>
-      <h1>hello from case-studies</h1>
+<CaseStudies/>
     </>
   )
 }

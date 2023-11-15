@@ -339,14 +339,14 @@ function Navbar() {
               </MenuHandler>
               <MenuList className='bg-white w-1/2 h-auto'>
                 <div className='flex ml-[0vw] py-10 px-10 gap-[5vw]'>
-                  <Link href="/learn/blogs">
+                  <Link href="/about/company">
                     <div id="icon1" className=' w-[24vh] h-[auto] bg-transparent p-[0.8vw] hover:bg-green-50 transition duration 200 hover:rounded-2xl'>
                       <h1 className='font-bold text-md'><i class="ri-line-chart-line mr-[0.3vw] text-green-300 text-left text-xl"></i>Company</h1>
                       <p className='text-sm font-[500] mt-[0.5vw] opacity-90'>Break down any size projectinto customized tasks</p>
                     </div>
                   </Link>
                   <div id="icon2" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-blue-50 transition duration 200 hover:rounded-2xl'>
-                    <Link href="/learn/case-studies">
+                    <Link href="/about/team">
                       <h1 className='font-bold text-md'><i class="ri-team-fill mr-[0.3vw] text-blue-400 text-left text-xl"></i>Team</h1>
                       <p className='text-sm font-[500] mt-[0.5vw] opacity-90'>Create beautiful docs and connect them to tasks</p>
                     </Link>

@@ -3,16 +3,19 @@ import data from '../textContent/blogs/blogsData.json';
 
 const BlogCard = ({ image, heading, bodyText, profile }) => {
   return (
-    <div className="max-w-md mx-auto bg-white shadow-lg rounded-md overflow-hidden m-4">
+    <div className="max-w-md mx-auto bg-white shadow-lg rounded-md overflow-hidden m-4 mt-10">
       <img src={image} alt="Blog Image" className="w-full h-40 object-cover" />
       <div className="p-4">
         <h1 className="text-xl font-bold mb-2">{heading}</h1>
         <p className="text-gray-600">{bodyText}</p>
-        <div className="flex items-center mt-4">
-          <img src={profile.image} alt="Profile Image" className="w-8 h-8 rounded-full" />
-          <div className="ml-2">
-            <p className="font-semibold">{profile.name}</p>
-            <p className="text-gray-500">{profile.date}</p>
+        <div className="flex items-center justify-start mt-4 gap-4">
+          <img src={profile.image} alt="Profile Image" 
+          className="w-8 h-8 rounded-full" />
+          <p className="font-semibold pr-10">{profile.name}</p>
+          <div className="ml-2 flex items-center gap-2">
+          <i class="ri-time-line text-2xl text-gray-400"></i>
+          <p className='text-gray-500 text-md'>Max 10min read</p>
+            
           </div>
         </div>
       </div>

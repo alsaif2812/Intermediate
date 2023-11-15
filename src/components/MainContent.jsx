@@ -1,11 +1,20 @@
+"use client"
 import Image from 'next/image';
 import logosData from '../textContent/logos/logosData.json';
 import Link from 'next/link';
 import Cards from './Cards';
 import Marquee from "react-fast-marquee";
+import party from "party-js";
+export function triggerConfetti(e) {
+  party.confetti(e.target, {
+    count: party.variation.range(20, 40),
+  });
+}
 
 
 export default function Home() {
+  
+  
   return (
     <>
       <div id="page-1" className="h-full bg-opacity-80">
@@ -18,7 +27,7 @@ export default function Home() {
           loop
           alt="img"
           className="md:hidden mt-[4vw] md:mt-[1vw] w-[70%] md:mx-auto"
-          id="top-image"
+          id="topimg"
         />
         <div id="content">
           <div className="w-full max-h-screen flex flex-col md:flex-row mt-[-5vw] md:mt-[-2vw]">
@@ -70,12 +79,13 @@ export default function Home() {
                 </button>
               </a>
               <div className="mt-[8vw] md:mt-[3vw] mx-[5vw] md:mx-[0vw]" id="qualifications">
-                <p>
-                  <i className="ri-trophy-fill text-yellow-300 text-2xl"></i>
+              <p>
+                  <i onMouseOver={triggerConfetti} className="ri-trophy-fill text-yellow-300 text-2xl"></i>
                   <span className="text-md text-gray-600">
                     Frappe Certified Partner
                   </span>
                 </p>
+
                 <p>
                   <i className="ri-star-fill text-yellow-300 text-2xl"></i>
                   <i className="ri-star-fill text-yellow-300 text-2xl"></i>
@@ -97,7 +107,7 @@ export default function Home() {
                 width={1000}
                 height={100}
                 className="w-[100%] mt-14 pr-[10vw]"
-                id='bottom-video'
+                id='bottomimg'
               />
             </div>
           </div>
