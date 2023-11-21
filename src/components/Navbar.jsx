@@ -17,8 +17,8 @@ function Navbar() {
   const [openMenu, setOpenMenu] = React.useState(false);
   const [openMenu2, setOpenMenu2] = React.useState(false);
   const [openMenu3, setOpenMenu3] = React.useState(false);
-  const [openMenu4, setOpenMenu4] = React.useState(false);
   const [openMenu5, setOpenMenu5] = React.useState(false);
+  const [openMenu6, setOpenMenu6] = React.useState(false);
   const handleMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
@@ -332,7 +332,7 @@ function Navbar() {
                   About{" "}
                   <ChevronDownIcon
                     strokeWidth={2.5}
-                    className={`h-3.5 w-3.5 transition-transform bg-sky-blue hover:bg-light-purple duration-300 ease-in-out transform hover:scale-105 hover:text-blue-500 ${openMenu ? "rotate-180" : "/"
+                    className={`h-3.5 w-3.5 transition-transform bg-sky-blue hover:bg-light-purple duration-300 ease-in-out transform hover:scale-105 hover:text-blue-500 ${openMenu5 ? "rotate-180" : "/"
                       }`}
                   />
                 </Button>
@@ -356,7 +356,7 @@ function Navbar() {
             </Menu>
           </div>
           <div id="learn" className='mx-[-1vw] bg-inherit'>
-            <Menu open={openMenu4} handler={setOpenMenu4} >
+            <Menu open={openMenu6} handler={setOpenMenu6} >
               <MenuHandler>
                 <Button
                   variant="text"
@@ -365,7 +365,7 @@ function Navbar() {
                   learn{" "}
                   <ChevronDownIcon
                     strokeWidth={2.5}
-                    className={`h-3.5 w-3.5 transition-transform bg-sky-blue hover:bg-light-purple duration-300 ease-in-out transform hover:scale-105 hover:text-blue-500 ${openMenu ? "rotate-180" : "/"
+                    className={`h-3.5 w-3.5 transition-transform bg-sky-blue hover:bg-light-purple duration-300 ease-in-out transform hover:scale-105 hover:text-blue-500 ${openMenu6 ? "rotate-180" : "/"
                       }`}
                   />
                 </Button>
@@ -386,7 +386,7 @@ function Navbar() {
                   </div>
                   <Link href="/learn/faqs">
                     <div id="icon3" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-red-50 transition duration 200 hover:rounded-2xl'>
-                      <h1 className='font-bold text-md'><i class="ri-mail-check-line mr-[0.3vw] text-red-400 text-left text-xl"></i>FAQ's</h1>
+                      <h1 className='font-bold text-md'><i class="ri-mail-check-line mr-[0.3vw] text-red-400 text-left text-xl"></i>FAQ&apos;s</h1>
                       <p className='text-sm font-[500] mt-[0.5vw] opacity-90'>Create beautiful docs and connect them to tasks</p>
                     </div>
                   </Link>
@@ -400,7 +400,6 @@ function Navbar() {
           >
             Careers
           </Link>
-
         </div>
         <div id="nav3" className="hidden md:flex items-center justify-between gap-2">
           <button className="py-2 px-4 bg-[#ffffff] rounded-lg font-bold text-blue-400 bg-opacity-90 transition hover:bg-blue-500 hover:text-white hover:scale-105 hover:mt-[0.1vw] duration-300">

@@ -8,11 +8,11 @@ export default function Home() {
         <video
           width={1000}
           height={100}
-          src='images/home-video.webm'
+          src ='images/home-video.webm'
           autoPlay
           muted
           loop
-          alt="img"
+          alt="video"
           className="md:hidden mt-[4vw] md:mt-[1vw] w-[70%] md:mx-auto"
           id="top-image"
         />
