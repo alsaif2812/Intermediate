@@ -26,13 +26,13 @@ export default function Home() {
           muted
           loop
           alt="img"
-          className="md:hidden mt-[4vw] md:mt-[1vw] w-[70%] md:mx-auto"
+          className="md:hidden my-[4vw] mx-3  w-[100%] "
           id="topimg"
         />
         <div id="content">
           <div className="w-full max-h-screen flex flex-col md:flex-row mt-[-5vw] md:mt-[-2vw]">
             <div id="left" className="md:w-1/2 md:h-full md:px-12 md:py-12 md:ml-10">
-              <h1 className="text-3xl h-auto  md:h-auto md:text-5xl font-bold mt-[5vw] md:mt-[3vw] w-full" id="maintext">
+              <h1 className="text-[7vw] h-auto  md:h-auto md:text-5xl font-bold mt-[5vw] md:mt-[3vw] w-full text-[#393939]" id="maintext">
                 we have the solutions to
                 <p><span className="typed w-full"></span></p>
               </h1>
@@ -73,7 +73,7 @@ export default function Home() {
                   id="getquote"
                   className="md:py-[0.7vw] md:px-[2vw] py-[2vw] px-[17vw] bg-blue-500 rounded-md md:mt-[2vw] mt-[6vw] shadow-xl hover:shadow-none transition duration-300 md:ml-[0vw]"
                 >
-                  <span className="md:font-semibold font-bold text-white" id="getquote2">
+                  <span className="md:font-semibold font-extrabold  text-white" id="getquote2">
                     Get a Quote
                   </span>
                 </button>

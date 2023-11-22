@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Image from 'next/image';
 const TeamPage = () => {
   return (
     <div className="flex flex-wrap justify-center">
@@ -122,7 +122,7 @@ const TeamPage = () => {
 const Card = ({ name, position, photo }) => {
   return (
     <div className="bg-gray-100 rounded-lg shadow-lg p-4 m-4 w-full md:w-64 mb-10">
-    <img src={photo} alt={name} className="w-full h-64 object-cover rounded-t-lg md:rounded-t-none md:rounded-l-lg" />
+    <Image src={photo} alt={name} height={100} width={100} className="w-full h-64 object-cover rounded-t-lg md:rounded-t-none md:rounded-l-lg" />
     <div className="mt-4">
       <h2 className="text-xl font-semibold">{name}</h2>
       <p className="text-gray-500">{position}</p>

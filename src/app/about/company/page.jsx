@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Teamimg from '../../../../public/images/Team.jpg';
 import mission from '../../../../public/images/mission.png';
 import Hero from '@/components/Hero';
-import Marquee from 'react-fast-marquee';
+// import Marquee from 'react-fast-marquee';
 
 
 const Page = () => {
@@ -192,7 +192,7 @@ const Page = () => {
 <div id="contact" className="md:flex md:w-full md:h-[30vw] h-[200vw] md:px-[10vw] md:pt-[5vw] bg-gray-100">
   <div id="leftcontact" className="md:w-[50%] md:p-[4vw] p-[10vw] md:mt-0 mt-[4vw] text-[#212121]">
     <h1 className="md:text-6xl text-5xl font-extrabold md:tracking-wide md:leading-tight">Contact Us</h1>
-    <p className="md:text-xl opacity-80 tracking-wide md:mt-[1vw] mt-[4vw]">We're here to help. Get in touch with us!</p>
+    <p className="md:text-xl opacity-80 tracking-wide md:mt-[1vw] mt-[4vw]">We&apos;re here to help. Get in touch with us!</p>
   </div>
   <div id="rightcontact" className="md:w-[50%] md:p-[4vw] p-[10vw] md:flex items-center justify-center">
     <form className="md:w-[90%]">

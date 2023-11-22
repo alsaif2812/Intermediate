@@ -12,7 +12,7 @@ export default function Home() {
           autoPlay
           muted
           loop
-          alt="img"
+          alt="video"
           className="md:hidden mt-[4vw] md:mt-[1vw] w-[70%] md:mx-auto"
           id="top-image"
         />

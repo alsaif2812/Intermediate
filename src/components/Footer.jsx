@@ -17,6 +17,7 @@ const Footer = () => {
 src={logo}
 height={100}
 width={70}
+alt='img'
 />
       <p className='mt-5'><i class="ri-customer-service-2-fill mr-3"></i><a  href="tel:<phone>">9005768830</a>
  </p>
