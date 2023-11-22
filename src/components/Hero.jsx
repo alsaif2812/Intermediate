@@ -8,7 +8,7 @@ export default function Home() {
         <video
           width={1000}
           height={100}
-          src='images/home-video.webm'
+          src ='images/home-video.webm'
           autoPlay
           muted
           loop

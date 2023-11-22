@@ -17,7 +17,6 @@ function Navbar() {
   const [openMenu, setOpenMenu] = React.useState(false);
   const [openMenu2, setOpenMenu2] = React.useState(false);
   const [openMenu3, setOpenMenu3] = React.useState(false);
-  const [openMenu4, setOpenMenu4] = React.useState(false);
   const [openMenu5, setOpenMenu5] = React.useState(false);
   const [openMenu6, setOpenMenu6] = React.useState(false);
   const handleMenu = () => {
@@ -401,7 +400,6 @@ function Navbar() {
           >
             Careers
           </Link>
-
         </div>
         <div id="nav3" className="hidden md:flex items-center justify-between gap-2">
           <button className="py-2 px-4 bg-[#ffffff] rounded-lg font-bold text-blue-400 bg-opacity-90 transition hover:bg-blue-500 hover:text-white hover:scale-105 hover:mt-[0.1vw] duration-300">

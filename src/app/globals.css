@@ -2,23 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
 @keyframes changeText {
-  0%, 20% {
+  0%,
+  20% {
     content: 'streamline operations';
   }
-  25%, 45% {
+  25%,
+  45% {
     content: 'automate production';
   }
-  50%, 70% {
+  50%,
+  70% {
     content: 'increase profits';
   }
-  75%, 95% {
+  75%,
+  95% {
     content: 'reduce costs';
   }
   100% {
@@ -26,10 +24,13 @@
   }
 }
 
-
 .typed::before {
   content: 'to run your business';
-  background: -webkit-linear-gradient(208deg, rgba(70,149,240,1) 0%, rgba(252,66,206,1) 78%); 
+  background: -webkit-linear-gradient(
+    208deg,
+    rgba(70, 149, 240, 1) 0%,
+    rgba(252, 66, 206, 1) 78%
+  );
   background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: changeText 5s infinite;
@@ -155,66 +156,16 @@
     margin-top: 2rem;
   }
 }
-  .marquee-container {
-    width: 1000vw;
-    overflow: hidden;
-  }
-  .marquee-content {
-    white-space: nowrap;
-    display: inline-block;
-    animation: marquee 8s linear infinite; 
-  }
-  .logo {
-    display: inline-block;
-    margin-right: 20px; 
-  }
-  @keyframes marquee {
-    0% {
-      transform: translateX(100%);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
 
-
-@media (min-width: 1101px) {
-  /* Add these styles outside of your component code */
-  .marquee-container {
-    width: 100%;
-    overflow: hidden;
-  }
-
-  .marquee-content {
-    white-space: nowrap;
-    display: flex;
-    animation: marquee 64s linear infinite;
-  }
-
-  .logo {
-    display: inline-block;
-    margin-right: 20px; /* Adjust the spacing between logos */
-  }
-}
-@media (max-width: 1400px) and (min-width: 720px){
-#right #bottomimg{
-background: #000;
-display: none;
- }
-#left #topimg{
- background: #000;
- display: block;
- }
-}
 @media (max-width: 1000px) and (min-width: 768px) {
-  #mainfaq #firstfaq{
+  #mainfaq #firstfaq {
     width: 100%;
   }
-  #mainfaq #secondfaq{
-  width: 100%;
+  #mainfaq #secondfaq {
+    width: 100%;
   }
-
 }
+<<<<<<< HEAD
 
   
 
@@ -345,3 +296,5 @@ ul.team-icon li a.dribble{
 }
 /* styles.module.css */
 
+=======
+>>>>>>> f76af97b5a10d35d933426642f02c4d39fbfb4f2
