@@ -82,42 +82,42 @@ function Navbar() {
                           <p className='font-[500] text-sm opacity-75'>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
                         </Link>
                       </div>
-                      <div id="icon2" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-blue-50 transition duration 200 hover:rounded-2xl'>
+                      <div id="icon2" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-red-50 transition duration 200 hover:rounded-2xl'>
                         <Link href="/solutions/services">
-                          <h1 className='font-semibold text-md'><i class="ri-service-fill mr-[0.3vw] text-blue-400 text-left text-xl"></i>services</h1>
+                          <h1 className='font-semibold text-md'><i class="ri-service-fill mr-[0.3vw] text-red-400 text-left text-xl"></i>services</h1>
                           <p className='font-[500] text-sm opacity-75'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         </Link>
                       </div>
-                      <div id="icon3" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-blue-50 transition duration 200 hover:rounded-2xl'>
+                      <div id="icon3" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-orange-50 transition duration 200 hover:rounded-2xl'>
                         <Link href="/solutions/healthcare">
-                          <h1 className='font-semibold text-md'><i class="ri-hospital-fill mr-[0.3vw] text-blue-400 text-left text-xl"></i>Healthcare</h1>
+                          <h1 className='font-semibold text-md'><i class="ri-hospital-fill mr-[0.3vw] text-orange-400 text-left text-xl"></i>Healthcare</h1>
                           <p className='font-[500] text-sm opacity-75'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         </Link>
                       </div>
-                      <div id="icon4" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-blue-50 transition duration 200 hover:rounded-2xl'>
+                      <div id="icon4" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-pink-50 transition duration 200 hover:rounded-2xl'>
                         <Link href="/solutions/education">
-                          <h1 className='font-semibold text-md'><i class="ri-hospital-fill mr-[0.3vw] text-blue-400 text-left text-xl"></i>Education</h1>
+                          <h1 className='font-semibold text-md'><i class="ri-hospital-fill mr-[0.3vw] text-pink-400 text-left text-xl"></i>Education</h1>
                           <p className='font-[500] text-sm opacity-75'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         </Link>
                       </div>
                     </div>
                     <br />
                     <div className='flex ml-[0vw] mt-[2vw] gap-[5vw]'>
-                      <div id="icon4" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-blue-50 transition duration 200 hover:rounded-2xl'>
+                      <div id="icon4" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-blue-gray-50 transition duration 200 hover:rounded-2xl'>
                         <Link href="/solutions/manufacturing">
-                          <h1 className='font-semibold text-md'><i class="ri-tools-fill mr-[0.3vw] text-blue-400 text-left text-xl"></i>Manufacturing</h1>
+                          <h1 className='font-semibold text-md'><i class="ri-tools-fill mr-[0.3vw] text-blue-gray-400 text-left text-xl"></i>Manufacturing</h1>
                           <p className='font-[500] text-sm opacity-75'>Lorem ipsum dolor sit amet consectetur </p>
                         </Link>
                       </div>
-                      <div id="icon5" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-blue-50 transition duration 200 hover:rounded-2xl'>
+                      <div id="icon5" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-lime-50 transition duration 200 hover:rounded-2xl'>
                         <Link href="/solutions/realestate">
-                          <h1 className='font-semibold text-md'><i class="ri-pencil-line mr-[0.3vw] text-blue-400 text-left text-xl"></i>Real Estate</h1>
+                          <h1 className='font-semibold text-md'><i class="ri-pencil-line mr-[0.3vw] text-lime-400 text-left text-xl"></i>Real Estate</h1>
                           <p className='font-[500] text-sm opacity-75'>Lorem ipsum dolor sit </p>
                         </Link>
                       </div>
-                      <div id="icon6" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-blue-50 transition duration 200 hover:rounded-2xl'>
+                      <div id="icon6" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-light-green-50 transition duration 200 hover:rounded-2xl'>
                         <Link href="/solutions/distribution">
-                          <h1 className='font-semibold text-md'><i class="ri-truck-line mr-[0.3vw] text-blue-400 text-left text-xl"></i>Distribution</h1>
+                          <h1 className='font-semibold text-md'><i class="ri-truck-line mr-[0.3vw] text-light-green-500 text-left text-xl"></i>Distribution</h1>
                           <p className='font-[500] text-sm opacity-75'>Lorem ipsum dolor sit amet</p>
                         </Link>
                       </div>
@@ -199,9 +199,9 @@ function Navbar() {
                   <div id='iconsleft' className=' items-center justify-center flex-wrap w-[48%]  h-[15vw] py-[1vw] px-[2vw] ml-[9vw]'>
                     <h3 className='text-md font-bold mt-[2vw] uppercase'>Product</h3>
                     <div className='flex ml-[0vw] mt-[2vw] gap-[5vw]'>
-                      <div id="icon1" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-green-50 transition duration 200 hover:rounded-2xl'>
+                      <div id="icon1" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-brown-50 transition duration 200 hover:rounded-2xl'>
                         <Link href="/products/erpnext">
-                          <h1 className='font-bold text-md'><i class="ri-task-line mr-[0.3vw] text-green-300 text-left text-xl"></i>ERPNext</h1>
+                          <h1 className='font-bold text-md'><i class="ri-task-line mr-[0.3vw] text-brown-300 text-left text-xl"></i>ERPNext</h1>
                           <p className='text-sm font-[500] mt-[0.5vw] opacity-90'>Break down any size projectinto customized tasks</p>
                         </Link>
                       </div>
@@ -211,9 +211,9 @@ function Navbar() {
                           <p className='text-sm font-[500] mt-[0.5vw] opacity-90'>Create beautiful docs and connect them to tasks</p>
                         </Link>
                       </div>
-                      <div id="icon3" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-green-50 transition duration 200 hover:rounded-2xl'>
+                      <div id="icon3" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-pink-50 transition duration 200 hover:rounded-2xl'>
                         <Link href="/products/neupos">
-                          <h1 className='font-semibold text-md'><i class="ri-trophy-line mr-[0.3vw] text-green-300 text-left text-xl"></i>NeuPOS</h1>
+                          <h1 className='font-semibold text-md'><i class="ri-trophy-line mr-[0.3vw] text-pink-300 text-left text-xl"></i>NeuPOS</h1>
                           <p className='text-sm font-[500] mt-[0.5vw] opacity-90'>Track work against strategy with measurable targets</p>
                         </Link>
                       </div>
@@ -252,23 +252,23 @@ function Navbar() {
                         </Link>
 
                       </div>
-                      <div id="icon2" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-pink-50 transition duration 200 hover:rounded-2xl'>
+                      <div id="icon2" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-blue-50 transition duration 200 hover:rounded-2xl'>
                         <Link href="/Services/ecommerce">
-                          <h1 className='font-bold text-md'><i class="ri-file-list-2-line mr-[0.3vw] text-pink-400 text-left text-xl"></i>E-commerce</h1>
+                          <h1 className='font-bold text-md'><i class="ri-file-list-2-line mr-[0.3vw] text-blue-400 text-left text-xl"></i>E-commerce</h1>
                           <p className='text-sm font-[500] mt-[0.5vw] opacity-90'>Create beautiful docs and connect them to tasks</p>
 
                         </Link>
                       </div>
-                      <div id="icon2" className=' w-[28vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-pink-50 transition duration 200 hover:rounded-2xl'>
+                      <div id="icon2" className=' w-[28vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-green-50 transition duration 200 hover:rounded-2xl'>
                         <Link href="/Services/implementation">
-                          <h1 className='font-bold text-md'><i class="ri-swap-fill mr-[0.3vw] text-pink-400 text-left text-xl"></i>ERP Implementation</h1>
+                          <h1 className='font-bold text-md'><i class="ri-swap-fill mr-[0.3vw] text-green-400 text-left text-xl"></i>ERP Implementation</h1>
                           <p className='text-sm font-[500] mt-[0.5vw] opacity-90'>Create beautiful docs and connect them to tasks</p>
 
                         </Link>
                       </div>
-                      <div id="icon2" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-pink-50 transition duration 200 hover:rounded-2xl'>
+                      <div id="icon2" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg--50 transition duration 200 hover:rounded-2xl'>
                         <Link href="/Services/workflow">
-                          <h1 className='font-bold text-md'><i class="ri-team-fill mr-[0.3vw] text-pink-400 text-left text-xl"></i>Workflow automation</h1>
+                          <h1 className='font-bold text-md'><i class="ri-team-fill mr-[0.3vw] text--400 text-left text-xl"></i>Workflow automation</h1>
                           <p className='text-sm font-[500] mt-[0.5vw] opacity-90'>Create beautiful docs and connect them to tasks</p>
 
                         </Link>
@@ -307,9 +307,9 @@ function Navbar() {
                       <p className='text-sm font-[500] mt-[0.5vw] opacity-90'>Break down any size projectinto customized tasks</p>
                     </div>
                   </Link>
-                  <div id="icon2" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-orange-50 transition duration 200 hover:rounded-2xl'>
+                  <div id="icon2" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-pink-50 transition duration 200 hover:rounded-2xl'>
                     <Link href="/about/team">
-                      <h1 className='font-bold text-md'><i class="ri-team-fill mr-[0.3vw] text-orange-400 text-left text-xl"></i>Team</h1>
+                      <h1 className='font-bold text-md'><i class="ri-team-fill mr-[0.3vw] text-pink-400 text-left text-xl"></i>Team</h1>
                       <p className='text-sm font-[500] mt-[0.5vw] opacity-90'>Create beautiful docs and connect them to tasks</p>
                     </Link>
                   </div>
@@ -335,8 +335,8 @@ function Navbar() {
               <MenuList className='bg-white w-1/2 h-auto border-none'>
                 <div className='flex ml-[0vw] py-10 px-10 gap-[5vw]'>
                   <Link href="/learn/blogs">
-                    <div id="icon1" className=' w-[24vh] h-[auto] bg-transparent p-[0.8vw] hover:bg-lime-50 transition duration 200 hover:rounded-2xl'>
-                      <h1 className='font-bold text-md'><i class="ri-line-chart-line mr-[0.3vw] text-lime-300 text-left text-xl"></i>Blogs</h1>
+                    <div id="icon1" className=' w-[24vh] h-[auto] bg-transparent p-[0.8vw] hover:bg-pink-50 transition duration 200 hover:rounded-2xl'>
+                      <h1 className='font-bold text-md'><i class="ri-line-chart-line mr-[0.3vw] text-pink-300 text-left text-xl"></i>Blogs</h1>
                       <p className='text-sm font-[500] mt-[0.5vw] opacity-90'>Break down any size projectinto customized tasks</p>
                     </div>
                   </Link>
@@ -347,8 +347,8 @@ function Navbar() {
                     </Link>
                   </div>
                   <Link href="/learn/faqs">
-                    <div id="icon3" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-lime-50 transition duration 200 hover:rounded-2xl'>
-                      <h1 className='font-bold text-md'><i class="ri-mail-check-line mr-[0.3vw] text-lime-400 text-left text-xl"></i>FAQ&apos;s</h1>
+                    <div id="icon3" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-green-50 transition duration 200 hover:rounded-2xl'>
+                      <h1 className='font-bold text-md'><i class="ri-mail-check-line mr-[0.3vw] text-green-400 text-left text-xl"></i>FAQ&apos;s</h1>
                       <p className='text-sm font-[500] mt-[0.5vw] opacity-90'>Create beautiful docs and connect them to tasks</p>
                     </div>
                   </Link>
