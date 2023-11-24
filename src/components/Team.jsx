@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Teamdata from '../textContent/team/team.json';
 
+
+
 const Card = () => {
           const [hoveredCard, setHoveredCard] = useState(null);
           return (
@@ -16,25 +18,54 @@ const Card = () => {
                                         {Teamdata.map((member) => (
                                                   <div
                                                             key={member.id}
-                                                            className="bg-white rounded-lg p-4 m-4 w-full sm:w-1/2 md:w-[20%]  transition duration-500 ease-in-out transform hover:scale-100"
-                                                            onMouseEnter={() => setHoveredCard(member.id)}
-                                                            onMouseLeave={() => setHoveredCard(null)}
+                                                            className="bg-white rounded-lg p-4 m-4 w-full sm:w-1/2 md:w-[20%] relative transition duration-500 ease-in-out transform hover:scale-100"
                                                   >
-
                                                             <Image
+                                                                      onMouseEnter={() => setHoveredCard(member.id)}
+                                                                      onMouseLeave={() => setHoveredCard(null)}
                                                                       src={hoveredCard === member.id ? member.cameoImage : member.photo}
-                                                                      alt='img'
+                                                                      alt="img"
                                                                       height={100}
                                                                       width={1000}
                                                                       className="w-full object-cover rounded-t-lg md:rounded-t-none md:rounded-l-lg transition-opacity duration-300 ease-in-out"
                                                             />
+                                                            <div className="flex justify-center items-center   transition-opacity duration-300 mt-4">
+                                                                      <a
+                                                                                href={member.linkedin}
+                                                                                target="_blank"
+                                                                                rel="noopener noreferrer"
+                                                                                className="flex items-center justify-center"
+                                                                      >
+                                                                                <i className="ri-linkedin-box-fill mx-2 text-3xl cursor-pointer"></i>
+                                                                      </a>
+                                                                      <a
+                                                                                href={member.instagram}
+                                                                                target="_blank"
+                                                                                rel="noopener noreferrer"
+                                                                                className="flex items-center justify-center"
+                                                                      >
+                                                                                <i className="ri-instagram-line mx-2 text-3xl cursor-pointer"></i>
+                                                                      </a>
+                                                                      <a
+                                                                                href={member.facebook}
+                                                                                target="_blank"
+                                                                                rel="noopener noreferrer"
+                                                                                className="flex items-center justify-center"
+                                                                      >
+                                                                                <i className="ri-facebook-circle-fill mx-2 text-3xl cursor-pointer"></i>
+                                                                      </a>
+                                                            </div>
                                                             <div className="mt-4 mb-10">
                                                                       <h2 className="text-xl font-semibold">{member.name}</h2>
                                                                       <p className="text-gray-500">{member.position}</p>
                                                             </div>
+
                                                   </div>
                                         ))}
                               </div>
+
+
+
                     </>
           );
 };
