@@ -6,7 +6,7 @@ import Image from 'next/image';
 const CaseStudies = ({ image, heading, bodyText, profile }) => {
   return (
     <div className="max-w-md mx-auto bg-white shadow-lg rounded-md overflow-hidden m-4">
-      <Image height={100} width={1000}  src={image} alt="Blog Image" className="w-full max-h-96 object-cover" />
+      <Image height={100} width={1000} src={image} alt="Blog Image" className="w-full max-h-96 object-cover" />
       <div className="p-4">
         <h1 className="text-xl font-bold mb-2">{heading}</h1>
         <p className="text-gray-600">{bodyText}</p>

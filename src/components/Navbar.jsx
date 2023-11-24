@@ -179,9 +179,9 @@ function Navbar() {
               </MenuList>
             </Menu>
           </div>
-          <div id="products" className='mx-[-1vw]'>
+          <div id="products" className='mx-[-1vw] border-none'>
             <Menu open={openMenu2} handler={setOpenMenu2} >
-              <MenuHandler>
+              <MenuHandler >
                 <Button
                   variant="text"
                   className="flex items-center gap-1 text-base font-bold capitalize tracking-normal bg-sky-blue hover:bg-light-purple transition duration-300 ease-in-out transform hover:scale-105 hover:text-blue-500"
