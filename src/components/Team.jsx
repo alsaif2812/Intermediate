@@ -47,7 +47,7 @@ const Card = () => {
                                                                                 <i className="ri-instagram-line mx-2 text-3xl cursor-pointer"></i>
                                                                       </a>
                                                                       <a
-                                                                                href={member.facebook}
+                                                                                href={member.github}
                                                                                 target="_blank"
                                                                                 rel="noopener noreferrer"
                                                                                 className="flex items-center justify-center"

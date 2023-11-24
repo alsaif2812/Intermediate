@@ -341,7 +341,7 @@ function Navbar() {
                     </div>
                   </Link>
                   <div id="icon2" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-lime-50 transition duration 200 hover:rounded-2xl'>
-                    <Link href="/learn/case-studies">
+                    <Link href="/learn/casestudies">
                       <h1 className='font-bold text-md'><i class="ri-team-fill mr-[0.3vw] text-lime-400 text-left text-xl"></i>case studies</h1>
                       <p className='text-sm font-[500] mt-[0.5vw] opacity-90'>Create beautiful docs and connect them to tasks</p>
                     </Link>
