@@ -1,6 +1,7 @@
 "use client"
 import Image from 'next/image';
-import logosData from '../textContent/logos/logosData.json';
+import logosData1 from '../textContent/logos/logosData1.json';
+import logosData2 from '../textContent/logos/logosData2.json';
 import Link from 'next/link';
 import Cards from './Cards';
 import Marquee from "react-fast-marquee";
@@ -13,8 +14,8 @@ export function triggerConfetti(e) {
 
 
 export default function Home() {
-  
-  
+
+
   return (
     <>
       <div id="page-1" className="h-full bg-opacity-80">
@@ -79,7 +80,7 @@ export default function Home() {
                 </button>
               </a>
               <div className="mt-[8vw] md:mt-[3vw] mx-[5vw] md:mx-[0vw]" id="qualifications">
-              <p>
+                <p>
                   <i onMouseOver={triggerConfetti} className="ri-trophy-fill text-yellow-300 text-2xl"></i>
                   <span className="text-md text-gray-600">
                     Frappe Certified Partner
@@ -116,15 +117,26 @@ export default function Home() {
             className="flex items-center justify-center flex-col md:mt-auto p-10 md:opacity-60 opacity-50 md:items-center md:justify-center md:flex-col bg-transparent mb-[5vw]"
           >
             <p className="text-sm md:text-xl md:mb-[2vw] mb-[8vw] text-center">Join our 50+ Successful Implementation stories</p>
-            <Marquee pauseOnHover  >
-              <div className='gap-[5rem] flex items-center  pt-12'>
-                {logosData.map((logo, index) => (
+            <Marquee pauseOnHover direction="left">
+              <div className='gap-[5rem] flex items-center pt-12'>
+                {logosData1.map((logo, index) => (
                   <div className="logo" key={index}>
-                    <Image width={100} height={100} src={`/images/${logo.src}`} alt={`${logo.name} logo`} />
+                    <Image width={100} height={90} src={`/images/${logo.src}`} alt={`${logo.name} logo`} />
                   </div>
                 ))}
               </div>
             </Marquee>
+
+            <Marquee pauseOnHover direction="right" >
+              <div className='gap-[5rem] flex items-center pt-12'>
+                {logosData2.map((logo, index) => (
+                  <div className="logo" key={index}>
+                    <Image width={100} height={90} src={`/images/${logo.src}`} alt={`${logo.name} logo`} />
+                  </div>
+                ))}
+              </div>
+            </Marquee>
+
           </div>
 
 
