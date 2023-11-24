@@ -107,7 +107,7 @@ const Footer = () => {
 
         <div className='bg-white'>
           <div class="container mx-auto py-4 px-5 flex  flex-wrap flex-col sm:flex-row  items-center m">
-            <p class="text-gray-500 text-sm text-center sm:text-left ">© 2020 Wahni
+            <p class="text-gray-500 text-sm text-center sm:text-left ">© {new Date().getFullYear()}   Wahni
             </p>
             <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
               <p className='mx-5'><span className='mx-2'>Terms</span> | <span className='mx-2'>Privacy Policy</span> </p>

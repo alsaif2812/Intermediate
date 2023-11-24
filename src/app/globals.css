@@ -5,27 +5,33 @@
 @keyframes changeText {
   0%,
   20% {
+    opacity: 1;
     content: 'streamline operations';
   }
   25%,
   45% {
+    opacity: 1;
     content: 'automate production';
   }
   50%,
   70% {
+    opacity: 1;
     content: 'increase profits';
   }
   75%,
   95% {
+    opacity: 1;
     content: 'reduce costs';
   }
-  100% {
+  100%,
+  120% {
+    opacity: 1;
     content: 'boost productivity';
   }
 }
 
 .typed::before {
-  content: 'to run your business';
+  content: ' run your business';
   background: -webkit-linear-gradient(
     208deg,
     rgba(70, 149, 240, 1) 0%,
@@ -33,7 +39,7 @@
   );
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: changeText 5s infinite;
+  animation: changeText 5s infinite; /* Adjusted animation duration */
 }
 
 @media (max-width: 767px) {

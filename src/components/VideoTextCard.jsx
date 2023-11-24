@@ -19,13 +19,16 @@ function VideoTextCard({ data, bgColor, borderColor, btnColor }) {
               <h1
                 key={tab}
                 onClick={() => setSelectedTab(tab)}
-                className={`cursor-pointer text-lg ${selectedTab === tab
-                  ? `${borderColor} border-b-4 pb-1 transition duration-300 ${borderColor}`
-                  : ''
+                className={`cursor-pointer text-lg capitalize leading-normal transition duration-300 ${selectedTab === tab
+                    ? `${borderColor} border-b-4`
+                    : 'border-b-4 border-transparent' // Transparent border for non-active tabs
                   }`}
               >
                 {tab}
               </h1>
+
+
+
             ))}
           </div>
         ) : (

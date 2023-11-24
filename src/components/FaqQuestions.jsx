@@ -31,7 +31,7 @@ function AccordionAlwaysOpen() {
                                                                                                     <AccordionHeader onClick={() => handleOpen(key, index)} className="capitalize bg-blue-300 bg-opacity-50 flex flex-col items-start gap-1   px-5 md:px-4 rounded-md">
                                                                                                               <p className='text-[#2e2d2d]'>{item.title}<i class="ri-arrow-down-s-line px-3 text-2xl"></i></p>
                                                                                                               <AccordionBody>
-                                                                                                                        <p className="text-xl font-semibold font-sans text-zinc-500  py-3 rounded-lg capitalize">
+                                                                                                                        <p className="text-xl font-medium font-serif text-zinc-500 py-3 rounded-lg capitalize">
                                                                                                                                   {item.body}
                                                                                                                         </p>
                                                                                                               </AccordionBody>
