@@ -1,7 +1,7 @@
 {
-    "blogCards": [
+    "CaseStudies": [
       {
-        "image": "https://wahni.io/assets/img/case-study/fertech-case-study.webp",
+        "image": "/images/fertech.webp",
         "heading": "Fertech Doors and Windows Pvt Ltd",
         "bodyText": "Established in 2016, Fertech Doors and Windows Pvt Ltd, Malappuram are specialised in the production and sales of high-quality doors and window frames. The group of skilled and experienced teams execute the production from wireframe to delivery on clients’ work sites...,",
         "profile": {

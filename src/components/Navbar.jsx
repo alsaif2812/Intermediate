@@ -57,7 +57,7 @@ function Navbar() {
             Home
           </Link>
           <div id="solutions" className='mx-[-1vw] bg-inherit'>
-            <Menu open={openMenu} handler={setOpenMenu} >
+            <Menu open={openMenu} handler={setOpenMenu}  >
               <MenuHandler>
                 <Button
                   variant="text"
@@ -73,7 +73,7 @@ function Navbar() {
               </MenuHandler>
               <MenuList className="hidden  lg:grid  p-1 bg-transparent border-none  ">
 
-                <div className='md:flex mt-[-1vw] bg-white hidden w-[100vw] p-[1vw]'>
+                <div className='md:flex mt-[-1vw] bg-white border-none hidden w-[100vw] p-[1vw]'>
                   <div id='iconsleft' className='items-center justify-center flex-wrap w-[60%] h-[25vw] py-[1vw] px-[2vw] max-w-full md:border-r-2 md:border-gray-100'>
                     <div className='flex ml-[0vw] mt-[4vw] gap-[5vw]'>
                       <div id="icon1" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-blue-50 transition duration 200 hover:rounded-2xl'>
@@ -170,45 +170,7 @@ function Navbar() {
                   </div>
                 </div>
 
-                {/* <div className="main h-[30rem]  w-[70vw] flex items-center bg-white rounded-2xl ">
 
-                  <div className="left h-full w-[20%] bg-gray-400   pt-6 flex flex-col gap-2 items-center">
-                    <div className="first  h-20 p-5 bg-red-100 flex flex-col items-start justify-center gap-1">
-                    <h1><i class="ri-hospital-fill  text-blue-400 text-left text-xl mr-3"></i><span className='text-lg '>Sales</span></h1>
-                    <p className='text-sm '>Lorem ipsum dolor, sit amet consectetur <br /> adipisicing elit. Excepturi, quasi?</p>
-                    </div>
-                    <div className="second  h-20 p-5 bg-red-100 flex flex-col items-start justify-center gap-1">
-                    <h1><i class="ri-hospital-fill  text-blue-400 text-left text-xl mr-3"></i><span className='text-lg '>Sales</span></h1>
-                    <p className='text-sm '>Lorem ipsum dolor, sit amet consectetur <br /> adipisicing elit. Excepturi, quasi?</p>
-                    </div>
-                    <div className="third  h-20 p-5 bg-red-100 flex flex-col items-start justify-center gap-1">
-                    <h1><i class="ri-hospital-fill  text-blue-400 text-left text-xl mr-3"></i><span className='text-lg '>Sales</span></h1>
-                    <p className='text-sm '>Lorem ipsum dolor, sit amet consectetur <br /> adipisicing elit. Excepturi, quasi?</p>
-                    </div>
-                    <div className="fourth  h-20 p-5 bg-red-100 flex flex-col items-start justify-center gap-1">
-                    <h1><i class="ri-hospital-fill  text-blue-400 text-left text-xl mr-3"></i><span className='text-lg '>Sales</span></h1>
-                    <p className='text-sm '>Lorem ipsum dolor, sit amet consectetur <br /> adipisicing elit. Excepturi, quasi?</p>
-                    </div>
-                  </div>
-                  <div className="right h-full w-[20%]  bg-gray-400  pt-6 flex flex-col gap-2 items-center">
-                  <div className="first  h-20 p-5 bg-red-100 flex flex-col items-start justify-center gap-1">
-                    <h1><i class="ri-hospital-fill  text-blue-400 text-left text-xl mr-3"></i><span className='text-lg '>Sales</span></h1>
-                    <p className='text-sm '>Lorem ipsum dolor, sit amet consectetur <br /> adipisicing elit. Excepturi, quasi?</p>
-                    </div>
-                    <div className="second  h-20 p-5 bg-red-100 flex flex-col items-start justify-center gap-1">
-                    <h1><i class="ri-hospital-fill  text-blue-400 text-left text-xl mr-3"></i><span className='text-lg '>Sales</span></h1>
-                    <p className='text-sm '>Lorem ipsum dolor, sit amet consectetur <br /> adipisicing elit. Excepturi, quasi?</p>
-                    </div>
-                    <div className="third  h-20 p-5 bg-red-100 flex flex-col items-start justify-center gap-1">
-                    <h1><i class="ri-hospital-fill  text-blue-400 text-left text-xl mr-3"></i><span className='text-lg '>Sales</span></h1>
-                    <p className='text-sm '>Lorem ipsum dolor, sit amet consectetur <br /> adipisicing elit. Excepturi, quasi?</p>
-                    </div>
-                    <div className="fourth  h-20 p-5 bg-red-100 flex flex-col items-start justify-center gap-1">
-                    <h1><i class="ri-hospital-fill  text-blue-400 text-left text-xl mr-3"></i><span className='text-lg '>Sales</span></h1>
-                    <p className='text-sm '>Lorem ipsum dolor, sit amet consectetur <br /> adipisicing elit. Excepturi, quasi?</p>
-                    </div>
-                  </div>
-                </div> */}
 
 
 
@@ -243,15 +205,15 @@ function Navbar() {
                           <p className='text-sm font-[500] mt-[0.5vw] opacity-90'>Break down any size projectinto customized tasks</p>
                         </Link>
                       </div>
-                      <div id="icon2" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-blue-50 transition duration 200 hover:rounded-2xl'>
+                      <div id="icon2" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-green-50 transition duration 200 hover:rounded-2xl'>
                         <Link href="/products/mobileapp">
-                          <h1 className='font-bold text-md'><i class="ri-file-text-line mr-[0.3vw] text-blue-400 text-left text-xl"></i>Mobile App</h1>
+                          <h1 className='font-bold text-md'><i class="ri-file-text-line mr-[0.3vw] text-green-300 text-left text-xl"></i>Mobile App</h1>
                           <p className='text-sm font-[500] mt-[0.5vw] opacity-90'>Create beautiful docs and connect them to tasks</p>
                         </Link>
                       </div>
-                      <div id="icon3" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-pink-50 transition duration 200 hover:rounded-2xl'>
+                      <div id="icon3" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-green-50 transition duration 200 hover:rounded-2xl'>
                         <Link href="/products/neupos">
-                          <h1 className='font-semibold text-md'><i class="ri-trophy-line mr-[0.3vw] text-pink-400 text-left text-xl"></i>NeuPOS</h1>
+                          <h1 className='font-semibold text-md'><i class="ri-trophy-line mr-[0.3vw] text-green-300 text-left text-xl"></i>NeuPOS</h1>
                           <p className='text-sm font-[500] mt-[0.5vw] opacity-90'>Track work against strategy with measurable targets</p>
                         </Link>
                       </div>
@@ -283,30 +245,30 @@ function Navbar() {
                   <div id='iconsleft' className=' items-center justify-center flex-wrap w-[70%]  h-[15vw] py-[1vw] px-[2vw] ml-[9vw]'>
 
                     <div className='flex ml-[0vw] mt-[5vw] gap-[5vw]'>
-                      <div id="icon1" className=' w-[28vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-green-50 transition duration 200 hover:rounded-2xl'>
+                      <div id="icon1" className=' w-[28vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-pink-50 transition duration 200 hover:rounded-2xl'>
                         <Link href="/Services/business">
-                          <h1 className='font-bold text-md'><i class="ri-line-chart-line mr-[0.3vw] text-green-300 text-left text-xl"></i>Business Consulting</h1>
+                          <h1 className='font-bold text-md'><i class="ri-line-chart-line mr-[0.3vw] text-pink-300 text-left text-xl"></i>Business Consulting</h1>
                           <p className='text-sm font-[500] mt-[0.5vw] opacity-90'>Break down any size projectinto customized </p>
                         </Link>
 
                       </div>
-                      <div id="icon2" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-blue-50 transition duration 200 hover:rounded-2xl'>
+                      <div id="icon2" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-pink-50 transition duration 200 hover:rounded-2xl'>
                         <Link href="/Services/ecommerce">
-                          <h1 className='font-bold text-md'><i class="ri-file-list-2-line mr-[0.3vw] text-blue-400 text-left text-xl"></i>E-commerce</h1>
+                          <h1 className='font-bold text-md'><i class="ri-file-list-2-line mr-[0.3vw] text-pink-400 text-left text-xl"></i>E-commerce</h1>
                           <p className='text-sm font-[500] mt-[0.5vw] opacity-90'>Create beautiful docs and connect them to tasks</p>
 
                         </Link>
                       </div>
-                      <div id="icon2" className=' w-[28vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-blue-50 transition duration 200 hover:rounded-2xl'>
+                      <div id="icon2" className=' w-[28vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-pink-50 transition duration 200 hover:rounded-2xl'>
                         <Link href="/Services/implementation">
-                          <h1 className='font-bold text-md'><i class="ri-swap-fill mr-[0.3vw] text-blue-400 text-left text-xl"></i>ERP Implementation</h1>
+                          <h1 className='font-bold text-md'><i class="ri-swap-fill mr-[0.3vw] text-pink-400 text-left text-xl"></i>ERP Implementation</h1>
                           <p className='text-sm font-[500] mt-[0.5vw] opacity-90'>Create beautiful docs and connect them to tasks</p>
 
                         </Link>
                       </div>
-                      <div id="icon2" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-blue-50 transition duration 200 hover:rounded-2xl'>
+                      <div id="icon2" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-pink-50 transition duration 200 hover:rounded-2xl'>
                         <Link href="/Services/workflow">
-                          <h1 className='font-bold text-md'><i class="ri-team-fill mr-[0.3vw] text-blue-400 text-left text-xl"></i>Workflow automation</h1>
+                          <h1 className='font-bold text-md'><i class="ri-team-fill mr-[0.3vw] text-pink-400 text-left text-xl"></i>Workflow automation</h1>
                           <p className='text-sm font-[500] mt-[0.5vw] opacity-90'>Create beautiful docs and connect them to tasks</p>
 
                         </Link>
@@ -337,17 +299,17 @@ function Navbar() {
                   />
                 </Button>
               </MenuHandler>
-              <MenuList className='bg-white w-1/2 h-auto'>
+              <MenuList className='bg-white w-1/2 h-auto border-none'>
                 <div className='flex ml-[0vw] py-10 px-10 gap-[5vw]'>
                   <Link href="/about/company">
-                    <div id="icon1" className=' w-[24vh] h-[auto] bg-transparent p-[0.8vw] hover:bg-green-50 transition duration 200 hover:rounded-2xl'>
-                      <h1 className='font-bold text-md'><i class="ri-line-chart-line mr-[0.3vw] text-green-300 text-left text-xl"></i>Company</h1>
+                    <div id="icon1" className=' w-[24vh] h-[auto] bg-transparent p-[0.8vw] hover:bg-orange-50 transition duration 200 hover:rounded-2xl'>
+                      <h1 className='font-bold text-md'><i class="ri-line-chart-line mr-[0.3vw] text-orange-300 text-left text-xl"></i>Company</h1>
                       <p className='text-sm font-[500] mt-[0.5vw] opacity-90'>Break down any size projectinto customized tasks</p>
                     </div>
                   </Link>
-                  <div id="icon2" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-blue-50 transition duration 200 hover:rounded-2xl'>
+                  <div id="icon2" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-orange-50 transition duration 200 hover:rounded-2xl'>
                     <Link href="/about/team">
-                      <h1 className='font-bold text-md'><i class="ri-team-fill mr-[0.3vw] text-blue-400 text-left text-xl"></i>Team</h1>
+                      <h1 className='font-bold text-md'><i class="ri-team-fill mr-[0.3vw] text-orange-400 text-left text-xl"></i>Team</h1>
                       <p className='text-sm font-[500] mt-[0.5vw] opacity-90'>Create beautiful docs and connect them to tasks</p>
                     </Link>
                   </div>
@@ -370,23 +332,23 @@ function Navbar() {
                   />
                 </Button>
               </MenuHandler>
-              <MenuList className='bg-white w-1/2 h-auto'>
+              <MenuList className='bg-white w-1/2 h-auto border-none'>
                 <div className='flex ml-[0vw] py-10 px-10 gap-[5vw]'>
                   <Link href="/learn/blogs">
-                    <div id="icon1" className=' w-[24vh] h-[auto] bg-transparent p-[0.8vw] hover:bg-green-50 transition duration 200 hover:rounded-2xl'>
-                      <h1 className='font-bold text-md'><i class="ri-line-chart-line mr-[0.3vw] text-green-300 text-left text-xl"></i>Blogs</h1>
+                    <div id="icon1" className=' w-[24vh] h-[auto] bg-transparent p-[0.8vw] hover:bg-lime-50 transition duration 200 hover:rounded-2xl'>
+                      <h1 className='font-bold text-md'><i class="ri-line-chart-line mr-[0.3vw] text-lime-300 text-left text-xl"></i>Blogs</h1>
                       <p className='text-sm font-[500] mt-[0.5vw] opacity-90'>Break down any size projectinto customized tasks</p>
                     </div>
                   </Link>
-                  <div id="icon2" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-blue-50 transition duration 200 hover:rounded-2xl'>
+                  <div id="icon2" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-lime-50 transition duration 200 hover:rounded-2xl'>
                     <Link href="/learn/case-studies">
-                      <h1 className='font-bold text-md'><i class="ri-team-fill mr-[0.3vw] text-blue-400 text-left text-xl"></i>case studies</h1>
+                      <h1 className='font-bold text-md'><i class="ri-team-fill mr-[0.3vw] text-lime-400 text-left text-xl"></i>case studies</h1>
                       <p className='text-sm font-[500] mt-[0.5vw] opacity-90'>Create beautiful docs and connect them to tasks</p>
                     </Link>
                   </div>
                   <Link href="/learn/faqs">
-                    <div id="icon3" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-red-50 transition duration 200 hover:rounded-2xl'>
-                      <h1 className='font-bold text-md'><i class="ri-mail-check-line mr-[0.3vw] text-red-400 text-left text-xl"></i>FAQ&apos;s</h1>
+                    <div id="icon3" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-lime-50 transition duration 200 hover:rounded-2xl'>
+                      <h1 className='font-bold text-md'><i class="ri-mail-check-line mr-[0.3vw] text-lime-400 text-left text-xl"></i>FAQ&apos;s</h1>
                       <p className='text-sm font-[500] mt-[0.5vw] opacity-90'>Create beautiful docs and connect them to tasks</p>
                     </div>
                   </Link>
