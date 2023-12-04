@@ -204,3 +204,6 @@
     margin: 0 auto; /* Center the button horizontally */
   }
 }
+.border-blue-gray-50 {
+  border: none;
+}
