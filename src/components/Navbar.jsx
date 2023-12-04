@@ -84,7 +84,7 @@ function Navbar() {
                       </Link>
                       <Link href="/solutions/services" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-red-50 transition duration 200 hover:rounded-2xl'>
                         <div id="icon2" >
-                          <h1 className='font-semibold text-md'><i class="ri-service-fill mr-[0.3vw] text-red-400 text-left text-xl"></i>services</h1>
+                          <h1 className='font-semibold text-md capitalize'><i class="ri-service-fill mr-[0.3vw] text-red-400 text-left text-xl"></i>services</h1>
                           <p className='font-[500] text-sm opacity-75'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                         </div>
                       </Link>
@@ -252,7 +252,7 @@ function Navbar() {
 
                         </div>
                       </Link>
-                      <Link href="/Services/ecommerce" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-blue-50 transition duration 200 hover:rounded-2xl'>
+                      <Link href="/Services/e-commerce" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-blue-50 transition duration 200 hover:rounded-2xl'>
                         <div id="icon2">
                           <h1 className='font-bold text-md'><i class="ri-file-list-2-line mr-[0.3vw] text-blue-400 text-left text-xl"></i>E-commerce</h1>
                           <p className='text-sm font-[500] mt-[0.5vw] opacity-90'>Create beautiful docs and connect them to tasks</p>
@@ -266,9 +266,9 @@ function Navbar() {
 
                         </div>
                       </Link>
-                      <Link href="/Services/workflow" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg--50 transition duration 200 hover:rounded-2xl'>
+                      <Link href="/Services/workflow" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-pink-50 transition duration 200 hover:rounded-2xl'>
                         <div id="icon4">
-                          <h1 className='font-bold text-md'><i class="ri-team-fill mr-[0.3vw] text--400 text-left text-xl"></i>Workflow automation</h1>
+                          <h1 className='font-bold text-md'><i class="ri-team-fill mr-[0.3vw] text-pink-400 text-left text-xl"></i>Workflow automation</h1>
                           <p className='text-sm font-[500] mt-[0.5vw] opacity-90'>Create beautiful docs and connect them to tasks</p>
 
                         </div>
@@ -342,7 +342,7 @@ function Navbar() {
                   </Link>
                   <Link href="/learn/casestudies" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-lime-50 transition duration 200 hover:rounded-2xl'>
                     <div id="icon2" >
-                      <h1 className='font-bold text-md'><i class="ri-team-fill mr-[0.3vw] text-lime-400 text-left text-xl"></i>case studies</h1>
+                      <h1 className='font-bold text-md capitalize'><i class="ri-team-fill mr-[0.3vw] text-lime-400 text-left text-xl"></i>case studies</h1>
                       <p className='text-sm font-[500] mt-[0.5vw] opacity-90'>Create beautiful docs and connect them to tasks</p>
                     </div>
                   </Link>

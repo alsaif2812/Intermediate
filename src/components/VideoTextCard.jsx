@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from 'react';
 
 function VideoTextCard({ data, bgColor, borderColor, btnColor }) {
@@ -20,8 +21,8 @@ function VideoTextCard({ data, bgColor, borderColor, btnColor }) {
                 key={tab}
                 onClick={() => setSelectedTab(tab)}
                 className={`cursor-pointer text-lg capitalize leading-normal transition duration-300 ${selectedTab === tab
-                    ? `${borderColor} border-b-4`
-                    : 'border-b-4 border-transparent' // Transparent border for non-active tabs
+                  ? `${borderColor} border-b-4`
+                  : 'border-b-4 border-transparent' // Transparent border for non-active tabs
                   }`}
               >
                 {tab}
@@ -39,7 +40,7 @@ function VideoTextCard({ data, bgColor, borderColor, btnColor }) {
           <div className="md:w-[60%] mt-10 w-[100%]">
             <div
               id="video"
-              className="rounded-2xl mt-6 p-10 w-full md:hidden block"
+              className="rounded-2xl my-6 w-full md:hidden block"
             >
               <video
                 src={data[selectedTab].video}

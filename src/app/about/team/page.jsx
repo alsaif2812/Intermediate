@@ -1,5 +1,4 @@
 
-import Link from 'next/link';
 import Image from 'next/image';
 import Card from '@/components/Team';
 
@@ -61,4 +60,12 @@ export default function Home() {
 
     </>
   );
+}
+
+
+export function generateMetadata({ params }) {
+  return {
+    title: "Our-Team",
+    description: "lorem ipsum dolor sit amet, consectetur adip"
+  }
 }

@@ -64,4 +64,11 @@ const page = () => {
   )
 }
 
-export default page
+export default page;
+
+export function generateMetadata({ params }) {
+  return {
+    title: "Careers",
+    description: "lorem ipsum dolor sit amet, consectetur adip"
+  }
+}

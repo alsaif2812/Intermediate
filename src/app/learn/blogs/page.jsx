@@ -5,20 +5,20 @@ import Image from 'next/image'
 const page = () => {
   return (
     <>
-      <div className=' md:p-0 p-10'>
-        <div id="page-1" className="max-h-full  mt-3 bg-opacity-80 mb-52">
+      <div className=' md:p-0 p-1'>
+        <div id="page-1" className="  bg-opacity-80 pb-20">
           <Image
             width={1000}
             height={100}
             src='/images/team.jpg'
 
             alt="video"
-            className="md:hidden mt-[4vw] md:mt-[1vw] w-[70%] md:mx-auto"
+            className="md:hidden  md:mt-[1vw]  md:mx-auto"
           />
           <div id="content">
-            <div className="w-full max-h-screen flex flex-col  md:flex-row mt-[-5vw] md:mt-[-2vw]">
+            <div className="w-full max-h-screen flex flex-col  md:flex-row mt-[-5vw] md:mt-[-2vw] ">
               <div id="left" className="md:w-1/2 md:h-full md:px-28 md:py-28 md:ml-10 ">
-                <h1 className="text-3xl h-auto  md:h-auto md:text-5xl font-bold mt-[5vw] md:mt-[3vw] w-full text-gray-800" id="maintext">
+                <h1 className="text-3xl h-auto  md:h-auto md:text-5xl font-bold mt-[5vw] md:mt-[3vw]  text-gray-800" id="maintext">
                   Journey through Knowledge: Dive into Captivating <br /> Stories and Informative Articles.
                 </h1>
                 <p className='text-sm font-semibold my-5 text-gray-600'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cupiditate libero <br /> nobis molestiae illo quisquam ipsa minus harum atque maiores provident.</p>
@@ -48,11 +48,10 @@ const page = () => {
               </div>
             </div>
           </div>
-
-
-
-
         </div>
+      </div>
+      <div className='p-5 md:p-0'>
+
         <BlogCard />
       </div>
     </>
@@ -60,3 +59,10 @@ const page = () => {
 }
 
 export default page
+
+export function generateMetadata({ params }) {
+  return {
+    title: "Blogs",
+    description: "lorem ipsum dolor sit amet, consectetur adip"
+  }
+}

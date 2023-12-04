@@ -13,3 +13,10 @@ const page = () => {
 }
 
 export default page
+
+export function generateMetadata({ params }) {
+  return {
+    title: "Frequently asked questions",
+    description: "lorem ipsum dolor sit amet, consectetur adip"
+  }
+}

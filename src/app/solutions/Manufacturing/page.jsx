@@ -1,4 +1,3 @@
-"use client"
 import React from 'react';
 import VideoTextCard from '@/components/VideoTextCard';
 import cardData from '../../../textContent/manufacturing/cardOne.json';
@@ -35,3 +34,11 @@ const Page = () => {
 };
 
 export default Page;
+
+
+export function generateMetadata({ params }) {
+  return {
+    title: "Manufacturing",
+    description: "lorem ipsum dolor sit amet, consectetur adip"
+  }
+}

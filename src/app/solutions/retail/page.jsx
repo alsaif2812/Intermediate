@@ -1,4 +1,3 @@
-'use client';
 import Hero from '@/components/Hero';
 import React from 'react';
 import VideoTextCard from '@/components/VideoTextCard';
@@ -14,22 +13,29 @@ const Page = () => {
         id="main"
         className="p-5 md:flex md:items-center md:justify-center md:px-[18vw]"
       >
-        <VideoTextCard data={cardData}  btnColor= "bg-[#4797B1]" borderColor= "hover:border-b-4 border-[#4797B1] border-opacity-60" bgColor= "bg-[#4797B1] bg-opacity-50"  />
+        <VideoTextCard data={cardData} btnColor="bg-[#4797B1]" borderColor="hover:border-b-4 border-[#4797B1] border-opacity-60" bgColor="bg-[#4797B1] bg-opacity-50" />
       </div>
       <div
         id="main"
         className="p-5 md:flex md:items-center md:justify-center  md:px-[18vw]"
       >
-        <VideoTextCard data={card2Data} bgColor="bg-[#900C3F] bg-opacity-30" btnColor= "bg-[#900C3F] bg-opacity-50" borderColor= "border-[#900C3F] border-opacity-50" />
+        <VideoTextCard data={card2Data} bgColor="bg-[#900C3F] bg-opacity-30" btnColor="bg-[#900C3F] bg-opacity-50" borderColor="border-[#900C3F] border-opacity-50" />
       </div>
       <div
         id="main"
         className="p-5 md:flex md:items-center md:justify-center  md:px-[18vw]"
       >
-        <VideoTextCard data={card3Data} bgColor="bg-[#FF8AAE] bg-opacity-20" btnColor= "bg-[#F5BED9]" />
+        <VideoTextCard data={card3Data} bgColor="bg-[#FF8AAE] bg-opacity-20" btnColor="bg-[#F5BED9]" />
       </div>
     </>
   );
 };
 
 export default Page;
+
+export function generateMetadata({ params }) {
+  return {
+    title: "Retail",
+    description: "lorem ipsum dolor sit amet, consectetur adip"
+  }
+}

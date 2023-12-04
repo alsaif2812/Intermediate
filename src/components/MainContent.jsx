@@ -1,7 +1,6 @@
 "use client"
 import Image from 'next/image';
-import logosData1 from '../textContent/logos/logosData1.json';
-import logosData2 from '../textContent/logos/logosData2.json';
+import logosData from '../textContent/logos/logosData.json';
 import Link from 'next/link';
 import Cards from './Cards';
 import Marquee from "react-fast-marquee";
@@ -119,23 +118,16 @@ export default function Home() {
             <p className="text-sm md:text-xl md:mb-[2vw] mb-[8vw] text-center">Join our 50+ Successful Implementation stories</p>
             <Marquee pauseOnHover direction="left">
               <div className='gap-[5rem] flex items-center pt-12'>
-                {logosData1.map((logo, index) => (
+                {logosData.map((logo, index) => (
                   <div className="logo" key={index}>
-                    <Image width={100} height={90} src={`/images/${logo.src}`} alt={`${logo.name} logo`} />
+                    <a href={logo.link} target='_blank'> <Image width={100} height={90} src={`/images/${logo.src}`} alt={`${logo.name} logo`} /></a>
+
                   </div>
                 ))}
               </div>
             </Marquee>
 
-            <Marquee pauseOnHover direction="right" >
-              <div className='gap-[5rem] flex items-center pt-12'>
-                {logosData2.map((logo, index) => (
-                  <div className="logo" key={index}>
-                    <Image width={100} height={90} src={`/images/${logo.src}`} alt={`${logo.name} logo`} />
-                  </div>
-                ))}
-              </div>
-            </Marquee>
+
 
           </div>
 

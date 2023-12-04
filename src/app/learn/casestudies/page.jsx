@@ -52,9 +52,19 @@ const page = () => {
 
 
       </div>
-      <CaseStudies />
+      <div className=' p-10 md:p-0'>
+        <CaseStudies />
+      </div>
+
     </>
   )
 }
 
 export default page
+
+export function generateMetadata({ params }) {
+  return {
+    title: "Case-Studies",
+    description: "lorem ipsum dolor sit amet, consectetur adip"
+  }
+}

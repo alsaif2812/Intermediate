@@ -1,11 +1,11 @@
-import Contact from '@/components/Contact'
+import Hero from '@/components/Hero'
 import React from 'react'
 
 const page = () => {
   return (
-    <div>
-      <Contact />
-    </div>
+    <>
+      <Hero />
+    </>
   )
 }
 
@@ -13,7 +13,7 @@ export default page
 
 export function generateMetadata({ params }) {
   return {
-    title: "Contact-Us",
+    title: "E-commerce",
     description: "lorem ipsum dolor sit amet, consectetur adip"
   }
 }

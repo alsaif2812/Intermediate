@@ -5,11 +5,19 @@ import React from 'react'
 const page = () => {
   return (
     <>
-    <Hero/>
-    <h1>hello from distribution</h1>
-      <Cards/>
+      <Hero />
+      <h1>hello from distribution</h1>
+      <Cards />
     </>
   )
 }
 
 export default page
+
+export function generateMetadata({ params }) {
+  return {
+    title: "Distribution",
+    description: "lorem ipsum dolor sit amet, consectetur adip"
+  }
+}
+

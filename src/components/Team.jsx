@@ -10,7 +10,7 @@ const Card = () => {
           return (
                     <>
                               <h1 className='my-10 text-center text-5xl text-gray-800 font-bold font-sans'>Our Leadership Team</h1>
-                              <p className='mt-10 text-center text-base  text-gray-800 font-bold font-sans'>This is our team, a lot of smiling happy people who work hard to empower your teams.</p>
+                              <p className='mt-10 text-center text-base  text-gray-800 font-bold font-sans px-10 md:px-0'>This is our team, a lot of smiling happy people who work hard to empower your teams.</p>
                               <div className='flex items-center justify-center'>
                                         <p className='border-b-pink-200 border-b-4 mb-10 w-[5%] mt-2 '></p>
                               </div>
