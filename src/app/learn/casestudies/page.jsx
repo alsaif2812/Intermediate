@@ -1,10 +1,23 @@
 import React from 'react'
 import CaseStudies from '../../../components/CaseStudies.jsx'
 import Image from 'next/image.js'
+import Head from 'next/head.js'
+
+export const metadata = {
+  title: "Read the Case Studies of  Wahni IT Solutions",
+  description: "Read about cloud ERP, software, setup, integration, business solutions, and related topics on our case studies, along with the most recent business news.",
+  keyword: "wahni it blogs,Best ERP software,erp,erpnext"
+
+}
 
 const page = () => {
   return (
     <>
+      <Head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keyword} />
+      </Head>
       <div id="page-1" className="max-h-full  mt-3 bg-opacity-80 mb-52">
         <Image
           width={1000}
@@ -62,9 +75,3 @@ const page = () => {
 
 export default page
 
-export function generateMetadata({ params }) {
-  return {
-    title: "Case-Studies",
-    description: "lorem ipsum dolor sit amet, consectetur adip"
-  }
-}

@@ -1,15 +1,25 @@
-"use client"
 import React from 'react';
 import Image from 'next/image';
 import Teamimg from '../../../../public/images/Team.jpg';
 import mission from '../../../../public/images/mission.png';
 import Hero from '@/components/Hero';
 import Contact from '@/components/Contact';
-// import Marquee from 'react-fast-marquee';
+import Head from 'next/head';
 
+
+export const metadata = {
+  title: 'About Wahni ERP Softwares - Best ERP Softwares in India',
+  description: 'Best ERP software in India. Our Open Source ERP Software services revolve around FOSS products. From implementation to training and support, we cover it all.',
+  keyword: 'wahni it,erpnext,best accounting software in kerala'
+};
 
 const Page = () => {
   return <>
+    <Head>
+      <title>{metadata.title}</title>
+      <meta name="description" content={metadata.description} />
+      <meta name="keywords" content={metadata.keyword} />
+    </Head>
     <Hero />
     <div id="top" className="md:flex md:w-full md:h-[30vw] h-[130vw] bg-gradient-to-b from-purple-500 via-purple-600 to-blue-500">
       <div id="leftabt" className="md:w-[50%] md:pl-[10vw] pl-[3vw] md:pt-[4vw] pt-[10vw] md:mt-0 mt-[4vw] text-[#212121]">
@@ -196,9 +206,3 @@ const Page = () => {
 
 export default Page;
 
-export function generateMetadata({ params }) {
-  return {
-    title: "Company",
-    description: "lorem ipsum dolor sit amet, consectetur adip"
-  }
-}

@@ -4,10 +4,24 @@ import VideoTextCard from '@/components/VideoTextCard';
 import cardData from '../../../textContent/retail/cardOne.json';
 import card2Data from '../../../textContent/retail/cardTwo.json';
 import card3Data from '../../../textContent/retail/cardThree.json';
+import Head from 'next/head';
+
+export const metadata = {
+  title: " Cloud-based easy-to-use ERP software for the retail industry ",
+  description: "Cloud-based easy-to-use ERP software solutions to scale business operations from one showroom or branch to multiple showrooms or branches at any location.",
+  keyword: "best accounting software in kerala,wahni it,erpnext"
+
+}
+
 
 const Page = () => {
   return (
     <>
+      <Head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keyword} />
+      </Head>
       <Hero />
       <div
         id="main"
@@ -32,10 +46,3 @@ const Page = () => {
 };
 
 export default Page;
-
-export function generateMetadata({ params }) {
-  return {
-    title: "Retail",
-    description: "lorem ipsum dolor sit amet, consectetur adip"
-  }
-}

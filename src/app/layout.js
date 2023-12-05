@@ -17,8 +17,9 @@ const nunito = Nunito({
 });
 // Consolidate metadata definitions
 export const metadata = {
-  title: 'Wahni IT Solutions',
-  description: 'Best ERP Software in Kerela',
+  title: 'Best ERP Software in Kerala, ERP Companies in Kochi, Wahni',
+  description: 'Wahni IT Solutions offers Top ERP Software in Kochi Kerala for Retail, Healthcare, Education, Manufacturing, Real Estate, Distribution & Agriculture.',
+  keyword: 'erp solutions, best erp software in india, erp for schools india, erp software solutions',
   icons: {
     icon: '/images/favicon.png',
     apple: '/images/favicon.png',
@@ -31,8 +32,10 @@ const RootLayout = ({ children }) => {
       <Head>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keyword} />
         <link rel="icon" href={logo} />
       </Head>
+
       <body className="md:bg-[url('/images/blob.png')] bg-no-repeat bg-right-top w-[100%]">
         <NextTopLoader />
         <div>

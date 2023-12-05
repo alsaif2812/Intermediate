@@ -1,10 +1,15 @@
-
+import Head from 'next/head';
 import Image from 'next/image';
 import Card from '@/components/Team';
 
 export default function Home() {
   return (
     <>
+      <Head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keyword} />
+      </Head>
       <div id="page-1" className="max-h-full  mt-3 bg-opacity-80 mb-52">
         <Image
           width={1000}
@@ -63,9 +68,8 @@ export default function Home() {
 }
 
 
-export function generateMetadata({ params }) {
-  return {
-    title: "Our-Team",
-    description: "lorem ipsum dolor sit amet, consectetur adip"
-  }
+export const metadata = {
+  title: "Meet Our Team - Wahni IT Solutions",
+  description: "Meet Our ERP Software Team. Behind Our Success, We have a young and vibrant software team, who are inspired by advanced technologies",
+  keyword: "wahni it,top erp software in kerala, erp software companies in kerala"
 }

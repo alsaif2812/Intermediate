@@ -1,10 +1,16 @@
 import BlogCard from '@/components/Blogs'
 import React from 'react'
 import Image from 'next/image'
+import Head from 'next/head'
 
 const page = () => {
   return (
     <>
+      <Head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keyword} />
+      </Head>
       <div className=' md:p-0 p-1'>
         <div id="page-1" className="  bg-opacity-80 pb-20">
           <Image
@@ -60,9 +66,9 @@ const page = () => {
 
 export default page
 
-export function generateMetadata({ params }) {
-  return {
-    title: "Blogs",
-    description: "lorem ipsum dolor sit amet, consectetur adip"
-  }
+export const metadata = {
+  title: "Best ERP software blogs from Wahni IT Solutions",
+  description: "Read about cloud ERP, software, setup, integration, business solutions, and related topics on our blog, along with the most recent business news.",
+  keyword: "wahni it blogs,Best ERP software,erp,erpnext"
+
 }

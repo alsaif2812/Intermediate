@@ -4,10 +4,25 @@ import cardData from '../../../textContent/manufacturing/cardOne.json';
 import card2Data from '../../../textContent/manufacturing/cardTwo.json';
 import card3Data from '../../../textContent/manufacturing/cardThree.json';
 import Hero from '@/components/Hero';
+import Head from 'next/head';
+
+
+export const metadata = {
+
+  title: "Manufacturing ERP Providers in Kochi Kerala, Wahni",
+  description: "Top Manufacturing ERP Providers in Kochi, Kerala - Wahni IT Solutions. Optimize processes, cut costs, and drive strategic decisions with our ERP solution.",
+  keywords: "Manufacturing,erp for manufacturing industry in india,wahni it,erpnext"
+
+}
 
 const Page = () => {
   return (
     <>
+      <Head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keyword} />
+      </Head>
       <Hero />
       <div
         id="main"
@@ -36,9 +51,3 @@ const Page = () => {
 export default Page;
 
 
-export function generateMetadata({ params }) {
-  return {
-    title: "Manufacturing",
-    description: "lorem ipsum dolor sit amet, consectetur adip"
-  }
-}

@@ -2,11 +2,24 @@
 import Image from 'next/image'
 import React from 'react'
 import Link from 'next/link'
+import Head from 'next/head'
 
 
+
+export const metadata = {
+  title: "Empower Your Career with Wahni IT Solutions",
+  description: "Both our clients and the community are very important to us. People in Wahni embrace flexible work schedules with responsibilities as part of their culture.",
+  keyword: "wahni it,best erp software in india, erp solutions, erpnext"
+}
 const page = () => {
   return (
+
     <>
+      <Head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keyword} />
+      </Head>
       <div id="page-1" className="h-full bg-opacity-80 mb-52">
         <Image
           width={1000}
@@ -65,10 +78,3 @@ const page = () => {
 }
 
 export default page;
-
-export function generateMetadata({ params }) {
-  return {
-    title: "Careers",
-    description: "lorem ipsum dolor sit amet, consectetur adip"
-  }
-}

@@ -1,8 +1,22 @@
 import React from 'react'
+import Head from 'next/head'
+
+
+export const metadata = {
+          title: "Terms of Service — Wahni IT Solutions",
+          description: "Website Terms and Conditions of Use",
+          keyword: "wahni it terms,wahni it terms of service,wahni it,erpnext"
+
+}
 
 const page = () => {
           return (
                     <>
+                              <Head>
+                                        <title>{metadata.title}</title>
+                                        <meta name="description" content={metadata.description} />
+                                        <meta name="keywords" content={metadata.keyword} />
+                              </Head>
                               <div id="termsmain" className='text-left  md:px-52 px-20 md:py-0 py-10 my-10'>
                                         <h1 className='text-5xl text-gray-900 font-bold my-10'>Welcome to Wahni IT Solutions!</h1>
                                         <p className='my-2 text-base text-gray-800'>These terms and conditions outline the rules and regulations for the use of Wahni IT Solutions Pvt Ltd's Website, located at wahni.io.

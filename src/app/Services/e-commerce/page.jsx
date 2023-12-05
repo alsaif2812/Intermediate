@@ -1,9 +1,22 @@
 import Hero from '@/components/Hero'
 import React from 'react'
+import Head from 'next/head'
+export function generateMetadata({ params }) {
+  return {
+    title: "E-Commerce — Wahni IT Solutions",
+    description: "We provide setting up of E-commerce sites and integrating the same with all the payment with all backend operations also integrated with ERPNext",
+    keyword: "ECommerce, E-Commerce, ecommerce,wahni it"
+  }
+}
 
 const page = () => {
   return (
     <>
+      <Head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keyword} />
+      </Head>
       <Hero />
     </>
   )
@@ -11,9 +24,3 @@ const page = () => {
 
 export default page
 
-export function generateMetadata({ params }) {
-  return {
-    title: "E-commerce",
-    description: "lorem ipsum dolor sit amet, consectetur adip"
-  }
-}

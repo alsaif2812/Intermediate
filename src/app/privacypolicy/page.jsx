@@ -1,8 +1,22 @@
 import React from 'react'
+import Head from 'next/head'
+
+
+export const metadata = {
+          title: "Privacy Policy — Wahni IT Solutions",
+          description: "Privacy Policy for Wahni IT Solutions",
+          keyword: "wahni it privacy policy,wahni it,privacy policy, erpnext"
+
+}
 
 const Privacypolicy = () => {
           return (
                     <>
+                              <Head>
+                                        <title>{metadata.title}</title>
+                                        <meta name="description" content={metadata.description} />
+                                        <meta name="keywords" content={metadata.keyword} />
+                              </Head>
                               <div id="privmain" className='h-auto w-full md:px-52 px-5 py-20 md:py-0 text-left my-5'>
                                         <h1 className='my-4 text-5xl font-bold text-gray-800'>Privacy Policy for Wahni IT Solutions Pvt Ltd
                                         </h1>
@@ -27,7 +41,8 @@ const Privacypolicy = () => {
                                         <p className='my-2 text-base text-gray-700'>Some of advertisers on our site may use cookies and web beacons. Our advertising partners are listed below. Each of our advertising partners has their own Privacy Policy for their policies on user data. For easier access, we hyperlinked to their Privacy Policies below.</p>
                                         <li className='my-2 text-base text-gray-800'>Google </li>
                                         <a className='my-2 text-base text-blue-400 no-underline hover:underline' href="https://policies.google.com/technologies/ads
-">https://policies.google.com/technologies/ads
+">
+                                                  https://policies.google.com/technologies/ads
                                         </a>
                                         <h2 className='text-3xl text-gray-800 font-bold my-4'>Privacy Policies</h2>
                                         <p className='my-2 text-base text-gray-700'>You may consult this list to find the Privacy Policy for each of the advertising partners of Wahni IT Solutions.
