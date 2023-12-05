@@ -9,10 +9,10 @@ const page = () => {
         <>
             <Hero />
             <div className="p-5 md:flex md:items-center md:justify-center md:px-[18vw] mb-5">
-                <VideoTextCard data={card1Data} bgColor="bg-[#95BDFF] bg-opacity-40" btnColor="bg-[#7797CC]" borderColor="hover:border-b-4 border-[#7797CC]" />
+                <VideoTextCard data={card1Data} bgColor="bg-[#D2E0FB] bg-opacity-40" btnColor="bg-[#528ff6]" borderColor="hover:border-b-4 border-[#528ff6]" />
             </div>
             <div className="p-5 md:flex md:items-center md:justify-center md:px-[18vw] mb-5">
-                <VideoTextCard data={card2Data} bgColor="bg-[#95BDFF] bg-opacity-40" btnColor="bg-[#7799CC]" borderColor="hover:border-b-4 border-[#7797CC]" />
+                <VideoTextCard data={card2Data} bgColor="bg-[#fff2cc] bg-opacity-40" btnColor="bg-[#ffd645]" borderColor="hover:border-b-4 border-[#ffd645]" />
             </div>
 
         </>

@@ -13,21 +13,21 @@ const Page = () => {
         id="main"
         className="p-5 md:flex md:items-center md:justify-center md:px-[18vw]"
       >
-        <VideoTextCard data={card3Data} bgColor="bg-[#86C8BC] bg-opacity-40" btnColor="bg-[#86C8CB]" />
+        <VideoTextCard data={card3Data} bgColor="bg-[#ccf4c7] bg-opacity-40" btnColor="bg-[#52d34d]" />
       </div>
 
       <div
         id="main"
         className="p-5 md:flex md:items-center md:justify-center md:px-[18vw]"
       >
-        <VideoTextCard data={cardData} bgColor="bg-[#F2BED1] bg-opacity-40" btnColor="bg-[#F2BED1]" borderColor=" border-[#F2BED1]" />
+        <VideoTextCard data={cardData} bgColor="bg-[#D2E0FB] bg-opacity-40" btnColor="bg-[#528ff6]" borderColor=" border-[#528ff6]" />
       </div>
 
       <div
         id="main"
         className="p-5 md:flex md:items-center md:justify-center md:px-[18vw]"
       >
-        <VideoTextCard data={card2Data} bgColor="bg-[#95BDFF] bg-opacity-40" btnColor="bg-[#7797CC]" borderColor=" border-[#7797CC]" />
+        <VideoTextCard data={card2Data} bgColor="bg-[#E5E0FF] bg-opacity-40" btnColor="bg-[#313bb2]" borderColor=" border-[#313bb2]" />
       </div>
     </>
   );

@@ -11,13 +11,13 @@ const page = () => {
       <div className="p-5 md:flex md:items-center md:justify-center md:px-[18vw] mb-5"
       >
 
-        <VideoTextCard data={card1Data} bgColor="bg-[#95BDFF] bg-opacity-40" btnColor="bg-[#7797CC]" borderColor="hover:border-b-4 border-[#7797CC]" />
+        <VideoTextCard data={card1Data} bgColor="bg-[#E5E0FF] bg-opacity-40" btnColor="bg-[#313bb2]" borderColor="hover:border-b-4 border-[#313bb2]" />
 
       </div>
       <div className="p-5 md:flex md:items-center md:justify-center md:px-[18vw] mb-5"
       >
 
-        <VideoTextCard data={card2Data} bgColor="bg-[#95BDFF] bg-opacity-40" btnColor="bg-[#7799CC]" borderColor="hover:border-b-4 border-[#7797CC]" />
+        <VideoTextCard data={card2Data} bgColor="bg-[#CDF0EA] bg-opacity-40" btnColor="bg-[#6eccb8]" borderColor="hover:border-b-4 border-[#6eccb8]" />
 
       </div>
 

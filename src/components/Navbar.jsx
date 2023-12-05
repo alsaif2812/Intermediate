@@ -48,7 +48,7 @@ function Navbar() {
         </div>
         <div
           id="nav2"
-          className="hidden md:flex items-center justify-between gap-5 font-extrabold text-[#20262e]"
+          className="hidden md:flex items-center justify-between gap-5 font-bold text-[#20262e]"
         >
           <Link
             href="/"
