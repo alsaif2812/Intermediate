@@ -3,7 +3,7 @@ import React from 'react'
 const page = () => {
           return (
                     <>
-                              <div id="termsmain" className='text-left  md:px-52 px-20 md:py-0 py-10'>
+                              <div id="termsmain" className='text-left  md:px-52 px-20 md:py-0 py-10 my-10'>
                                         <h1 className='text-5xl text-gray-900 font-bold my-10'>Welcome to Wahni IT Solutions!</h1>
                                         <p className='my-2 text-base text-gray-800'>These terms and conditions outline the rules and regulations for the use of Wahni IT Solutions Pvt Ltd's Website, located at wahni.io.
                                         </p>
