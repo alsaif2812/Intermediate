@@ -6,16 +6,21 @@ import Footer from '@/components/Footer';
 import Head from 'next/head';
 import 'remixicon/fonts/remixicon.css';
 import logo from '../../public/images/wit-logo.png'
-import './globals.css'; // Import your global styles
+import './globals.css';
+import { Metadata } from 'next';
 
 const nunito = Nunito({
   subsets: ['latin'],
   display: 'swap',
 });
-
+// Consolidate metadata definitions
 export const metadata = {
   title: 'Wahni IT Solutions',
-  description: 'Best ERP Software in Kerela'
+  description: 'Best ERP Software in Kerela',
+  icons: {
+    icon: '/images/favicon.png',
+    apple: '/images/favicon.png',
+  },
 };
 
 const RootLayout = ({ children }) => {
@@ -40,3 +45,4 @@ const RootLayout = ({ children }) => {
 
 
 export default RootLayout;
+

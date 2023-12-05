@@ -194,10 +194,9 @@ function Navbar() {
                   />
                 </Button>
               </MenuHandler>
-              <MenuList className="hidden w-[100%] bg-white lg:grid mt-[3vw] border-none">
+              <MenuList className="hidden w-[100%] bg-white lg:grid  border-none">
                 <div className='md:flex mt-[-1vw]  hidden text-zinc-900 '>
-                  <div id='iconsleft' className=' items-center justify-center flex-wrap w-[48%]  h-[15vw] py-[1vw] px-[2vw] ml-[9vw]'>
-                    <h3 className='text-md font-bold mt-[2vw] uppercase'>Product</h3>
+                  <div id='iconsleft' className=' items-center justify-center flex-wrap w-[48%]  h-[15vw] py-[3vw] px-[2vw] ml-[9vw]'>
                     <div className='flex ml-[0vw] mt-[2vw] gap-[5vw]'>
                       <Link href="/products/erpnext" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-brown-50 transition duration 200 hover:rounded-2xl'>
                         <div id="icon1" >
@@ -245,28 +244,28 @@ function Navbar() {
                   <div id='iconsleft' className=' items-center justify-center flex-wrap w-[70%]  h-[15vw] py-[1vw] px-[2vw] ml-[9vw]'>
 
                     <div className='flex ml-[0vw] mt-[5vw] gap-[5vw]'>
-                      <Link href="/Services/business" className=' w-[28vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-pink-50 transition duration 200 hover:rounded-2xl'>
+                      <Link href="/services/business" className=' w-[28vh] h-[auto] bg-transparent p-[0.8vw] hover:bg-pink-50 transition duration 200 hover:rounded-2xl'>
                         <div id="icon1">
                           <h1 className='font-bold text-md'><i class="ri-line-chart-line mr-[0.3vw] text-pink-300 text-left text-xl"></i>Business Consulting</h1>
                           <p className='text-sm font-[500] mt-[0.5vw] opacity-90'>Break down any size projectinto customized </p>
 
                         </div>
                       </Link>
-                      <Link href="/Services/e-commerce" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-blue-50 transition duration 200 hover:rounded-2xl'>
+                      <Link href="/services/e-commerce" className=' w-[24vh] h-[auto] bg-transparent p-[0.8vw] hover:bg-blue-50 transition duration 200 hover:rounded-2xl'>
                         <div id="icon2">
                           <h1 className='font-bold text-md'><i class="ri-file-list-2-line mr-[0.3vw] text-blue-400 text-left text-xl"></i>E-commerce</h1>
                           <p className='text-sm font-[500] mt-[0.5vw] opacity-90'>Create beautiful docs and connect them to tasks</p>
 
                         </div>
                       </Link>
-                      <Link href="/Services/implementation" className=' w-[28vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-green-50 transition duration 200 hover:rounded-2xl'>
+                      <Link href="/services/implementation" className=' w-[28vh] h-[auto] bg-transparent p-[0.8vw] hover:bg-green-50 transition duration 200 hover:rounded-2xl'>
                         <div id="icon3">
                           <h1 className='font-bold text-md'><i class="ri-swap-fill mr-[0.3vw] text-green-400 text-left text-xl"></i>ERP Implementation</h1>
                           <p className='text-sm font-[500] mt-[0.5vw] opacity-90'>Create beautiful docs and connect them to tasks</p>
 
                         </div>
                       </Link>
-                      <Link href="/Services/workflow" className=' w-[24vh] h-[autovw] bg-transparent p-[0.8vw] hover:bg-pink-50 transition duration 200 hover:rounded-2xl'>
+                      <Link href="/services/workflow" className=' w-[24vh] h-[auto] bg-transparent p-[0.8vw] hover:bg-pink-50 transition duration 200 hover:rounded-2xl'>
                         <div id="icon4">
                           <h1 className='font-bold text-md'><i class="ri-team-fill mr-[0.3vw] text-pink-400 text-left text-xl"></i>Workflow automation</h1>
                           <p className='text-sm font-[500] mt-[0.5vw] opacity-90'>Create beautiful docs and connect them to tasks</p>
