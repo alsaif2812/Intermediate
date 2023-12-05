@@ -48,7 +48,7 @@ export default function Home() {
               <div className="bg-transparent py-4 rounded-md mt-8" id="btn">
                 <div className="flex flex-wrap gap-4">
                   <Link href="/solutions/manufacturing">
-                    <button className="py-2 px-4 bg-white rounded-md hover:shadow-2xl shadow-md font-semibold flex items-center transition">
+                    <button className="py-2 px-4 bg-white rounded-md hover:shadow-2xl shadow-md font-semibold flex items-center transition gap-2">
                       <FontAwesomeIcon icon={faIndustry} />
                       Manufacturing
                     </button>
