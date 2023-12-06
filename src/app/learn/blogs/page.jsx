@@ -2,7 +2,7 @@ import BlogCard from '@/components/Blogs'
 import React from 'react'
 import Image from 'next/image'
 import Head from 'next/head'
-
+import Link from 'next/link'
 const page = () => {
   return (
     <>
@@ -11,6 +11,7 @@ const page = () => {
         <meta name="description" content={metadata.description} />
         <meta name="keywords" content={metadata.keyword} />
       </Head>
+
       <div className=' md:p-0 p-1'>
         <div id="page-1" className="  bg-opacity-80 pb-20">
           <Image
@@ -57,8 +58,9 @@ const page = () => {
         </div>
       </div>
       <div className='p-5 md:p-0'>
-
-        <BlogCard />
+        <Link href="/order-management">
+          <BlogCard />
+        </Link>
       </div>
     </>
   )
