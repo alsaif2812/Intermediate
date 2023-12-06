@@ -5,6 +5,13 @@ import card2Data from '../../../textContent/services/card2Data.json'
 import VideoTextCard from '@/components/VideoTextCard'
 import Head from 'next/head'
 
+export const metadata = {
+
+  title: "Wahni provides simple-to-use ERP software solutions in India",
+  description: "Transform your service business with our comprehensive ERP solutions. Streamline operations, enhance communication, and boost efficiency.",
+  keyword: "erp software solutions,wahni it,erpnext"
+
+}
 const page = () => {
   return (
     <>
@@ -33,10 +40,3 @@ const page = () => {
 
 export default page
 
-export function generateMetadata({ params }) {
-  return {
-    title: "Wahni provides simple-to-use ERP software solutions in India",
-    description: "Transform your service business with our comprehensive ERP solutions. Streamline operations, enhance communication, and boost efficiency.",
-    keyword: "erp software solutions,wahni it,erpnext"
-  }
-}
