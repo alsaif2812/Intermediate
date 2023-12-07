@@ -1,6 +1,12 @@
+"use client"
 import React from 'react';
 import data from '../textContent/blogs/blogsData.json';
 import Image from 'next/image';
+// import { motion } from "framer-motion"
+
+
+
+
 
 const BlogCard = ({ image, heading, bodyText, profile }) => {
   return (
@@ -10,13 +16,13 @@ const BlogCard = ({ image, heading, bodyText, profile }) => {
         <h1 className="text-xl font-bold mb-2">{heading}</h1>
         <p className="text-gray-600">{bodyText}</p>
         <div className="flex items-center justify-start mt-4 gap-2">
-          <Image height={100} width={1000}  src={profile.image} alt="Profile Image" 
-          className="w-8 h-8 rounded-full" />
+          <Image height={100} width={1000} src={profile.image} alt="Profile Image"
+            className="w-8 h-8 rounded-full" />
           <p className="font-semibold pr-10">{profile.name}</p>
           <div className="ml-2 flex items-center gap-2">
-          <i class="ri-time-line text-2xl text-gray-400"></i>
-          <p className='text-gray-500 text-md'>Max 10min read</p>
-            
+            <i class="ri-time-line text-2xl text-gray-400"></i>
+            <p className='text-gray-500 text-md'>Max 10min read</p>
+
           </div>
         </div>
       </div>

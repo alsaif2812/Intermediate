@@ -12,6 +12,8 @@ import {
   faWarehouse
 } from '@fortawesome/free-solid-svg-icons';
 import party from 'party-js';
+// import { motion } from "framer-motion"
+
 export function triggerConfetti(e) {
   party.confetti(e.target, {
     count: party.variation.range(20, 40),
