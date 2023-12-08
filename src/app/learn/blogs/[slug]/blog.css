@@ -1,6 +1,63 @@
+/* Reset some default styles */
+body,
+h1,
+h2,
+h3,
+h4,
 p {
-  font-size: 14px;
+  margin: 0;
+  padding: 0;
 }
-h1 {
-  font-size: 24px;
+p {
+  font-size: 20px;
+}
+
+/* Set a background color for the body */
+body {
+  background-color: #f4f4f4;
+  /* font-family: Arial, sans-serif; */
+}
+
+/* Style the container */
+.ql-editor {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style headings */
+h1,
+h2,
+h3,
+h4 {
+  color: black;
+  margin-bottom: 10px;
+  font-weight: 900;
+  font-size: 1.3vw;
+}
+
+/* Style paragraphs */
+p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Style the image */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px 0;
+}
+
+/* Style links */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
