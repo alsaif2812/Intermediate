@@ -1,6 +1,5 @@
-/* Container styling */
 .ql-editor.read-mode {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   font-family: 'Arial', sans-serif;
 }
@@ -32,10 +31,11 @@
 
 .ql-editor.read-mode h3 {
   font-size: 1.2em;
+  /* background: #000; */
 }
 
 .ql-editor.read-mode h4 {
-  font-size: 1.2em;
+  font-size: 1.5em;
 }
 
 /* Image styling */
