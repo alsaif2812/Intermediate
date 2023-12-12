@@ -15,7 +15,6 @@ export default function Page({ params }) {
   return (
     <>
       <BlogHero />
-
-      <div className="py-6 px-52" dangerouslySetInnerHTML={post}></div>;
+      <div className="py-6 px-52 bg-[url('/Images/blog3.jpg')]" dangerouslySetInnerHTML={post}></div>;
     </>)
 }

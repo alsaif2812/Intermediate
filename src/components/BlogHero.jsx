@@ -5,8 +5,8 @@ import profile from '../../public/images/member2.png'
 const BlogHero = () => {
           return (
                     <>
-                              <div className='w-full h-96 flex'>
-                                        <div className='md:w-1/2 md:h-full  md:pl-96 md:py-4 overflow-hidden' >
+                              <div className="w-full  flex ">
+                                        <div className='md:w-1/2  md:pl-96 md:py-4 overflow-hidden' >
                                                   <Image
                                                             src={img}
                                                             height={500}

@@ -1,4 +1,4 @@
-// components/RootLayout.js
+// "use client"
 import NextTopLoader from 'nextjs-toploader';
 import { Nunito } from 'next/font/google';
 import Navbar from '@/components/Navbar';
@@ -6,27 +6,18 @@ import Footer from '@/components/Footer';
 import Head from 'next/head';
 import 'remixicon/fonts/remixicon.css';
 import logo from '../../public/images/wit-logo.png'
-import './globals.css'; // Import your global styles
+import './globals.css';
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
+// import { metadata } from '../components/Metadata'
 config.autoAddCss = false;
 
-const nunito = Nunito({
+export const nunito = Nunito({
   subsets: ['latin'],
   display: 'swap',
 });
-// Consolidate metadata definitions
-export const metadata = {
-  title: 'Best ERP Software in Kerala, ERP Companies in Kochi, Wahni',
-  description: 'Wahni IT Solutions offers Top ERP Software in Kochi Kerala for Retail, Healthcare, Education, Manufacturing, Real Estate, Distribution & Agriculture.',
-  keyword: 'erp solutions, best erp software in india, erp for schools india, erp software solutions',
-  icons: {
-    icon: '/images/favicon.png',
-    apple: '/images/favicon.png',
-  },
-};
-
-const RootLayout = ({ children }) => {
+import metadata from '../components/Metadata'
+const RootLayout = ({ children, showBackgroundImage }) => {
   return (
     <html lang="en" className={nunito.className}>
       <Head>
@@ -36,7 +27,7 @@ const RootLayout = ({ children }) => {
         <link rel="icon" href={logo} />
       </Head>
 
-      <body className="md:bg-[url('/images/blob.png')] bg-no-repeat bg-right-top w-[100%]">
+      <body className={` ${showBackgroundImage ? 'md:bg-[url("/images/blob.png")] bg-no-repeat bg-right-top w-[100%]' : ''}`}>
         <NextTopLoader />
         <div>
           <Navbar />

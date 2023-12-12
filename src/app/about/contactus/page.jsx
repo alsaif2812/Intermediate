@@ -1,6 +1,7 @@
 import Contact from '@/components/Contact'
 import React from 'react'
 import Head from 'next/head'
+import Layout from '../../layout'
 
 
 
@@ -15,12 +16,15 @@ const page = () => {
   return (
 
     <div>
-      <Head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-        <meta name="keywords" content={metadata.keyword} />
-      </Head>
-      <Contact />
+      <Layout showBackgroundImage={false}>
+
+        <Head>
+          <title>{metadata.title}</title>
+          <meta name="description" content={metadata.description} />
+          <meta name="keywords" content={metadata.keyword} />
+        </Head>
+        <Contact />
+      </Layout>
     </div>
   )
 }
