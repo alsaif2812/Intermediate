@@ -5,20 +5,20 @@ import profile from '../../public/images/member2.png'
 const BlogHero = () => {
           return (
                     <>
-                              <div className="w-full  flex ">
-                                        <div className='md:w-1/2  md:pl-96 md:py-4 overflow-hidden' >
+                              <div className="w-full  md:flex  items-center justify-center">
+                                        <div className='   md:py-4 overflow-hidden px-5 py-10' >
                                                   <Image
                                                             src={img}
                                                             height={500}
-                                                            width={900}
+                                                            width={400}
                                                             alt='img'
-                                                            className='md:w-[80%] rounded-xl'
+                                                            className=' rounded-xl'
                                                   />
                                         </div>
-                                        <div className='w-1/2 h-full  pr-96 py-4'>
+                                        <div className='md:w-[30%] w-full  md:py-4 md:px-0 px-6'>
                                                   <div id="text">
                                                             <p className='uppercase text-sm font-extrabold text-purple-600 '>software</p>
-                                                            <h1 className='text-5xl font-bold text-[#2e2e2e] my-2'>10 best mindgrasp AI Alternative in 2023 (Reviews & Pricing)</h1>
+                                                            <h1 className='md:text-4xl text-3xl font-bold text-[#2e2e2e] my-2'>10 best mindgrasp AI Alternative in 2023 (Reviews & Pricing)</h1>
                                                             <div id="name" className=' my-10 flex items-center justify-between w-full  p-3'>
                                                                       <div className='flex gap-2 items-center mr-5'>
                                                                                 <Image
@@ -48,10 +48,10 @@ const BlogHero = () => {
                                                                       </div>
                                                             </div>
                                                             <div>
-                                                                      <i className="ri-twitter-x-line bg-gray-800 rounded-full mx-3 p-2 text-white"></i>
-                                                                      <i className="ri-linkedin-box-fill bg-gray-800 rounded-full mx-3 p-2 text-white"></i>
-                                                                      <i className="ri-facebook-circle-fill bg-gray-800 rounded-full mx-3 p-2 text-white"></i>
-                                                                      <i className="ri-share-line bg-gray-800 rounded-full mx-3 p-2 text-white"></i>
+                                                                      <i className="ri-twitter-x-line bg-gray-800 rounded-full mx-3 p-2 text-white cursor-pointer"></i>
+                                                                      <i className="ri-linkedin-box-fill bg-gray-800 rounded-full mx-3 p-2 text-white cursor-pointer"></i>
+                                                                      <i className="ri-facebook-circle-fill bg-gray-800 rounded-full mx-3 p-2 text-white cursor-pointer"></i>
+                                                                      <i className="ri-share-line bg-gray-800 rounded-full mx-3 p-2 text-white cursor-pointer"></i>
                                                             </div>
                                                   </div>
                                         </div>

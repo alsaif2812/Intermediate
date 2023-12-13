@@ -14,12 +14,12 @@ const JobCard = () => {
                               <div id="jobmain" className='px-20 py-10 flex flex-col items-center'>
                                         <div id="jobcard" className='w-full md:max-w-[70%] rounded-xl border-2 border-gray-500 mt-5 py-5 px-10'>
                                                   <div id="upper" className='w-full flex flex-col md:flex-row gap- items-center justify-between'>
-                                                            <div className='flex flex-col md:flex-row gap-3 md:gap-20 items-center'>
+                                                            <div className='flex flex-col md:flex-row gap-3 md:gap-6 items-center'>
                                                                       <i className="ri-briefcase-4-line text-3xl text-[#535353]"></i>
                                                                       <h1 className='text-2xl font-extrabold text-[#535353]'>Junior UI/UX Designer</h1>
                                                             </div>
                                                             <p className='flex items-center text-xl font-bold mt-4 md:mt-0 text-[#535353]'>
-                                                                      <i className="ri-map-pin-line text-2xl "></i>Trivandrum
+                                                                      <i className="ri-map-pin-line text-xl "></i>Trivandrum
                                                             </p>
                                                   </div>
                                                   <div id="lower" className='w-full pt-6 md:pt-14 flex flex-col md:flex-row items-center justify-between'>
@@ -34,15 +34,20 @@ const JobCard = () => {
                                                                                 Remote
                                                                       </button>
                                                             </div>
-                                                            <button onClick={togglePopup} className='mt-4 md:mt-0 py-3 px-6 bg-blue-700 text-white text-sm font-bold rounded-lg'>Read more</button>
+                                                            <div className='flex gap-3'>
+                                                                      <button className='mt-4 md:mt-0 py-3 px-6 bg-blue-700 text-white text-sm font-bold rounded-lg'>
+                                                                                Apply Now
+                                                                      </button>
+                                                                      <button onClick={togglePopup} className='mt-4 md:mt-0 py-3 px-6 bg-[#f5f5f5] text-[#2e2e2e] text-sm font-bold rounded-lg'>Read Description</button>
+                                                            </div>
                                                   </div>
                                                   {showPopup && (
                                                             <div className="page-dim-overlay  py-10 ">
                                                                       {/* Popup Content */}
-                                                                      <div className="popup-content border-2 border-gray-500 p-5 rounded-md" >
+                                                                      <div className="popup-content  p-5 rounded-md" >
                                                                                 {/* Add your job description here */}
                                                                                 <div className=' w-full'>
-                                                                                          <h1 className='border-b-2 pb-2 font-semibold text-gray-700  text-4xl text-center border-gray-300 mb-5'>Junior UI/UX Engineer</h1>
+                                                                                          <h1 className=' pb-2 font-semibold text-gray-700  text-4xl text-center mb-5'>Junior UI/UX Engineer</h1>
                                                                                           <strong className='my-3 pb-5'>Wahni IT Solutions is looking for a Project Manager (Preferably Malayalam Speaking) to join our team and to drive ERPNext implementation for our clients, the job location is based in Thripayar, near Thrissur. </strong>The role of the Project Manager is to execute the project and deliver the desired outcomes in an effective and professional manner in a defined time period. You will be responsible for the project planning, execution, control; and project closure, once all the identified and agreed scope of work is implemented and tested for quality.
                                                                                           <p className='mt-2 text-lg font-semibold'>Your responsibilities would include, but not be limited to, the following:</p>
                                                                                           <ul className='my-3 list-disc list-inside'>
@@ -77,13 +82,7 @@ const JobCard = () => {
                                                                                           </ul>
                                                                                 </div>
 
-                                                                                {/* Close button */}
-                                                                                <div className="close-button flex gap-3" onClick={togglePopup}>
-                                                                                          <button className='mt-4 md:mt-0 py-3 px-6 bg-blue-700 text-white text-sm font-bold rounded-lg '>Close</button>
-                                                                                          <button className='mt-4 md:mt-0 py-3 px-6 bg-blue-700 text-white text-sm font-bold rounded-lg'>
-                                                                                                    Apply Now
-                                                                                          </button>
-                                                                                </div>
+
 
                                                                                 {/* Apply Now button */}
                                                                       </div>
