@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react';
-import Layout from '../layout'
+import Layout from '../../layout'
 const JobApplicationPage = () => {
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');

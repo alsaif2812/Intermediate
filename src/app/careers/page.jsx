@@ -1,16 +1,27 @@
-// import Hero from '@/components/Hero'
+"use client"
 import Image from 'next/image'
 import React from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
 import JobCard from '../../components/JobCard'
 import Layout from '../layout'
+import { Input } from "@material-tailwind/react";
 
 export const metadata = {
-  title: "Empower Your Career with Wahni IT Solutions",
-  description: "Both our clients and the community are very important to us. People in Wahni embrace flexible work schedules with responsibilities as part of their culture.",
-  keyword: "wahni it,best erp software in india, erp solutions, erpnext"
+  generator: 'Next.js',
+  applicationName: 'Next.js',
+  referrer: 'origin-when-cross-origin',
+  keywords: ['Next.js', 'React', 'JavaScript'],
+  authors: [{ name: 'Seb' }, { name: 'Josh', url: 'https://nextjs.org' }],
+  creator: 'Jiachi Liu',
+  publisher: 'Sebastian Markbåge',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
 }
+
 const page = () => {
   return (
 
@@ -78,21 +89,21 @@ const page = () => {
         </div>
         <div id="jobmain" className='  px-20 py-10 flex flex-col items-center'>
           <div id="nav" className='flex flex-col md:flex-row gap-5 items-center justify-center'>
-            <input
-              type="text"
-              placeholder="Job title"
+            <Input
+              icon={<i class="ri-search-eye-line"></i>}
+              label="Job Title"
               className="w-full md:w-auto py-2 px-5 rounded-md border-2 border-[#dadada] mb-2 md:mb-0"
             />
 
-            <input
-              type="text"
-              placeholder='Location'
+            <Input
+              icon={<i class="ri-map-pin-2-line"></i>}
+              label="Location"
               className='w-full md:w-auto py-2 px-5 rounded-md border-2 border-[#dadada] mb-2 md:mb-0'
             />
 
-            <input
-              type="text"
-              placeholder='Job Type'
+            <Input
+              icon={<i class="ri-shopping-bag-fill"></i>}
+              label="Job Type"
               className='w-full md:w-auto py-2 px-5 rounded-md border-2 border-[#dadada]'
             />
 
