@@ -7,7 +7,7 @@ import JobCard from '../../components/JobCard'
 import Layout from '../layout'
 import { Input } from "@material-tailwind/react";
 
-export const metadata = {
+const metadata = {
   generator: 'Next.js',
   applicationName: 'Next.js',
   referrer: 'origin-when-cross-origin',
