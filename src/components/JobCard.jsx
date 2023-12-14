@@ -1,18 +1,15 @@
 "use client"
 import React, { useState } from 'react';
-import Link from 'next/link';
-
 const JobCard = () => {
           const [showPopup, setShowPopup] = useState(false);
 
           const togglePopup = () => {
                     setShowPopup(!showPopup);
           };
-
           return (
                     <>
-                              <div id="jobmain" className='px-20 py-10 flex flex-col items-center'>
-                                        <div id="jobcard" className='w-full md:max-w-[70%] rounded-xl border-2 border-gray-500 mt-5 py-5 px-10'>
+                              <div id="jobmain" className='md:px-20 px-5 py-5 md:py-10 flex flex-col items-center'>
+                                        <div id="jobcard" className='w-full md:max-w-[70%] rounded-xl border-2 border-gray-500 mt-5 py-5 md:px-10 px-4'>
                                                   <div id="upper" className='w-full flex flex-col md:flex-row gap- items-center justify-between'>
                                                             <div className='flex flex-col md:flex-row gap-3 md:gap-6 items-center'>
                                                                       <i className="ri-briefcase-4-line text-3xl text-[#535353]"></i>
@@ -35,16 +32,16 @@ const JobCard = () => {
                                                                       </button>
                                                             </div>
                                                             <div className='flex gap-3'>
-                                                                      <button className='mt-4 md:mt-0 py-3 px-6 bg-blue-700 text-white text-sm font-bold rounded-lg'>
+                                                                      <button className='mt-4 md:mt-0 md:py-3 md:px-6 py-2 px-4 bg-blue-700 text-white text-sm font-bold rounded-lg'>
                                                                                 Apply Now
                                                                       </button>
                                                                       <button onClick={togglePopup} className='mt-4 md:mt-0 py-3 px-6 bg-[#f5f5f5] text-[#2e2e2e] text-sm font-bold rounded-lg'>Read Description</button>
                                                             </div>
                                                   </div>
                                                   {showPopup && (
-                                                            <div className="page-dim-overlay  py-10 ">
+                                                            <div className="page-dim-overlay  md:py-10  pt-10">
                                                                       {/* Popup Content */}
-                                                                      <div className="popup-content  p-5 rounded-md" >
+                                                                      <div className="popup-content  md:p-5  rounded-md" >
                                                                                 {/* Add your job description here */}
                                                                                 <div className=' w-full'>
                                                                                           <h1 className=' pb-2 font-semibold text-gray-700  text-4xl text-center mb-5'>Junior UI/UX Engineer</h1>
@@ -67,7 +64,6 @@ const JobCard = () => {
                                                                                                     <li> Implementing process optimization, improvements, and modernization initiatives where appropriate;</li>
                                                                                                     <li> Identifying process inefficiencies and compliance issues, and implementing strategic solutions;</li>
                                                                                                     <li>Participating actively and collaborating within the IT team, providing feedback on current day to day activities, and recommending improvements;</li>
-
                                                                                           </ul>
                                                                                           <p className='mt-2 text-lg font-semibold my-3' >Required/Preferred Skill Set:</p>
                                                                                           <ul className='my-3 list-decimal list-inside'>

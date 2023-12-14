@@ -11,8 +11,19 @@ import {
   MenuItem,
   Button
 } from "@material-tailwind/react";
+
+import {
+  IconButton,
+  SpeedDial,
+  SpeedDialHandler,
+  SpeedDialContent,
+  SpeedDialAction,
+} from "@material-tailwind/react";
+import {
+  PlusIcon,
+} from "@heroicons/react/outline";
 import { ChevronDownIcon } from "@heroicons/react/outline";
-function Navbar() {
+function Navbar({ showDefaultButtonColors }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openMenu, setOpenMenu] = React.useState(false);
   const [openMenu2, setOpenMenu2] = React.useState(false);
@@ -365,12 +376,31 @@ function Navbar() {
           </Link>
         </div>
         <div id="nav3" className="hidden md:flex items-center justify-between gap-2">
-          <button className="py-2 px-4 bg-[#ffffff] rounded-lg font-bold text-blue-400 bg-opacity-90 transition hover:bg-blue-500 hover:text-white hover:scale-105 hover:mt-[0.1vw] duration-300">
+          <button className={`${showDefaultButtonColors ? 'bg-white-500' : 'bg-[#26C3FE] text-white'} py-2 px-4 bg-[#47CCFE] rounded-lg font-bold text-blue-400 bg-opacity-90 transition hover:bg-blue-500 hover:text-white hover:scale-105 hover:mt-[0.1vw] duration-300`}>
             Free Demo
           </button>
-          <button className="py-2 px-4 bg-white rounded-lg font-bold bg-opacity-20 text-white transition hover:bg-blue-500 hover:text-white hover:scale-105 hover:mt-[0.1vw] duration-300">
+          <button className={`${showDefaultButtonColors ? 'bg-white text-white hover:bg-blue-500' : 'bg-gray-600 text-[#5b5858]'} py-2 px-4  rounded-lg font-bold bg-opacity-20  transition   hover:scale-105 hover:mt-[0.1vw] duration-300`}>
             Contact Sales
           </button>
+          <SpeedDial className='bg-blue-500'>
+            <SpeedDialHandler>
+              <IconButton size="lg" className={`${showDefaultButtonColors ? 'bg-white text-white hover:bg-blue-500' : 'bg-[#47CCFE]  text-[#fafafa]'}   rounded-full `}>
+                <PlusIcon className="h-5 w-4 transition-transform group-hover:rotate-[180deg] duration-500" />
+              </IconButton>
+            </SpeedDialHandler>
+            <SpeedDialContent>
+              <SpeedDialAction>
+                <i class="ri-whatsapp-line h-5 w-5"></i>
+              </SpeedDialAction>
+              <SpeedDialAction>
+                <i class="ri-customer-service-line h-5 w-5"></i>
+              </SpeedDialAction>
+              <SpeedDialAction>
+                <i class="ri-mail-line h-5 w-5"></i>
+              </SpeedDialAction>
+
+            </SpeedDialContent>
+          </SpeedDial>
         </div>
         <div
           id="mobileMenu"
@@ -535,7 +565,7 @@ function Navbar() {
             <button className='capitalize my-[1.9vw] ml-[-3vw] px-[4vw] py-[2vw] bg-deep-purple-300 rounded-lg font-semibold text-sm text-[#212121]'>Contact sales</button>
           </div>
         </div>
-      </div>
+      </div >
     </>
   );
 }

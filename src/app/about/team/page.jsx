@@ -5,6 +5,7 @@ import Card from '@/components/Team';
 export default function Home() {
   return (
     <>
+      ,
       <Head>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />

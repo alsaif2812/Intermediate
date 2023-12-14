@@ -5,12 +5,12 @@ import profile from '../../public/images/member2.png'
 const BlogHero = () => {
           return (
                     <>
-                              <div className="w-full  md:flex  items-center justify-center">
+                              <div className="w-full  md:flex md:h-[30rem] h-[45rem] my-5 md:my-0 items-center justify-center bg-gradient-to-r from-[#CAF2EF] via-[#C9EFDC] to-[#F2BBF1]">
                                         <div className='   md:py-4 overflow-hidden px-5 py-10' >
                                                   <Image
                                                             src={img}
                                                             height={500}
-                                                            width={400}
+                                                            width={500}
                                                             alt='img'
                                                             className=' rounded-xl'
                                                   />
@@ -35,15 +35,13 @@ const BlogHero = () => {
                                                                       <div className=' items-center px-3'>
 
                                                                                 <div className='leading-none '>
-                                                                                          <h1 className='text-sm'>December 5,</h1>
-                                                                                          <p className='text-sm'>2023</p>
+                                                                                          <h1 className='text-sm'>December 5,2023</h1>
                                                                                 </div>
                                                                       </div> |
                                                                       <div className='s'>
 
                                                                                 <div className='leading-none '>
-                                                                                          <h1 className=''>10min</h1>
-                                                                                          <p className='text-sm'>read</p>
+                                                                                          <h1 className=''>10min read</h1>
                                                                                 </div>
                                                                       </div>
                                                             </div>

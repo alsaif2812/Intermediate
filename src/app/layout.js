@@ -1,25 +1,28 @@
-// "use client"
-import NextTopLoader from 'nextjs-toploader';
+"use client";
+import Head from 'next/head';
 import { Nunito } from 'next/font/google';
+import '@fortawesome/fontawesome-svg-core/styles.css';
+import { config } from "@fortawesome/fontawesome-svg-core";
+import 'remixicon/fonts/remixicon.css';
+
+import NextTopLoader from 'nextjs-toploader';
+import logo from '../../public/images/wit-logo.png';
+import './globals.css';
+
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import Head from 'next/head';
-import 'remixicon/fonts/remixicon.css';
-import logo from '../../public/images/wit-logo.png'
-import './globals.css';
-import "@fortawesome/fontawesome-svg-core/styles.css";
-import { config } from "@fortawesome/fontawesome-svg-core";
-// import { metadata } from '../components/Metadata'
+import metadata from '../components/Metadata';
+
 config.autoAddCss = false;
 
-export const nunito = Nunito({
+const nunitoResult = Nunito({
   subsets: ['latin'],
   display: 'swap',
 });
-import metadata from '../components/Metadata'
+
 const RootLayout = ({ children, showBackgroundImage }) => {
   return (
-    <html lang="en" className={nunito.className}>
+    <html lang="en" className={nunitoResult.className}>
       <Head>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
@@ -30,7 +33,7 @@ const RootLayout = ({ children, showBackgroundImage }) => {
       <body className={` ${showBackgroundImage ? 'md:bg-[url("/images/blob.png")] bg-no-repeat bg-right-top w-[100%]' : ''}`}>
         <NextTopLoader />
         <div>
-          <Navbar />
+          <Navbar showDefaultButtonColors={showBackgroundImage} />
           {children}
         </div>
         <Footer />
@@ -39,6 +42,4 @@ const RootLayout = ({ children, showBackgroundImage }) => {
   );
 };
 
-
 export default RootLayout;
-
