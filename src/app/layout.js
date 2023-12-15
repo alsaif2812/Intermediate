@@ -12,7 +12,7 @@ import './globals.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import metadata from '../components/Metadata';
-
+import SpeedDial from '../components/SpeedDial';
 config.autoAddCss = false;
 
 const nunitoResult = Nunito({
@@ -22,7 +22,7 @@ const nunitoResult = Nunito({
 
 const RootLayout = ({ children, showBackgroundImage }) => {
   return (
-    <html lang="en" className={nunitoResult.className}>
+    <>
       <Head>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
@@ -30,15 +30,18 @@ const RootLayout = ({ children, showBackgroundImage }) => {
         <link rel="icon" href={logo} />
       </Head>
 
-      <body className={` ${showBackgroundImage ? 'md:bg-[url("/images/blob.png")] bg-no-repeat bg-right-top w-[100%]' : ''}`}>
+      <body className={`${nunitoResult.className} ${showBackgroundImage ? 'md:bg-[url("/images/blob.png")] bg-no-repeat bg-right-top w-[100%]' : ''}`}>
         <NextTopLoader />
         <div>
           <Navbar showDefaultButtonColors={showBackgroundImage} />
           {children}
         </div>
         <Footer />
+        <div style={{ position: 'fixed', bottom: '20px', right: '20px' }}>
+          <SpeedDial />
+        </div>
       </body>
-    </html>
+    </>
   );
 };
 
