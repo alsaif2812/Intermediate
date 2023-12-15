@@ -8,8 +8,9 @@ function VideoTextCard({ data, bgColor, borderColor, btnColor }) {
   return (
     <div
       id="Videotextcard"
-      className={`${bgColor} text-[#3d3d3d] max-h-[1000rem] md:flex md:items-center md:justify-center md:mt-3 md:mb-0 mt-28 py-10 px-5 rounded-3xl md:max-w-[1000rem] md:px-8`}
+      className={`${bgColor} text-[#3d3d3d]  h-auto md:flex md:items-center md:justify-center md:mt-3 md:mb-0 mt-28 py-10 px-5 rounded-3xl  md:px-8`}
     >
+
       <div className="md:mt-[0.6vw] ">
         {tabs.length > 1 ? (
           <div
@@ -40,7 +41,7 @@ function VideoTextCard({ data, bgColor, borderColor, btnColor }) {
           <div className="md:w-[60%] mt-10 w-[100%]">
             <div
               id="video"
-              className="rounded-2xl my-6 w-full md:hidden block"
+              className="rounded-2xl my-6 md:hidden block"
             >
               <video
                 src={data[selectedTab].video}
@@ -48,9 +49,9 @@ function VideoTextCard({ data, bgColor, borderColor, btnColor }) {
                 autoPlay
                 loop
                 muted
-                width={1000}
+                width={600}
                 height={100}
-                className="md:w-full md:h-full object-cover cursor-pointer w- rounded-xl "
+                className=" object-cover cursor-pointer  rounded-xl "
                 id="topimg"
               />
             </div>
@@ -81,16 +82,16 @@ function VideoTextCard({ data, bgColor, borderColor, btnColor }) {
               </button>
             </div>
           </div>
-          <div className="md:w-[100%] md:pb-10 md:px-16 hidden md:block">
+          <div className=" md:pb-10 md:px-16 hidden md:block">
             <video
               src={data[selectedTab].video}
               alt="img"
               autoPlay
               loop
               muted
-              width={400}
+              width={950}
               height={100}
-              className="md:w-[100%] md:rounded-lg bg mt-9 ml-8 cursor-pointer "
+              className=" md:rounded-lg bg mt-9 ml-8 cursor-pointer "
               id="bottomimg"
             />
           </div>

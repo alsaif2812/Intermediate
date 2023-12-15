@@ -22,7 +22,7 @@ const nunitoResult = Nunito({
 
 const RootLayout = ({ children, showBackgroundImage }) => {
   return (
-    <>
+    <html lang="en" className={`${nunitoResult.className}`}>
       <Head>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
@@ -30,7 +30,7 @@ const RootLayout = ({ children, showBackgroundImage }) => {
         <link rel="icon" href={logo} />
       </Head>
 
-      <body className={`${nunitoResult.className} ${showBackgroundImage ? 'md:bg-[url("/images/blob.png")] bg-no-repeat bg-right-top w-[100%]' : ''}`}>
+      <body className={` ${showBackgroundImage ? 'md:bg-[url("/images/blob.png")] bg-no-repeat bg-right-top w-[100%]' : ''}`}>
         <NextTopLoader />
         <div>
           <Navbar showDefaultButtonColors={showBackgroundImage} />
@@ -41,7 +41,7 @@ const RootLayout = ({ children, showBackgroundImage }) => {
           <SpeedDial />
         </div>
       </body>
-    </>
+    </html>
   );
 };
 
