@@ -8,9 +8,11 @@ import {
 } from "@material-tailwind/react";
 import { Chip } from "@material-tailwind/react";
 
-export function CardWithLink() {
+
+
+export function CardWithLink({ jsonData }) {
           return (
-                    <Card className="mt-6 md:w-[50%] w-[80%]">
+                    <Card className="mt-6 md:w-[50%] w-[80%] /">
                               <CardBody>
                                         <svg
                                                   xmlns="http://www.w3.org/2000/svg"
@@ -26,25 +28,30 @@ export function CardWithLink() {
                                                   <path d="M5.26 17.242a.75.75 0 10-.897-1.203 5.243 5.243 0 00-2.05 5.022.75.75 0 00.625.627 5.243 5.243 0 005.022-2.051.75.75 0 10-1.202-.897 3.744 3.744 0 01-3.008 1.51c0-1.23.592-2.323 1.51-3.008z" />
                                         </svg>
                                         <Typography variant="h5" color="blue-gray" className="mb-2">
-                                                  <h1 className='text-2xl font-extrabold ml-3'>Ready to experience the magic of workflow automation? Here are some next steps</h1>                                        </Typography>
+                                                  <h1 className='text-2xl font-extrabold ml-3'>{jsonData.Typography1.content}</h1>
+                                        </Typography>
                                         <Typography>
                                                   <div>
-                                                            <ul className='my-5 list-inside font-semibold text-lg'>
-                                                                      <li className="flex md:items-center "><Chip value="1" className="flex items-center justify-center  w-7 h-7 rounded-full mx-2 bg-[#bb44b8]" />Explore the extensive library of pre-built workflows available in ERPNext.
-                                                                      </li>
-                                                                      <li className="flex md:items-center my-5"><Chip value="2" className="flex items-center justify-center  w-7 h-7 rounded-full mx-2 bg-[#bb44b8]" />Consult with an ERPNext expert to design and implement custom workflows tailored to your specific needs.
-                                                                      </li>
-                                                                      <li className="flex md:items-center "><Chip value="3" className="flex items-center justify-center  w-7 h-7 rounded-full mx-2 bg-[#bb44b8]" />Start small, automate one or two processes at a time, and gradually expand your workflow automation capabilities.
-                                                                      </li>
-
-                                                            </ul>
+                                                            {jsonData.Typography2.content.ul ? (
+                                                                      <ul className='my-5 list-inside font-semibold text-lg'>
+                                                                                {Object.values(jsonData.Typography2.content.ul).map((item, index) => (
+                                                                                          <li key={index} className="flex md:items-center">
+                                                                                                    <Chip value={index + 1} className="flex items-center justify-center w-7 h-7 rounded-full mx-2 bg-[#bb44b8]" />
+                                                                                                    {item}
+                                                                                          </li>
+                                                                                ))}
+                                                                      </ul>
+                                                            ) : (
+                                                                      <p className="font-semibold text-gray-700  md:px-8 px-3">{jsonData.Typography2.content}</p>
+                                                            )}
                                                   </div>
+
                                         </Typography>
                               </CardBody>
                               <CardFooter className="pt-0">
                                         <a href="/" className="inline-block">
                                                   <Button size="sm" variant="text" className="flex items-center gap-2">
-                                                            Contact Salesdo
+                                                            {jsonData.Button}
                                                             <svg
                                                                       xmlns="http://www.w3.org/2000/svg"
                                                                       fill="none"
@@ -53,11 +60,7 @@ export function CardWithLink() {
                                                                       stroke="currentColor"
                                                                       className="h-4 w-4"
                                                             >
-                                                                      <path
-                                                                                strokeLinecap="round"
-                                                                                strokeLinejoin="round"
-                                                                                d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-                                                                      />
+                                                                      <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
                                                             </svg>
                                                   </Button>
                                         </a>

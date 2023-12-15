@@ -496,7 +496,7 @@ function Navbar({ showDefaultButtonColors }) {
                   <Link href='/services/business'>
                     <MenuItem>Business Consulting</MenuItem>
                   </Link>
-                  <Link href='/services/ecommerce'>
+                  <Link href='/services/e-commerce'>
                     <MenuItem>E-commerce</MenuItem>
                   </Link>
                   <Link href='/services/implementation'>

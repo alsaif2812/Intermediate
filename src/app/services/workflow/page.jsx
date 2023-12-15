@@ -10,6 +10,7 @@ import Card2Data from '../../../textContent/workflow/Card2Data.json'
 import Card3Data from '../../../textContent/workflow/Card3Data.json'
 import Card4Data from '../../../textContent/workflow/Card4Data.json'
 import Rocket from '../../../components/Rocket'
+import jsonData1 from '../../../textContent/rocket/rocket1.json';
 const metadata = {
   title: "Workflow Automation — Wahni IT Solutions",
   description: "we are experienced in workflow automation in Kerala Legislative Assembly through ICFOSS a governmental agency supporting free and open-source software.",
@@ -76,27 +77,22 @@ const page = () => {
         <h1 className='md:text-4xl text-2xl font-bold md:pb-28 md:pt-20 pt-20 pb-10 text-center'>Let's dive deeper into how workflow automation <br />  with ERPNext can benefit specific departments:
         </h1>
         <div className="p-1 md:flex md:items-center md:justify-center md:px-[18vw] mb-5">
-          <VideoTextCard data={Card1Data} bgColor="bg-[#D2E0FB] bg-opacity-40" btnColor="bg-[#528ff6]" borderColor="hover:border-b-4 border-[#528ff6]" />
+          <VideoTextCard data={Card1Data} bgColor="bg-[#D2E0FB] bg-opacity-40" btnColor="bg-[#528ff6]" borderColor="hover:border-b-4 border-[#528ff6] " txtcolor="text-[#528ff6]" />
         </div>
         <div className="p-1 md:flex md:items-center md:justify-center md:px-[18vw] mb-5">
-          <VideoTextCard data={Card2Data} bgColor="bg-[#fff2cc] bg-opacity-40" btnColor="bg-[#ffd645]" borderColor="hover:border-b-4 border-[#ffd645]" />
+          <VideoTextCard data={Card2Data} bgColor="bg-[#fff2cc] bg-opacity-40" btnColor="bg-[#ffd645]" borderColor="hover:border-b-4 border-[#ffd645]" txtcolor="text-[#ffd645]" />
         </div>
         <div className="p-1 md:flex md:items-center md:justify-center md:px-[18vw] mb-5">
-          <VideoTextCard data={Card3Data} bgColor="bg-[#fff2cc] bg-opacity-40" btnColor="bg-[#ffd645]" borderColor="hover:border-b-4 border-[#ffd645]" />
+          <VideoTextCard data={Card3Data} bgColor="bg-[#fff2cc] bg-opacity-40" btnColor="bg-[#ffd645]" borderColor="hover:border-b-4 border-[#ffd645]" txtcolor="text-[#ffd645]" />
         </div>
         <div className="p-1 md:flex md:items-center md:justify-center md:px-[18vw] mb-5">
-          <VideoTextCard data={Card4Data} bgColor="bg-[#fff2cc] bg-opacity-40" btnColor="bg-[#ffd645]" borderColor="hover:border-b-4 border-[#ffd645]" />
+          <VideoTextCard data={Card4Data} bgColor="bg-[#fff2cc] bg-opacity-40" btnColor="bg-[#ffd645]" borderColor="hover:border-b-4 border-[#ffd645]" txtcolor="text-[#ffd645]" />
         </div>
       </div>
       <div id="iconss" className='flex items-center justify-center my-10'>
-        <Rocket />
+        <Rocket jsonData={jsonData1} />
 
       </div>
-
-
-
-
-
     </>
   )
 }
