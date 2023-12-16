@@ -6,6 +6,8 @@ import Card2Data from '../../../textContent/e-commerce/Card2Data.json'
 import VideoTextCard from '@/components/VideoTextCard'
 import jsonData2 from '../../../textContent/rocket/rocket2.json';
 import Rocket from '../../../components/Rocket'
+import ServicesHero from '@/components/ServicesHero'
+import Data2 from '../../../textContent/servicesHeroContent/e-commerce'
 
 export const metadata = {
 
@@ -25,17 +27,8 @@ const page = () => {
       </Head>
       <div>
         <div id="mainecommerce" className='w-full py-5 md:pt-6  pt-16 px-6 flex flex-col items-center justify-center '>
-          <div id="maintext4" className='w-full flex flex-col items-center justify-center gap-6'>
-            <h1 className='text-6xl md:text-7xl font-extrabold text-center gradient-text'>Simplify, Automate, Sell</h1>
-            <p className='text-lg text-center md:text-xl '> <strong>Automate your workflow </strong> <br /> and watch your profits soar with <br />ERPNext-powered e-commerce.
-            </p>
-            <button className='mt-4 bg-gradient-to-r from-[#4695F0]  to-[#FC42CE]  px-6 py-3 md:py-3 md:px-6 md:text-lg rounded-md font-bold text-white shadow-md hover:shadow-lg focus:outline-none focus:ring focus:border-blue-300'>
-              Get a Quote, it&apos;s Free <i className="ri-arrow-right-line"></i>
-            </button>
 
-            <p className='opacity-70 text-gray-800 font-semibold'><i className="ri-trophy-fill text-yellow-600 text-xl mx-1"></i> Frappe Certified Partner</p>
-          </div>
-
+          <ServicesHero data={Data2} />
         </div>
         <div className=' px-4 md:pt-20 pt-1'>
 

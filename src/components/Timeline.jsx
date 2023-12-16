@@ -1,3 +1,4 @@
+"use client"
 import {
           Timeline,
           TimelineItem,
@@ -59,19 +60,19 @@ function TimelineWithIcon() {
                                         </TimelineHeader>
                                         <TimelineBody>
                                                   <Typography color="gary" className="font-normal text-gray-600">
-                                                            <ul className="flex flex-col gap-4">
+                                                            <ul className="flex flex-col gap-4 list-outside">
 
-                                                                      <li className="flex items-center "><Chip value="1" className="flex items-center justify-center w-7 h-7 rounded-full mx-2 bg-[#bb44b8]" /><strong > Discovery:</strong> Define project scope, milestones, customizations, and expected outcomes.
+                                                                      <li ><span className=" flex items-center "><Chip value="1" className="flex items-center justify-center w-7 h-7 rounded-full mx-2 bg-[#bb44b8]" /><strong > Discovery:</strong> </span>Define project scope, milestones, customizations, and expected outcomes.
 
                                                                       </li>
 
-                                                                      <li className="flex items-center "><Chip value="2" className="flex items-center justify-center  w-7 h-7 rounded-full mx-2 bg-[#bb44b8]" /><strong>Planning:</strong> Develop a comprehensive strategy for smooth implementation and progress tracking.</li>
+                                                                      <li><span className=" flex items-center "><Chip value="2" className="flex items-center justify-center  w-7 h-7 rounded-full mx-2 bg-[#bb44b8]" /><strong>Planning:</strong></span> Develop a comprehensive strategy for smooth implementation and progress tracking.</li>
 
-                                                                      <li className="flex items-center "><Chip value="3" className="flex items-center justify-center  w-7 h-7 rounded-full mx-2 bg-[#bb44b8]" /><strong>Analysis & Configuration:</strong> Install and configure the system to mirror your specific processes.
+                                                                      <li ><span className=" flex items-center "><Chip value="3" className="flex items-center justify-center  w-7 h-7 rounded-full mx-2 bg-[#bb44b8]" /><strong>Analysis & Configuration:</strong> </span>Install and configure the system to mirror your specific processes.
                                                                       </li>
-                                                                      <li className="flex items-center "><Chip value="4" className="flex items-center justify-center  w-7 h-7 rounded-full mx-2 bg-[#bb44b8]" /><strong>Migration & Verification:</strong> Migrate data, map it accurately, and perform thorough verification checks.
+                                                                      <li><span className="flex items-center"><Chip value="4" className="flex items-center justify-center  w-7 h-7 rounded-full mx-2 bg-[#bb44b8]" /><strong>Migration & Verification:</strong></span> Migrate data, map it accurately, and perform thorough verification checks.
                                                                       </li>
-                                                                      <li className="flex items-center "><Chip value="5" className="flex items-center justify-center  w-7 h-7 rounded-full mx-2 bg-[#bb44b8]" /><strong>Testing & Validation:</strong> Test the system across all functionalities, ensuring seamless quote-to-cash flow.
+                                                                      <li ><span className=" flex items-center "><Chip value="5" className="flex items-center justify-center  w-7 h-7 rounded-full mx-2 bg-[#bb44b8]" /><strong>Testing & Validation:</strong></span> Test the system across all functionalities, ensuring seamless quote-to-cash flow.
                                                                       </li>
                                                             </ul>
                                                   </Typography>

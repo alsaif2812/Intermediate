@@ -11,6 +11,8 @@ import Card3Data from '../../../textContent/workflow/Card3Data.json'
 import Card4Data from '../../../textContent/workflow/Card4Data.json'
 import Rocket from '../../../components/Rocket'
 import jsonData1 from '../../../textContent/rocket/rocket1.json';
+import ServicesHero from '@/components/ServicesHero'
+import Data3 from '../../../textContent/servicesHeroContent/Workflow'
 const metadata = {
   title: "Workflow Automation — Wahni IT Solutions",
   description: "we are experienced in workflow automation in Kerala Legislative Assembly through ICFOSS a governmental agency supporting free and open-source software.",
@@ -27,17 +29,7 @@ const page = () => {
         <meta name="keywords" content={metadata.keyword} />
       </Head>
       <div id="mainworkflow" className='w-full py-5 md:pt-6  pt-16 px-6 flex flex-col items-center justify-center '>
-        <div id="maintext3" className='w-full flex flex-col items-center justify-center gap-6'>
-          <h1 className='text-6xl md:text-7xl font-extrabold text-center gradient-text'>Work smarter,
-            <br />  not harder</h1>
-          <p className='text-lg text-center md:text-xl '> <strong>Design custom workflows, </strong> <br /> automate complex processes, <br /> and unlock the full power of your business data.
-          </p>
-          <button className='mt-4 bg-gradient-to-r from-[#4695F0]  to-[#FC42CE]  px-6 py-3 md:py-3 md:px-6 md:text-lg rounded-md font-bold text-white shadow-md hover:shadow-lg focus:outline-none focus:ring focus:border-blue-300'>
-            Get Started, it&apos;s Free <i className="ri-arrow-right-line"></i>
-          </button>
-
-          <p className='opacity-70 text-gray-800 font-semibold'><i className="ri-trophy-fill text-yellow-600 text-xl mx-1"></i> Frappe Certified Partner</p>
-        </div>
+        <ServicesHero data={Data3} />
         <div id="card" className='bg-[#D2E0FB] w-full py-5 px-5 flex items-center  justify-center flex-col md:flex-row mt-20 md:mt-20 rounded-xl md:rounded-2xl md:w-[60%] md:py-20'>
           <div className='md:hidden'>
             <Image
