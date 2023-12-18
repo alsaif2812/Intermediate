@@ -24,17 +24,17 @@ const page = () => {
         <meta name="description" content={metadata.description} />
         <meta name="keywords" content={metadata.keywords} />
       </Head>
-      <div id="mainerp" className=' py-5 md:pt-6  pt-16 px-3 flex flex-col '>
+      <div id="mainerp" className=' py-5 md:pt-6  pt-10 px-3 flex flex-col '>
 
         <ServicesHero data={Data1} />
         <div id="timeline" className='flex flex-col items-center justify-center px-5'>
-          <h1 className='md:text-4xl text-2xl font-bold md:pb-28 md:pt-20 pt-20 pb-10 text-center'>Unveiling our blueprint for <br /> successful ERP implementation.</h1>
+          <h1 className='md:text-4xl text-2xl font-bold md:pb-28 md:pt-20 pt-20 pb-10 text-center text-[#3f3e3e]'>Unveiling our blueprint for <br /> successful ERP implementation.</h1>
           <Timeline />
         </div>
         <div id="resources" className='pt-20'>
           <div className='flex flex-col items-center justify-center text-center'>
             <p className='text-purple-600 font-extrabold text-sm my-3'>RESOURCES</p>
-            <h1 className='text-4xl font-extrabold text-[#2e2e2e]'><strong>Beyond the Hype:</strong> Dive into Real Results <br /> with ERPNext Case Studies
+            <h1 className='text-4xl font-extrabold text-[#3f3e3e]'><strong>Beyond the Hype:</strong> Dive into Real Results <br /> with ERPNext Case Studies
             </h1>
           </div>
           <div className='flex flex-col gap-4 md:flex-row items-center justify-center '>

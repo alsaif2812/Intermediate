@@ -11,13 +11,8 @@ import {
   faCoins,
   faWarehouse
 } from '@fortawesome/free-solid-svg-icons';
-import party from 'party-js';
+import Frappe from './Frappe';
 
-export function triggerConfetti(e) {
-  party.confetti(e.target, {
-    count: party.variation.range(20, 40),
-  });
-}
 
 export default function Home() {
   return (
@@ -94,15 +89,7 @@ export default function Home() {
                 className="mt-[8vw] md:mt-[3vw] mx-[5vw] md:mx-[0vw]"
                 id="qualifications"
               >
-                <p>
-                  <i
-                    onMouseOver={triggerConfetti}
-                    className="ri-trophy-fill text-yellow-300 text-2xl"
-                  ></i>
-                  <a href='https://frappe.io/partner-certification/PARTCRTF00018' className="text-md text-gray-600">
-                    Frappe Certified Partner
-                  </a>
-                </p>
+                <Frappe />
 
                 <p>
                   <i className="ri-star-fill text-yellow-300 text-2xl"></i>

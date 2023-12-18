@@ -9,10 +9,10 @@ import {
           Typography,
 } from "@material-tailwind/react";
 import { Chip } from "@material-tailwind/react";
-function TimelineWithIcon() {
+function TimelineWithIcon({ timelineData }) {
           return (
 
-                    <Timeline className="md:w-[50rem]">
+                    <Timeline className="md:w-[50rem] text-[#3f3e3e]">
                               <TimelineItem>
                                         <TimelineConnector />
                                         <TimelineHeader>
