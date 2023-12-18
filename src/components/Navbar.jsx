@@ -108,7 +108,7 @@ function Navbar({ showDefaultButtonColors }) {
                           <p className='font-[500] text-sm opacity-75'>From design to delivery, we got you covered </p>
                         </div>
                       </Link>
-                      <Link href="/solutions/realestate" className=' w-[24vh] h-auto bg-transparent p-[0.8vw] hover:bg-lime-50 transition duration 200 hover:rounded-2xl'>
+                      <Link href="/solutions/real-estate" className=' w-[24vh] h-auto bg-transparent p-[0.8vw] hover:bg-lime-50 transition duration 200 hover:rounded-2xl'>
                         <div id="icon5" >
                           <h1 className='font-semibold text-md'><i class="ri-pencil-line mr-[0.3vw] text-lime-400 text-left text-xl"></i>Real Estate</h1>
                           <p className='font-[500] text-sm opacity-75'>Listings, deals, and more. Manage all at ease
@@ -245,7 +245,7 @@ function Navbar({ showDefaultButtonColors }) {
                   <div id='iconsleft' className=' items-center justify-center flex-wrap w-[70%]  h-[15vw] py-[1vw] px-[2vw] ml-[9vw]'>
 
                     <div className='flex ml-[0vw] mt-[5vw] gap-[5vw]'>
-                      <Link href="/services/business" className=' w-[28vh] h-auto bg-transparent p-[0.8vw] hover:bg-pink-50 transition duration 200 hover:rounded-2xl'>
+                      <Link href="/services/business-consulting" className=' w-[28vh] h-auto bg-transparent p-[0.8vw] hover:bg-pink-50 transition duration 200 hover:rounded-2xl'>
                         <div id="icon1">
                           <h1 className='font-bold text-md'><i class="ri-line-chart-line mr-[0.3vw] text-pink-300 text-left text-xl"></i>Business Consulting</h1>
                           <p className='text-sm font-[500] mt-[0.5vw] opacity-90'>Drive your business with innovation and growth </p>
@@ -259,14 +259,14 @@ function Navbar({ showDefaultButtonColors }) {
 
                         </div>
                       </Link>
-                      <Link href="/services/implementation" className=' w-[28vh] h-auto bg-transparent p-[0.8vw] hover:bg-green-50 transition duration 200 hover:rounded-2xl'>
+                      <Link href="/services/erp-implementation" className=' w-[28vh] h-auto bg-transparent p-[0.8vw] hover:bg-green-50 transition duration 200 hover:rounded-2xl'>
                         <div id="icon3">
                           <h1 className='font-bold text-md'><i class="ri-swap-fill mr-[0.3vw] text-green-400 text-left text-xl"></i>ERP Implementation</h1>
                           <p className='text-sm font-[500] mt-[0.5vw] opacity-90'>Your one-stop shop for successful ERP implementation.</p>
 
                         </div>
                       </Link>
-                      <Link href="/services/workflow" className=' w-[24vh] h-auto bg-transparent p-[0.8vw] hover:bg-pink-50 transition duration 200 hover:rounded-2xl'>
+                      <Link href="/services/workflow-automation" className=' w-[24vh] h-auto bg-transparent p-[0.8vw] hover:bg-pink-50 transition duration 200 hover:rounded-2xl'>
                         <div id="icon4">
                           <h1 className='font-bold text-md'><i class="ri-team-fill mr-[0.3vw] text-pink-400 text-left text-xl"></i>Workflow automation</h1>
                           <p className='text-sm font-[500] mt-[0.5vw] opacity-90'>Effortless efficiency. Workflows that work for you</p>
@@ -340,7 +340,7 @@ function Navbar({ showDefaultButtonColors }) {
                       <p className='text-sm font-[500] mt-[0.5vw] opacity-90'>Learn how ERP can transform your company</p>
                     </div>
                   </Link>
-                  <Link href="/learn/casestudies" className=' w-[24vh] h-auto bg-transparent p-[0.8vw] hover:bg-lime-50 transition duration 200 hover:rounded-2xl'>
+                  <Link href="/learn/case-studies" className=' w-[24vh] h-auto bg-transparent p-[0.8vw] hover:bg-lime-50 transition duration 200 hover:rounded-2xl'>
                     <div id="icon2" >
                       <h1 className='font-bold text-md capitalize'><i class="ri-team-fill mr-[0.3vw] text-lime-400 text-left text-xl"></i>case studies</h1>
                       <p className='text-sm font-[500] mt-[0.5vw] opacity-90'>Don&lsquo;t just take our word for it, read the success stories.</p>
@@ -429,7 +429,7 @@ function Navbar({ showDefaultButtonColors }) {
                   <Link href='/solutions/manufacturing' >
                     <MenuItem>Manufacturing</MenuItem>
                   </Link>
-                  <Link href='/solutions/realestate'>
+                  <Link href='/solutions/real-estate'>
                     <MenuItem>Real Estate</MenuItem>
                   </Link>
                   <Link href='/solutions/distribution'>
@@ -493,16 +493,16 @@ function Navbar({ showDefaultButtonColors }) {
                   </Button>
                 </MenuHandler>
                 <MenuList>
-                  <Link href='/services/business'>
+                  <Link href='/services/business-consulting'>
                     <MenuItem>Business Consulting</MenuItem>
                   </Link>
                   <Link href='/services/e-commerce'>
                     <MenuItem>E-commerce</MenuItem>
                   </Link>
-                  <Link href='/services/implementation'>
+                  <Link href='/services/erp-implementation'>
                     <MenuItem>ERP Implementation</MenuItem>
                   </Link>
-                  <Link href='/services/workflow'>
+                  <Link href='/services/workflow-automation'>
                     <MenuItem>Workflow automation</MenuItem>
                   </Link>
 
