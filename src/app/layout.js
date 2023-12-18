@@ -1,18 +1,17 @@
-"use client";
-import Head from 'next/head';
-import { Nunito } from 'next/font/google';
+'use client';
+import './globals.css';
 import '@fortawesome/fontawesome-svg-core/styles.css';
-import { config } from "@fortawesome/fontawesome-svg-core";
 import 'remixicon/fonts/remixicon.css';
 
-import NextTopLoader from 'nextjs-toploader';
-import logo from '../../public/images/wit-logo.png';
-import './globals.css';
-
-import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import metadata from '../components/Metadata';
+import Navbar from '@/components/Navbar';
+import NextTopLoader from 'nextjs-toploader';
 import SpeedDial from '../components/SpeedDial';
+
+import { Nunito } from 'next/font/google';
+import { config } from '@fortawesome/fontawesome-svg-core';
+import { usePathname } from 'next/navigation';
+
 config.autoAddCss = false;
 
 const nunitoResult = Nunito({
@@ -20,23 +19,29 @@ const nunitoResult = Nunito({
   display: 'swap',
 });
 
-const RootLayout = ({ children, showBackgroundImage }) => {
+const blobHideRoutes = ['/services/e-commerce'];
+
+const RootLayout = ({ children }) => {
+  const showBlob = !blobHideRoutes.includes(usePathname());
+
   return (
     <html lang="en" className={`${nunitoResult.className}`}>
-      <Head>
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
-        <meta name="keywords" content={metadata.keyword} />
-        <link rel="icon" href={logo} />
-      </Head>
-
-      <body className={` ${showBackgroundImage ? 'md:bg-[url("/images/blob.png")] bg-no-repeat bg-right-top w-[100%]' : ''}`}>
+      <body
+        className={`${
+          showBlob
+            ? 'md:bg-[url("/images/blob.png")] bg-no-repeat bg-right-top'
+            : ''
+        }`}
+      >
         <NextTopLoader />
+
         <div>
-          <Navbar showDefaultButtonColors={showBackgroundImage} />
+          <Navbar showDefaultButtonColors={showBlob} />
           {children}
         </div>
+
         <Footer />
+
         <div style={{ position: 'fixed', bottom: '20px', right: '20px' }}>
           <SpeedDial />
         </div>
