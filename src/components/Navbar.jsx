@@ -346,7 +346,7 @@ function Navbar({ showDefaultButtonColors }) {
                       <p className='text-sm font-[500] mt-[0.5vw] opacity-90'>Don&lsquo;t just take our word for it, read the success stories.</p>
                     </div>
                   </Link>
-                  <Link href="/learn/faqs" className=' w-[24vh] h-auto bg-transparent p-[0.8vw] hover:bg-green-50 transition duration 200 hover:rounded-2xl'>
+                  <Link href="/learn/faq" className=' w-[24vh] h-auto bg-transparent p-[0.8vw] hover:bg-green-50 transition duration 200 hover:rounded-2xl'>
                     <div id="icon3" >
                       <h1 className='font-bold text-md'><i class="ri-mail-check-line mr-[0.3vw] text-green-400 text-left text-xl"></i>FAQ&apos;s</h1>
                       <p className='text-sm font-[500] mt-[0.5vw] opacity-90'>Get quick answers to your burning questions.</p>

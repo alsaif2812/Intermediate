@@ -12,7 +12,7 @@ import Card4Data from '../../../textContent/workflow/Card4Data.json'
 import Rocket from '../../../components/Rocket'
 import jsonData1 from '../../../textContent/rocket/rocket1.json';
 import ServicesHero from '@/components/ServicesHero'
-// import Data3 from '../../../textContent/servicesHeroContent/Workflow'
+import Data3 from '../../../textContent/servicesHeroContent/Workflow'
 const metadata = {
   title: "Workflow Automation — Wahni IT Solutions",
   description: "we are experienced in workflow automation in Kerala Legislative Assembly through ICFOSS a governmental agency supporting free and open-source software.",
@@ -29,7 +29,7 @@ const page = () => {
         <meta name="keywords" content={metadata.keyword} />
       </Head>
       <div id="mainworkflow" className='w-full py-5 md:pt-6  pt-16 px-6 flex flex-col items-center justify-center '>
-        {/* <ServicesHero data={Data3} /> */}
+        <ServicesHero data={Data3} />
         <div id="card" className='bg-[#D2E0FB] w-full py-5 px-5 flex items-center  justify-center flex-col md:flex-row mt-20 md:mt-20 rounded-xl md:rounded-2xl md:w-[60%] md:py-20'>
           <div className='md:hidden'>
             <Image
