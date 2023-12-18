@@ -9,15 +9,22 @@ import {
   faIndustry,
   faStore,
   faCoins,
-  faWarehouse
+  faWarehouse,
 } from '@fortawesome/free-solid-svg-icons';
 import Frappe from './Frappe';
-
+import ChangeText from './ChangeText';
 
 export default function Home() {
+  const textContent = [
+    'streamline operations',
+    'automate production',
+    'increase profits',
+    'reduce costs',
+    'boost productivity',
+  ];
+
   return (
     <>
-
       <div id="page-1" className="h-full bg-opacity-80">
         <video
           width={1000}
@@ -36,32 +43,42 @@ export default function Home() {
               id="left"
               className="md:w-1/2 md:h-full md:px-12 md:py-12 md:ml-10"
             >
-              <h1
-                className="text-[7vw] h-auto  md:h-auto md:text-5xl font-bold mt-[5vw] md:mt-[3vw] w-full text-[#393939]"
-                id="maintext"
-              >
-                we have the solutions to
-                <p>
-                  <span className="typed w-full"></span>
-                </p>
-              </h1>
+              <ChangeText
+                staticText="we have the solutions to"
+                animTextContent={textContent}
+                interval={2000}
+                staticTextClass="text-[7vw] h-auto  md:h-auto md:text-5xl font-bold mt-[5vw] md:mt-[3vw] w-full text-[#393939]"
+                animTextClass="w-full typed"
+              />
+
               <div className="bg-transparent py-4 rounded-md mt-8" id="btn">
                 <div className="flex flex-wrap gap-4">
                   <Link href="/solutions/manufacturing">
                     <button className="py-2 px-4 bg-white rounded-md hover:shadow-2xl shadow-md font-semibold flex items-center transition gap-2">
-                      <FontAwesomeIcon icon={faIndustry} className='text-blue-600' />
+                      <FontAwesomeIcon
+                        icon={faIndustry}
+                        className="text-blue-600"
+                      />
                       Manufacturing
                     </button>
                   </Link>
                   <button className="py-2 px-4 bg-white rounded-md hover:shadow-2xl shadow-md font-semibold flex items-center transition gap-2">
-                    <FontAwesomeIcon icon={faStore} className='text-blue-600' />Trading
+                    <FontAwesomeIcon icon={faStore} className="text-blue-600" />
+                    Trading
                   </button>
                 </div>
                 <div className="flex flex-wrap gap-4 mt-4">
                   <button className="py-2 px-4 bg-white rounded-md hover:shadow-2xl shadow-md font-semibold flex items-center transition gap-2">
-                    <FontAwesomeIcon icon={faCoins} className='text-blue-600' /> Accounts                 </button>
+                    <FontAwesomeIcon icon={faCoins} className="text-blue-600" />{' '}
+                    Accounts{' '}
+                  </button>
                   <button className="py-2 px-4 bg-white rounded-md hover:shadow-2xl shadow-md font-semibold flex items-center transition gap-2">
-                    <FontAwesomeIcon icon={faWarehouse} className='text-blue-600' /> Warehouse                 </button>
+                    <FontAwesomeIcon
+                      icon={faWarehouse}
+                      className="text-blue-600"
+                    />{' '}
+                    Warehouse{' '}
+                  </button>
                 </div>
               </div>
               <input
@@ -147,7 +164,6 @@ export default function Home() {
         </div>
       </div>
       <Cards />
-
     </>
   );
 }
