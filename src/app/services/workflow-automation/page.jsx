@@ -12,7 +12,7 @@ import Card4Data from '../../../textContent/workflow/Card4Data.json';
 import Rocket from '../../../components/Rocket';
 import jsonData1 from '../../../textContent/rocket/rocket1.json';
 import ServicesHero from '@/components/ServicesHero';
-import Data3 from '../../../textContent/servicesHeroContent/Workflow';
+import Data3 from '../../../textContent/servicesHeroContent/WorkFlow.json';
 const metadata = {
     title: 'Workflow Automation — Wahni IT Solutions',
     description:
@@ -56,9 +56,9 @@ const page = () => {
                             becomes a distant memory.
                         </h1>
                         <h3 className="text-xl font-semibold text-gray-900 text-opacity-90">
-                            This isn't a utopian dream, it's the reality of
+                            This isn&apos;t a utopian dream, it&apos;s the reality of
                             workflow automation with ERPNext, the open-source
-                            enterprise resource planning platform that's
+                            enterprise resource planning platform that&apos;s
                             transforming businesses across industries.
                         </h3>
                     </div>
@@ -75,7 +75,7 @@ const page = () => {
             </div>
             <div className=" px-4">
                 <h1 className="md:text-4xl text-2xl font-bold md:pb-28 md:pt-20 pt-20 pb-10 text-center">
-                    Let's dive deeper into how workflow automation <br /> with
+                    Let&apos;s dive deeper into how workflow automation <br /> with
                     ERPNext can benefit specific departments:
                 </h1>
                 <div className="p-1 md:flex md:items-center md:justify-center md:px-[12vw] mb-5">

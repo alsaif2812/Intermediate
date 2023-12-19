@@ -4,11 +4,9 @@ import Head from 'next/head';
 import ServicesHero from '@/components/ServicesHero';
 import Data4 from '../../../textContent/servicesHeroContent/Business';
 import './business.css';
-import Image from 'next/image';
-import mission from '../../../../public/images/mission.png';
-import Timeline from '@/components/Timeline';
 import Rocket from '../../../components/Rocket';
 import rocket3 from '../../../textContent/rocket/rocket3';
+import TimelineWithIcon from '@/components/Timeline';
 
 export const metadata = {
     title: 'Business Consulting — Wahni IT Solutions',
@@ -43,9 +41,9 @@ const page = () => {
                     </h1>
                     <div className="border-2 border-blue-500 rounded-3xl md:w-[5vw] w-[22vw] md:mt-[1vw] mt-[3vw]"></div>
                     <p className="md:mt-4 mt-[12vw] opacity-60">
-                        You're not alone. At Wahni IT Solutions , we understand
+                        You&apos;re not alone. At Wahni IT Solutions , we understand
                         the challenges businesses face in navigating the
-                        ever-changing financial landscape. That's why we offer a
+                        ever-changing financial landscape. That&apos;s why we offer a
                         comprehensive suite of services to streamline your
                         operations, optimize your finances, and ensure your
                         compliance.
@@ -76,7 +74,7 @@ const page = () => {
                     Unveiling our blueprint for <br /> successful ERP
                     implementation.
                 </h1>
-                <Timeline />
+                <TimelineWithIcon />
             </div>
             <div id="iconss" className="flex items-center justify-center my-10">
                 <Rocket jsonData={rocket3} />

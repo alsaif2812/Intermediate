@@ -11,7 +11,7 @@ function VideoTextCard({ data }) {
         () => Math.floor(Math.random() * videoTextCardColors.length),
         [],
     );
-    const theme = useMemo(() => videoTextCardColors[randInt]);
+    const theme = useMemo(() => videoTextCardColors[randInt], []);
 
     return (
         <div
