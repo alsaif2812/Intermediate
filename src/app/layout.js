@@ -15,39 +15,41 @@ import { usePathname } from 'next/navigation';
 config.autoAddCss = false;
 
 const nunitoResult = Nunito({
-  subsets: ['latin'],
-  display: 'swap',
+    subsets: ['latin'],
+    display: 'swap',
 });
 
 const blobHideRoutes = ['/services/e-commerce'];
 
 const RootLayout = ({ children }) => {
-  const showBlob = !blobHideRoutes.includes(usePathname());
+    const showBlob = !blobHideRoutes.includes(usePathname());
 
-  return (
-    <html lang="en" className={`${nunitoResult.className}`}>
-      <body
-        className={`${
-          showBlob
-            ? 'md:bg-[url("/images/blob.png")] bg-no-repeat bg-right-top'
-            : ''
-        }`}
-      >
-        <NextTopLoader />
+    return (
+        <html lang="en" className={`${nunitoResult.className}`}>
+            <body
+                className={`${
+                    showBlob
+                        ? 'md:bg-[url("/images/blob.png")] bg-no-repeat bg-right-top'
+                        : ''
+                }`}
+            >
+                <NextTopLoader />
 
-        <div>
-          <Navbar showDefaultButtonColors={showBlob} />
-          {children}
-        </div>
+                <div>
+                    <Navbar showDefaultButtonColors={showBlob} />
+                    {children}
+                </div>
 
-        <Footer />
+                <Footer />
 
-        <div style={{ position: 'fixed', bottom: '20px', right: '20px' }}>
-          <SpeedDial />
-        </div>
-      </body>
-    </html>
-  );
+                <div
+                    style={{ position: 'fixed', bottom: '20px', right: '20px' }}
+                >
+                    <SpeedDial />
+                </div>
+            </body>
+        </html>
+    );
 };
 
 export default RootLayout;
