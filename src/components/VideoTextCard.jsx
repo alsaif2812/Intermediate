@@ -1,6 +1,7 @@
 'use client';
 import React, { useMemo, useState } from 'react';
 import videoTextCardColors from '../theme/videoTextCardColors';
+import { Chip } from '@material-tailwind/react';
 
 function VideoTextCard({ data }) {
     const tabs = Object.keys(data);
@@ -16,7 +17,7 @@ function VideoTextCard({ data }) {
         <div
             id="Videotextcard"
             style={{ backgroundColor: theme.primary }}
-            className={`text-[#3d3d3d]  h-auto  md:mt-3 md:mb-0 mt-28 py-10 px-5 rounded-3xl  md:px-8`}
+            className={`text-[#3d3d3d]  w-100 md:mt-3 md:mb-0 mt-28 py-10 px-5 rounded-3xl  md:px-8`}
         >
             {data[selectedTab] && data[selectedTab].top ? (
                 <p
@@ -94,8 +95,23 @@ function VideoTextCard({ data }) {
                                 ))}
 
                         {data[selectedTab].points
-                            ? data[selectedTab].points.map((i, index) => (
-                                  <p key={index}>{i}</p>
+                            ? data[selectedTab].points.map((i, idx) => (
+                                  <div
+                                      key={idx}
+                                      className="flex items-start py-2"
+                                  >
+                                      <div className="mr-2">
+                                          <Chip
+                                              className="px-2.5 rounded-full"
+                                              style={{
+                                                  backgroundColor:
+                                                      theme.secondary,
+                                              }}
+                                              value={idx + 1}
+                                          />
+                                      </div>
+                                      <p className='w-full'>{i}</p>
+                                  </div>
                               ))
                             : null}
                     </div>

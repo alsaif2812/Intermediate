@@ -32,10 +32,10 @@ const page = () => {
                     <ServicesHero data={Data2} />
                 </div>
                 <div className=" px-4 md:pt-20 pt-1">
-                    <div className="p-1 md:flex md:items-center md:justify-center md:px-[18vw] mb-5">
+                    <div className="p-1 md:flex md:items-center md:justify-center md:px-[12vw] mb-5">
                         <VideoTextCard data={Card1Data} />
                     </div>
-                    <div className="p-1 md:flex md:items-center md:justify-center md:px-[18vw] mb-5">
+                    <div className="p-1 md:flex md:items-center md:justify-center md:px-[12vw] mb-5">
                         <VideoTextCard data={Card2Data} />
                     </div>
                 </div>

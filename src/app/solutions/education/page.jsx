@@ -21,10 +21,10 @@ const page = () => {
                 <meta name="keywords" content={metadata.keyword} />
             </Head>
             <Hero />
-            <div className="p-5 md:flex md:items-center md:justify-center md:px-[18vw] mb-5">
+            <div className="p-5 md:flex md:items-center md:justify-center md:px-[12vw] mb-5">
                 <VideoTextCard data={card1Data} />
             </div>
-            <div className="p-5 md:flex md:items-center md:justify-center md:px-[18vw] mb-5">
+            <div className="p-5 md:flex md:items-center md:justify-center md:px-[12vw] mb-5">
                 <VideoTextCard data={card2Data} />
             </div>
         </>

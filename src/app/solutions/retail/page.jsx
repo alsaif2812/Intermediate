@@ -24,19 +24,19 @@ const Page = () => {
             <Hero />
             <div
                 id="main"
-                className="p-5 md:flex md:items-center md:justify-center md:px-[18vw]"
+                className="p-5 md:flex md:items-center md:justify-center md:px-[12vw]"
             >
                 <VideoTextCard data={cardData} />
             </div>
             <div
                 id="main"
-                className="p-5 md:flex md:items-center md:justify-center  md:px-[18vw]"
+                className="p-5 md:flex md:items-center md:justify-center  md:px-[12vw]"
             >
                 <VideoTextCard data={card2Data} />
             </div>
             <div
                 id="main"
-                className="p-5 md:flex md:items-center md:justify-center  md:px-[18vw]"
+                className="p-5 md:flex md:items-center md:justify-center  md:px-[12vw]"
             >
                 <VideoTextCard data={card3Data} />
             </div>

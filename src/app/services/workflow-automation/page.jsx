@@ -78,16 +78,16 @@ const page = () => {
                     Let's dive deeper into how workflow automation <br /> with
                     ERPNext can benefit specific departments:
                 </h1>
-                <div className="p-1 md:flex md:items-center md:justify-center md:px-[18vw] mb-5">
+                <div className="p-1 md:flex md:items-center md:justify-center md:px-[12vw] mb-5">
                     <VideoTextCard data={Card1Data} />
                 </div>
-                <div className="p-1 md:flex md:items-center md:justify-center md:px-[18vw] mb-5">
+                <div className="p-1 md:flex md:items-center md:justify-center md:px-[12vw] mb-5">
                     <VideoTextCard data={Card2Data} />
                 </div>
-                <div className="p-1 md:flex md:items-center md:justify-center md:px-[18vw] mb-5">
+                <div className="p-1 md:flex md:items-center md:justify-center md:px-[12vw] mb-5">
                     <VideoTextCard data={Card3Data} />
                 </div>
-                <div className="p-1 md:flex md:items-center md:justify-center md:px-[18vw] mb-5">
+                <div className="p-1 md:flex md:items-center md:justify-center md:px-[12vw] mb-5">
                     <VideoTextCard data={Card4Data} />
                 </div>
             </div>
