@@ -6,6 +6,8 @@ import Timeline from '../../../components/Timeline.jsx'
 import Data1 from '../../../textContent/servicesHeroContent/Implementation'
 import ResourceCard from '@/components/ResourceCard'
 import ServicesHero from '@/components/ServicesHero'
+import JsonData from '../../../textContent/timeline/Data1.json'
+
 
 
 
@@ -29,7 +31,8 @@ const page = () => {
         <ServicesHero data={Data1} />
         <div id="timeline" className='flex flex-col items-center justify-center px-5'>
           <h1 className='md:text-4xl text-2xl font-bold md:pb-28 md:pt-20 pt-20 pb-10 text-center text-[#3f3e3e]'>Unveiling our blueprint for <br /> successful ERP implementation.</h1>
-          <Timeline />
+          <Timeline timelineData={JsonData} />
+
         </div>
         <div id="resources" className='pt-20'>
           <div className='flex flex-col items-center justify-center text-center'>
