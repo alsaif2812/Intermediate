@@ -110,7 +110,7 @@ function VideoTextCard({ data }) {
                                               value={idx + 1}
                                           />
                                       </div>
-                                      <p className='w-full'>{i}</p>
+                                      <p className="w-full">{i}</p>
                                   </div>
                               ))
                             : null}

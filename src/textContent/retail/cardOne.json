@@ -2,11 +2,7 @@
   "POSAwesome": {
     "heading": "Feature-Rich POS System for all Businesses",
     "body": "POS Awesome is an open-source point-of-sale (POS) system for Erpnext users. It is designed to be user-friendly and efficient, and it offers a wide range of features, including:",
-    "points": [
-      "Returns from POS",
-      "Credit Sales",
-      "Batch & Serial Numbering"
-    ],
+    "points": ["Returns from POS", "Credit Sales", "Batch & Serial Numbering"],
     "video": "/images/work-order.webm"
   },
   "Custom Invoice Print Format Templates": {

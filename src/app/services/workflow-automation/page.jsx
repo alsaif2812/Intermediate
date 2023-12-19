@@ -56,10 +56,11 @@ const page = () => {
                             becomes a distant memory.
                         </h1>
                         <h3 className="text-xl font-semibold text-gray-900 text-opacity-90">
-                            This isn&apos;t a utopian dream, it&apos;s the reality of
-                            workflow automation with ERPNext, the open-source
-                            enterprise resource planning platform that&apos;s
-                            transforming businesses across industries.
+                            This isn&apos;t a utopian dream, it&apos;s the
+                            reality of workflow automation with ERPNext, the
+                            open-source enterprise resource planning platform
+                            that&apos;s transforming businesses across
+                            industries.
                         </h3>
                     </div>
                     <div id="imng" className="md:block hidden">
@@ -75,8 +76,8 @@ const page = () => {
             </div>
             <div className=" px-4">
                 <h1 className="md:text-4xl text-2xl font-bold md:pb-28 md:pt-20 pt-20 pb-10 text-center">
-                    Let&apos;s dive deeper into how workflow automation <br /> with
-                    ERPNext can benefit specific departments:
+                    Let&apos;s dive deeper into how workflow automation <br />{' '}
+                    with ERPNext can benefit specific departments:
                 </h1>
                 <div className="p-1 md:flex md:items-center md:justify-center md:px-[12vw] mb-5">
                     <VideoTextCard data={Card1Data} />

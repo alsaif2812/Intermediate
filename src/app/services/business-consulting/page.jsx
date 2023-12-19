@@ -41,11 +41,11 @@ const page = () => {
                     </h1>
                     <div className="border-2 border-blue-500 rounded-3xl md:w-[5vw] w-[22vw] md:mt-[1vw] mt-[3vw]"></div>
                     <p className="md:mt-4 mt-[12vw] opacity-60">
-                        You&apos;re not alone. At Wahni IT Solutions , we understand
-                        the challenges businesses face in navigating the
-                        ever-changing financial landscape. That&apos;s why we offer a
-                        comprehensive suite of services to streamline your
-                        operations, optimize your finances, and ensure your
+                        You&apos;re not alone. At Wahni IT Solutions , we
+                        understand the challenges businesses face in navigating
+                        the ever-changing financial landscape. That&apos;s why
+                        we offer a comprehensive suite of services to streamline
+                        your operations, optimize your finances, and ensure your
                         compliance.
                     </p>
                 </div>
