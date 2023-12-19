@@ -11,13 +11,12 @@
   },
   "Job Card": {
     "heading": "Track job progress efficiently",
-    "body": "A job card in ERPNext is a document that is used to track the progress of a job or operation. It is typically used in manufacturing businesses to track the production of finished goods.\nOnce a job card is created, it can be used to track the following information:The job or operation to be performed",
+    "body": "A Job Card can be used to track the following information,",
     "points": [
-      "--The employee assigned to the job or operation",
-      "--The start and end times of the job or operation",
-      "--The number of items produced",
-      "--The materials used",
-      "--The labor hours spent"
+      "The start and end times of the job or operation",
+      "The number of items produced",
+      "The materials used",
+      "The labor hours spent"
     ]
   },
   "Downtime Entry": {

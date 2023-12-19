@@ -39,8 +39,8 @@ const RootLayout = ({ children }) => {
     <html lang="en" className={`${nunitoResult.className}`}>
       <body
         className={`${showBlob
-          ? 'md:bg-[url("/images/blob.png")] bg-no-repeat bg-right-top'
-          : ''
+            ? 'md:bg-[url("/images/blob.png")] bg-no-repeat bg-right-top'
+            : ''
           }`}
       >
         <NextTopLoader />
@@ -52,7 +52,9 @@ const RootLayout = ({ children }) => {
 
         <Footer />
 
-        <div style={{ position: 'fixed', bottom: '20px', right: '20px' }}>
+        <div
+          style={{ position: 'fixed', bottom: '20px', right: '20px' }}
+        >
           <SpeedDial />
         </div>
       </body>
