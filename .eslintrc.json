@@ -1,9 +1,14 @@
 {
-  "extends": ["next", "next/core-web-vitals", "eslint:recommended"],
+  "extends": [
+    "next",
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
   "globals": {
     "React": "readonly"
   },
   "rules": {
-    "no-unused-vars": "warn"
+    "react/prop-types": "off"
   }
 }
