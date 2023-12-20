@@ -26,9 +26,8 @@ function Nav({ data, title }) {
                     {title}
                     <ChevronDownIcon
                         strokeWidth={2.5}
-                        className={`h-3.5 w-3.5 transition-transform bg-sky-blue hover:bg-light-purple duration-300 ease-in-out transform hover:scale-105 hover:text-blue-500 ${
-                            openMenu ? 'rotate-180' : '/'
-                        }`}
+                        className={`h-3.5 w-3.5 transition-transform bg-sky-blue hover:bg-light-purple duration-300 ease-in-out transform hover:scale-105 hover:text-blue-500 ${openMenu ? 'rotate-180' : '/'
+                            }`}
                     />
                 </Button>
             </MenuHandler>
@@ -66,7 +65,7 @@ function NavItem({ caption, color, heading, icon, link }) {
 
 function Navbar({ showDefaultButtonColors }) {
     const navbarDataKeys = Object.keys(navbarData);
-    console.log('keys', navbarDataKeys);
+
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [openMenu, setOpenMenu] = useState(false);
 
@@ -129,30 +128,29 @@ function Navbar({ showDefaultButtonColors }) {
                     className="hidden md:flex items-center justify-between gap-2"
                 >
                     <button
-                        className={`${
-                            showDefaultButtonColors
-                                ? 'bg-white'
-                                : 'bg-[#26C3FE] text-white'
-                        } py-2 px-4 bg-[#47CCFE] rounded-lg font-bold text-blue-400 bg-opacity-90 transition hover:bg-blue-500 hover:text-white hover:scale-105 hover:mt-[0.1vw] duration-300`}
+                        className={`${showDefaultButtonColors
+                            ? 'bg-white'
+                            : 'bg-[#26C3FE] text-white'
+                            } py-2 px-4 bg-[#47CCFE] rounded-lg font-bold text-blue-400 bg-opacity-90 transition hover:bg-blue-500 hover:text-white hover:scale-105 hover:mt-[0.1vw] duration-300`}
                     >
                         Free Demo
                     </button>
-                    <button
-                        className={`${
-                            showDefaultButtonColors
+                    <Link href="/contact-sales">
+                        <button
+                            className={`${showDefaultButtonColors
                                 ? 'bg-white text-white hover:bg-blue-500'
                                 : 'bg-gray-600 text-[#5b5858]'
-                        } py-2 px-4  rounded-lg font-bold bg-opacity-20  transition   hover:scale-105 hover:mt-[0.1vw] duration-300`}
-                    >
-                        Contact Sales
-                    </button>
+                                } py-2 px-4  rounded-lg font-bold bg-opacity-20  transition   hover:scale-105 hover:mt-[0.1vw] duration-300`}
+                        >
+                            Contact Sales
+                        </button>
+                    </Link>
                 </div>
                 <div id="mobileMenu" className="md:hidden relative ">
                     <button
                         id="menuToggle"
-                        className={`block text-gray-600 hover:text-gray-900 focus:outline-none ${
-                            isMobileMenuOpen ? 'hidden' : ''
-                        }`}
+                        className={`block text-gray-600 hover:text-gray-900 focus:outline-none ${isMobileMenuOpen ? 'hidden' : ''
+                            }`}
                         onClick={handleMenu}
                     >
                         <i
@@ -162,9 +160,8 @@ function Navbar({ showDefaultButtonColors }) {
                     </button>
                     <div
                         id="menu"
-                        className={`${
-                            isMobileMenuOpen ? 'block' : 'hidden'
-                        } fixed inset-0 max-w-full max-h-[150vw] z-50 shadow-lg p-[1vw] md:p-[2vw] flex flex-col items-center bg-[#fff] pt-[20vw] justify-start`}
+                        className={`${isMobileMenuOpen ? 'block' : 'hidden'
+                            } fixed inset-0 max-w-full max-h-[150vw] z-50 shadow-lg p-[1vw] md:p-[2vw] flex flex-col items-center bg-[#fff] pt-[20vw] justify-start`}
                     >
                         <button
                             id="closeMenu"
@@ -189,9 +186,8 @@ function Navbar({ showDefaultButtonColors }) {
                                         Solutions{' '}
                                         <ChevronDownIcon
                                             strokeWidth={2.5}
-                                            className={`h-3.5 w-3.5 transition-transform  duration-300 ease-in-out transform  ${
-                                                openMenu ? 'rotate-180' : '/'
-                                            }`}
+                                            className={`h-3.5 w-3.5 transition-transform  duration-300 ease-in-out transform  ${openMenu ? 'rotate-180' : '/'
+                                                }`}
                                         />
                                     </Button>
                                 </MenuHandler>
@@ -230,9 +226,8 @@ function Navbar({ showDefaultButtonColors }) {
                                         Products{' '}
                                         <ChevronDownIcon
                                             strokeWidth={2.5}
-                                            className={`h-3.5 w-3.5 transition-transform  duration-300 ease-in-out transform  ${
-                                                openMenu ? 'rotate-180' : '/'
-                                            }`}
+                                            className={`h-3.5 w-3.5 transition-transform  duration-300 ease-in-out transform  ${openMenu ? 'rotate-180' : '/'
+                                                }`}
                                         />
                                     </Button>
                                 </MenuHandler>
@@ -259,9 +254,8 @@ function Navbar({ showDefaultButtonColors }) {
                                         Services{' '}
                                         <ChevronDownIcon
                                             strokeWidth={2.5}
-                                            className={`h-3.5 w-3.5 transition-transform  duration-300 ease-in-out transform  ${
-                                                openMenu ? 'rotate-180' : '/'
-                                            }`}
+                                            className={`h-3.5 w-3.5 transition-transform  duration-300 ease-in-out transform  ${openMenu ? 'rotate-180' : '/'
+                                                }`}
                                         />
                                     </Button>
                                 </MenuHandler>
@@ -302,12 +296,12 @@ function Navbar({ showDefaultButtonColors }) {
                         <button className="capitalize my-[1.9vw] ml-[-3vw] px-[4vw] py-[2vw] bg-deep-purple-300 rounded-lg font-semibold text-sm text-[#212121]">
                             free demo
                         </button>
-                        <button className="capitalize my-[1.9vw] ml-[-3vw] px-[4vw] py-[2vw] bg-deep-purple-300 rounded-lg font-semibold text-sm text-[#212121]">
+                        <Link href="/contact-sales" className="capitalize my-[1.9vw] ml-[-3vw] px-[4vw] py-[2vw] bg-deep-purple-300 rounded-lg font-semibold text-sm text-[#212121]">
                             Contact sales
-                        </button>
+                        </Link>
                     </div>
                 </div>
-            </div>
+            </div >
         </>
     );
 }

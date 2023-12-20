@@ -1,7 +1,7 @@
 {
   "NeuPOS": {
     "heading": "  Offline POS that Syncs data to ERPNext",
-    "body": "Warehouse stock management in ERPNext is a comprehensive and integrated solution for managing inventory levels, stock movements, and warehouse operations. It provides a variety of features to help businesses track their inventory in real time, optimize their stock levels, and improve their warehouse efficiency.",
+    "body": "NeuPOS is a POS Module that is designed to help businesses of all sizes to streamline their sales and inventory management processes, It can work offline and sync the data to ERPNext. It's built on top of Frappe Books, free and offline open-source accounting software, which allows businesses to manage sales, inventory, and finances all in one place.",
     "video": "/images/work-order.webm"
   }
 }

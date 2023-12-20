@@ -15,7 +15,7 @@ function TimelineWithIcon({ timelineData }) {
             <TimelineItem>
                 <TimelineConnector />
                 <TimelineHeader>
-                    <TimelineIcon className="p-2 rounded-full">
+                    <TimelineIcon className="p-2 rounded-full bg-[#528ff6]">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             height="20"
@@ -48,7 +48,7 @@ function TimelineWithIcon({ timelineData }) {
             <TimelineItem>
                 <TimelineConnector />
                 <TimelineHeader>
-                    <TimelineIcon className="p-2 ">
+                    <TimelineIcon className="p-2 bg-[#528ff6]">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             height="20"
@@ -83,7 +83,7 @@ function TimelineWithIcon({ timelineData }) {
             <TimelineItem>
                 <TimelineConnector />
                 <TimelineHeader>
-                    <TimelineIcon className="p-2 rounded-full">
+                    <TimelineIcon className="p-2 rounded-full bg-[#528ff6]">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             height="20"
@@ -170,7 +170,7 @@ function TimelineWithIcon({ timelineData }) {
             <TimelineItem>
                 <TimelineConnector />
                 <TimelineHeader>
-                    <TimelineIcon className="p-2 rounded-full">
+                    <TimelineIcon className="p-2 rounded-full bg-[#528ff6]">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             height="20"
@@ -204,7 +204,7 @@ function TimelineWithIcon({ timelineData }) {
             </TimelineItem>
             <TimelineItem>
                 <TimelineHeader>
-                    <TimelineIcon className="p-2 rounded-full">
+                    <TimelineIcon className="p-2 rounded-full bg-[#528ff6]">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             height="20"

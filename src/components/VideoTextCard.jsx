@@ -45,9 +45,8 @@ function VideoTextCard({ data }) {
                                             ? theme.secondary
                                             : 'transparent',
                                 }}
-                                className={`cursor-pointer text-lg capitalize leading-normal transition duration-300 ${
-                                    selectedTab === tab ? `border-b-4` : ''
-                                }`}
+                                className={`cursor-pointer text-lg capitalize leading-normal transition duration-300 ${selectedTab === tab ? `border-b-4` : ''
+                                    }`}
                             >
                                 {tab}
                             </h1>
@@ -96,23 +95,23 @@ function VideoTextCard({ data }) {
 
                         {data[selectedTab].points
                             ? data[selectedTab].points.map((i, idx) => (
-                                  <div
-                                      key={idx}
-                                      className="flex items-start py-2"
-                                  >
-                                      <div className="mr-2">
-                                          <Chip
-                                              className="px-2.5 rounded-full"
-                                              style={{
-                                                  backgroundColor:
-                                                      theme.secondary,
-                                              }}
-                                              value={idx + 1}
-                                          />
-                                      </div>
-                                      <p className="w-full">{i}</p>
-                                  </div>
-                              ))
+                                <div
+                                    key={idx}
+                                    className="flex items-start py-2"
+                                >
+                                    <div className="mr-2">
+                                        <Chip
+                                            className="px-2.5 rounded-full"
+                                            style={{
+                                                backgroundColor:
+                                                    theme.secondary,
+                                            }}
+                                            value={idx + 1}
+                                        />
+                                    </div>
+                                    <p className="w-full">{i}</p>
+                                </div>
+                            ))
                             : null}
                     </div>
                     <div

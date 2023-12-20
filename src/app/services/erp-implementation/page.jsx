@@ -31,7 +31,7 @@ const page = () => {
                     id="timeline"
                     className="flex flex-col items-center justify-center px-5"
                 >
-                    <h1 className="md:text-4xl text-2xl font-bold md:pb-28 md:pt-20 pt-20 pb-10 text-center text-[#3f3e3e]">
+                    <h1 className="md:text-4xl text-2xl font-bold md:pb-28  pb-10 text-center text-[#3f3e3e]">
                         Unveiling our blueprint for <br /> successful ERP
                         implementation.
                     </h1>

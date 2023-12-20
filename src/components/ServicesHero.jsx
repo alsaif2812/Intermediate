@@ -16,7 +16,7 @@ const ServicesHero = ({ data }) => {
     return (
         <div
             id="maintext2"
-            className=" pt-8 md:pt-10  w-full flex flex-col items-center justify-center gap-6"
+            className=" pt-8  w-full flex flex-col items-center md:py-32 gap-6  h-screen"
         >
             <h1 className="text-5xl md:text-7xl font-extrabold text-center gradient-text">
                 {renderLines(title)}
