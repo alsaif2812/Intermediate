@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 const metadata = {
     title: 'Best ERP Software in Kerala, ERP Companies in Kochi, Wahni',
     description:
@@ -13,4 +11,3 @@ const metadata = {
 };
 
 export default metadata;
->>>>>>> 8f25e8e064ba94043577a29186d540c7f4b1e68a
