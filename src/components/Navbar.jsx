@@ -1,25 +1,75 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import witLogo from '../../public/images/wit-logo.png';
-import photogrid from '../../public/images/photogrid.jpg';
 import Link from 'next/link';
 import {
+    Button,
     Menu,
     MenuHandler,
-    MenuList,
     MenuItem,
-    Button,
+    MenuList,
 } from '@material-tailwind/react';
-
 import { ChevronDownIcon } from '@heroicons/react/outline';
+import navbarData from '@/textContent/navbar/data.json';
+
+function Nav({ data, title }) {
+    const [openMenu, setOpenMenu] = useState(false);
+    console.log('data', data);
+    return (
+        <Menu open={openMenu} handler={setOpenMenu} allowHover={true}>
+            <MenuHandler>
+                <Button
+                    variant="text"
+                    className="flex items-center text-base font-bold capitalize bg-sky-blue hover:bg-light-purple transition duration-300 ease-in-out transform hover:scale-105 hover:text-blue-500"
+                >
+                    {title}
+                    <ChevronDownIcon
+                        strokeWidth={2.5}
+                        className={`h-3.5 w-3.5 transition-transform bg-sky-blue hover:bg-light-purple duration-300 ease-in-out transform hover:scale-105 hover:text-blue-500 ${
+                            openMenu ? 'rotate-180' : '/'
+                        }`}
+                    />
+                </Button>
+            </MenuHandler>
+            <MenuList className="hidden bg-white w-auto grid grid-cols-2">
+                {data.map((item) => (
+                    <NavItem key={data.heading} {...item} />
+                ))}
+            </MenuList>
+        </Menu>
+    );
+}
+
+function NavItem({ caption, color, heading, icon, link }) {
+    return (
+        <Link
+            href={link}
+            className={`border-none px-2.5 py-4 w-2/3 hover:bg-${color}-50 rounded-2xl transition duration-200`}
+        >
+            <div className="flex">
+                <div className="mr-2">
+                    <i
+                        className={`${icon} mr-[0.3vw] text-${color}-400 text-left text-xl`}
+                    ></i>
+                </div>
+                <div className="">
+                    <p className="font-semibold text-md">{heading}</p>
+                    <p className="mt-2 font-medium text-xs opacity-75">
+                        {caption}
+                    </p>
+                </div>
+            </div>
+        </Link>
+    );
+}
+
 function Navbar({ showDefaultButtonColors }) {
+    const navbarDataKeys = Object.keys(navbarData);
+    console.log('keys', navbarDataKeys);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const [openMenu, setOpenMenu] = React.useState(false);
-    const [openMenu2, setOpenMenu2] = React.useState(false);
-    const [openMenu3, setOpenMenu3] = React.useState(false);
-    const [openMenu5, setOpenMenu5] = React.useState(false);
-    const [openMenu6, setOpenMenu6] = React.useState(false);
+    const [openMenu, setOpenMenu] = useState(false);
+
     const handleMenu = () => {
         setIsMobileMenuOpen(!isMobileMenuOpen);
     };
@@ -33,18 +83,19 @@ function Navbar({ showDefaultButtonColors }) {
             }
         }
     }, [isMobileMenuOpen]);
+
     return (
         <>
             <div
                 id="navbar"
-                className="bg-transparent py-1 px-6 md:px-12 flex items-center justify-between md:h-[6vw] max-h-[18vw] mt-[0vw] md:mt-[0vw] mr-[2vw] w-[100%]"
+                className="px-6 md:px-10 flex items-center justify-between py-6"
             >
                 <div id="nav1">
                     <Image
                         src={witLogo}
-                        className="md:h-[54px] md:w-[78px] h-[13vw] w-[20vw] rounded-lg mt-[9vw] md:mt-[0vw]"
+                        style={{ width: '80px' }}
                         id="logo"
-                        alt="img"
+                        alt="wahni it solutions logo"
                     />
                 </div>
                 <div
@@ -53,519 +104,22 @@ function Navbar({ showDefaultButtonColors }) {
                 >
                     <Link
                         href="/"
-                        className="bg-sky-blue hover:bg-light-purple transition duration-300 ease-in-out transform hover:scale-105 hover:text-blue-500"
+                        className="mt-0.5 font-extrabold bg-sky-blue hover:bg-light-purple transition duration-300 ease-in-out transform hover:scale-105 hover:text-blue-500"
                     >
                         Home
                     </Link>
-                    <div id="solutions" className="mx-[-1vw] bg-inherit">
-                        <Menu open={openMenu} handler={setOpenMenu}>
-                            <MenuHandler>
-                                <Button
-                                    variant="text"
-                                    className="flex items-center gap-1 text-base font-bold capitalize tracking-normal bg-sky-blue hover:bg-light-purple transition duration-300 ease-in-out transform hover:scale-105 hover:text-blue-500"
-                                >
-                                    Solutions{' '}
-                                    <ChevronDownIcon
-                                        strokeWidth={2.5}
-                                        className={`h-3.5 w-3.5 transition-transform bg-sky-blue hover:bg-light-purple duration-300 ease-in-out transform hover:scale-105 hover:text-blue-500 ${
-                                            openMenu ? 'rotate-180' : '/'
-                                        }`}
-                                    />
-                                </Button>
-                            </MenuHandler>
-                            <MenuList className="hidden  lg:grid  p-1 bg-transparent border-none  ">
-                                <div className="md:flex mt-[-1vw] bg-white border-none hidden  p-[1vw]">
-                                    <div
-                                        id="iconsleft"
-                                        className="items-center justify-center flex-wrap w-[60%] h-[25vw] py-[1vw] px-[2vw] md:border-r-2 md:border-gray-100"
-                                    >
-                                        <div className="flex ml-[0vw] mt-[4vw] gap-[5vw]">
-                                            <Link
-                                                href="/solutions/retail"
-                                                className=" w-[24vh] h-auto bg-transparent p-[0.8vw] hover:bg-blue-50 transition duration 200 hover:rounded-2xl"
-                                            >
-                                                <div id="icon1">
-                                                    <h1 className="font-semibold text-md">
-                                                        <i class="ri-store-2-line mr-[0.3vw] text-blue-400 text-left text-xl"></i>
-                                                        Retail{' '}
-                                                    </h1>
-                                                    <p className="font-[500] text-sm opacity-75">
-                                                        Sell smarter, not
-                                                        harder, with ERPNext
-                                                        (forgot POS)
-                                                    </p>
-                                                </div>
-                                            </Link>
-                                            <Link
-                                                href="/solutions/services"
-                                                className=" w-[24vh] h-auto bg-transparent p-[0.8vw] hover:bg-red-50 transition duration 200 hover:rounded-2xl"
-                                            >
-                                                <div id="icon2">
-                                                    <h1 className="font-semibold text-md capitalize">
-                                                        <i class="ri-service-fill mr-[0.3vw] text-red-400 text-left text-xl"></i>
-                                                        services
-                                                    </h1>
-                                                    <p className="font-[500] text-sm opacity-75">
-                                                        Manage projects, track
-                                                        time, and bill clients
-                                                        effortlessly
-                                                    </p>
-                                                </div>
-                                            </Link>
-                                            <Link
-                                                href="/solutions/healthcare"
-                                                className=" w-[24vh] h-auto bg-transparent p-[0.8vw] hover:bg-orange-50 transition duration 200 hover:rounded-2xl"
-                                            >
-                                                <div id="icon3">
-                                                    <h1 className="font-semibold text-md">
-                                                        <i class="ri-hospital-fill mr-[0.3vw] text-orange-400 text-left text-xl"></i>
-                                                        Healthcare
-                                                    </h1>
-                                                    <p className="font-[500] text-sm opacity-75">
-                                                        Manage appointments, and
-                                                        bill patients
-                                                        effortlessly
-                                                    </p>
-                                                </div>
-                                            </Link>
-                                            <Link
-                                                href="/solutions/education"
-                                                className=" w-[24vh] h-auto bg-transparent p-[0.8vw] hover:bg-pink-50 transition duration 200 hover:rounded-2xl"
-                                            >
-                                                <div id="icon4">
-                                                    <h1 className="font-semibold text-md">
-                                                        <i class="ri-graduation-cap-fill mr-[0.3vw] text-pink-400 text-left text-xl"></i>
-                                                        Education
-                                                    </h1>
-                                                    <p className="font-[500] text-sm opacity-75">
-                                                        Empowering educators,
-                                                        enriching learners. With
-                                                        ERPNext
-                                                    </p>
-                                                </div>
-                                            </Link>
-                                        </div>
-                                        <br />
-                                        <div className="flex ml-[0vw] mt-[2vw] gap-[5vw]">
-                                            <Link
-                                                href="/solutions/manufacturing"
-                                                className=" w-[24vh] h-auto bg-transparent p-[0.8vw] hover:bg-blue-gray-50 transition duration 200 hover:rounded-2xl"
-                                            >
-                                                <div id="icon4">
-                                                    <h1 className="font-semibold text-md">
-                                                        <i class="ri-tools-fill mr-[0.3vw] text-blue-gray-400 text-left text-xl"></i>
-                                                        Manufacturing
-                                                    </h1>
-                                                    <p className="font-[500] text-sm opacity-75">
-                                                        From design to delivery,
-                                                        we got you covered{' '}
-                                                    </p>
-                                                </div>
-                                            </Link>
-                                            <Link
-                                                href="/solutions/real-estate"
-                                                className=" w-[24vh] h-auto bg-transparent p-[0.8vw] hover:bg-lime-50 transition duration 200 hover:rounded-2xl"
-                                            >
-                                                <div id="icon5">
-                                                    <h1 className="font-semibold text-md">
-                                                        <i class="ri-pencil-line mr-[0.3vw] text-lime-400 text-left text-xl"></i>
-                                                        Real Estate
-                                                    </h1>
-                                                    <p className="font-[500] text-sm opacity-75">
-                                                        Listings, deals, and
-                                                        more. Manage all at ease
-                                                    </p>
-                                                </div>
-                                            </Link>
-                                            <Link
-                                                href="/solutions/distribution"
-                                                className=" w-[24vh] h-auto bg-transparent p-[0.8vw] hover:bg-light-green-50 transition duration 200 hover:rounded-2xl"
-                                            >
-                                                <div id="icon6">
-                                                    <h1 className="font-semibold text-md">
-                                                        <i class="ri-truck-line mr-[0.3vw] text-light-green-500 text-left text-xl"></i>
-                                                        Distribution
-                                                    </h1>
-                                                    <p className="font-[500] text-sm opacity-75">
-                                                        Manage inventory, track
-                                                        orders, and deliver
-                                                        shipments on time{' '}
-                                                    </p>
-                                                </div>
-                                            </Link>
-                                            <Link
-                                                href="/solutions/agriculture"
-                                                className=" w-[24vh] h-auto bg-transparent p-[0.8vw] hover:bg-blue-50 transition duration 200 hover:rounded-2xl"
-                                            >
-                                                <div id="icon7">
-                                                    <h1 className="font-semibold text-md">
-                                                        <i class="ri-hand-heart-line mr-[0.3vw] text-blue-400 text-left text-xl"></i>
-                                                        Agriculture
-                                                    </h1>
-                                                    <p className="font-[500] text-sm opacity-75">
-                                                        Streamline your farm
-                                                        operations and boost
-                                                        yields
-                                                    </p>
-                                                </div>
-                                            </Link>
-                                        </div>
-                                    </div>
-                                    <hr />
-                                    <div
-                                        id="right"
-                                        className=" max-w-[50%] max-h-full pl-[2vw]"
-                                    >
-                                        <div className="flex items-center justify-between w-[30vw] h-[10%]  p-[1vw]">
-                                            <h1 className="font-bold uppercase text-[#212121]">
-                                                Latest From blog
-                                            </h1>
-                                            <h1 className="font-bold uppercase text-[#212121]">
-                                                see all
-                                                <i class="ri-arrow-right-line text-blue-500"></i>
-                                            </h1>
-                                        </div>
-                                        <div>
-                                            <div className="flex items-center  gap-7 mt-[1vw]">
-                                                <Image
-                                                    src={photogrid}
-                                                    alt="img"
-                                                    height={100}
-                                                    width={100}
-                                                    className="rounded-lg"
-                                                />
-                                                <h1 className="capitalize  text-lg tracking-wider leading-tight text-[#212121]">
-                                                    12 benefits that make wahni
-                                                    unique
-                                                </h1>
-                                            </div>
-                                            <div className="flex items-center  gap-7 mt-[1vw]">
-                                                <Image
-                                                    src={photogrid}
-                                                    alt="img"
-                                                    height={100}
-                                                    width={100}
-                                                    className="rounded-lg"
-                                                />
-                                                <h1 className="capitalize  text-lg tracking-wider leading-tight text-[#212121]">
-                                                    How to write effective
-                                                    OKRs(with <br /> 60+ OKR
-                                                    examples)
-                                                </h1>
-                                            </div>
-                                            <div className="flex items-center  gap-7 mt-[1vw]">
-                                                <Image
-                                                    src={photogrid}
-                                                    alt="img"
-                                                    height={100}
-                                                    width={100}
-                                                    className="rounded-lg"
-                                                />
-                                                <h1 className="capitalize  text-lg tracking-wider leading-tight text-[#212121]">
-                                                    Top 18 project Management{' '}
-                                                    <br /> methodologies
-                                                </h1>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </MenuList>
-                        </Menu>
-                    </div>
-                    <div id="products" className="mx-[-1vw] border-none">
-                        <Menu open={openMenu2} handler={setOpenMenu2}>
-                            <MenuHandler>
-                                <Button
-                                    variant="text"
-                                    className="flex items-center gap-1 text-base font-bold capitalize tracking-normal bg-sky-blue hover:bg-light-purple transition duration-300 ease-in-out transform hover:scale-105 hover:text-blue-500"
-                                >
-                                    Products{' '}
-                                    <ChevronDownIcon
-                                        strokeWidth={2.5}
-                                        className={`h-3.5 w-3.5 transition-transform bg-sky-blue hover:bg-light-purple duration-300 ease-in-out transform hover:scale-105 hover:text-blue-500 ${
-                                            openMenu2 ? 'rotate-180' : '/'
-                                        }`}
-                                    />
-                                </Button>
-                            </MenuHandler>
-                            <MenuList className="hidden w-[100%] bg-white lg:grid  border-none">
-                                <div className="md:flex mt-[-1vw]  hidden text-zinc-900 ">
-                                    <div
-                                        id="iconsleft"
-                                        className=" items-center justify-center flex-wrap w-[48%]  h-[15vw] py-[3vw] px-[2vw] ml-[9vw]"
-                                    >
-                                        <div className="flex ml-[0vw] mt-[2vw] gap-[5vw]">
-                                            <Link
-                                                href="/products/erpnext"
-                                                className=" w-[24vh] h-auto bg-transparent p-[0.8vw] hover:bg-brown-50 transition duration 200 hover:rounded-2xl"
-                                            >
-                                                <div id="icon1">
-                                                    <h1 className="font-bold text-md">
-                                                        <i class="ri-task-line mr-[0.3vw] text-brown-300 text-left text-xl"></i>
-                                                        ERPNext
-                                                    </h1>
-                                                    <p className="text-sm font-[500] mt-[0.5vw] opacity-90">
-                                                        Simplify your business,
-                                                        grow your success.
-                                                    </p>
-                                                </div>
-                                            </Link>
-                                            <Link
-                                                href="/products/mobileapp"
-                                                className=" w-[24vh] h-auto bg-transparent p-[0.8vw] hover:bg-green-50 transition duration 200 hover:rounded-2xl"
-                                            >
-                                                <div id="icon2">
-                                                    <h1 className="font-bold text-md">
-                                                        <i class="ri-file-text-line mr-[0.3vw] text-green-300 text-left text-xl"></i>
-                                                        Mobile App
-                                                    </h1>
-                                                    <p className="text-sm font-[500] mt-[0.5vw] opacity-90">
-                                                        Order and deliver, all
-                                                        on your phone.
-                                                    </p>
-                                                </div>
-                                            </Link>
-                                            <Link
-                                                href="/products/neupos"
-                                                className=" w-[24vh] h-auto bg-transparent p-[0.8vw] hover:bg-pink-50 transition duration 200 hover:rounded-2xl"
-                                            >
-                                                <div id="icon3">
-                                                    <h1 className="font-semibold text-md">
-                                                        <i class="ri-trophy-line mr-[0.3vw] text-pink-300 text-left text-xl"></i>
-                                                        NeuPOS
-                                                    </h1>
-                                                    <p className="text-sm font-[500] mt-[0.5vw] opacity-90">
-                                                        Effortless sales,
-                                                        seamless integration
-                                                        with ERPNext
-                                                    </p>
-                                                </div>
-                                            </Link>
-                                        </div>
-                                        <br />
-                                    </div>
-                                    <hr />
-                                </div>
-                            </MenuList>
-                        </Menu>
-                    </div>
-                    <div id="services" className="mx-[-1vw]">
-                        <Menu open={openMenu3} handler={setOpenMenu3}>
-                            <MenuHandler>
-                                <Button
-                                    variant="text"
-                                    className="flex items-center gap-1 text-base font-bold capitalize tracking-normal bg-sky-blue hover:bg-light-purple transition duration-300 ease-in-out transform hover:scale-105 hover:text-blue-500"
-                                >
-                                    Services{' '}
-                                    <ChevronDownIcon
-                                        strokeWidth={2.5}
-                                        className={`h-3.5 w-3.5 transition-transform  ${
-                                            openMenu3 ? 'rotate-180' : '/'
-                                        }`}
-                                    />
-                                </Button>
-                            </MenuHandler>
-                            <MenuList className="hidden w-[100%] bg-white lg:grid  border-none">
-                                <div className="md:flex mt-[-1vw]  hidden text-zinc-900">
-                                    <div
-                                        id="iconsleft"
-                                        className=" items-center justify-center flex-wrap w-[70%]  h-[15vw] py-[1vw] px-[2vw] ml-[9vw]"
-                                    >
-                                        <div className="flex ml-[0vw] mt-[5vw] gap-[5vw]">
-                                            <Link
-                                                href="/services/business-consulting"
-                                                className=" w-[28vh] h-auto bg-transparent p-[0.8vw] hover:bg-pink-50 transition duration 200 hover:rounded-2xl"
-                                            >
-                                                <div id="icon1">
-                                                    <h1 className="font-bold text-md">
-                                                        <i class="ri-line-chart-line mr-[0.3vw] text-pink-300 text-left text-xl"></i>
-                                                        Business Consulting
-                                                    </h1>
-                                                    <p className="text-sm font-[500] mt-[0.5vw] opacity-90">
-                                                        Drive your business with
-                                                        innovation and growth{' '}
-                                                    </p>
-                                                </div>
-                                            </Link>
-                                            <Link
-                                                href="/services/e-commerce"
-                                                className=" w-[24vh] h-auto bg-transparent p-[0.8vw] hover:bg-blue-50 transition duration 200 hover:rounded-2xl"
-                                            >
-                                                <div id="icon2">
-                                                    <h1 className="font-bold text-md">
-                                                        <i class="ri-file-list-2-line mr-[0.3vw] text-blue-400 text-left text-xl"></i>
-                                                        E-commerce
-                                                    </h1>
-                                                    <p className="text-sm font-[500] mt-[0.5vw] opacity-90">
-                                                        Scale with confidence,
-                                                        we&lsquo;ve got you
-                                                        covered.
-                                                    </p>
-                                                </div>
-                                            </Link>
-                                            <Link
-                                                href="/services/erp-implementation"
-                                                className=" w-[28vh] h-auto bg-transparent p-[0.8vw] hover:bg-green-50 transition duration 200 hover:rounded-2xl"
-                                            >
-                                                <div id="icon3">
-                                                    <h1 className="font-bold text-md">
-                                                        <i class="ri-swap-fill mr-[0.3vw] text-green-400 text-left text-xl"></i>
-                                                        ERP Implementation
-                                                    </h1>
-                                                    <p className="text-sm font-[500] mt-[0.5vw] opacity-90">
-                                                        Your one-stop shop for
-                                                        successful ERP
-                                                        implementation.
-                                                    </p>
-                                                </div>
-                                            </Link>
-                                            <Link
-                                                href="/services/workflow-automation"
-                                                className=" w-[24vh] h-auto bg-transparent p-[0.8vw] hover:bg-pink-50 transition duration 200 hover:rounded-2xl"
-                                            >
-                                                <div id="icon4">
-                                                    <h1 className="font-bold text-md">
-                                                        <i class="ri-team-fill mr-[0.3vw] text-pink-400 text-left text-xl"></i>
-                                                        Workflow automation
-                                                    </h1>
-                                                    <p className="text-sm font-[500] mt-[0.5vw] opacity-90">
-                                                        Effortless efficiency.
-                                                        Workflows that work for
-                                                        you
-                                                    </p>
-                                                </div>
-                                            </Link>
-                                        </div>
-                                        <br />
-                                    </div>
-                                    <hr />
-                                </div>
-                            </MenuList>
-                        </Menu>
-                    </div>
-                    <div id="about" className="mx-[-1vw] bg-inherit">
-                        <Menu open={openMenu5} handler={setOpenMenu5}>
-                            <MenuHandler>
-                                <Button
-                                    variant="text"
-                                    className="flex items-center gap-1 text-base font-bold capitalize tracking-normal bg-sky-blue hover:bg-light-purple transition duration-300 ease-in-out transform hover:scale-105 hover:text-blue-500"
-                                >
-                                    About{' '}
-                                    <ChevronDownIcon
-                                        strokeWidth={2.5}
-                                        className={`h-3.5 w-3.5 transition-transform bg-sky-blue hover:bg-light-purple duration-300 ease-in-out transform hover:scale-105 hover:text-blue-500 ${
-                                            openMenu5 ? 'rotate-180' : '/'
-                                        }`}
-                                    />
-                                </Button>
-                            </MenuHandler>
-                            <MenuList className="bg-white w-1/2 h-auto border-none">
-                                <div className="flex ml-[0vw] py-10 px-10 gap-[5vw]">
-                                    <Link
-                                        href="/about/company"
-                                        className=" w-[24vh] h-auto bg-transparent p-[0.8vw] hover:bg-orange-50 transition duration 200 hover:rounded-2xl"
-                                    >
-                                        <div id="icon1">
-                                            <h1 className="font-bold text-md">
-                                                <i class="ri-line-chart-line mr-[0.3vw] text-orange-300 text-left text-xl"></i>
-                                                Company
-                                            </h1>
-                                            <p className="text-sm font-[500] mt-[0.5vw] opacity-90">
-                                                Building tomorrow&lsquo;s
-                                                solutions, today.
-                                            </p>
-                                        </div>
-                                    </Link>
-                                    <Link
-                                        href="/about/team"
-                                        className=" w-[24vh] h-auto bg-transparent p-[0.8vw] hover:bg-pink-50 transition duration 200 hover:rounded-2xl"
-                                    >
-                                        <div id="icon2">
-                                            <h1 className="font-bold text-md">
-                                                <i class="ri-team-fill mr-[0.3vw] text-pink-400 text-left text-xl"></i>
-                                                Team
-                                            </h1>
-                                            <p className="text-sm font-[500] mt-[0.5vw] opacity-90">
-                                                Meet the folks that guide you to
-                                                success.
-                                            </p>
-                                        </div>
-                                    </Link>
-                                </div>
-                            </MenuList>
-                        </Menu>
-                    </div>
-                    <div id="learn" className="mx-[-1vw] bg-inherit">
-                        <Menu open={openMenu6} handler={setOpenMenu6}>
-                            <MenuHandler>
-                                <Button
-                                    variant="text"
-                                    className="flex items-center gap-1 text-base font-bold capitalize tracking-normal bg-sky-blue hover:bg-light-purple transition duration-300 ease-in-out transform hover:scale-105 hover:text-blue-500"
-                                >
-                                    learn{' '}
-                                    <ChevronDownIcon
-                                        strokeWidth={2.5}
-                                        className={`h-3.5 w-3.5 transition-transform bg-sky-blue hover:bg-light-purple duration-300 ease-in-out transform hover:scale-105 hover:text-blue-500 ${
-                                            openMenu6 ? 'rotate-180' : '/'
-                                        }`}
-                                    />
-                                </Button>
-                            </MenuHandler>
-                            <MenuList className="bg-white w-1/2 h-auto border-none">
-                                <div className="flex ml-[0vw] py-10 px-10 gap-[5vw]">
-                                    <Link
-                                        href="/learn/blogs"
-                                        className=" w-[24vh] h-auto bg-transparent p-[0.8vw] hover:bg-pink-50 transition duration 200 hover:rounded-2xl"
-                                    >
-                                        <div id="icon1">
-                                            <h1 className="font-bold text-md">
-                                                <i class="ri-line-chart-line mr-[0.3vw] text-pink-300 text-left text-xl"></i>
-                                                Blogs
-                                            </h1>
-                                            <p className="text-sm font-[500] mt-[0.5vw] opacity-90">
-                                                Learn how ERP can transform your
-                                                company
-                                            </p>
-                                        </div>
-                                    </Link>
-                                    <Link
-                                        href="/learn/case-studies"
-                                        className=" w-[24vh] h-auto bg-transparent p-[0.8vw] hover:bg-lime-50 transition duration 200 hover:rounded-2xl"
-                                    >
-                                        <div id="icon2">
-                                            <h1 className="font-bold text-md capitalize">
-                                                <i class="ri-team-fill mr-[0.3vw] text-lime-400 text-left text-xl"></i>
-                                                case studies
-                                            </h1>
-                                            <p className="text-sm font-[500] mt-[0.5vw] opacity-90">
-                                                Don&lsquo;t just take our word
-                                                for it, read the success
-                                                stories.
-                                            </p>
-                                        </div>
-                                    </Link>
-                                    <Link
-                                        href="/learn/faq"
-                                        className=" w-[24vh] h-auto bg-transparent p-[0.8vw] hover:bg-green-50 transition duration 200 hover:rounded-2xl"
-                                    >
-                                        <div id="icon3">
-                                            <h1 className="font-bold text-md">
-                                                <i class="ri-mail-check-line mr-[0.3vw] text-green-400 text-left text-xl"></i>
-                                                FAQ&apos;s
-                                            </h1>
-                                            <p className="text-sm font-[500] mt-[0.5vw] opacity-90">
-                                                Get quick answers to your
-                                                burning questions.
-                                            </p>
-                                        </div>
-                                    </Link>
-                                </div>
-                            </MenuList>
-                        </Menu>
-                    </div>
+
+                    {navbarDataKeys.map((key) => (
+                        <Nav
+                            key={key}
+                            title={key}
+                            data={navbarData[key].items}
+                        />
+                    ))}
+
                     <Link
                         href="/careers"
-                        className="bg-sky-blue hover:bg-light-purple transition duration-300 ease-in-out transform hover:scale-105 hover:text-blue-500"
+                        className="mt-0.5 font-extrabold bg-sky-blue hover:bg-light-purple transition duration-300 ease-in-out transform hover:scale-105 hover:text-blue-500"
                     >
                         Careers
                     </Link>
