@@ -18,6 +18,68 @@ const Card = () => {
             <div className="flex items-center justify-center">
                 <p className="border-b-pink-200 border-b-4 mb-10 w-[5%] mt-2"></p>
             </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 justify-center">
+                {Teamdata.map((member) => (
+                    <div
+                        key={member.id}
+                        className="relative rounded-lg p-4 m-4 transition duration-500 ease-in-out transform hover:scale-100"
+                    >
+                        <div
+                            onMouseEnter={() => setHoveredCard(member.id)}
+                            onMouseLeave={() => setHoveredCard(null)}
+                            className="relative w-full p-2 object-cover rounded-t-lg transition-opacity duration-300 ease-in-out"
+                        >
+                            <div>
+                                <Image
+                                    src={
+                                        hoveredCard === member.id
+                                            ? member.cameoImage
+                                            : member.photo
+                                    }
+                                    alt="img"
+                                    height={200}
+                                    width={800}
+                                    className="w-full"
+                                />
+                                {hoveredCard === member.id && (
+                                    <div className="md:top-[91.5%] top-[87%] flex items-center justify-center bg-white bg-opacity-50 w-full max-h-10 transition-opacity duration-500 mt-2 md:mt-4 absolute">
+                                        <a
+                                            href={member.linkedin}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center justify-center"
+                                        >
+                                            <i className="ri-linkedin-box-fill mx-2 text-3xl cursor-pointer"></i>
+                                        </a>
+                                        <a
+                                            href={member.instagram}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center justify-center"
+                                        >
+                                            <i className="ri-instagram-line mx-2 text-3xl cursor-pointer"></i>
+                                        </a>
+                                        <a
+                                            href={member.github}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center justify-center"
+                                        >
+                                            <i className="ri-facebook-circle-fill mx-2 text-3xl cursor-pointer"></i>
+                                        </a>
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+                        <div className="mt-4 mb-10">
+                            <h2 className="text-xl font-semibold">
+                                {member.name}
+                            </h2>
+                            <p className="text-gray-500">{member.position}</p>
+                        </div>
+                    </div>
+                ))}
+            </div>
             <div className="flex flex-wrap justify-center">
                 {Teamdata.map((member) => (
                     <div

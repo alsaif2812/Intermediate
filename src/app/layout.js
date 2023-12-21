@@ -26,6 +26,10 @@ const blobHideRoutes = [
     '/services/business-consulting',
     '/services/workflow-automation',
     '/contact-sales',
+    '/products/erpnext',
+    '/products/mobileapp',
+    '/products/neupos',
+
 ];
 
 const RootLayout = ({ children }) => {
@@ -36,12 +40,12 @@ const RootLayout = ({ children }) => {
         <html lang="en" className={`${nunitoResult.className}`}>
             <body
                 className={`${showBlob
-                    ? 'md:bg-[url("/images/blob.png")] bg-no-repeat bg-right-top'
+                    ? 'md:bg-[url("/images/bg.png")] bg-no-repeat bg-top-right bg-contain'
                     : ''
                     }`}
             >
 
-                <NextTopLoader />
+                <NextTopLoader showSpinner={false} height={6} />
 
                 <div>
                     <Navbar showDefaultButtonColors={showBlob} />

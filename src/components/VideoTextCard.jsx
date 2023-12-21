@@ -2,6 +2,7 @@
 import React, { useMemo, useState } from 'react';
 import videoTextCardColors from '../theme/videoTextCardColors';
 import { Chip } from '@material-tailwind/react';
+import './VideoTextCard.css'
 
 function VideoTextCard({ data }) {
     const tabs = Object.keys(data);
@@ -17,7 +18,7 @@ function VideoTextCard({ data }) {
         <div
             id="Videotextcard"
             style={{ backgroundColor: theme.primary }}
-            className={`text-[#3d3d3d]  w-100 md:mt-3 md:mb-0 mt-28 py-10 px-5 rounded-3xl  md:px-8`}
+            className={`text-[#3d3d3d]   md:mt-3 md:mb-0 mt-28 py-10 px-5 rounded-3xl  md:px-8`}
         >
             {data[selectedTab] && data[selectedTab].top ? (
                 <p
@@ -57,10 +58,10 @@ function VideoTextCard({ data }) {
                 )}
             </div>
             <div className="md:mt-[0.6vw] md:flex w-full">
-                <div className="md:w-[60%] mt-10 w-[100%]">
+                <div className=" mt-10 ">
                     <div
-                        id="video"
-                        className="rounded-2xl my-6 md:hidden block"
+                        id="top-video"
+                        className="rounded-2xl my-6 md:hidden block "
                     >
                         <video
                             src={data[selectedTab].video}
@@ -70,8 +71,8 @@ function VideoTextCard({ data }) {
                             muted
                             width={600}
                             height={100}
-                            className=" object-cover cursor-pointer  rounded-xl "
-                            id="topimg"
+                            className=" object-cover cursor-pointer w-full rounded-xl "
+
                         />
                     </div>
                     <div id="title" className="text-center md:text-left">
@@ -133,10 +134,10 @@ function VideoTextCard({ data }) {
                         autoPlay
                         loop
                         muted
-                        width={950}
+                        width={2200}
                         height={100}
                         className=" md:rounded-lg bg mt-9 ml-8 cursor-pointer "
-                        id="bottomimg"
+                        id="bottom-video"
                     />
                 </div>
             </div>

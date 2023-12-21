@@ -57,7 +57,7 @@ export default function Home() {
                             >
                                 <div className="flex flex-wrap gap-4">
                                     <Link href="/solutions/manufacturing">
-                                        <button className="py-2 px-4 bg-white rounded-md hover:shadow-2xl shadow-md font-semibold flex items-center transition gap-2">
+                                        <button className="py-2 px-4 bg-transparent rounded-md hover:shadow-2xl shadow-md font-semibold flex items-center transition gap-2">
                                             <FontAwesomeIcon
                                                 icon={faIndustry}
                                                 className="text-blue-600"
@@ -65,7 +65,7 @@ export default function Home() {
                                             Manufacturing
                                         </button>
                                     </Link>
-                                    <button className="py-2 px-4 bg-white rounded-md hover:shadow-2xl shadow-md font-semibold flex items-center transition gap-2">
+                                    <button className="py-2 px-4 bg-transparent rounded-md hover:shadow-2xl shadow-md font-semibold flex items-center transition gap-2">
                                         <FontAwesomeIcon
                                             icon={faStore}
                                             className="text-blue-600"
@@ -74,14 +74,14 @@ export default function Home() {
                                     </button>
                                 </div>
                                 <div className="flex flex-wrap gap-4 mt-4">
-                                    <button className="py-2 px-4 bg-white rounded-md hover:shadow-2xl shadow-md font-semibold flex items-center transition gap-2">
+                                    <button className="py-2 px-4 bg-transparent rounded-md hover:shadow-2xl shadow-md font-semibold flex items-center transition gap-2">
                                         <FontAwesomeIcon
                                             icon={faCoins}
                                             className="text-blue-600"
                                         />{' '}
                                         Accounts{' '}
                                     </button>
-                                    <button className="py-2 px-4 bg-white rounded-md hover:shadow-2xl shadow-md font-semibold flex items-center transition gap-2">
+                                    <button className="py-2 px-4 bg-transparent rounded-md hover:shadow-2xl shadow-md font-semibold flex items-center transition gap-2">
                                         <FontAwesomeIcon
                                             icon={faWarehouse}
                                             className="text-blue-600"
@@ -91,11 +91,11 @@ export default function Home() {
                                 </div>
                             </div>
                             <input
-                                type="email"
-                                name="email"
-                                id="email"
-                                className="py-1 px-3 border-zinc-200 border-2 rounded-lg my-6 text-lg placeholder-opacity-30 md:w-[18vw] md:ml-[0vw]"
-                                placeholder="Enter your work email"
+                                type="tel"
+                                name="number"
+                                id="number"
+                                className="py-1 px-3 border-zinc-200  rounded-lg my-6 text-lg placeholder-opacity-30 md:w-[18vw] md:ml-[0vw] bg-transparent border  shadow-md shadow-gray-300"
+                                placeholder="Enter your Phone Number"
                             />
                             <br />
                             <a href="/">
@@ -107,7 +107,7 @@ export default function Home() {
                                         className="md:font-semibold font-extrabold  text-white"
                                         id="getquote2"
                                     >
-                                        Get a Quote
+                                        Get a Callback
                                     </span>
                                 </button>
                             </a>

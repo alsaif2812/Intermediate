@@ -15,7 +15,6 @@ import navbarData from '@/textContent/navbar/data.json';
 
 function Nav({ data, title }) {
     const [openMenu, setOpenMenu] = useState(false);
-    console.log('data', data);
     return (
         <Menu open={openMenu} handler={setOpenMenu} allowHover={true}>
             <MenuHandler>
@@ -128,22 +127,12 @@ function Navbar({ showDefaultButtonColors }) {
                     className="hidden md:flex items-center justify-between gap-2"
                 >
                     <button
-                        className={`${showDefaultButtonColors
-                            ? 'bg-white'
-                            : 'bg-[#26C3FE] text-white'
-                            } py-2 px-4 bg-[#47CCFE] rounded-lg font-bold text-blue-400 bg-opacity-90 transition hover:bg-blue-500 hover:text-white hover:scale-105 hover:mt-[0.1vw] duration-300`}
+                        className="py-2 px-4 bg-[#47CCFE] rounded-lg font-bold text-white bg-opacity-90 transition hover:bg-blue-500 hover:text-white hover:scale-105 hover:mt-[0.1vw] duration-300 "
                     >
                         Free Demo
                     </button>
                     <Link href="/contact-sales">
-                        <button
-                            className={`${showDefaultButtonColors
-                                ? 'bg-white text-white hover:bg-blue-500'
-                                : 'bg-gray-600 text-[#5b5858]'
-                                } py-2 px-4  rounded-lg font-bold bg-opacity-20  transition   hover:scale-105 hover:mt-[0.1vw] duration-300`}
-                        >
-                            Contact Sales
-                        </button>
+                        <Button variant="outlined" color='blue'>Contact Sales</Button>
                     </Link>
                 </div>
                 <div id="mobileMenu" className="md:hidden relative ">
