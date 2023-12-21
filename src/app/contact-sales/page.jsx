@@ -1,9 +1,24 @@
 'use client'
-import React from 'react';
+import React, { useState } from 'react';
 
 import { Textarea, Input } from "@material-tailwind/react";
 
 const ContactPage = () => {
+          const [activeTab, setActiveTab] = useState(1); // Initially set the active tab to 1
+          const tabs = [
+                    'Head Office',
+                    'Trivandrum Office',
+                    'Calicut Office'
+          ];
+          const addresses = [
+                    'Vikas Trust Rural Industrial Park,Sneehatheeram, Thalikulam P.O,Thrissur, Kerala 680569',
+                    'ICFOSS Swathanthra Incubator,Greenfield Stadium,Karyavattom, Thiruvananthapuram,Kerala 695581',
+                    'C/O Sidharth S & Associates 2nd Floor, KRS Complex,Cherootty Road, Kozhikode - 673032'
+          ];
+
+          const handleTabClick = (index) => {
+                    setActiveTab(index);
+          };
           return (
                     <div className=' md:flex items-center justify-center flex-col pt-10 md:pt-0' style={{ background: 'linear-gradient(to bottom, #E1F8F7 50%, #fff 50%)' }}>
                               <div className='my-6 text-[#2e2e2e] text-center p-5'>
@@ -23,8 +38,8 @@ const ContactPage = () => {
                                                   <div className='flex items-center justify-start md:pt-10 md:pb-5 p-5 gap-3'>
                                                             <div><i className="ri-phone-fill md:text-2xl text-3xl text-[#fff]"></i></div>
                                                             <div className='text-md text-lg flex flex-col'>
-                                                                      <a href="tel:+91 806 925 6448">+91 806 925 6448</a>
-                                                                      <a href="tel:+91 9535 818 200">+91 9535 818 200</a>
+                                                                      <a href="tel:919535818200">+91 9535 818 200</a>
+                                                                      <a href="tel:918069256448">+91 806 925 6448</a>
                                                             </div>
                                                   </div>
 
@@ -35,10 +50,23 @@ const ContactPage = () => {
                                                             </div>
                                                   </div>
 
-                                                  <div className='flex items-center justify-start md:pt-10 md:pb-5 gap-3 p-5'>
-                                                            <div><i className="ri-map-pin-line md:text-2xl text-3xl text-[#fff]"></i></div>
+                                                  <div className='flex gap-3 p-5'>
+                                                            {tabs.map((tab, index) => (
+                                                                      <div
+                                                                                key={index}
+                                                                                className={`cursor-pointer ${activeTab === index + 1 ? 'text-white font-extrabold transition duration-300 border-b-4 border-white' : 'font-extrabold  text-white transition duration-300'}`}
+                                                                                onClick={() => handleTabClick(index + 1)}
+                                                                      >
+                                                                                {tab}
+                                                                      </div>
+                                                            ))}
+                                                  </div>
+                                                  <div className='flex items-center justify-start md:pt-1 md:pb-5 gap-3 p-5 md:p-0'>
+                                                            <div>
+                                                                      <i className="ri-map-pin-line md:text-2xl text-3xl text-[#fff]"></i>
+                                                            </div>
                                                             <div className='text-white text-md text-lg'>
-                                                                      New-York, USA
+                                                                      {addresses[activeTab - 1]}
                                                             </div>
                                                   </div>
                                         </div>

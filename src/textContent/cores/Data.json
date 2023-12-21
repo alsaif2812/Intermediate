@@ -1,0 +1,49 @@
+[
+  {
+    "id": "firstdiv",
+    "content": [
+      {
+        "id": "first",
+        "number": "01",
+        "title": "Deliver the best customer experience, period",
+        "subtitle": "Core Habits",
+        "details": "Details matter. Add value in every interaction"
+      },
+      {
+        "id": "Second",
+        "number": "02",
+        "title": "Deliver the best customer experience, period",
+        "subtitle": "Core Habits",
+        "details": "Details matter. Add value in every interaction"
+      },
+      {
+        "id": "Second",
+        "number": "03",
+        "title": "Deliver the best customer experience, period",
+        "subtitle": "Core Habits",
+        "details": "Details matter. Add value in every interaction"
+      },
+      {
+        "id": "Second",
+        "number": "04",
+        "title": "Deliver the best customer experience, period",
+        "subtitle": "Core Habits",
+        "details": "Details matter. Add value in every interaction"
+      },
+      {
+        "id": "Second",
+        "number": "05",
+        "title": "Deliver the best customer experience, period",
+        "subtitle": "Core Habits",
+        "details": "Details matter. Add value in every interaction"
+      },
+      {
+        "id": "Second",
+        "number": "06",
+        "title": "Deliver the best customer experience, period",
+        "subtitle": "Core Habits",
+        "details": "Details matter. Add value in every interaction"
+      }
+    ]
+  }
+]
