@@ -5,7 +5,7 @@ import React from 'react'
 const Trusted = () => {
           return (
                     <>
-                              <div id="main-trust" className='p-20 bg-gray-100 px-96 '>
+                              <div id="main-trust" className='p-20 bg-gray-100 md:px-96 '>
                                         <div id="card" className=' w-full  bg-gradient-to-r from-purple-900 via-purple-500 to-[#2e2e2e] rounded-3xl py-10 px-16'>
                                                   <h1 className='text-3xl font-extrabold text-white'>Trusted by over 2,000,000 teams</h1>
                                                   <div id="middle-texts" className='w-[50%] py-10 grid md:grid-cols-2 grid-cols-1 gap-6'>

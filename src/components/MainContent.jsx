@@ -2,7 +2,6 @@
 import Image from 'next/image';
 import logosData from '../textContent/logos/logosData.json';
 import Link from 'next/link';
-import Cards from './Cards';
 import Marquee from 'react-fast-marquee';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -172,7 +171,6 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <Cards />
         </>
     );
 }

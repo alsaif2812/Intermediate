@@ -1,4 +1,7 @@
+import Delivery from '@/components/Delivery';
+import IndexTeam from '@/components/IndexTeam';
 import MainContent from '@/components/MainContent';
+import Trusted from '@/components/Trusted';
 import Head from 'next/head';
 
 export const metadata = {
@@ -21,6 +24,9 @@ export default function Home() {
                 <meta name="keywords" content={metadata.keyword} />
             </Head>
             <MainContent />
+            <Delivery />
+            <IndexTeam />
+            <Trusted />
         </>
     );
 }
