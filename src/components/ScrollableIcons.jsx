@@ -5,11 +5,15 @@ import './ScrollableIcons.css';
 
 const ScrollableIcons = ({ data }) => {
           const [activeTab, setActiveTab] = useState(1); // Initially set the active tab to 1
-          const icons = [RiHome2Line, RiBuilding2Line, RiBuilding2Line, RiHome2Line]; // Replace with the desired icons
+          const icons = [RiHome2Line, RiBuilding2Line, RiBuilding2Line, RiHome2Line, RiBuilding2Line, RiHome2Line]; // Replace with the desired icons
           const addresses = [
                     'https://clickup.com/assets/home-test/projects.png',
                     'https://clickup.com/assets/home-test/whiteboard.png',
                     'https://clickup.com/assets/home-test/chat.png',
+                    'https://clickup.com/assets/home-test/projects.png',
+                    'https://clickup.com/assets/home-test/whiteboard.png',
+                    'https://clickup.com/assets/home-test/chat.png',
+
           ]; // Replace with the actual image paths
 
           const handleTabClick = (index) => {
