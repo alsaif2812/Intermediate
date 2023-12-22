@@ -1,44 +1,51 @@
-'use client'
+'use client';
 import React, { useState } from 'react';
+import { RiHome2Line, RiBuilding2Line, RiMapPinLine } from 'react-icons/ri'; // Import React Icons
 import './ScrollableIcons.css';
 
 const ScrollableIcons = ({ data }) => {
-          const [selectedIcon, setSelectedIcon] = useState(data);
+          const [activeTab, setActiveTab] = useState(1); // Initially set the active tab to 1
+          const icons = [RiHome2Line, RiBuilding2Line, RiBuilding2Line, RiHome2Line]; // Replace with the desired icons
+          const addresses = [
+                    'https://clickup.com/assets/home-test/projects.png',
+                    'https://clickup.com/assets/home-test/whiteboard.png',
+                    'https://clickup.com/assets/home-test/chat.png',
+          ]; // Replace with the actual image paths
+
+          const handleTabClick = (index) => {
+                    setActiveTab(index);
+          };
 
           return (
-                    <div>
-                              <div className="md:mt-[0.6vw]">
-                                        <div
-                                                  id="icon"
-                                                  className="flex items-center justify-around md:justify-start md:gap-10 text-sm font-bold gap-5 overflow-x-auto"
-                                        >
-                                                  <div
-                                                            onClick={() => setSelectedIcon(data)}
-                                                            className={`cursor-pointer text-lg capitalize leading-normal transition duration-300 ${selectedIcon.id === data.id ? 'border-b-4' : ''
-                                                                      }`}
-                                                  >
-                                                            <span dangerouslySetInnerHTML={{ __html: data.html }} />
-                                                  </div>
+                    <>
+                              <>
+                                        <div className='flex flex-wrap gap-6 justify-center items-start p-5'>
+                                                  {icons.map((Icon, index) => (
+                                                            <div
+                                                                      key={index}
+                                                                      className={`cursor-pointer ${activeTab === index + 1 ? 'text-black font-extrabold p-6 border-[1px] border-gray-300 rounded-lg scale-110 shadow-lg shadow-red-100 transition duration-300' : 'font-extrabold text-black  border-[1px]  shadow-sm p-6 rounded-lg transition duration-300  hover:scale-95 '}`}
+                                                                      onClick={() => handleTabClick(index + 1)}
+                                                            >
+                                                                      <Icon size={40} />
+                                                            </div>
+                                                  ))}
+
                                         </div>
-                              </div>
-                              <div className="md:mt-[0.6vw] md:flex w-full">
-                                        <div className="mt-10">
-                                                  <div className="rounded-2xl my-6 md:hidden block">
+                                        <div className='flex items-center justify-center md:pt-1 md:pb-5 gap-3 p-5 md:p-0 md:py-20 '>
+                                                  <div className='px-10 py-20'>
                                                             <img
-                                                                      src={data.path}
-                                                                      alt={`Image for ${data.name}`}
-                                                                      width={600}
+                                                                      src={addresses[activeTab - 1]}
+                                                                      alt={`Location ${activeTab}`}
+                                                                      width={1000}
                                                                       height={100}
-                                                                      className="object-cover cursor-pointer w-full rounded-xl"
-                                                                      onError={(e) => {
-                                                                                console.error('Image failed to load:', e.target.src);
-                                                                                e.target.style.display = 'none'; // Hide the image if it fails to load
-                                                                      }}
+                                                                      className='icon-image rounded-lg shadow-2xl shadow-[#402060]' // Add any additional styling for the image
                                                             />
+
                                                   </div>
+                                                  {/* You can add additional styling or components for the address here */}
                                         </div>
-                              </div>
-                    </div>
+                              </>
+                    </>
           );
 };
 

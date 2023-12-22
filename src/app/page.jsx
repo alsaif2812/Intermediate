@@ -1,6 +1,7 @@
 import Delivery from '@/components/Delivery';
 import IndexTeam from '@/components/IndexTeam';
 import MainContent from '@/components/MainContent';
+import ScrollableIcons from '@/components/ScrollableIcons';
 import Trusted from '@/components/Trusted';
 import Head from 'next/head';
 
@@ -24,6 +25,7 @@ export default function Home() {
                 <meta name="keywords" content={metadata.keyword} />
             </Head>
             <MainContent />
+            <ScrollableIcons />
             <Delivery />
             <IndexTeam />
             <Trusted />
