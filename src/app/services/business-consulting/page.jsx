@@ -14,7 +14,6 @@ import {
     TimelineIcon,
     TimelineBody,
     Typography,
-    chip,
 } from '@material-tailwind/react';
 
 const metadata = {
@@ -104,7 +103,7 @@ const page = () => {
                                     </li>
                                     <li>
                                         Tax worries be gone
-                                        <p>Say goodbye to late-night tax stress. We'll be your proactive guide, keeping you informed and optimized throughout the year
+                                        <p>Say goodbye to late-night tax stress. We&apos;ll be your proactive guide, keeping you informed and optimized throughout the year
                                         </p>
                                     </li>
                                 </ul>
@@ -135,7 +134,7 @@ const page = () => {
                                     </li>
                                     <li>
                                         Structure for success
-                                        <p>We'll help you restructure your organization for optimal performance, ensuring alignment with your strategic goals.
+                                        <p>We&apos;ll help you restructure your organization for optimal performance, ensuring alignment with your strategic goals.
 
                                         </p>
                                     </li>
@@ -161,7 +160,7 @@ const page = () => {
                                 <ul className="flex flex-col gap-4 list-inside list-disc">
                                     <li>
                                         Say hello to smooth-sailing processes
-                                        <p>We'll automate your financial workflows with cutting-edge ERP solutions, minimizing manual tasks and human error.
+                                        <p>We&apos;ll automate your financial workflows with cutting-edge ERP solutions, minimizing manual tasks and human error.
 
                                         </p>
                                     </li>

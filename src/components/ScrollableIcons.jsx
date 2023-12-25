@@ -23,16 +23,18 @@ const ScrollableIcons = ({ data }) => {
           return (
                     <>
                               <>
-                                        <div className='flex flex-wrap gap-6 justify-center items-start p-5'>
+                                        <div className='flex gap-6 justify-center items-start p-5 overflow-x-auto overflow-hidden'>
                                                   {icons.map((Icon, index) => (
                                                             <div
                                                                       key={index}
-                                                                      className={`cursor-pointer ${activeTab === index + 1 ? 'text-black font-extrabold p-6 border-[1px] border-gray-300 rounded-lg scale-110 shadow-lg shadow-red-100 transition duration-300' : 'font-extrabold text-black  border-[1px]  shadow-sm p-6 rounded-lg transition duration-300  hover:scale-95 '}`}
+                                                                      className={`cursor-pointer ${activeTab === index + 1 ? 'text-[#2e2e2e] font-extrabold p-6 border-[1px] border-gray-300 rounded-lg scale-110 shadow-lg shadow-red-100 transition duration-300' : 'font-extrabold text-[#2e2e2e]  border-[1px]  shadow-sm p-6 rounded-lg transition duration-300  hover:scale-95 '}`}
                                                                       onClick={() => handleTabClick(index + 1)}
                                                             >
                                                                       <Icon size={40} />
+                                                                      <h1>lorem</h1>
                                                             </div>
                                                   ))}
+
 
                                         </div>
                                         <div className='flex items-center justify-center md:pt-1 md:pb-5 gap-3 p-5 md:p-0 md:py-20 '>

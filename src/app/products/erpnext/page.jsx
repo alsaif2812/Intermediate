@@ -1,4 +1,3 @@
-import Cards from '@/components/Cards';
 import './erp.css'
 import React from 'react';
 import Head from 'next/head';

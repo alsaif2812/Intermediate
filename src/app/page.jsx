@@ -4,6 +4,9 @@ import MainContent from '@/components/MainContent';
 import ScrollableIcons from '@/components/ScrollableIcons';
 import Trusted from '@/components/Trusted';
 import Head from 'next/head';
+import TrustedData from '@/textContent/trusted/CardData1.json'
+import IndexteamData from '@/textContent/indexTeam/CardData.json'
+
 
 export const metadata = {
     title: 'Best ERP Software in Kerala, ERP Companies in Kochi, Wahni',
@@ -27,8 +30,8 @@ export default function Home() {
             <MainContent />
             <ScrollableIcons />
             <Delivery />
-            <IndexTeam />
-            <Trusted />
+            <IndexTeam data={IndexteamData} />
+            <Trusted data={TrustedData} />
         </>
     );
 }

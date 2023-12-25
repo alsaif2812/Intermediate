@@ -29,12 +29,15 @@ const blobHideRoutes = [
     '/products/erpnext',
     '/products/mobileapp',
     '/products/neupos',
+    '/form-submit-success',
 
 ];
 
-const RootLayout = ({ children }) => {
-    const showBlob = !blobHideRoutes.includes(usePathname());
 
+const RootLayout = ({ children }) => {
+    const pathname = usePathname();
+    const showBlob = !blobHideRoutes.includes(pathname);
+    console.log(pathname)
     return (
 
         <html lang="en" className={`${nunitoResult.className}`}>
@@ -44,21 +47,27 @@ const RootLayout = ({ children }) => {
                     : ''
                     }`}
             >
-
                 <NextTopLoader showSpinner={false} height={6} />
 
-                <div>
-                    <Navbar showDefaultButtonColors={showBlob} />
-                    {children}
-                </div>
 
-                <Footer />
+                <>
+                    <div>
+                        {pathname !== "/form-submit-success" ? (
+                            <Navbar showDefaultButtonColors={showBlob} />
+                        ) : null}
+                        {children}
+                    </div>
+                    {pathname !== "/form-submit-success" ? (
 
-                <div
-                    style={{ position: 'fixed', bottom: '20px', right: '20px' }}
-                >
-                    <SpeedDial />
-                </div>
+                        <Footer />
+                    ) : null}
+
+                    {pathname !== "/form-submit-success" ? (<div
+                        style={{ position: 'fixed', bottom: '20px', right: '20px' }}
+                    >
+                        <SpeedDial />
+                    </div>) : null}
+                </>
             </body>
         </html>
     );

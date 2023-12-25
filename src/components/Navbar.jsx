@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import witLogo from '../../public/images/wit-logo.png';
 import Link from 'next/link';
+import './Main.css'
 import {
     Button,
     Menu,
@@ -96,10 +97,7 @@ function Navbar({ showDefaultButtonColors }) {
                         alt="wahni it solutions logo"
                     />
                 </div>
-                <div
-                    id="nav2"
-                    className="hidden md:flex items-center justify-center gap-7 font-bold text-[#20262e]"
-                >
+                <div id="nav2" className="hidden md:flex items-center justify-center gap-7 font-bold text-[#20262e]">
                     <Link
                         href="/"
                         className="mt-0.5 font-extrabold bg-sky-blue hover:bg-light-purple transition duration-300 ease-in-out transform hover:scale-105 hover:text-blue-500"
@@ -122,10 +120,7 @@ function Navbar({ showDefaultButtonColors }) {
                         Careers
                     </Link>
                 </div>
-                <div
-                    id="nav3"
-                    className="hidden md:flex items-center justify-between gap-2"
-                >
+                <div id="nav3" className="hidden md:flex items-center justify-between gap-2" >
                     <button
                         className="py-2 px-4 bg-[#47CCFE] rounded-lg font-bold text-white bg-opacity-90 transition hover:bg-blue-500 hover:text-white hover:scale-105 hover:mt-[0.1vw] duration-300 "
                     >
@@ -150,7 +145,7 @@ function Navbar({ showDefaultButtonColors }) {
                     <div
                         id="menu"
                         className={`${isMobileMenuOpen ? 'block' : 'hidden'
-                            } fixed inset-0 max-w-full max-h-[150vw] z-50 shadow-lg p-[1vw] md:p-[2vw] flex flex-col items-center bg-[#fff] pt-[20vw] justify-start`}
+                            } fixed inset-0  z-50 shadow-lg   bg-[#fafafa]`}
                     >
                         <button
                             id="closeMenu"
@@ -159,135 +154,8 @@ function Navbar({ showDefaultButtonColors }) {
                         >
                             <i className="ri-close-line text-2xl"></i>
                         </button>
-                        <Link
-                            href="/"
-                            className="flex items-center justify-center py-3 px-4 text-gray-800 hover:bg-gray-200"
-                        >
-                            Home
-                        </Link>
-                        <a className="flex items-center justify-center py-3 px-4 text-gray-800 hover:bg-gray-200">
-                            <Menu>
-                                <MenuHandler>
-                                    <Button
-                                        variant="text"
-                                        className="flex items-center gap-1 text-base font-normal capitalize tracking-normal transition duration-300 ease-in-out transform my-[-2vw]"
-                                    >
-                                        Solutions{' '}
-                                        <ChevronDownIcon
-                                            strokeWidth={2.5}
-                                            className={`h-3.5 w-3.5 transition-transform  duration-300 ease-in-out transform  ${openMenu ? 'rotate-180' : '/'
-                                                }`}
-                                        />
-                                    </Button>
-                                </MenuHandler>
-                                <MenuList>
-                                    <Link href="/solutions/retail">
-                                        <MenuItem>Retail</MenuItem>
-                                    </Link>
-                                    <Link href="/solutions/services">
-                                        <MenuItem>Services</MenuItem>
-                                    </Link>
-                                    <Link href="/solutions/healthcare">
-                                        <MenuItem>Healthcare</MenuItem>
-                                    </Link>
-                                    <Link href="/solutions/manufacturing">
-                                        <MenuItem>Manufacturing</MenuItem>
-                                    </Link>
-                                    <Link href="/solutions/real-estate">
-                                        <MenuItem>Real Estate</MenuItem>
-                                    </Link>
-                                    <Link href="/solutions/distribution">
-                                        <MenuItem>Distribution</MenuItem>
-                                    </Link>
-                                    <Link href="/solutions/agriculture">
-                                        <MenuItem>Agriculture</MenuItem>
-                                    </Link>
-                                </MenuList>
-                            </Menu>
-                        </a>
-                        <a className="flex items-center justify-center py-3 px-4 text-gray-800 hover:bg-gray-200">
-                            <Menu>
-                                <MenuHandler>
-                                    <Button
-                                        variant="text"
-                                        className="flex items-center gap-1 text-base font-normal capitalize transition duration-300 ease-in-out transform my-[-2vw]"
-                                    >
-                                        Products{' '}
-                                        <ChevronDownIcon
-                                            strokeWidth={2.5}
-                                            className={`h-3.5 w-3.5 transition-transform  duration-300 ease-in-out transform  ${openMenu ? 'rotate-180' : '/'
-                                                }`}
-                                        />
-                                    </Button>
-                                </MenuHandler>
-                                <MenuList>
-                                    <Link href="/products/erpnext">
-                                        <MenuItem>ERPNext</MenuItem>
-                                    </Link>
-                                    <Link href="/products/mobileapp">
-                                        <MenuItem>Mobile App</MenuItem>
-                                    </Link>
-                                    <Link href="/products/neupos">
-                                        <MenuItem>Neu POS</MenuItem>
-                                    </Link>
-                                </MenuList>
-                            </Menu>
-                        </a>
-                        <a className="flex items-center justify-center py-3 px-4 text-gray-800 hover:bg-gray-200">
-                            <Menu>
-                                <MenuHandler>
-                                    <Button
-                                        variant="text"
-                                        className="flex items-center gap-1 text-base font-normal capitalize transition duration-300 ease-in-out transform my-[-2vw]"
-                                    >
-                                        Services{' '}
-                                        <ChevronDownIcon
-                                            strokeWidth={2.5}
-                                            className={`h-3.5 w-3.5 transition-transform  duration-300 ease-in-out transform  ${openMenu ? 'rotate-180' : '/'
-                                                }`}
-                                        />
-                                    </Button>
-                                </MenuHandler>
-                                <MenuList>
-                                    <Link href="/services/business-consulting">
-                                        <MenuItem>Business Consulting</MenuItem>
-                                    </Link>
-                                    <Link href="/services/e-commerce">
-                                        <MenuItem>E-commerce</MenuItem>
-                                    </Link>
-                                    <Link href="/services/erp-implementation">
-                                        <MenuItem>ERP Implementation</MenuItem>
-                                    </Link>
-                                    <Link href="/services/workflow-automation">
-                                        <MenuItem>Workflow automation</MenuItem>
-                                    </Link>
-                                </MenuList>
-                            </Menu>
-                        </a>
-                        <Link
-                            href="/about"
-                            className="flex items-center justify-center py-3 pr-8 text-gray-800 hover:bg-gray-200 "
-                        >
-                            About
-                        </Link>
-                        <Link
-                            href="/learn"
-                            className="flex items-center justify-center py-3 pr-8 text-gray-800 hover:bg-gray-200 "
-                        >
-                            Learn
-                        </Link>
-                        <Link
-                            href="/careers"
-                            className="block py-3 pr-7 text-gray-800 hover:bg-gray-200 "
-                        >
-                            Careers
-                        </Link>
-                        <button className="capitalize my-[1.9vw] ml-[-3vw] px-[4vw] py-[2vw] bg-deep-purple-300 rounded-lg font-semibold text-sm text-[#212121]">
-                            free demo
-                        </button>
-                        <Link href="/contact-sales" className="capitalize my-[1.9vw] ml-[-3vw] px-[4vw] py-[2vw] bg-deep-purple-300 rounded-lg font-semibold text-sm text-[#212121]">
-                            Contact sales
-                        </Link>
+                        <p>Hii</p>
+
                     </div>
                 </div>
             </div >

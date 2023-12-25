@@ -1,9 +1,32 @@
-import React from 'react'
+"use client"
+import React, { useState } from 'react';
+import Modal from 'react-modal';
 
-const Photogrid = () => {
+const Photogrid = ({ photos }) => {
+          const [modalIsOpen, setModalIsOpen] = useState(false);
+          const [selectedPhotoIndex, setSelectedPhotoIndex] = useState(0);
+
+          const openModal = (index) => {
+                    setSelectedPhotoIndex(index);
+                    setModalIsOpen(true);
+          };
+
+          const closeModal = () => {
+                    setModalIsOpen(false);
+          };
+
+          const navigatePhotos = (direction) => {
+                    const newIndex = direction === 'next' ? selectedPhotoIndex + 1 : selectedPhotoIndex - 1;
+
+                    if (newIndex >= 0 && newIndex < photos.length) {
+                              setSelectedPhotoIndex(newIndex);
+                    }
+          };
+
           return (
                     <div>
-                              <div id="photogrid" className=" pt-20 md:px-[0vw] px-[5vw] bg-gray-100">
+                              <div id="photogrid" className="pt-20 md:px-[0vw] px-[5vw] bg-gray-100">
+                                        {/* ... your existing content ... */}
                                         <div id="texts-gallery" className=' text-center'>
                                                   <p className=" font-semibold md:text-sm tracking-widest uppercase text-purple-500">
                                                             Gallery
@@ -19,22 +42,37 @@ const Photogrid = () => {
                                                             Join Our Team
                                                   </button>
                                         </div>
-                                        <div className="photo-grid mt-10 grid gap-4 grid-cols-4 md:grid-cols-5 px-56 py-20 ">
-                                                  {/* Placeholder for photos */}
-                                                  <img src="https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg" alt="Photo 1" className="w-full h-full object-cover rounded-md" />
-                                                  <img src="https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg" alt="Photo 2" className="w-full h-full object-cover rounded-md" />
-                                                  <img src="https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg" alt="Photo 3" className="w-full h-full object-cover rounded-md" />
-                                                  <img src="https://c7.staticflickr.com/9/8546/28354329294_bb45ba31fa_b.jpg" alt="Photo 4" className="w-full h-full object-cover rounded-md" />
-                                                  <img src="https://c6.staticflickr.com/9/8890/28897154101_a8f55be225_b.jpg" alt="Photo 5" className="w-full h-full object-cover rounded-md" />
-                                                  <img src="https://c5.staticflickr.com/9/8768/28941110956_b05ab588c1_b.jpg" alt="Photo 6" className="w-full h-full object-cover rounded-md" />
-                                                  <img src="https://c3.staticflickr.com/9/8583/28354353794_9f2d08d8c0_b.jpg" alt="Photo 7" className="w-full h-full object-cover rounded-md" />
-                                                  <img src="https://c7.staticflickr.com/9/8569/28941134686_d57273d933_b.jpg" alt="Photo 8" className="w-full h-full object-cover rounded-md" />
-                                                  <img src="https://c6.staticflickr.com/9/8342/28897193381_800db6419e_b.jpg" alt="Photo 9" className="w-full h-full object-cover rounded-md" />
-                                                  <img src="https://c7.staticflickr.com/9/8785/28687743710_3580fcb5f0_b.jpg" alt="Photo 10" className="w-full h-full object-cover rounded-md" />
-                                                  {/* Add more images as needed */}
-                                        </div>                              </div>
-                    </div>
-          )
-}
+                                        <div className="photo-grid mt-10 md:grid gap-4 flex overflow-x-auto  md:grid-cols-5 md:px-56 md:py-20">
+                                                  {photos.map((photo, index) => (
+                                                            <img
+                                                                      key={index}
+                                                                      src={photo}
+                                                                      alt={`Photo ${index + 1}`}
+                                                                      className="w-full h-full object-cover rounded-md cursor-pointer"
+                                                                      onClick={() => openModal(index)}
+                                                            />
+                                                  ))}
+                                        </div>
+                              </div>
 
-export default Photogrid
+                              <Modal
+                                        isOpen={modalIsOpen}
+                                        onRequestClose={closeModal}
+                                        contentLabel="Photo Modal"
+                                        className="modal"
+                                        overlayClassName="overlay"
+                              >
+                                        <div>
+                                                  <div id="close" onClick={closeModal} className='flex items-center justify-end cursor-pointer'><i class="ri-close-fill text-5xl text-white font-extrabold"></i></div>
+                                        </div>
+                                        <img src={photos[selectedPhotoIndex]} alt={`Photo ${selectedPhotoIndex + 1}`} className="w-full h-full object-cover" />
+
+
+                                        <div className='flex justify-between items-center font-extrabold text-white'> <button onClick={() => navigatePhotos('prev')}><i class="ri-arrow-left-fill text-5xl"></i></button>
+                                                  <button onClick={() => navigatePhotos('next')}><i class="ri-arrow-right-fill text-5xl"></i></button></div>
+                              </Modal>
+                    </div>
+          );
+};
+
+export default Photogrid;

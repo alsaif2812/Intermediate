@@ -25,7 +25,7 @@ const ContactPage = () => {
                               <div className='my-6 text-[#2e2e2e] text-center p-5'>
                                         <h1 className='md:text-5xl text-4xl font-extrabold'>Get In Touch</h1>
                                         <p className='md:text-lg tracking-wider my-3 text-sm font-semibold'>
-                                                  We'll create high-quality linkable content and build at least 40 high-authority links to each asset, paving the way for you to grow your rankings, improve brand.
+                                                  We&apos;ll create high-quality linkable content and build at least 40 high-authority links to each asset, paving the way for you to grow your rankings, improve brand.
                                         </p>
                               </div>
 
@@ -33,7 +33,7 @@ const ContactPage = () => {
                                         <div className='md:w-[35%] bg-[#01B8B0] rounded-2xl w-full md:p-5 md:pt-10 p-8 text-left text-[#fff]'>
                                                   <h2 className='md:text-2xl text-4xl my-2 font-extrabold'>Contact Information</h2>
                                                   <p className='md:text-sm text-lg my-5 tracking-wider'>
-                                                            We'll create high-quality linkable content and build at least 40 high-authority
+                                                            We&apos;ll create high-quality linkable content and build at least 40 high-authority
                                                   </p>
 
                                                   <div className='flex items-center justify-start md:pt-10 md:pb-5 p-5 gap-3'>

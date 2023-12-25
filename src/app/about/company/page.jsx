@@ -6,6 +6,9 @@ import Core from '@/components/Core';
 import Photogrid from '@/components/Photogrid';
 import Mission from '@/components/Mission';
 import Trusted from '@/components/Trusted';
+import photo from '@/textContent/photogrid/photo.json'
+import TrustedData from '@/textContent/trusted/CardData2.json'
+import './company.css'
 export const metadata = {
     title: 'About Wahni ERP Softwares - Best ERP Softwares in India',
     description:
@@ -24,8 +27,8 @@ const Page = () => {
             <Hero />
             <Mission />
             <Core data={CoreData} />
-            <Photogrid />
-            <Trusted />
+            <Photogrid photos={photo} />
+            <Trusted data={TrustedData} />
         </>
     );
 };

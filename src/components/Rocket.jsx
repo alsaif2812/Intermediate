@@ -7,6 +7,7 @@ import {
     Button,
 } from '@material-tailwind/react';
 import { Chip } from '@material-tailwind/react';
+import Link from 'next/link';
 
 export function CardWithLink({ jsonData }) {
     return (
@@ -58,7 +59,7 @@ export function CardWithLink({ jsonData }) {
                 </Typography>
             </CardBody>
             <CardFooter className="pt-0">
-                <a href="/" className="inline-block">
+                <Link href="/contact-sales" className="inline-block">
                     <Button
                         size="sm"
                         variant="text"
@@ -80,7 +81,7 @@ export function CardWithLink({ jsonData }) {
                             />
                         </svg>
                     </Button>
-                </a>
+                </Link>
             </CardFooter>
         </Card>
     );

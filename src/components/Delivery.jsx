@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import './Main.css'
+import './Delivery.css'
 import { FaHome, FaBuilding } from 'react-icons/fa';
 
 const Delivery = () => {
@@ -14,13 +14,7 @@ const Delivery = () => {
                     { icon: <FaBuilding className="md:text-2xl text-3xl text-[#212121]" /> },
           ];
 
-          const addresses = [
-                    'Vikas Trust Rural Industrial Park, Sneehatheeram, Thalikulam P.O, Thrissur, Kerala 680569',
-                    'ICFOSS Swathanthra Incubator, Greenfield Stadium, Karyavattom, Thiruvananthapuram, Kerala 695581',
-                    'C/O Sidharth S & Associates 2nd Floor, KRS Complex, Cherootty Road, Kozhikode - 673032',
-                    'C/O Sidharth S & Associates 2nd Floor, KRS Complex, Cherootty Road, Kozhikode - 673032',
-                    'C/O Sidharth S & Associates 2nd Floor, KRS Complex, Cherootty Road, Kozhikode - 673032',
-          ];
+
 
           const handleTabClick = (index) => {
                     setActiveTab(index);
@@ -28,7 +22,7 @@ const Delivery = () => {
 
           return (
                     <>
-                              <div id="main-delivery" className='w-full min-h-screen bg-white py-20 px-5 md:px-52'>
+                              <div id="main-delivery" className='w-full min-h-screen bg-white py-20 px-5 md:px-28'>
                                         <div id="upper" className='w-full text-center py-5'>
                                                   <h1 className='text-6xl font-extrabold text-[#2e2e2e]'>
                                                             Perfect fit <span className="gradient-text">for every team</span>
@@ -36,8 +30,8 @@ const Delivery = () => {
                                                   <p className='text-md mt-3 font-semibold'>Get started fast with out-of-the-box solutions.</p>
                                                   <p>Easily customize Wahni as team needs grow!</p>
                                         </div>
-                                        <div id="lower" className='my-10 flex flex-col items-center'>
-                                                  <div className='flex flex-wrap gap-6 justify-center items-start p-5'>
+                                        <div id="" className='lower my-10 md:flex md:flex-col md:items-center'>
+                                                  <div className='flex  gap-6 justify-center items-start p-5 overflow-x-auto'>
                                                             {tabs.map((tab, index) => (
                                                                       <div
                                                                                 key={index}
@@ -48,7 +42,7 @@ const Delivery = () => {
                                                                       </div>
                                                             ))}
                                                   </div>
-                                                  <div id="card" className='border-2 border-gray-500 rounded-lg w-full md:w-[70%] lg:w-[60%] xl:w-[70%] py-8 px-10 grid grid-cols-1 md:grid-cols-2 gap-5 shadow-lg shadow-red-100 mt-1'>
+                                                  <div id="" className='card border-2 border-gray-500 rounded-lg w-full md:w-[70%] lg:w-[60%] xl:w-[70%] py-8 px-10 grid  md:grid-cols-2 gap-5 shadow-lg shadow-red-100 mt-1'>
                                                             <div id="lft">
                                                                       <h2 className='font-bold text-lg my-3'>Deliver projects on time, every time</h2>
                                                                       <p className='text-sm font-semibold my-1'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus, perspiciatis ea.</p>

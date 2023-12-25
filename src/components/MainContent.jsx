@@ -3,6 +3,7 @@ import Image from 'next/image';
 import logosData from '../textContent/logos/logosData.json';
 import Link from 'next/link';
 import Marquee from 'react-fast-marquee';
+import './Main.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faIndustry,
@@ -40,7 +41,7 @@ export default function Home() {
                     <div className="w-full max-h-screen flex flex-col md:flex-row mt-[-5vw] md:mt-[-2vw]">
                         <div
                             id="left"
-                            className="md:w-1/2 md:h-full md:px-12 md:py-12 md:ml-10"
+                            className=" md:h-full md:px-12 md:py-12 md:ml-10"
                         >
                             <ChangeText
                                 staticText="we have the solutions to"
