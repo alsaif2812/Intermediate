@@ -1,13 +1,14 @@
-import React from 'react';
-import Head from 'next/head';
 import './ecommerce.css';
 import Card1Data from '../../../textContent/e-commerce/Card1Data.json';
 import Card2Data from '../../../textContent/e-commerce/Card2Data.json';
-import VideoTextCard from '@/components/VideoTextCard';
-import jsonData2 from '../../../textContent/rocket/rocket2.json';
+import Data2 from '../../../textContent/servicesHeroContent/e-commerce';
+
+import { Fragment } from 'react';
 import Rocket from '../../../components/Rocket';
 import ServicesHero from '@/components/ServicesHero';
-import Data2 from '../../../textContent/servicesHeroContent/e-commerce';
+import VideoTextCard from '@/components/VideoTextCard';
+
+import jsonData2 from '../../../textContent/rocket/rocket2.json';
 
 export const metadata = {
     title: 'E-Commerce — Wahni IT Solutions',
@@ -18,12 +19,7 @@ export const metadata = {
 
 const page = () => {
     return (
-        <>
-            <Head>
-                <title>{metadata.title}</title>
-                <meta name="description" content={metadata.description} />
-                <meta name="keywords" content={metadata.keyword} />
-            </Head>
+        <Fragment>
             <div>
                 <div
                     id="mainecommerce"
@@ -46,7 +42,7 @@ const page = () => {
                     <Rocket jsonData={jsonData2} />
                 </div>
             </div>
-        </>
+        </Fragment>
     );
 };
 

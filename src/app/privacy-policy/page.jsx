@@ -1,4 +1,4 @@
-import React from 'react';
+import { Fragment } from 'react';
 import Head from 'next/head';
 
 export const metadata = {
@@ -9,7 +9,7 @@ export const metadata = {
 
 const Privacypolicy = () => {
     return (
-        <>
+        <Fragment>
             <Head>
                 <title>{metadata.title}</title>
                 <meta name="description" content={metadata.description} />
@@ -93,6 +93,7 @@ const Privacypolicy = () => {
                 <a
                     className="my-2 text-base text-blue-400 no-underline hover:underline"
                     target="_blank"
+                    rel="noreferrer"
                     href="https://policies.google.com/technologies/ads
 "
                 >
@@ -172,7 +173,7 @@ const Privacypolicy = () => {
                     Policy and agree to its Terms and Conditions.
                 </p>
             </div>
-        </>
+        </Fragment>
     );
 };
 

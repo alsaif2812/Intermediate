@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import Image from 'next/image';
 import Teamdata from '../textContent/team/team.json';
 
@@ -7,7 +7,7 @@ const Card = () => {
     const [hoveredCard, setHoveredCard] = useState(null);
 
     return (
-        <>
+        <Fragment>
             <h1 className="my-10 text-center text-5xl text-gray-800 font-bold font-sans">
                 Our Leadership Team
             </h1>
@@ -18,7 +18,7 @@ const Card = () => {
             <div className="flex items-center justify-center">
                 <p className="border-b-pink-200 border-b-4 mb-10 w-[5%] mt-2"></p>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 justify-center">
+            <div className="md:m-24 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 justify-center">
                 {Teamdata.map((member) => (
                     <div
                         key={member.id}
@@ -29,7 +29,7 @@ const Card = () => {
                             onMouseLeave={() => setHoveredCard(null)}
                             className="relative w-full p-2 object-cover rounded-t-lg transition-opacity duration-300 ease-in-out"
                         >
-                            <div>
+                            <div className="flex justify-between items-end">
                                 <Image
                                     src={
                                         hoveredCard === member.id
@@ -39,110 +39,89 @@ const Card = () => {
                                     alt="img"
                                     height={200}
                                     width={800}
-                                    className="w-full"
+                                    className="w-100"
                                 />
-                                {hoveredCard === member.id && (
-                                    <div className="md:top-[91.5%] top-[87%] flex items-center justify-center bg-white bg-opacity-50 w-full max-h-10 transition-opacity duration-500 mt-2 md:mt-4 absolute">
+                                <div
+                                    className={`${
+                                        hoveredCard !== member.id
+                                            ? 'invisible'
+                                            : null
+                                    } transition-all duration-200`}
+                                >
+                                    {member.links.linkedin ? (
                                         <a
-                                            href={member.linkedin}
+                                            href={member.links.linkedin}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="flex items-center justify-center"
                                         >
-                                            <i className="ri-linkedin-box-fill mx-2 text-3xl cursor-pointer"></i>
+                                            <i className="ri-linkedin-box-fill mx-2 text-3xl text-blue-800"></i>
                                         </a>
+                                    ) : null}
+
+                                    {member.links.instagram ? (
                                         <a
-                                            href={member.instagram}
+                                            href={member.links.instagram}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="flex items-center justify-center"
                                         >
-                                            <i className="ri-instagram-line mx-2 text-3xl cursor-pointer"></i>
+                                            <i className="ri-instagram-fill mx-2 text-3xl text-pink-400"></i>
                                         </a>
+                                    ) : null}
+
+                                    {member.links.facebook ? (
                                         <a
-                                            href={member.github}
+                                            href={member.links.github}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="flex items-center justify-center"
                                         >
-                                            <i className="ri-facebook-circle-fill mx-2 text-3xl cursor-pointer"></i>
+                                            <i className="ri-facebook-circle-fill mx-2 text-3xl text-blue-800"></i>
                                         </a>
-                                    </div>
-                                )}
+                                    ) : null}
+
+                                    {member.links.github ? (
+                                        <a
+                                            href={member.links.github}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center justify-center"
+                                        >
+                                            <i className="ri-github-fill mx-2 text-3xl cursor-pointer"></i>
+                                        </a>
+                                    ) : null}
+
+                                    {member.links.frappeForum ? (
+                                        <a
+                                            href={member.links.frappeForum}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center justify-center"
+                                        >
+                                            <Image
+                                                src="/images/frappe-logo.png"
+                                                alt="frappe logo"
+                                                width={24}
+                                                height={24}
+                                            />
+                                        </a>
+                                    ) : null}
+                                </div>
                             </div>
                         </div>
                         <div className="mt-4 mb-10">
                             <h2 className="text-xl font-semibold">
                                 {member.name}
                             </h2>
-                            <p className="text-gray-500">{member.position}</p>
+                            <p className="text-gray-500 font-medium">
+                                {member.position}
+                            </p>
                         </div>
                     </div>
                 ))}
             </div>
-            <div className="flex flex-wrap justify-center">
-                {Teamdata.map((member) => (
-                    <div
-                        key={member.id}
-                        className="relative  rounded-lg p-4 m-4 w-full sm:w-1/2 md:w-[45%] lg:w-[30%] transition duration-500 ease-in-out transform hover:scale-100"
-                    >
-                        <div
-                            onMouseEnter={() => setHoveredCard(member.id)}
-                            onMouseLeave={() => setHoveredCard(null)}
-                            className="relative w-full p-2 object-cover rounded-t-lg md:rounded-t-none md:rounded-l-lg transition-opacity duration-300 ease-in-out"
-                        >
-                            <div>
-                                <Image
-                                    src={
-                                        hoveredCard === member.id
-                                            ? member.cameoImage
-                                            : member.photo
-                                    }
-                                    alt="img"
-                                    height={200}
-                                    width={800}
-                                    className="w-full"
-                                />
-                                {hoveredCard === member.id && (
-                                    <div className="md:top-[91.5%] top-[87%] flex items-center justify-center bg-white bg-opacity-50 w-full max-h-10 transition-opacity duration-500 mt-2 md:mt-4 absolute">
-                                        <a
-                                            href={member.linkedin}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="flex items-center justify-center"
-                                        >
-                                            <i className="ri-linkedin-box-fill mx-2 text-3xl cursor-pointer"></i>
-                                        </a>
-                                        <a
-                                            href={member.instagram}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="flex items-center justify-center"
-                                        >
-                                            <i className="ri-instagram-line mx-2 text-3xl cursor-pointer"></i>
-                                        </a>
-                                        <a
-                                            href={member.github}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="flex items-center justify-center"
-                                        >
-                                            <i className="ri-facebook-circle-fill mx-2 text-3xl cursor-pointer"></i>
-                                        </a>
-                                    </div>
-                                )}
-                            </div>
-                        </div>
-                        <div className="mt-4 mb-10">
-                            <h2 className="text-xl font-semibold">
-                                {member.name}
-                            </h2>
-                            <p className="text-gray-500">{member.position}</p>
-                        </div>
-                    </div>
-                ))}
-            </div>
-        </>
+        </Fragment>
     );
 };
 

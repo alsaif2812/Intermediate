@@ -1,12 +1,44 @@
 [
-  "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
-  "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-  "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
-  "https://c7.staticflickr.com/9/8546/28354329294_bb45ba31fa_b.jpg",
-  "https://c6.staticflickr.com/9/8890/28897154101_a8f55be225_b.jpg",
-  "https://c5.staticflickr.com/9/8768/28941110956_b05ab588c1_b.jpg",
-  "https://c3.staticflickr.com/9/8583/28354353794_9f2d08d8c0_b.jpg",
-  "https://c7.staticflickr.com/9/8569/28941134686_d57273d933_b.jpg",
-  "https://c6.staticflickr.com/9/8342/28897193381_800db6419e_b.jpg",
-  "https://c7.staticflickr.com/9/8785/28687743710_3580fcb5f0_b.jpg"
+  {
+    "src": "/images/company/onam-23-1.jpg",
+    "width": 576,
+    "height": 720,
+    "tags": [{ "value": "Onam 2023" }]
+  },
+  {
+    "src": "/images/company/onam-23-2.jpg",
+    "width": 1024,
+    "height": 768,
+    "tags": [{ "value": "Onam 2023" }]
+  },
+  {
+    "src": "/images/company/onam-23-3.jpg",
+    "width": 1024,
+    "height": 768,
+    "tags": [{ "value": "Onam 2023" }]
+  },
+  {
+    "src": "/images/company/onam-23-4.jpg",
+    "width": 1024,
+    "height": 768,
+    "tags": [{ "value": "Onam 2023" }]
+  },
+  {
+    "src": "/images/company/xmas-23-1.jpg",
+    "width": 576,
+    "height": 720,
+    "tags": [{ "value": "Christmas 2023" }]
+  },
+  {
+    "src": "/images/company/xmas-23-2.jpg",
+    "width": 1024,
+    "height": 768,
+    "tags": [{ "value": "Christmas 2023" }]
+  },
+  {
+    "src": "/images/company/xmas-23-3.jpg",
+    "width": 1024,
+    "height": 768,
+    "tags": [{ "value": "Christmas 2023" }]
+  }
 ]

@@ -1,27 +1,21 @@
-'use client';
-import React from 'react';
 import './implementation.css';
-import Head from 'next/head';
-import Timeline from '../../../components/Timeline.jsx';
 import Data1 from '../../../textContent/servicesHeroContent/Implementation';
-import ResourceCard from '@/components/ResourceCard';
-import ServicesHero from '@/components/ServicesHero';
+import { Fragment } from 'react';
 
-const metadata = {
+// import ResourceCard from '@/components/ResourceCard';
+import ServicesHero from '@/components/ServicesHero';
+import Timeline from '../../../components/Timeline.jsx';
+
+export const metadata = {
     title: 'Accounting ERP software in Kochi Kerala, Wahni',
     description:
         "Transform your business with Wahni's ERPNext solutions. Streamline operations, including accounting, in Kochi, Kerala. Elevate efficiency across verticals.",
     keywords: 'ERP Implementation,wahni it,erpnext',
 };
 
-const page = () => {
+const Page = () => {
     return (
-        <>
-            <Head>
-                <title>{metadata.title}</title>
-                <meta name="description" content={metadata.description} />
-                <meta name="keywords" content={metadata.keywords} />
-            </Head>
+        <Fragment>
             <div
                 id="mainerp"
                 className=" py-5 md:pt-6  pt-10 px-3 flex flex-col "
@@ -37,7 +31,7 @@ const page = () => {
                     </h1>
                     <Timeline />
                 </div>
-                <div id="resources" className="pt-20">
+                {/*             <div id="resources" className="pt-20">
                     <div className="flex flex-col items-center justify-center text-center">
                         <p className="text-purple-600 font-extrabold text-sm my-3">
                             RESOURCES
@@ -52,10 +46,10 @@ const page = () => {
                         <ResourceCard />
                         <ResourceCard />
                     </div>
-                </div>
+                </div> */}
             </div>
-        </>
+        </Fragment>
     );
 };
 
-export default page;
+export default Page;

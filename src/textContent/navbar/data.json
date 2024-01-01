@@ -73,14 +73,16 @@
         "heading": "Mobile App",
         "icon": "ri-task-line",
         "link": "/products/mobileapp",
-        "color": "green"
+        "color": "green",
+        "isHidden": true
       },
       {
         "caption": "Effortless sales, seamless integration with ERPNext",
         "heading": "NeuPOS",
         "icon": "ri-trophy-line",
         "link": "/products/neupos",
-        "color": "purple"
+        "color": "purple",
+        "isHidden": true
       }
     ]
   },

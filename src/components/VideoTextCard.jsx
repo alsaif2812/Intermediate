@@ -1,8 +1,9 @@
 'use client';
-import React, { useMemo, useState } from 'react';
-import videoTextCardColors from '../theme/videoTextCardColors';
+import './VideoTextCard.css';
+import React, { Suspense, useMemo, useState } from 'react';
 import { Chip } from '@material-tailwind/react';
-import './VideoTextCard.css'
+import Image from 'next/image';
+import videoTextCardColors from '../theme/videoTextCardColors';
 
 function VideoTextCard({ data }) {
     const tabs = Object.keys(data);
@@ -14,13 +15,17 @@ function VideoTextCard({ data }) {
     );
     const theme = useMemo(() => videoTextCardColors[randInt], []);
 
+    if (!data[selectedTab]) {
+        return <Suspense />;
+    }
+
     return (
         <div
             id="Videotextcard"
             style={{ backgroundColor: theme.primary }}
             className={`text-[#3d3d3d]   md:mt-3 md:mb-0 mt-28 py-10 px-5 rounded-3xl  md:px-8`}
         >
-            {data[selectedTab] && data[selectedTab].top ? (
+            {data[selectedTab].top ? (
                 <p
                     style={{ color: theme.secondary }}
                     className={`text-2xl font-extrabold`}
@@ -30,92 +35,113 @@ function VideoTextCard({ data }) {
             ) : (
                 ''
             )}
-            <div className="md:mt-[0.6vw] ">
+            <div className="md:mt-4 flex overflow-x-auto gap-x-6">
                 {tabs.length > 0 ? (
-                    <div
-                        id="tab"
-                        className="flex items-center justify-around md:justify-start md:gap-10 text-sm font-bold gap-5 overflow-x-auto"
-                    >
-                        {tabs.map((tab) => (
-                            <h1
-                                key={tab}
-                                onClick={() => setSelectedTab(tab)}
-                                style={{
-                                    borderColor:
-                                        selectedTab === tab
-                                            ? theme.secondary
-                                            : 'transparent',
-                                }}
-                                className={`cursor-pointer text-lg capitalize leading-normal transition duration-300 ${selectedTab === tab ? `border-b-4` : ''
-                                    }`}
-                            >
-                                {tab}
-                            </h1>
-                        ))}
-                    </div>
+                    tabs.map((tab) => (
+                        <p
+                            key={tab}
+                            onClick={() => setSelectedTab(tab)}
+                            style={{
+                                borderColor:
+                                    selectedTab === tab
+                                        ? theme.secondary
+                                        : 'transparent',
+                            }}
+                            className={`text-lg font-bold whitespace-nowrap  capitalize transition duration-300 ${
+                                selectedTab === tab ? `border-b-4` : ''
+                            }`}
+                        >
+                            {tab}
+                        </p>
+                    ))
                 ) : (
                     <div id="tab" className="mb-[-3rem]"></div>
                 )}
             </div>
-            <div className="md:mt-[0.6vw] md:flex w-full">
-                <div className=" mt-10 ">
-                    <div
-                        id="top-video"
-                        className="rounded-2xl my-6 md:hidden block "
-                    >
-                        <video
-                            src={data[selectedTab].video}
-                            alt="img"
-                            autoPlay
-                            loop
-                            muted
-                            width={600}
-                            height={100}
-                            className=" object-cover cursor-pointer w-full rounded-xl "
+            <div className="md:my-22 w-full">
+                <div className="mt-10 flex flex-col md:flex-row md:justify-between">
+                    <div className="order-2 md:order-1 mt-12 md:mt-0">
+                        <div id="title" className="">
+                            <p className="text-4xl font-bold">
+                                {data[selectedTab].heading}
+                            </p>
+                        </div>
+                        <div
+                            id="text"
+                            className="p-2 mt-2 rounded-3xl text-lg font-semibold leading-6"
+                        >
+                            {data[selectedTab].body &&
+                                data[selectedTab].body
+                                    .split('\n')
+                                    .map((i, index) => (
+                                        <p key={index} className="mt-4">
+                                            {i}
+                                        </p>
+                                    ))}
 
-                        />
+                            {data[selectedTab].points
+                                ? data[selectedTab].points.map((i, idx) => (
+                                      <div
+                                          key={idx}
+                                          className="flex items-start py-2"
+                                      >
+                                          <div className="mr-2">
+                                              <Chip
+                                                  className="px-2.5 rounded-full"
+                                                  style={{
+                                                      backgroundColor:
+                                                          theme.secondary,
+                                                  }}
+                                                  value={idx + 1}
+                                              />
+                                          </div>
+                                          <p className="w-full">{i}</p>
+                                      </div>
+                                  ))
+                                : null}
+                        </div>
                     </div>
-                    <div id="title" className="text-center md:text-left">
-                        <h1 className="text-4xl font-bold">
-                            {data[selectedTab].heading}
-                        </h1>
-                    </div>
-                    <div
-                        id="text"
-                        className="p-2 mt-2 rounded-3xl text-lg font-semibold leading-6"
-                    >
-                        {data[selectedTab] &&
-                            data[selectedTab].body &&
-                            data[selectedTab].body
-                                .split('\n')
-                                .map((i, index) => (
-                                    <p key={index} className="mt-4">
-                                        {i}
-                                    </p>
-                                ))}
 
-                        {data[selectedTab].points
-                            ? data[selectedTab].points.map((i, idx) => (
-                                <div
-                                    key={idx}
-                                    className="flex items-start py-2"
-                                >
-                                    <div className="mr-2">
-                                        <Chip
-                                            className="px-2.5 rounded-full"
-                                            style={{
-                                                backgroundColor:
-                                                    theme.secondary,
-                                            }}
-                                            value={idx + 1}
-                                        />
-                                    </div>
-                                    <p className="w-full">{i}</p>
-                                </div>
-                            ))
-                            : null}
+                    <div className="order-1 md:order-2 md:pb-10 md:px-16">
+                        {!data[selectedTab].image && data[selectedTab].video ? (
+                            <video
+                                src={data[selectedTab].video}
+                                alt="img"
+                                autoPlay
+                                loop
+                                muted
+                                width={3500}
+                                height={2160}
+                                className="w-auto md:max-w-[35rem] rounded-lg"
+                                id="bottom-video"
+                            />
+                        ) : null}
+
+                        {!data[selectedTab].video && data[selectedTab].image ? (
+                            <Image
+                                src={data[selectedTab].image}
+                                alt={data[selectedTab].heading}
+                                width={100}
+                                height={100}
+                                className="w-screen md:min-w-[35rem] rounded-xl"
+                            />
+                        ) : null}
+
+                        {!data[selectedTab].image &&
+                        !data[selectedTab].video ? (
+                            <video
+                                src="/images/work-order.webm"
+                                alt="img"
+                                autoPlay
+                                loop
+                                muted
+                                width={3500}
+                                height={2160}
+                                className="w-auto md:max-w-[35rem] rounded-lg"
+                            />
+                        ) : null}
                     </div>
-                    <div
+                    {/* <div
                         id="btns"
                         className="flex items-center justify-center md:block p-3"
                     >
@@ -125,20 +151,7 @@ function VideoTextCard({ data }) {
                         >
                             Dummybtn
                         </button>
-                    </div>
-                </div>
-                <div className=" md:pb-10 md:px-16 hidden md:block">
-                    <video
-                        src={data[selectedTab].video}
-                        alt="img"
-                        autoPlay
-                        loop
-                        muted
-                        width={2200}
-                        height={100}
-                        className=" md:rounded-lg bg mt-9 ml-8 cursor-pointer "
-                        id="bottom-video"
-                    />
+                    </div> */}
                 </div>
             </div>
         </div>

@@ -1,14 +1,14 @@
-import React from 'react';
-import Hero from '@/components/Hero';
-import CoreData from '@/textContent/cores/Data.json'
-import Head from 'next/head';
+import './company.css';
 import Core from '@/components/Core';
-import Photogrid from '@/components/Photogrid';
+import CoreData from '@/textContent/cores/Data.json';
+import { Fragment } from 'react';
+import Head from 'next/head';
+import Hero from '@/components/Hero';
 import Mission from '@/components/Mission';
-import Trusted from '@/components/Trusted';
-import photo from '@/textContent/photogrid/photo.json'
-import TrustedData from '@/textContent/trusted/CardData2.json'
-import './company.css'
+import Photogrid from '@/components/Photogrid';
+// import Trusted from '@/components/Trusted';
+// import TrustedData from '@/textContent/trusted/CardData2.json';
+import photosData from '@/textContent/photogrid/photo.json';
 export const metadata = {
     title: 'About Wahni ERP Softwares - Best ERP Softwares in India',
     description:
@@ -18,18 +18,23 @@ export const metadata = {
 
 const Page = () => {
     return (
-        <>
+        <Fragment>
             <Head>
                 <title>{metadata.title}</title>
                 <meta name="description" content={metadata.description} />
                 <meta name="keywords" content={metadata.keyword} />
             </Head>
-            <Hero />
+            <Hero
+                image="/images/company-vector.png"
+                showShadowOnImage={false}
+                heading="Beyond code, beyond expectations. Wahni IT Solutions"
+                caption="Beyond the code, beyond expectations. We're Wahni IT Solutions, where innovation meets expertise to fuel your business transformation."
+            />
             <Mission />
+            <Photogrid images={photosData} />
             <Core data={CoreData} />
-            <Photogrid photos={photo} />
-            <Trusted data={TrustedData} />
-        </>
+            {/* <Trusted data={TrustedData} /> */}
+        </Fragment>
     );
 };
 

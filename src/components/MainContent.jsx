@@ -1,18 +1,19 @@
 'use client';
-import Image from 'next/image';
-import logosData from '../textContent/logos/logosData.json';
-import Link from 'next/link';
-import Marquee from 'react-fast-marquee';
-import './Main.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import './Main.css';
 import {
+    faCoins,
     faIndustry,
     faStore,
-    faCoins,
     faWarehouse,
 } from '@fortawesome/free-solid-svg-icons';
-import Frappe from './Frappe';
+import { Button } from '@material-tailwind/react';
 import ChangeText from './ChangeText';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Fragment } from 'react';
+import Frappe from './Frappe';
+import Link from 'next/link';
+import LogosMarquee from './LogosMarquee';
+import logosData from '../textContent/logos/logosData.json';
 
 export default function Home() {
     const textContent = [
@@ -24,30 +25,25 @@ export default function Home() {
     ];
 
     return (
-        <>
+        <Fragment>
             <div id="page-1" className="h-full bg-opacity-80">
                 <video
-                    width={1000}
-                    height={100}
                     src="images/home-video.webm"
-                    autoPlay
-                    muted
+                    autoPlay={true}
+                    muted={true}
                     loop
                     alt="img"
-                    className="md:hidden my-[4vw] mx-3  w-[100%] "
+                    className="md:hidden my-[4vw] mx-3"
                     id="topimg"
                 />
                 <div id="content">
-                    <div className="w-full max-h-screen flex flex-col md:flex-row mt-[-5vw] md:mt-[-2vw]">
-                        <div
-                            id="left"
-                            className=" md:h-full md:px-12 md:py-12 md:ml-10"
-                        >
+                    <div className="w-full max-h-screen grid md:grid-cols-2">
+                        <div className="mx-4 md:mx-24 md:py-12">
                             <ChangeText
                                 staticText="we have the solutions to"
                                 animTextContent={textContent}
                                 interval={2000}
-                                staticTextClass="text-[7vw] h-auto  md:h-auto md:text-5xl font-bold mt-[5vw] md:mt-[3vw] w-full text-[#393939]"
+                                staticTextClass="text-3xl md:text-5xl h-auto md:h-auto md:text-5xl font-bold mt-[5vw] md:mt-[3vw] w-full text-[#393939]"
                                 animTextClass="w-full typed"
                             />
 
@@ -90,7 +86,15 @@ export default function Home() {
                                     </button>
                                 </div>
                             </div>
-                            <input
+
+                            <div className="mt-8">
+                                <Link href="/contact-sales">
+                                    <Button variant="gradient" color="blue">
+                                        Schedule a Free Demo
+                                    </Button>
+                                </Link>
+                            </div>
+                            {/*                 <input
                                 type="tel"
                                 name="number"
                                 id="number"
@@ -110,7 +114,7 @@ export default function Home() {
                                         Get a Callback
                                     </span>
                                 </button>
-                            </a>
+                            </a> */}
                             <div
                                 className="mt-[8vw] md:mt-[3vw] mx-[5vw] md:mx-[0vw]"
                                 id="qualifications"
@@ -128,50 +132,25 @@ export default function Home() {
                                 </p>
                             </div>
                         </div>
-                        <div
-                            id="right"
-                            className="hidden md:block w-[60%] h-full bg-transparent object-center"
-                        >
+                        <div id="right" className="hidden md:block h-100">
                             <video
                                 src="images/home-video.webm"
                                 autoPlay
                                 loop
                                 muted
-                                alt="video"
-                                width={1000}
+                                width={100}
                                 height={100}
-                                className="w-[100%] mt-14 pr-[10vw]"
+                                alt="video"
+                                className="w-[40rem]"
                                 id="bottomimg"
                             />
                         </div>
                     </div>
-                    <div
-                        id="footer-page-1"
-                        className="flex items-center justify-center flex-col md:mt-auto p-10 md:opacity-60 opacity-50 md:items-center md:justify-center md:flex-col bg-transparent mb-[5vw]"
-                    >
-                        <p className="text-sm md:text-xl md:mb-[2vw] mb-[8vw] text-center">
-                            Join our 50+ Successful Implementation stories
-                        </p>
-                        <Marquee pauseOnHover direction="left">
-                            <div className="gap-[5rem] flex items-center pt-12">
-                                {logosData.map((logo, index) => (
-                                    <div className="logo" key={index}>
-                                        <a href={logo.link} target="_blank">
-                                            {' '}
-                                            <Image
-                                                width={100}
-                                                height={90}
-                                                src={`/images/${logo.src}`}
-                                                alt={`${logo.name} logo`}
-                                            />
-                                        </a>
-                                    </div>
-                                ))}
-                            </div>
-                        </Marquee>
+                    <div className="flex items-center justify-center flex-col md:mt-auto p-10 md:opacity-60 opacity-50 md:items-center md:justify-center md:flex-col bg-transparent mb-[5vw]">
+                        <LogosMarquee data={logosData} />
                     </div>
                 </div>
             </div>
-        </>
+        </Fragment>
     );
 }

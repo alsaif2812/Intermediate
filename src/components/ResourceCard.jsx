@@ -1,9 +1,9 @@
-import React from 'react';
+import { Fragment } from 'react';
 import Image from 'next/image';
 import image from '../../public/images/blog3.jpg';
 const ResourceCard = () => {
     return (
-        <>
+        <Fragment>
             <div className="max-w-[20rem] mb-10  bg-white shadow-lg rounded-md overflow-hidden m-4 mt-20 hover:shadow-2xl transition duration-300">
                 <Image
                     height={100}
@@ -30,12 +30,12 @@ const ResourceCard = () => {
                     </div>
                     <div className="ml-2 flex items-center justify-center gap-2 text-[#3f3e3e]">
                         <button>
-                            Read more <i class="ri-arrow-right-line"></i>
+                            Read more <i className="ri-arrow-right-line"></i>
                         </button>
                     </div>
                 </div>
             </div>
-        </>
+        </Fragment>
     );
 };
 

@@ -1,21 +1,21 @@
 'use client';
 import {
     Timeline,
-    TimelineItem,
+    TimelineBody,
     TimelineConnector,
     TimelineHeader,
     TimelineIcon,
-    TimelineBody,
+    TimelineItem,
     Typography,
 } from '@material-tailwind/react';
 import { Chip } from '@material-tailwind/react';
-function TimelineWithIcon({ timelineData }) {
+function TimelineWithIcon() {
     return (
         <Timeline className="md:w-[50rem] text-[#3f3e3e]">
             <TimelineItem>
                 <TimelineConnector />
                 <TimelineHeader>
-                    <TimelineIcon className="p-2 rounded-full bg-[#528ff6]">
+                    <TimelineIcon className="p-4 rounded-full bg-blue-400">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             height="20"
@@ -35,7 +35,7 @@ function TimelineWithIcon({ timelineData }) {
                 <TimelineBody className="pb-8">
                     <Typography
                         color="gary"
-                        className="font-normal text-gray-600"
+                        className="font-normal text-gray-700"
                     >
                         The foundation of every successful ERP implementation is
                         understanding your unique operations. Our experienced
@@ -48,7 +48,7 @@ function TimelineWithIcon({ timelineData }) {
             <TimelineItem>
                 <TimelineConnector />
                 <TimelineHeader>
-                    <TimelineIcon className="p-2 bg-[#528ff6]">
+                    <TimelineIcon className="p-4 bg-blue-400">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             height="20"
@@ -68,7 +68,7 @@ function TimelineWithIcon({ timelineData }) {
                 <TimelineBody className="pb-8">
                     <Typography
                         color="gary"
-                        className="font-normal text-gray-600"
+                        className="font-normal text-gray-700"
                     >
                         Building upon the insights gained in consultation, we
                         transition to implementation, where we expertly merge
@@ -83,7 +83,7 @@ function TimelineWithIcon({ timelineData }) {
             <TimelineItem>
                 <TimelineConnector />
                 <TimelineHeader>
-                    <TimelineIcon className="p-2 rounded-full bg-[#528ff6]">
+                    <TimelineIcon className="p-4 rounded-full bg-blue-400">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             height="20"
@@ -103,65 +103,75 @@ function TimelineWithIcon({ timelineData }) {
                 <TimelineBody>
                     <Typography
                         color="gary"
-                        className="font-normal text-gray-600"
+                        className="font-normal text-gray-700"
                     >
                         <ul className="flex flex-col gap-4 list-outside">
                             <li>
                                 <span className=" flex items-center ">
                                     <Chip
                                         value="1"
-                                        className="flex items-center justify-center w-7 h-7 rounded-full mx-2 bg-[#bb44b8]"
+                                        className="flex items-center justify-center px-2 py-1 rounded-full mx-2 bg-blue-300"
                                     />
                                     <strong> Discovery:</strong>{' '}
                                 </span>
-                                Define project scope, milestones,
-                                customizations, and expected outcomes.
+                                <span className="ml-10">
+                                    Define project scope, milestones,
+                                    customizations, and expected outcomes.
+                                </span>
                             </li>
 
                             <li>
                                 <span className=" flex items-center ">
                                     <Chip
                                         value="2"
-                                        className="flex items-center justify-center  w-7 h-7 rounded-full mx-2 bg-[#bb44b8]"
+                                        className="flex items-center justify-center px-2 py-1 rounded-full mx-2 bg-blue-300"
                                     />
                                     <strong>Planning:</strong>
-                                </span>{' '}
-                                Develop a comprehensive strategy for smooth
-                                implementation and progress tracking.
+                                </span>
+                                <span className="ml-10">
+                                    Develop a comprehensive strategy for smooth
+                                    implementation and progress tracking.
+                                </span>
                             </li>
 
                             <li>
                                 <span className=" flex items-center ">
                                     <Chip
                                         value="3"
-                                        className="flex items-center justify-center  w-7 h-7 rounded-full mx-2 bg-[#bb44b8]"
+                                        className="flex items-center justify-center px-2 py-1 rounded-full mx-2 bg-blue-300"
                                     />
                                     <strong>Analysis & Configuration:</strong>{' '}
                                 </span>
-                                Install and configure the system to mirror your
-                                specific processes.
+                                <span className="ml-10">
+                                    Install and configure the system to mirror
+                                    your specific processes.
+                                </span>
                             </li>
                             <li>
                                 <span className="flex items-center">
                                     <Chip
                                         value="4"
-                                        className="flex items-center justify-center  w-7 h-7 rounded-full mx-2 bg-[#bb44b8]"
+                                        className="flex items-center justify-center px-2 py-1 rounded-full mx-2 bg-blue-300"
                                     />
                                     <strong>Migration & Verification:</strong>
                                 </span>{' '}
-                                Migrate data, map it accurately, and perform
-                                thorough verification checks.
+                                <span className="ml-10">
+                                    Migrate data, map it accurately, and perform
+                                    thorough verification checks.
+                                </span>
                             </li>
                             <li>
                                 <span className=" flex items-center ">
                                     <Chip
                                         value="5"
-                                        className="flex items-center justify-center  w-7 h-7 rounded-full mx-2 bg-[#bb44b8]"
+                                        className="flex items-center justify-center px-2 py-1 rounded-full mx-2 bg-blue-300"
                                     />
                                     <strong>Testing & Validation:</strong>
                                 </span>{' '}
-                                Test the system across all functionalities,
-                                ensuring seamless quote-to-cash flow.
+                                <span className="ml-10">
+                                    Test the system across all functionalities,
+                                    ensuring seamless quote-to-cash flow.
+                                </span>
                             </li>
                         </ul>
                     </Typography>
@@ -170,7 +180,7 @@ function TimelineWithIcon({ timelineData }) {
             <TimelineItem>
                 <TimelineConnector />
                 <TimelineHeader>
-                    <TimelineIcon className="p-2 rounded-full bg-[#528ff6]">
+                    <TimelineIcon className="p-4 rounded-full bg-blue-400">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             height="20"
@@ -190,7 +200,7 @@ function TimelineWithIcon({ timelineData }) {
                 <TimelineBody>
                     <Typography
                         color="gary"
-                        className="font-normal text-gray-600"
+                        className="font-normal text-gray-700"
                     >
                         Our comprehensive training equips users to navigate the
                         new ecosystem with confidence. Through interactive
@@ -204,7 +214,7 @@ function TimelineWithIcon({ timelineData }) {
             </TimelineItem>
             <TimelineItem>
                 <TimelineHeader>
-                    <TimelineIcon className="p-2 rounded-full bg-[#528ff6]">
+                    <TimelineIcon className="p-4 rounded-full bg-blue-400">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             height="20"
@@ -224,7 +234,7 @@ function TimelineWithIcon({ timelineData }) {
                 <TimelineBody>
                     <Typography
                         color="gary"
-                        className="font-normal text-gray-600"
+                        className="font-normal text-gray-700"
                     >
                         Go live worry-free! Our round-the-clock support puts our
                         15-year ERP expertise at your fingertips. Our dedicated
