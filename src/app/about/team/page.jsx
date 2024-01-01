@@ -1,10 +1,11 @@
+import Card from '@/components/Team';
+import { Fragment } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
-import Card from '@/components/Team';
 
 export default function Home() {
     return (
-        <>
+        <Fragment>
             ,
             <Head>
                 <title>{metadata.title}</title>
@@ -15,49 +16,25 @@ export default function Home() {
                 <Image
                     width={1000}
                     height={100}
-                    src="/images/team.jpg"
+                    src="/images/company-vector.png"
                     alt="video"
                     className="md:hidden mt-[4vw] md:mt-[1vw] w-[70%] md:mx-auto"
                 />
                 <div id="content">
                     <div className="w-full max-h-screen flex flex-col  md:flex-row mt-[-5vw] md:mt-[-2vw]">
-                        <div
-                            id="left"
-                            className="md:w-1/2 md:h-full md:px-28 md:py-28 md:ml-10 "
-                        >
-                            <h1
-                                className="text-3xl h-auto  md:h-auto md:text-5xl font-bold mt-[5vw] md:mt-[3vw] w-full text-gray-800"
-                                id="maintext"
-                            >
-                                Welcome to Our <br /> Team Page dummy Text
+                        <div className="md:w-1/2 md:h-full md:px-28 md:py-28 md:ml-10 ">
+                            <h1 className="text-3xl h-auto  md:h-auto md:text-5xl font-bold mt-[5vw] md:mt-[3vw] w-full text-gray-800">
+                                Fueled by Passion ⚡️, Driven by Results 💯
                             </h1>
-                            <p className="text-sm font-semibold my-5 text-gray-600">
-                                Lorem ipsum dolor, sit amet consectetur
-                                adipisicing elit. Cupiditate libero <br /> nobis
-                                molestiae illo quisquam ipsa minus harum atque
-                                maiores provident.
+                            <p className="text- font-semibold my-5 text-gray-600">
+                                From ideation to implementation, Wahni IT
+                                Solutions boasts a diverse team of specialists,
+                                each dedicated to exceeding expectations.
                             </p>
-
-                            <a href="/">
-                                <button
-                                    id="getquote"
-                                    className="md:py-[0.7vw] md:px-[2vw] py-[2vw] px-[17vw] bg-blue-500 rounded-md md:mt-[0vw] mt-[6vw] shadow-xl hover:shadow-none transition duration-300 md:ml-[0vw]"
-                                >
-                                    <span
-                                        className="md:font-semibold font-extrabold text-white"
-                                        id="getquote2"
-                                    >
-                                        Hiring!
-                                    </span>
-                                </button>
-                            </a>
                         </div>
-                        <div
-                            id="right"
-                            className="hidden md:block w-[60%] h-full bg-transparent object-center"
-                        >
+                        <div className="hidden md:block w-[60%] h-full bg-transparent object-center">
                             <Image
-                                src="/images/team.jpg"
+                                src="/images/company-vector.png"
                                 alt="img/"
                                 width={500}
                                 height={100}
@@ -68,7 +45,7 @@ export default function Home() {
                 </div>
             </div>
             <Card />
-        </>
+        </Fragment>
     );
 }
 

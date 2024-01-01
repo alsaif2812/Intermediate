@@ -1,12 +1,14 @@
-import Delivery from '@/components/Delivery';
-import IndexTeam from '@/components/IndexTeam';
+import FeaturesCard from '@/components/FeaturesCard';
+import { Fragment } from 'react';
+import Head from 'next/head';
+// import IndexTeam from '@/components/IndexTeam';
+// import IndexteamData from '@/textContent/indexTeam/CardData.json';
 import MainContent from '@/components/MainContent';
 import ScrollableIcons from '@/components/ScrollableIcons';
-import Trusted from '@/components/Trusted';
-import Head from 'next/head';
-import TrustedData from '@/textContent/trusted/CardData1.json'
-import IndexteamData from '@/textContent/indexTeam/CardData.json'
-
+import featuresCardData from '@/textContent/index/featuresCardData.json';
+import scrollableIconsData from '@/textContent/index/scrollableIconsData.json';
+// import Trusted from '@/components/Trusted';
+// import TrustedData from '@/textContent/trusted/CardData1.json';
 
 export const metadata = {
     title: 'Best ERP Software in Kerala, ERP Companies in Kochi, Wahni',
@@ -21,17 +23,17 @@ export const metadata = {
 };
 export default function Home() {
     return (
-        <>
+        <Fragment>
             <Head>
                 <title>{metadata.title}</title>
                 <meta name="description" content={metadata.description} />
                 <meta name="keywords" content={metadata.keyword} />
             </Head>
             <MainContent />
-            <ScrollableIcons />
-            <Delivery />
-            <IndexTeam data={IndexteamData} />
-            <Trusted data={TrustedData} />
-        </>
+            <ScrollableIcons data={scrollableIconsData} />
+            <FeaturesCard data={featuresCardData} />
+            {/* <IndexTeam data={IndexteamData} /> */}
+            {/* <Trusted data={TrustedData} /> */}
+        </Fragment>
     );
 }

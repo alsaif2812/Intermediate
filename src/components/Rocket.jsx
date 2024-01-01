@@ -1,17 +1,17 @@
 'use client';
 import {
+    Button,
     Card,
     CardBody,
     CardFooter,
     Typography,
-    Button,
 } from '@material-tailwind/react';
 import { Chip } from '@material-tailwind/react';
 import Link from 'next/link';
 
-export function CardWithLink({ jsonData }) {
+export default function Rocket({ jsonData }) {
     return (
-        <Card className="mt-6 md:w-[50%] w-[80%] /">
+        <Card className="mt-6 md:w-2/3  mx-auto">
             <CardBody>
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -86,4 +86,3 @@ export function CardWithLink({ jsonData }) {
         </Card>
     );
 }
-export default CardWithLink;

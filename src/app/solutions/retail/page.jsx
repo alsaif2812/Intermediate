@@ -1,10 +1,9 @@
+import { Fragment } from 'react';
 import Hero from '@/components/Hero';
-import React from 'react';
 import VideoTextCard from '@/components/VideoTextCard';
-import cardData from '../../../textContent/retail/cardOne.json';
 import card2Data from '../../../textContent/retail/cardTwo.json';
 import card3Data from '../../../textContent/retail/cardThree.json';
-import Head from 'next/head';
+import cardData from '../../../textContent/retail/cardOne.json';
 
 export const metadata = {
     title: ' Cloud-based easy-to-use ERP software for the retail industry ',
@@ -14,14 +13,19 @@ export const metadata = {
 };
 
 const Page = () => {
+    const heroText = {
+        heading: 'From Retail Chaos to Cashflow Nirvana',
+        caption:
+            'No matter your retail size or specialty, We have the tools to unleash your inner beast and turn your business into a cashflow symphony.',
+        buttonText: 'Talk To Sales',
+        buttonLink: '/contact-sales',
+        image: '/images/hero/sales-dash.png',
+    };
+
     return (
-        <>
-            <Head>
-                <title>{metadata.title}</title>
-                <meta name="description" content={metadata.description} />
-                <meta name="keywords" content={metadata.keyword} />
-            </Head>
-            <Hero />
+        <Fragment>
+            <Hero {...heroText} />
+
             <div
                 id="main"
                 className="p-5 md:flex md:items-center md:justify-center md:px-[12vw]"
@@ -40,7 +44,7 @@ const Page = () => {
             >
                 <VideoTextCard data={card3Data} />
             </div>
-        </>
+        </Fragment>
     );
 };
 

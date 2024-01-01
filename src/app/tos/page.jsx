@@ -1,4 +1,4 @@
-import React from 'react';
+import { Fragment } from 'react';
 import Head from 'next/head';
 
 export const metadata = {
@@ -9,7 +9,7 @@ export const metadata = {
 
 const page = () => {
     return (
-        <>
+        <Fragment>
             <Head>
                 <title>{metadata.title}</title>
                 <meta name="description" content={metadata.description} />
@@ -359,7 +359,7 @@ const page = () => {
                     liable for any loss or damage of any nature.
                 </p>
             </div>
-        </>
+        </Fragment>
     );
 };
 

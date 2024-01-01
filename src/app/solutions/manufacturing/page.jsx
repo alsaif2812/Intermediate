@@ -1,10 +1,10 @@
-import React from 'react';
+import { Fragment } from 'react';
+import Head from 'next/head';
+import Hero from '@/components/Hero';
 import VideoTextCard from '@/components/VideoTextCard';
-import cardData from '../../../textContent/manufacturing/cardOne.json';
 import card2Data from '../../../textContent/manufacturing/cardTwo.json';
 import card3Data from '../../../textContent/manufacturing/cardThree.json';
-import Hero from '@/components/Hero';
-import Head from 'next/head';
+import cardData from '../../../textContent/manufacturing/cardOne.json';
 
 export const metadata = {
     title: 'Manufacturing ERP Providers in Kochi Kerala, Wahni',
@@ -15,14 +15,22 @@ export const metadata = {
 };
 
 const Page = () => {
+    const heroTextContent = {
+        heading: 'Quality, Efficiency, Growth',
+        caption:
+            ' ERPNext lets you create, manage, and track multi-level BOMs for all your products. Ensure accurate costing, eliminate production delays, and optimize material usage',
+        image: '/images/hero/manufacturing.png',
+        buttonText: 'Contact Sales',
+        buttonLink: 'contact-sales',
+    };
     return (
-        <>
+        <Fragment>
             <Head>
                 <title>{metadata.title}</title>
                 <meta name="description" content={metadata.description} />
                 <meta name="keywords" content={metadata.keyword} />
             </Head>
-            <Hero />
+            <Hero {...heroTextContent} />
             <div
                 id="main"
                 className="p-5 md:flex md:items-center md:justify-center md:px-[12vw]"
@@ -57,7 +65,7 @@ const Page = () => {
                     borderColor=" border-[#313bb2]"
                 />
             </div>
-        </>
+        </Fragment>
     );
 };
 

@@ -1,19 +1,23 @@
-'use client';
-import React from 'react';
-import Head from 'next/head';
 import './workflow.css';
-import Image from 'next/image';
-import img from '../../../../public/images/blog2.webp';
-import VideoTextCard from '@/components/VideoTextCard';
+
 import Card1Data from '../../../textContent/workflow/Card1Data.json';
 import Card2Data from '../../../textContent/workflow/Card2Data.json';
 import Card3Data from '../../../textContent/workflow/Card3Data.json';
 import Card4Data from '../../../textContent/workflow/Card4Data.json';
-import Rocket from '../../../components/Rocket';
-import jsonData1 from '../../../textContent/rocket/rocket1.json';
-import ServicesHero from '@/components/ServicesHero';
 import Data3 from '../../../textContent/servicesHeroContent/WorkFlow.json';
-const metadata = {
+
+import { Fragment } from 'react';
+
+import Head from 'next/head';
+import Image from 'next/image';
+import Rocket from '../../../components/Rocket';
+import ServicesHero from '@/components/ServicesHero';
+import VideoTextCard from '@/components/VideoTextCard';
+
+import img from '../../../../public/images/blog2.webp';
+import jsonData1 from '../../../textContent/rocket/rocket1.json';
+
+export const metadata = {
     title: 'Workflow Automation — Wahni IT Solutions',
     description:
         'we are experienced in workflow automation in Kerala Legislative Assembly through ICFOSS a governmental agency supporting free and open-source software.',
@@ -22,7 +26,7 @@ const metadata = {
 
 const page = () => {
     return (
-        <>
+        <Fragment>
             <Head>
                 <title>{metadata.title}</title>
                 <meta name="description" content={metadata.description} />
@@ -95,7 +99,7 @@ const page = () => {
             <div id="iconss" className="flex items-center justify-center my-10">
                 <Rocket jsonData={jsonData1} />
             </div>
-        </>
+        </Fragment>
     );
 };
 

@@ -1,16 +1,17 @@
-// YourComponent.js
-import React from 'react';
+'use client';
+import { Fragment } from 'react';
 import Frappe from './Frappe';
+import Link from 'next/link';
 
 const ServicesHero = ({ data }) => {
     const { title, subtitle, buttonText } = data.maintext;
 
     const renderLines = (text) => {
         return text.split('\n').map((line, index) => (
-            <React.Fragment key={index}>
+            <Fragment key={index}>
                 {line}
                 <br />
-            </React.Fragment>
+            </Fragment>
         ));
     };
     return (
@@ -25,9 +26,11 @@ const ServicesHero = ({ data }) => {
                 {' '}
                 <strong>{renderLines(subtitle)}</strong>
             </p>
-            <button className="mt-4 bg-gradient-to-r from-[#4695F0]  to-[#FC42CE]  px-6 py-3 md:py-3 md:px-6 md:text-lg rounded-md font-bold text-white shadow-md hover:shadow-lg focus:outline-none focus:ring focus:border-blue-300">
-                {buttonText} <i className="ri-arrow-right-line"></i>
-            </button>
+            <Link href="/contact-sales">
+                <button className="mt-4 bg-gradient-to-r from-[#4695F0]  to-[#FC42CE]  px-6 py-3 md:py-3 md:px-6 md:text-lg rounded-md font-bold text-white shadow-md hover:shadow-lg focus:outline-none focus:ring focus:border-blue-300">
+                    {buttonText} <i className="ri-arrow-right-line"></i>
+                </button>
+            </Link>
             <Frappe />
         </div>
     );

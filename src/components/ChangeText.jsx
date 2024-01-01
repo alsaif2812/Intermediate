@@ -1,5 +1,5 @@
-'use client'
-import React, { useState, useEffect } from 'react';
+'use client';
+import React, { useEffect, useState } from 'react';
 
 function ChangeText(props) {
     const [displayText, setDisplayText] = useState(props.animTextContent[0]);
@@ -19,10 +19,10 @@ function ChangeText(props) {
     }, []);
 
     return (
-        <div>
+        <div className="">
             <p className={`${props.staticTextClass}`}>
                 {props.staticText}&nbsp;
-                <p className={`${props.animTextClass}`}>{displayText}</p>
+                <span className={`${props.animTextClass}`}>{displayText}</span>
             </p>
         </div>
     );

@@ -1,26 +1,33 @@
-import './erp.css'
-import React from 'react';
+import './erp.css';
+import Data from '../../../textContent/servicesHeroContent/erp-next.json';
+import FeaturesCard from '@/components/FeaturesCard';
+import { Fragment } from 'react';
 import Head from 'next/head';
-import Data from '../../../textContent/servicesHeroContent/erp-next.json'
-import ServicesHero from '@/components/ServicesHero';
-import cardData from '../../../textContent/manufacturing/cardOne.json';
-import VideoTextCard from '@/components/VideoTextCard';
+import LogosMarquee from '@/components/LogosMarquee';
+import Rocket from '@/components/Rocket';
 import ScrollableIcons from '@/components/ScrollableIcons';
-import IconsData from '@/textContent/scrollableicons/Data.json'
-
+import ServicesHero from '@/components/ServicesHero';
+import VideoTextCard from '@/components/VideoTextCard';
+import cardData from '../../../textContent/manufacturing/cardOne.json';
+import featuresCardData from '@/textContent/products/erpnext/featuresCardData.json';
+import logosData from '@/textContent/logos/logosData.json';
+import rocketTextContent from '@/textContent/rocket/rocket3.json';
+import scrollableIconsData from '@/textContent/products/erpnext/scrollableIconsData.json';
 
 const page = () => {
     return (
-        <>
+        <Fragment>
             <Head>
                 <title>{metadata.title}</title>
                 <meta name="description" content={metadata.description} />
                 <meta name="keywords" content={metadata.keyword} />
             </Head>
             <ServicesHero data={Data} />
+            <ScrollableIcons data={scrollableIconsData} />
+            <LogosMarquee data={logosData} />
             <div
                 id="main"
-                className="p-5 md:flex md:items-center md:justify-center md:px-[12vw]"
+                className="p-5 mt-14 md:flex md:items-center md:justify-center md:px-[12vw]"
             >
                 <VideoTextCard
                     data={cardData}
@@ -29,7 +36,9 @@ const page = () => {
                     borderColor=" border-[#528ff6]"
                 />
             </div>
-            <ScrollableIcons data={IconsData} />        </>
+            <FeaturesCard data={featuresCardData} />
+            <Rocket jsonData={rocketTextContent} />
+        </Fragment>
     );
 };
 

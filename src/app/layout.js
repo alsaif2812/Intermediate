@@ -3,12 +3,15 @@ import './globals.css';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import 'remixicon/fonts/remixicon.css';
 
+import React, { Fragment } from 'react';
 import Footer from '@/components/Footer';
+import { GoogleTagManager } from '@next/third-parties/google';
+
 import Navbar from '@/components/Navbar';
 import NextTopLoader from 'nextjs-toploader';
+import { Nunito } from 'next/font/google';
 import SpeedDial from '../components/SpeedDial';
 
-import { Nunito } from 'next/font/google';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import { usePathname } from 'next/navigation';
 
@@ -20,57 +23,81 @@ const nunitoResult = Nunito({
 });
 
 const blobHideRoutes = [
-    '/learn/blogs/abc',
-    '/services/erp-implementation',
-    '/services/e-commerce',
-    '/services/business-consulting',
-    '/services/workflow-automation',
-    '/contact-sales',
-    '/products/erpnext',
-    '/products/mobileapp',
-    '/products/neupos',
-    '/form-submit-success',
-
+    '(/services/.*)',
+    '(/contact-sales/.*)',
+    '(/products/.*)',
+    '(/form-submit-success/.*)',
 ];
 
+const bgHideRoutes = ['(/learn/blogs/.*)', '(/learn/case-studies/.*)'];
 
-const RootLayout = ({ children }) => {
+export default function RootLayout({ children }) {
+    let isBgHideRoute = false;
+    let isBlobHideRoute = false;
     const pathname = usePathname();
-    const showBlob = !blobHideRoutes.includes(pathname);
-    console.log(pathname)
-    return (
 
+    bgHideRoutes.forEach((pattern) => {
+        if (pathname.match(pattern)) {
+            isBgHideRoute = true;
+            return;
+        }
+        isBlobHideRoute = false;
+        return;
+    });
+
+    blobHideRoutes.forEach((pattern) => {
+        if (pathname === '/') {
+            isBlobHideRoute = false;
+            return;
+        }
+        if (pathname.match(pattern)) {
+            isBlobHideRoute = true;
+            return;
+        }
+    });
+
+    const getBgClass = () => {
+        if (isBgHideRoute) {
+            return null;
+        }
+
+        if (isBlobHideRoute) {
+            return 'md:bg-[url("/images/bg-2.png")] bg-no-repeat bg-top-right bg-contain';
+        } else {
+            return 'md:bg-[url("/images/bg.png")] bg-no-repeat bg-top-right bg-contain';
+        }
+    };
+
+    const bgClass = getBgClass();
+
+    return (
         <html lang="en" className={`${nunitoResult.className}`}>
-            <body
-                className={`${showBlob
-                    ? 'md:bg-[url("/images/bg.png")] bg-no-repeat bg-top-right bg-contain'
-                    : ''
-                    }`}
-            >
+            <GoogleTagManager gtmId="GTM-K95WCZQ" />
+            <body className={bgClass}>
                 <NextTopLoader showSpinner={false} height={6} />
 
-
-                <>
+                <Fragment>
                     <div>
-                        {pathname !== "/form-submit-success" ? (
-                            <Navbar showDefaultButtonColors={showBlob} />
+                        {pathname !== '/form-submit-success' ? (
+                            <Navbar showDefaultButtonColors={isBlobHideRoute} />
                         ) : null}
                         {children}
                     </div>
-                    {pathname !== "/form-submit-success" ? (
+                    {pathname !== '/form-submit-success' ? <Footer /> : null}
 
-                        <Footer />
+                    {pathname !== '/form-submit-success' ? (
+                        <div
+                            style={{
+                                position: 'fixed',
+                                bottom: '20px',
+                                right: '20px',
+                            }}
+                        >
+                            <SpeedDial />
+                        </div>
                     ) : null}
-
-                    {pathname !== "/form-submit-success" ? (<div
-                        style={{ position: 'fixed', bottom: '20px', right: '20px' }}
-                    >
-                        <SpeedDial />
-                    </div>) : null}
-                </>
+                </Fragment>
             </body>
         </html>
     );
-};
-
-export default RootLayout;
+}

@@ -1,12 +1,13 @@
 'use client';
-import React from 'react';
+
+import { Fragment } from 'react';
 import Image from 'next/image';
-import logo from '../../public/images/wit-logo.png';
 import Link from 'next/link';
+import logo from '../../public/images/wit-logo.png';
 
 const Footer = () => {
     return (
-        <>
+        <Fragment>
             <footer className=" text-gray-600 body-font bg-[#fafafa]">
                 <div className="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col ">
                     <div className="w-64 flex-shrink-0 md:mx-0 mx-auto  md:text-left justify-center md:flex flex-col md:items-left md:items-start items-center  flex ">
@@ -191,7 +192,7 @@ const Footer = () => {
                                 </li>
                                 <li>
                                     <Link
-                                        href="/about/contactus"
+                                        href="/contact-sales"
                                         className="font-semibold text-gray-600 hover:text-gray-800 transition duration-300"
                                     >
                                         Contact Us
@@ -212,14 +213,14 @@ const Footer = () => {
                         <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
                             <p className="mx-5">
                                 <Link
-                                    href={'/terms-conditions'}
+                                    href={'/tos'}
                                     className="mx-2 hover:text-gray-900 transition duration-300"
                                 >
-                                    Terms
+                                    Terms of Service
                                 </Link>{' '}
                                 |{' '}
                                 <Link
-                                    href={'/privacypolicy'}
+                                    href={'/privacy-policy'}
                                     className="mx-2 hover:text-gray-900 transition duration-300"
                                 >
                                     Privacy Policy
@@ -229,12 +230,13 @@ const Footer = () => {
                                 href="https://www.facebook.com/profile.php?id=100075923303577"
                                 target="_blank"
                                 className="text-gray-500"
+                                rel="noreferrer"
                             >
                                 <svg
                                     fill="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="2"
                                     className="w-5 h-5"
                                     viewBox="0 0 24 24"
                                 >
@@ -245,6 +247,7 @@ const Footer = () => {
                                 href="https://twitter.com/WahniSolutions"
                                 target="_blank"
                                 className="ml-3 text-gray-500"
+                                rel="noreferrer"
                             >
                                 <i className="ri-twitter-x-fill "></i>
                             </a>
@@ -252,13 +255,14 @@ const Footer = () => {
                                 href="https://www.instagram.com/wahnierp_/"
                                 target="_blank"
                                 className="ml-3 text-gray-500"
+                                rel="noreferrer"
                             >
                                 <svg
                                     fill="none"
                                     stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="2"
                                     className="w-5 h-5"
                                     viewBox="0 0 24 24"
                                 >
@@ -277,13 +281,14 @@ const Footer = () => {
                                 href="https://www.linkedin.com/company/wahni-it-solutions/"
                                 target="_blank"
                                 className="ml-3 text-gray-500"
+                                rel="noreferrer"
                             >
                                 <svg
                                     fill="currentColor"
                                     stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="0"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="0"
                                     className="w-5 h-5"
                                     viewBox="0 0 24 24"
                                 >
@@ -303,7 +308,7 @@ const Footer = () => {
                     </div>
                 </div>
             </footer>
-        </>
+        </Fragment>
     );
 };
 

@@ -1,9 +1,9 @@
-import React from 'react';
+import { Fragment } from 'react';
 import Image from 'next/image';
 import social from '../../public/images/righticon.avif';
 const HeroForFaq = () => {
     return (
-        <>
+        <Fragment>
             <div
                 id="mainfaq"
                 className="w-full md:max-h-screen    md:flex flex md:flex-row flex-col items-center justify-center "
@@ -62,7 +62,7 @@ const HeroForFaq = () => {
                     />
                 </div>
             </div>
-        </>
+        </Fragment>
     );
 };
 

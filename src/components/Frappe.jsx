@@ -1,5 +1,6 @@
 'use client';
-import React from 'react';
+
+import { Fragment } from 'react';
 import party from 'party-js';
 
 export function triggerConfetti(e) {
@@ -10,7 +11,7 @@ export function triggerConfetti(e) {
 
 const Frappe = () => {
     return (
-        <>
+        <Fragment>
             <p>
                 <i
                     onMouseOver={triggerConfetti}
@@ -23,7 +24,7 @@ const Frappe = () => {
                     Frappe Certified Partner
                 </a>
             </p>
-        </>
+        </Fragment>
     );
 };
 
