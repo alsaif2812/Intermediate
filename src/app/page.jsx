@@ -13,7 +13,7 @@ export const metadata = {
     keyword:
         'erp solutions, best erp software in india, erp for schools india, erp software solutions',
     icons: {
-        icon: '/images/favicon.png',
+        icon: '/images/favicon1.png',
         apple: '/images/apple-icon.png',
     },
 };

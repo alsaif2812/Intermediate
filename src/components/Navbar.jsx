@@ -236,7 +236,7 @@ function Navbar() {
                     </Link>
                 </div>
                 <div className='flex items-center justify-between gap-6'>
-                    <div className="hidden md:flex items-center justify-center gap-7 font-bold text-[#20262e]" id='navbar-part-2'>
+                    <div className="hidden md:flex items-center justify-center gap-7 font-bold text-[#20262e]  mx-52 px-10 " id='navbar-part-2'>
                         <Link
                             href="/"
                             className="mt-0.5 font-extrabold bg-sky-blue hover:bg-light-purple transition duration-300 ease-in-out transform hover:scale-105 hover:text-blue-500"
