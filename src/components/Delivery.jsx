@@ -125,11 +125,4 @@ const Delivery = () => {
 };
 
 export default Delivery;
-{
-    /* <div>
-<i className="ri-map-pin-line md:text-2xl text-3xl text-[#000]"></i>
-</div>
-<div className='text-black text-md text-lg'>
-{addresses[activeTab - 1]}
-</div> */
-}
+

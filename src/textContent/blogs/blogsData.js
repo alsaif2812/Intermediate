@@ -13,7 +13,7 @@ export const blogsData = [
         },
     },
     {
-        image: '/images/blog1.webp',
+        image: '/images/blog2.webp',
         heading: '6 Key Phases of an ERP Implementation Plan',
         bodyText:
             "An enterprise resource planning (ERP) system is a software programme that organises all of a company's operational procedures into a single software program. Accounting, human resources, and production",
@@ -26,7 +26,7 @@ export const blogsData = [
         },
     },
     {
-        image: '/images/blog1.webp',
+        image: '/images/blog4.png',
         heading: 'Why ERP Software Required for your Business',
         bodyText:
             "ERP, or enterprise resource planning, is a type of business application that connects and manages all areas of your company's performance, including but not limited to customer relationship management, inventory management, production planning, and financial controls.",

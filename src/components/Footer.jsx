@@ -10,7 +10,7 @@ const Footer = () => {
         <Fragment>
             <footer className=" text-gray-600 body-font bg-[#fafafa]">
                 <div className="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col ">
-                    <div className="w-64 flex-shrink-0 md:mx-0 mx-auto  md:text-left justify-center md:flex flex-col md:items-left md:items-start items-center  flex ">
+                    <div className=" flex-shrink-0 md:mx-0 mx-auto  md:text-left justify-center md:flex flex-col md:items-left md:items-start items-center  flex ">
                         <Image
                             src={logo}
                             height={100}
@@ -202,9 +202,7 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-
                 <hr />
-
                 <div className="">
                     <div className="container mx-auto py-4 px-0 flex  flex-wrap flex-col sm:flex-row  items-center ">
                         <p className="text-gray-500 text-sm text-center sm:text-left ">

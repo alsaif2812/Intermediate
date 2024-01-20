@@ -1,5 +1,5 @@
 'use client';
-import './Main.css';
+import './Navbar.css'
 import {
     Button,
     Collapse,
@@ -82,6 +82,7 @@ function MobileNav({ title, data, closeDrawer }) {
         <>
             <div
                 onClick={toggleOpen}
+
                 className="w-full flex justify-between py-3"
             >
                 <Typography variant="h5" className="text-gray-900">
@@ -129,7 +130,7 @@ function MobileNavbar() {
     const closeDrawer = () => setDrawerOpen(false);
 
     return (
-        <div className="md:hidden">
+        <div className="md:hidden" id='mobile-menu'>
             <i
                 className="ri-menu-3-line text-gray-700 text-3xl"
                 onClick={openDrawer}
@@ -185,31 +186,33 @@ function MobileNavbar() {
                     </Typography>
                 </Link>
 
-                <div className="w-full mt-8">
-                    <Link
-                        href="/"
-                        target="_blank"
-                        onClick={closeDrawer}
-                    >
-                        <Button
-
-                            className="w-full  bg-gradient-to-r from-cyan-400 to-blue-500 "
+                <div id="button">
+                    <div className="w-full mt-8">
+                        <Link
+                            href="/"
+                            target="_blank"
+                            onClick={closeDrawer}
                         >
-                            Free Demo
-                        </Button>
-                    </Link>
-                </div>
+                            <Button
 
-                <div className="w-full mt-4">
-                    <Link href="/contact-sales" onClick={closeDrawer}>
-                        <Button
-                            variant="outlined"
-                            color="blue"
-                            className="w-full"
-                        >
-                            Contact Sales
-                        </Button>
-                    </Link>
+                                className="w-full  bg-gradient-to-r from-cyan-400 to-blue-500 "
+                            >
+                                Free Demo
+                            </Button>
+                        </Link>
+                    </div>
+
+                    <div className="w-full mt-4">
+                        <Link href="/contact-sales" onClick={closeDrawer}>
+                            <Button
+                                variant="outlined"
+                                color="blue"
+                                className="w-full"
+                            >
+                                Contact Sales
+                            </Button>
+                        </Link>
+                    </div>
                 </div>
             </Drawer>
         </div>
@@ -221,56 +224,57 @@ function Navbar() {
 
     return (
         <Fragment>
-            <div className="px-6 md:px-10 flex items-center justify-between py-6">
-                <div>
+            <div id='navbar' className="px-6 md:px-10 flex items-center justify-between  py-6">
+                <div id='navbar-part-1'>
                     <Link href="/">
                         <Image
                             src={logo}
-                            style={{ width: '80px' }}
+                            style={{ width: '100px' }}
                             id="logo"
                             alt="wahni it solutions logo"
                         />
                     </Link>
                 </div>
-                <div className="hidden md:flex items-center justify-center gap-7 font-bold text-[#20262e]">
-                    <Link
-                        href="/"
-                        className="mt-0.5 font-extrabold bg-sky-blue hover:bg-light-purple transition duration-300 ease-in-out transform hover:scale-105 hover:text-blue-500"
-                    >
-                        Home
-                    </Link>
+                <div className='flex items-center justify-between gap-6'>
+                    <div className="hidden md:flex items-center justify-center gap-7 font-bold text-[#20262e]" id='navbar-part-2'>
+                        <Link
+                            href="/"
+                            className="mt-0.5 font-extrabold bg-sky-blue hover:bg-light-purple transition duration-300 ease-in-out transform hover:scale-105 hover:text-blue-500"
+                        >
+                            Home
+                        </Link>
 
-                    {navbarDataKeys.map((key) => (
-                        <Nav
-                            key={key}
-                            title={key}
-                            data={navbarData[key].items}
-                        />
-                    ))}
+                        {navbarDataKeys.map((key) => (
+                            <Nav
+                                key={key}
+                                title={key}
+                                data={navbarData[key].items}
+                            />
+                        ))}
 
-                    <Link
-                        href="/careers"
-                        className="mt-0.5 font-extrabold bg-sky-blue hover:bg-light-purple transition duration-300 ease-in-out transform hover:scale-105 hover:text-blue-500"
-                    >
-                        Careers
-                    </Link>
+                        <Link
+                            href="/careers"
+                            className="mt-0.5 font-extrabold bg-sky-blue hover:bg-light-purple transition duration-300 ease-in-out transform hover:scale-105 hover:text-blue-500"
+                        >
+                            Careers
+                        </Link>
+                    </div>
+                    <div className="hidden md:flex items-center justify-between gap-2" id='navbar-part-3'>
+                        <Link
+                            href="/"
+                        >
+                            <button className="py-2 px-4 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg font-bold text-white bg-opacity-90 transition hover:bg-blue-500 hover:text-white hover:scale-105 hover:mt-[0.1vw] duration-300 ">
+                                Free Demo
+                            </button>
+                        </Link>
+                        <Link href="/contact-sales">
+                            <Button variant="outlined" color="blue">
+                                Contact Sales
+                            </Button>
+                        </Link>
+                    </div>
+                    <MobileNavbar />
                 </div>
-                <div className="hidden md:flex items-center justify-between gap-2">
-                    <Link
-                        href="/"
-                    >
-                        <button className="py-2 px-4 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg font-bold text-white bg-opacity-90 transition hover:bg-blue-500 hover:text-white hover:scale-105 hover:mt-[0.1vw] duration-300 ">
-                            Free Demo
-                        </button>
-                    </Link>
-                    <Link href="/contact-sales">
-                        <Button variant="outlined" color="blue">
-                            Contact Sales
-                        </Button>
-                    </Link>
-                </div>
-
-                <MobileNavbar />
             </div>
         </Fragment>
     );

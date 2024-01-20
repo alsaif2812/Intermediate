@@ -3,7 +3,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { blogsData } from '@/textContent/blogs/blogsData';
-// import { motion } from "framer-motion"
 
 const BlogCard = ({ image, heading, bodyText, profile }) => {
     const getSlug = (heading) => heading.toLowerCase().split(' ').join('-');
@@ -15,19 +14,13 @@ const BlogCard = ({ image, heading, bodyText, profile }) => {
                     width={1000}
                     src={image}
                     alt="Blog Image"
-                    className="w-full max-h-96 object-cover "
+                    className="w-full  object-cover "
                 />
                 <div className="p-4">
                     <h1 className="text-xl font-bold mb-2">{heading}</h1>
                     <p className="text-gray-600">{bodyText}</p>
                     <div className="flex items-center justify-start mt-4 gap-2">
-                        <Image
-                            height={100}
-                            width={1000}
-                            src={profile.image}
-                            alt="Profile Image"
-                            className="w-8 h-8 rounded-full"
-                        />
+                       
                         <p className="font-semibold pr-10">{profile.name}</p>
                         <div className="ml-2 flex items-center gap-2">
                             <i className="ri-time-line text-2xl text-gray-400"></i>

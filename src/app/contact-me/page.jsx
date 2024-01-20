@@ -2,11 +2,11 @@
 'use client'
 const ContactMeCard = () => {
           return (
-                    <div className="  h-full md:px-[36rem] px-10  py-10 ">
-                              <div className="bg-gradient-to-r from-purple-300 to-blue-400  flex items-center justify-center text-white  rounded-3xl  md:px-5 py-8 px-5 shadow-lg font-bold">
+                    <div className="  h-full  px-5  py-10 ">
+                              <div className="bg-gradient-to-r from-purple-300 to-blue-400  flex items-start md:items-center justify-center text-white  rounded-xl  md:px-5 py-8 px-5 shadow-lg font-bold">
                                         <div>
-                                                  <h1 className="text-4xl font-bold mb-6">Here&apos;s My personal details!</h1>
-                                                  <div className="mb-4 flex flex-col gap-6 items-center">
+                                                  <h1 className="md:text-4xl text-3xl  font-bold mb-6">Here&apos;s My personal details!</h1>
+                                                  <div className="mb-4 flex flex-col gap-6 md:items-center items-center">
                                                             <p className="text-3xl text-center mb-2 flex gap-3 uppercase">
 
                                                                       Mohd Al Saif
@@ -38,6 +38,7 @@ const ContactMeCard = () => {
                                         </div>
                               </div>
                     </div>
+
           );
 };
 

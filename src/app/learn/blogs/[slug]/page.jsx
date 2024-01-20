@@ -56,25 +56,21 @@ export default function Page({ params }) {
                     </p>
                     <div className="">
                         <Link
-                            href={`https://twitter.com/intent/tweet?url=https://wahni.io/learn/blogs/${params.slug}`}
+                            href={`/${params.slug}`}
                         >
                             <i className="ri-twitter-x-fill bg-white rounded-full mx-3 p-2 text-xl text-black hover:transition-all delay-50 duration-200 hover:shadow-lg"></i>
                         </Link>
                         <Link
-                            href={`https://wa.me/?text=https://wahni.io/learn/blogs/${params.slug}`}
+                            href={`/${params.slug}`}
                         >
                             <i className="ri-whatsapp-fill bg-white rounded-full mx-3 p-2 text-xl text-green-400 hover:transition-all delay-50 duration-200 hover:shadow-lg"></i>
                         </Link>
                         <Link
-                            href={`https://www.linkedin.com/shareArticle?mini=true&url=https://wahni.io/learn/blogs/${params.slug}`}
+                            href={`https://www.linkedin.com/in/al-saif-a0400a287/${params.slug}`}
                         >
                             <i className="ri-linkedin-box-fill bg-white rounded-full mx-3 p-2 text-xl text-blue-400 hover:transition-all delay-50 duration-200 hover:shadow-lg"></i>
                         </Link>
-                        <Link
-                            href={`https://www.facebook.com/sharer/sharer.php?u=https://wahni.io/learn/blogs/${params.slug}`}
-                        >
-                            <i className="ri-facebook-circle-fill bg-white rounded-full mx-3 p-2 text-2xl text-blue-500 hover:transition-all delay-50 duration-200 hover:shadow-lg"></i>
-                        </Link>
+
                     </div>
                 </div>
             </div>
