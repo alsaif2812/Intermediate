@@ -1,4 +1,4 @@
-'use client';
+'use client'
 import React, { useEffect, useState } from 'react';
 
 function ChangeText(props) {
@@ -13,10 +13,11 @@ function ChangeText(props) {
             setDisplayText(props.animTextContent[idx]);
             idx += 1;
         }, props.interval);
+
         return () => {
             clearTimeout(interval);
         };
-    }, []);
+    }, [props.animTextContent, props.interval]); // Include props.animTextContent and props.interval in the dependency array
 
     return (
         <div className="">

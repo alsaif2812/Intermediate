@@ -4,20 +4,19 @@ import React, { Suspense, useMemo, useState } from 'react';
 import { Chip } from '@material-tailwind/react';
 import Image from 'next/image';
 import videoTextCardColors from '../theme/videoTextCardColors';
+const randInt = () => Math.floor(Math.random() * videoTextCardColors.length);
 
 function VideoTextCard({ data }) {
     const tabs = Object.keys(data);
     const [selectedTab, setSelectedTab] = useState(tabs[0]);
 
-    const randInt = useMemo(
-        () => Math.floor(Math.random() * videoTextCardColors.length),
-        [],
-    );
-    const theme = useMemo(() => videoTextCardColors[randInt], []);
+    const theme = useMemo(() => videoTextCardColors[randInt()], []);
 
     if (!data[selectedTab]) {
         return <Suspense />;
     }
+
+
 
     return (
         <div
