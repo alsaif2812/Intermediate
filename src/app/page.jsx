@@ -27,7 +27,7 @@ export default function Home() {
             </Head>
             <MainContent />
             <ScrollableIcons data={scrollableIconsData} />
-            {/* <FeaturesCard data={featuresCardData} /> */}
+            <FeaturesCard data={featuresCardData} />
         </Fragment>
     );
 }
