@@ -17,7 +17,7 @@ export default function PhotoGrid({ images }) {
 
     return (
         <>
-            <div className="my-24">
+            <div className="my-24 bg-black">
                 <div id="texts-gallery" className=" text-center pb-4">
                     <p className=" font-semibold md:text-sm tracking-widest uppercase text-purple-500">
                         Gallery

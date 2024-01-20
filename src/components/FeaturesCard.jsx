@@ -28,15 +28,14 @@ export default function FeaturesCard() {
                     id=""
                     className="lower my-10 md:flex md:flex-col md:items-center"
                 >
-                    <div className="flex  gap-6 justify-center items-start p-5 overflow-x-auto">
+                    <div className="flex  gap-10 justify-center items-center p-5  overflow-x-auto">
                         {keys.map((tab, index) => (
                             <div
                                 key={index}
-                                className={`${
-                                    activeTab === tab
-                                        ? 'text-black font-semibold p-8 border border-gray-300 rounded-lg shadow-lg shadow-purple-50 transition duration-300'
-                                        : 'font-medium text-gray-700  border shadow-sm p-8 rounded-lg transition duration-300  scale-100 hover:scale-80 '
-                                }`}
+                                className={`cursor-pointer ${activeTab === tab
+                                    ? 'text-black font-semibold p-8 border border-gray-300 rounded-lg shadow-lg shadow-purple-100 transition duration-300'
+                                    : 'font-medium text-gray-700  border shadow-sm p-8 rounded-lg transition duration-300  scale-100 hover:scale-95 '
+                                    }`}
                                 onClick={() => setActiveTab(tab)}
                             >
                                 <div className="text-center">
@@ -81,8 +80,8 @@ export default function FeaturesCard() {
                                             key={item.title}
                                             className={
                                                 idx !==
-                                                featuresCardData[activeTab]
-                                                    .points.length -
+                                                    featuresCardData[activeTab]
+                                                        .points.length -
                                                     1
                                                     ? `border-b-2 border-gray-300 p-3`
                                                     : 'p-3'

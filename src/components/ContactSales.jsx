@@ -88,22 +88,21 @@ function ContactSalesContent() {
                         Wahni, Building the future, together.
                     </p>
 
-                    <div className="flex items-center justify-start md:pt-10 md:pb-5 p-5 gap-3">
+                    <div className="flex items-center justify-start md:pt-10 px-3 gap-3">
                         <div>
                             <i className="ri-phone-fill md:text-2xl text-3xl text-[#fff]"></i>
                         </div>
                         <div className="text-md text-lg flex flex-col">
-                            <a href="tel:919535818200">+91 9535 818 200</a>
-                            <a href="tel:918069256448">+91 806 925 6448</a>
+                            <a href="tel:919005768830">+91 9005 7688 30</a>
                         </div>
                     </div>
 
-                    <div className="flex items-center justify-start md:pt-10 md:pb-5 gap-3 p-5">
+                    <div className="flex items-center justify-start  md:pb-5 gap-3 p-5">
                         <div>
                             <i className="ri-mail-fill md:text-2xl text-3xl text-[#fff]"></i>
                         </div>
                         <div className="text-white text-md text-lg">
-                            <a href="mailto:info@wahni.com">info@wahni.com</a>
+                            <a href="mailto:alsaifsiddiqui1@gmail.com">alsaifsiddiqui1@gmail.com</a>
                         </div>
                     </div>
 
@@ -111,11 +110,10 @@ function ContactSalesContent() {
                         {tabs.map((tab, index) => (
                             <div
                                 key={index}
-                                className={`cursor-pointer ${
-                                    activeTab === index + 1
-                                        ? 'text-white font-extrabold transition duration-300 border-b-4 border-white'
-                                        : 'font-extrabold  text-white transition duration-300'
-                                }`}
+                                className={`cursor-pointer ${activeTab === index + 1
+                                    ? 'text-white font-extrabold transition duration-300 border-b-4 border-white'
+                                    : 'font-extrabold  text-white transition duration-300'
+                                    }`}
                                 onClick={() => handleTabClick(index + 1)}
                             >
                                 {tab}

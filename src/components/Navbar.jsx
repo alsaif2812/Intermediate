@@ -15,12 +15,12 @@ import { ChevronDownIcon } from '@heroicons/react/outline';
 import Image from 'next/image';
 import Link from 'next/link';
 import navbarData from '@/textContent/navbar/data.json';
-import witLogo from '../../public/images/wit-logo.png';
+import logo from '../../public/images/favicon.png';
 
 function Nav({ data, title }) {
     const [openMenu, setOpenMenu] = useState(false);
     return (
-        <Menu open={openMenu} handler={setOpenMenu} allowHover={true}>
+        <Menu open={openMenu} handler={setOpenMenu} allowHover={false}>
             <MenuHandler>
                 <Button
                     variant="text"
@@ -29,9 +29,8 @@ function Nav({ data, title }) {
                     {title}
                     <ChevronDownIcon
                         strokeWidth={2.5}
-                        className={`h-3.5 w-3.5 transition-transform bg-sky-blue hover:bg-light-purple duration-300 ease-in-out transform hover:scale-105 hover:text-blue-500 ${
-                            openMenu ? 'rotate-180' : '/'
-                        }`}
+                        className={`h-3.5 w-3.5 transition-transform bg-sky-blue hover:bg-light-purple duration-300 ease-in-out transform hover:scale-105 hover:text-blue-500 ${openMenu ? 'rotate-180' : '/'
+                            }`}
                     />
                 </Button>
             </MenuHandler>
@@ -188,14 +187,13 @@ function MobileNavbar() {
 
                 <div className="w-full mt-8">
                     <Link
-                        href="https://frappecloud.com/genie/signup"
+                        href="/"
                         target="_blank"
                         onClick={closeDrawer}
                     >
                         <Button
-                            variant="gradient"
-                            color="blue"
-                            className="w-full"
+
+                            className="w-full  bg-gradient-to-r from-cyan-400 to-blue-500 "
                         >
                             Free Demo
                         </Button>
@@ -227,7 +225,7 @@ function Navbar() {
                 <div>
                     <Link href="/">
                         <Image
-                            src={witLogo}
+                            src={logo}
                             style={{ width: '80px' }}
                             id="logo"
                             alt="wahni it solutions logo"
@@ -259,8 +257,7 @@ function Navbar() {
                 </div>
                 <div className="hidden md:flex items-center justify-between gap-2">
                     <Link
-                        href="https://frappecloud.com/genie/signup"
-                        target="_blank"
+                        href="/"
                     >
                         <button className="py-2 px-4 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg font-bold text-white bg-opacity-90 transition hover:bg-blue-500 hover:text-white hover:scale-105 hover:mt-[0.1vw] duration-300 ">
                             Free Demo

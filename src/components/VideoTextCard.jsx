@@ -47,9 +47,8 @@ function VideoTextCard({ data }) {
                                         ? theme.secondary
                                         : 'transparent',
                             }}
-                            className={`text-lg font-bold whitespace-nowrap  capitalize transition duration-300 ${
-                                selectedTab === tab ? `border-b-4` : ''
-                            }`}
+                            className={`text-lg font-bold whitespace-nowrap cursor-pointer  capitalize transition duration-300 ${selectedTab === tab ? `border-b-4` : ''
+                                }`}
                         >
                             {tab}
                         </p>
@@ -81,23 +80,23 @@ function VideoTextCard({ data }) {
 
                             {data[selectedTab].points
                                 ? data[selectedTab].points.map((i, idx) => (
-                                      <div
-                                          key={idx}
-                                          className="flex items-start py-2"
-                                      >
-                                          <div className="mr-2">
-                                              <Chip
-                                                  className="px-2.5 rounded-full"
-                                                  style={{
-                                                      backgroundColor:
-                                                          theme.secondary,
-                                                  }}
-                                                  value={idx + 1}
-                                              />
-                                          </div>
-                                          <p className="w-full">{i}</p>
-                                      </div>
-                                  ))
+                                    <div
+                                        key={idx}
+                                        className="flex items-start py-2"
+                                    >
+                                        <div className="mr-2">
+                                            <Chip
+                                                className="px-2.5 rounded-full"
+                                                style={{
+                                                    backgroundColor:
+                                                        theme.secondary,
+                                                }}
+                                                value={idx + 1}
+                                            />
+                                        </div>
+                                        <p className="w-full">{i}</p>
+                                    </div>
+                                ))
                                 : null}
                         </div>
                     </div>
@@ -128,7 +127,7 @@ function VideoTextCard({ data }) {
                         ) : null}
 
                         {!data[selectedTab].image &&
-                        !data[selectedTab].video ? (
+                            !data[selectedTab].video ? (
                             <video
                                 src="/images/work-order.webm"
                                 alt="img"

@@ -14,6 +14,7 @@ import SpeedDial from '../components/SpeedDial';
 
 import { config } from '@fortawesome/fontawesome-svg-core';
 import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 
 config.autoAddCss = false;
 
@@ -71,9 +72,9 @@ export default function RootLayout({ children }) {
     const bgClass = getBgClass();
 
     return (
-        <html lang="en" className={`${nunitoResult.className}`}>
+        <html lang="en" className={`${nunitoResult.className} select-none`}>
             <GoogleTagManager gtmId="GTM-K95WCZQ" />
-            <body className={bgClass}>
+            <body className={`${bgClass} body`}>
                 <NextTopLoader showSpinner={false} height={6} />
 
                 <Fragment>
@@ -81,8 +82,18 @@ export default function RootLayout({ children }) {
                         {pathname !== '/form-submit-success' ? (
                             <Navbar showDefaultButtonColors={isBlobHideRoute} />
                         ) : null}
+
                         {children}
+                        {pathname !== '/contact-me' ? <div id='layout' className='text-[#2e2e2e] text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold py-4 sm:py-6 flex items-center justify-center rounded-t-lg shadow-md'>
+                            <p className='text-center'>
+                                Made with <span className='font-extrabold gradient-text'>❤️ & AL-SAIF</span>
+                                <Link href='/contact-me' className='ml-2 sm:ml-4 text-xs sm:text-sm cursor-pointer hover:underline font-extrabold transition duration-500'>
+                                    How to reach me?
+                                </Link>
+                            </p>
+                        </div> : null}
                     </div>
+
                     {pathname !== '/form-submit-success' ? <Footer /> : null}
 
                     {pathname !== '/form-submit-success' ? (
@@ -98,6 +109,6 @@ export default function RootLayout({ children }) {
                     ) : null}
                 </Fragment>
             </body>
-        </html>
+        </html >
     );
 }

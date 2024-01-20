@@ -12,14 +12,14 @@ export function triggerConfetti(e) {
 const Frappe = () => {
     return (
         <Fragment>
-            <p>
+            <p className='flex gap-3 justify-start items-center'>
                 <i
                     onMouseOver={triggerConfetti}
-                    className="ri-trophy-fill text-yellow-300 text-2xl mx-2"
+                    className="ri-trophy-fill text-yellow-300 text-2xl "
                 ></i>
                 <a
                     href="https://frappe.io/partner-certification/PARTCRTF00018"
-                    className="text-lg text-gray-600"
+                    className="text-md text-gray-600"
                 >
                     Frappe Certified Partner
                 </a>

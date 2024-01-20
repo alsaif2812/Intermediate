@@ -31,13 +31,14 @@ const SpeedDialComponent = () => {
                 <SpeedDialContent>
                     <SpeedDialAction>
                         <Link
-                            href={`https://api.whatsapp.com/send?phone=918848253891&text=Hi, I'm [Your Name] from [location]. I'm writing to express my interest in learning more about your [Product/Service name] and potentially exploring how it can benefit [Your company/personal needs]. If possible, I would also appreciate a call back from your team to discuss my requirements in more detail and address any questions I may have. I'm available at [Your phone number] on [Mention your preferred days and times for a call].`}
+                            href={`https://api.whatsapp.com/send?phone=919005768830&text=Hi, I'm [Your Name] from [Your Location]. I'm interested in learning more about your [Product/Service Name] and exploring how it can benefit my [Company/Personal Needs]. If possible, I'd appreciate a call back to discuss my requirements further. I'm available at [Your Phone Number] on [Your Preferred Days and Times for a Call].`}
+
                         >
                             <i className="ri-whatsapp-fill p-1 text-2xl text-[#63cfb6]"></i>
                         </Link>
                     </SpeedDialAction>
                     <SpeedDialAction>
-                        <Link href={`tel:919535818200`}>
+                        <Link href={`tel:919005768830`}>
                             <i className="ri-phone-fill p-1 text-2xl text-blue-400"></i>
                         </Link>
                     </SpeedDialAction>

@@ -50,15 +50,14 @@ const Delivery = () => {
                     id=""
                     className="lower my-10 md:flex md:flex-col md:items-center"
                 >
-                    <div className="flex  gap-6 justify-center items-start p-5 overflow-x-auto">
+                    <div className="flex  gap-6 justify-center items-start p-5 overflow-x-auto bg-black">
                         {tabs.map((tab, index) => (
                             <div
                                 key={index}
-                                className={`cursor-pointer ${
-                                    activeTab === index + 1
-                                        ? 'text-black font-extrabold p-8 border-[1px] border-gray-300 rounded-lg scale-110 shadow-lg shadow-red-50 transition duration-300'
-                                        : 'font-extrabold text-black  border-[1px]  shadow-sm p-8 rounded-lg transition duration-300  hover:scale-95 '
-                                }`}
+                                className={` ${activeTab === index + 1
+                                    ? 'text-black font-extrabold p-8 border-[1px] border-black rounded-lg scale-110 shadow-lg shadow-red-50 transition duration-300'
+                                    : 'font-extrabold text-black  border-[1px]  shadow-sm p-8 rounded-lg transition duration-300  hover:scale-95 '
+                                    }`}
                                 onClick={() => handleTabClick(index + 1)}
                             >
                                 {tab.icon}

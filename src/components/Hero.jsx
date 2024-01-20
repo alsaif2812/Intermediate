@@ -9,7 +9,7 @@ export default function Hero({
     showShadowOnImage = true,
 }) {
     return (
-        <div id="page-1" className="bg-opacity-80 md: pb-40">
+        <div id="page-1" className="bg-opacity-80 md: pb-40 ">
             <Image
                 width={1000}
                 height={100}
@@ -46,9 +46,8 @@ export default function Hero({
                             alt={heading}
                             width={5000}
                             height={5000}
-                            className={`w-2/3 rounded-lg ${
-                                showShadowOnImage ? 'shadow-xl' : null
-                            } mx-auto transition-all duration-200 hover:scale-105`}
+                            className={`w-2/3 rounded-lg ${showShadowOnImage ? 'shadow-xl' : null
+                                } mx-auto transition duration-500 cursor-pointer hover:scale-105`}
                             id="bottom"
                         />
                     </div>

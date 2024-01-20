@@ -5,10 +5,6 @@ import { Fragment } from 'react';
 import Head from 'next/head';
 import Hero from '@/components/Hero';
 import Mission from '@/components/Mission';
-import Photogrid from '@/components/Photogrid';
-// import Trusted from '@/components/Trusted';
-// import TrustedData from '@/textContent/trusted/CardData2.json';
-import photosData from '@/textContent/photogrid/photo.json';
 export const metadata = {
     title: 'About Wahni ERP Softwares - Best ERP Softwares in India',
     description:
@@ -31,9 +27,7 @@ const Page = () => {
                 caption="Beyond the code, beyond expectations. We're Wahni IT Solutions, where innovation meets expertise to fuel your business transformation."
             />
             <Mission />
-            <Photogrid images={photosData} />
             <Core data={CoreData} />
-            {/* <Trusted data={TrustedData} /> */}
         </Fragment>
     );
 };

@@ -1,14 +1,10 @@
 import FeaturesCard from '@/components/FeaturesCard';
 import { Fragment } from 'react';
 import Head from 'next/head';
-// import IndexTeam from '@/components/IndexTeam';
-// import IndexteamData from '@/textContent/indexTeam/CardData.json';
 import MainContent from '@/components/MainContent';
 import ScrollableIcons from '@/components/ScrollableIcons';
 import featuresCardData from '@/textContent/index/featuresCardData.json';
 import scrollableIconsData from '@/textContent/index/scrollableIconsData.json';
-// import Trusted from '@/components/Trusted';
-// import TrustedData from '@/textContent/trusted/CardData1.json';
 
 export const metadata = {
     title: 'Best ERP Software in Kerala, ERP Companies in Kochi, Wahni',
@@ -32,8 +28,6 @@ export default function Home() {
             <MainContent />
             <ScrollableIcons data={scrollableIconsData} />
             <FeaturesCard data={featuresCardData} />
-            {/* <IndexTeam data={IndexteamData} /> */}
-            {/* <Trusted data={TrustedData} /> */}
         </Fragment>
     );
 }

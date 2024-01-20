@@ -32,6 +32,8 @@ export default function Home() {
                     autoPlay={true}
                     muted={true}
                     loop
+                    width={1000}
+                    height={100}
                     alt="img"
                     className="md:hidden my-[4vw] mx-3"
                     id="topimg"
@@ -61,29 +63,36 @@ export default function Home() {
                                             Manufacturing
                                         </button>
                                     </Link>
-                                    <button className="py-2 px-4 bg-transparent rounded-md hover:shadow-2xl shadow-md font-semibold flex items-center transition gap-2">
-                                        <FontAwesomeIcon
-                                            icon={faStore}
-                                            className="text-blue-600"
-                                        />
-                                        Trading
-                                    </button>
+                                    <Link href='/solutions/retail'>
+                                        <button className="py-2 px-4 bg-transparent rounded-md hover:shadow-2xl shadow-md font-semibold flex items-center transition gap-2">
+                                            <FontAwesomeIcon
+                                                icon={faStore}
+                                                className="text-blue-600"
+                                            />
+                                            Retail
+                                        </button>
+                                    </Link>
+
                                 </div>
                                 <div className="flex flex-wrap gap-4 mt-4">
-                                    <button className="py-2 px-4 bg-transparent rounded-md hover:shadow-2xl shadow-md font-semibold flex items-center transition gap-2">
-                                        <FontAwesomeIcon
-                                            icon={faCoins}
-                                            className="text-blue-600"
-                                        />{' '}
-                                        Accounts{' '}
-                                    </button>
-                                    <button className="py-2 px-4 bg-transparent rounded-md hover:shadow-2xl shadow-md font-semibold flex items-center transition gap-2">
-                                        <FontAwesomeIcon
-                                            icon={faWarehouse}
-                                            className="text-blue-600"
-                                        />{' '}
-                                        Warehouse{' '}
-                                    </button>
+                                    <Link href='/products/erpnext'>
+                                        <button className="py-2 px-4 bg-transparent rounded-md hover:shadow-2xl shadow-md font-semibold flex items-center transition gap-2">
+                                            <FontAwesomeIcon
+                                                icon={faCoins}
+                                                className="text-blue-600"
+                                            />{' '}
+                                            ERPNext{' '}
+                                        </button>
+                                    </Link>
+                                    <Link href='/services/e-commerce'>
+                                        <button className="py-2 px-4 bg-transparent rounded-md hover:shadow-2xl shadow-md font-semibold flex items-center transition gap-2">
+                                            <FontAwesomeIcon
+                                                icon={faWarehouse}
+                                                className="text-blue-600"
+                                            />{' '}
+                                            E-commerce{' '}
+                                        </button>
+                                    </Link>
                                 </div>
                             </div>
 
@@ -94,63 +103,45 @@ export default function Home() {
                                     </Button>
                                 </Link>
                             </div>
-                            {/*                 <input
-                                type="tel"
-                                name="number"
-                                id="number"
-                                className="py-1 px-3 border-zinc-200  rounded-lg my-6 text-lg placeholder-opacity-30 md:w-[18vw] md:ml-[0vw] bg-transparent border  shadow-md shadow-gray-300"
-                                placeholder="Enter your Phone Number"
-                            />
-                            <br />
-                            <a href="/">
-                                <button
-                                    id="getquote"
-                                    className="md:py-[0.7vw] md:px-[2vw] py-[2vw] px-[17vw] bg-blue-500 rounded-md md:mt-0  mt-[6vw] shadow-xl hover:shadow-none transition duration-300 md:ml-[0vw]"
-                                >
-                                    <span
-                                        className="md:font-semibold font-extrabold  text-white"
-                                        id="getquote2"
-                                    >
-                                        Get a Callback
-                                    </span>
-                                </button>
-                            </a> */}
+
                             <div
                                 className="mt-[8vw] md:mt-[3vw] mx-[5vw] md:mx-[0vw]"
                                 id="qualifications"
                             >
                                 <Frappe />
 
-                                <p>
-                                    <i className="ri-star-fill text-yellow-300 text-2xl"></i>
-                                    <i className="ri-star-fill text-yellow-300 text-2xl"></i>
-                                    <i className="ri-star-fill text-yellow-300 text-2xl"></i>
-                                    <i className="ri-star-fill text-yellow-300 text-2xl"></i>
-                                    <span className="text-sm text-gray-600 ml-1">
+                                <p className='flex items-center justify-start gap-3'>
+                                    <div>
+                                        <i className="ri-star-fill text-yellow-300 text-2xl"></i>
+                                        <i className="ri-star-fill text-yellow-300 text-2xl"></i>
+                                        <i className="ri-star-fill text-yellow-300 text-2xl"></i>
+                                        <i className="ri-star-fill text-yellow-300 text-2xl"></i>
+                                    </div>
+                                    <span className="text-md text-gray-600 ">
                                         Based on Customer Reviews
                                     </span>
                                 </p>
                             </div>
                         </div>
-                        <div id="right" className="hidden md:block h-100">
+                        <div id="right" className="hidden md:block ">
                             <video
                                 src="images/home-video.webm"
                                 autoPlay
                                 loop
                                 muted
-                                width={100}
+                                width={10000}
                                 height={100}
                                 alt="video"
-                                className="w-[40rem]"
+                                className=""
                                 id="bottomimg"
                             />
                         </div>
                     </div>
-                    <div className="flex items-center justify-center flex-col md:mt-auto p-10 md:opacity-60 opacity-50 md:items-center md:justify-center md:flex-col bg-transparent mb-[5vw]">
+                    <div className="flex items-center justify-center flex-col md:mt-auto p-10 md:opacity-60 opacity-50 md:items-center md:justify-center md:flex-col bg-transparent mb-[5vw] bg-black">
                         <LogosMarquee data={logosData} />
                     </div>
                 </div>
             </div>
-        </Fragment>
+        </Fragment >
     );
 }
