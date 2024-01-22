@@ -14,7 +14,6 @@ import SpeedDial from '../components/SpeedDial';
 
 import { config } from '@fortawesome/fontawesome-svg-core';
 import { usePathname } from 'next/navigation';
-import Link from 'next/link';
 
 config.autoAddCss = false;
 
