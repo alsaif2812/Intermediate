@@ -126,13 +126,6 @@
         "icon": "ri-line-chart-line",
         "link": "/about/company",
         "color": "green"
-      },
-      {
-        "caption": "Meet the folks that guide you to success.",
-        "heading": "Team",
-        "icon": "ri-team-fill",
-        "link": "/about/team",
-        "color": "light-blue"
       }
     ]
   },

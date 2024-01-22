@@ -263,7 +263,7 @@ function Navbar() {
                         <Link
                             href="/"
                         >
-                            <button className="py-2 px-4 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg font-bold text-white bg-opacity-90 transition hover:bg-blue-500 hover:text-white hover:scale-105 hover:mt-[0.1vw] duration-300 ">
+                            <button className="py-2 px-6 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg font-bold text-white bg-opacity-90 transition hover:bg-blue-500 hover:text-white hover:scale-[0.99999] hover:mt-[0.1vw] duration-300 ">
                                 Free Demo
                             </button>
                         </Link>

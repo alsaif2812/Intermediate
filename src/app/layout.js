@@ -84,14 +84,7 @@ export default function RootLayout({ children }) {
                         ) : null}
 
                         {children}
-                        {pathname !== '/contact-me' ? <div id='layout' className='text-[#2e2e2e] text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold py-4 sm:py-6 flex items-center justify-center rounded-t-lg shadow-md'>
-                            <p className='text-center'>
-                                Made with <span className='font-extrabold gradient-text'>❤️ & AL-SAIF</span>
-                                <Link href='/contact-me' className='ml-2 sm:ml-4 text-xs sm:text-sm cursor-pointer hover:underline font-extrabold transition duration-500'>
-                                    How to reach me?
-                                </Link>
-                            </p>
-                        </div> : null}
+
                     </div>
 
                     {pathname !== '/form-submit-success' ? <Footer /> : null}

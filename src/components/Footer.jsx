@@ -153,7 +153,7 @@ const Footer = () => {
                                 </li>
                                 <li>
                                     <Link
-                                        href="/learn/faqs"
+                                        href="/learn/faq"
                                         className="font-semibold text-gray-600 hover:text-gray-800 transition duration-300"
                                     >
                                         F.A.Q&apos;s
@@ -309,6 +309,7 @@ const Footer = () => {
                     </div>
                 </div>
             </footer>
+            hii
         </Fragment>
     );
 };

@@ -7,6 +7,8 @@ import {
 } from '@material-tailwind/react';
 import FAQCardData from '../textContent/faq/faq.json';
 import { Fragment } from 'react';
+import React from 'react'
+
 
 function AccordionAlwaysOpen() {
     const [open, setOpen] = React.useState({ group: null, index: null });

@@ -1,11 +1,9 @@
-// import FaqQuestions from '@/components/FaqQuestions';
-// import HeroForFaq from '@/components/HeroForFaq';
+import FaqQuestions from '@/components/FaqQuestions';
 
 const page = () => {
     return (
         <>
-            {/* <HeroForFaq /> */}
-            {/* <FaqQuestions /> */}
+            <FaqQuestions />
         </>
     );
 };
