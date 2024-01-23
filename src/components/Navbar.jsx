@@ -235,6 +235,7 @@ function Navbar() {
                         />
                     </Link>
                 </div>
+                ll
 
                 <div className="hidden md:flex items-center justify-center gap-7 font-bold text-[#20262e]   px-10 " id='navbar-part-2'>
                     <Link
