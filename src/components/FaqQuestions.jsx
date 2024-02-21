@@ -5,67 +5,55 @@ import {
     AccordionBody,
     AccordionHeader,
 } from '@material-tailwind/react';
-import FAQCardData from '../textContent/faq/faq.json';
+import FAQCardData from '../textContent/faq/roman.json';
 import { Fragment } from 'react';
 import React from 'react'
-
 
 function AccordionAlwaysOpen() {
     const [open, setOpen] = React.useState({ group: null, index: null });
 
-    const handleOpen = (groupKey, index) => {
+    const handleOpen = (index) => {
         setOpen((prevOpen) =>
-            prevOpen.group === groupKey && prevOpen.index === index
-                ? { group: null, index: null }
-                : { group: groupKey, index },
+            prevOpen.index === index
+                ? { index: null }
+                : { index },
         );
     };
 
     return (
         <Fragment>
-            <h2 className="text-5xl font-bold text-gray-800 text-center py-10">
-                Frequently Asked Questions
-            </h2>
-            <div className=" py-5 px-5 md:px-0 ">
-                {Object.keys(FAQCardData).map((key) => (
-                    <div key={key} className="grid grid-cols-12  md:p-0 py-5 ">
-                        <div className="col-span-12 md:col-span-4 md:flex  md:px-10 items-start justify-end ">
-                            <p className="text-3xl font-semibold font-sans text-gray-900 mb-3 md:mb-0">
-                                {key}
-                            </p>
-                        </div>
-                        <div className="col-span-12 md:col-span-6 ">
-                            {FAQCardData[key].map((item, index) => (
-                                <div key={item.title}>
-                                    <Accordion
-                                        open={
-                                            open.group === key &&
-                                            open.index === index
-                                        }
-                                        className=" md:mb-12"
-                                    >
-                                        <AccordionHeader
-                                            onClick={() =>
-                                                handleOpen(key, index)
-                                            }
-                                            className="capitalize bg-blue-100 bg-opacity-50 flex flex-col items-start gap-1 px-3 md:px-4 rounded-md"
-                                        >
-                                            <p className="text-[#2e2d2d]">
-                                                {item.title}
-                                                <i className="ri-arrow-down-s-line px-3 text-2xl"></i>
-                                            </p>
-                                            <AccordionBody>
-                                                <p className="text-lg font-medium  text-[#2e2d2d] py-3 rounded-lg capitalize">
-                                                    {item.body}
-                                                </p>
-                                            </AccordionBody>
-                                        </AccordionHeader>
-                                    </Accordion>
-                                </div>
-                            ))}
-                        </div>
+            <div className="py-5 px-5 md:px-0">
+
+                <h2 className='text-center md:text-5xl text-3xl my-10 font-extrabold'> Shab - e - Barat manane ka sahih tareeka Quran or Sunnat ki roshni me !</h2>
+                <div className="grid grid-cols-1 place-content-center md:p-0 py-5  md:px-20">
+                    <div className="col-span-1 md:col-span-6">
+                        {FAQCardData.map((item, index) => (
+                            <div key={item.title} className="mb-4 md:mb-8 "> {/* Adjust the margin-bottom for spacing */}
+                                <Accordion
+                                    open={open.index === index}
+                                    className="md:mb-12 "
+                                >
+                                    <AccordionHeader
+                                        onClick={() => handleOpen(index)}
+                                        className="capitalize bg-blue-100 text-center bg-opacity-50 flex flex-col items-center gap-1 px-3 md:px-4 rounded-md">
+                                        <p className="text-[#2e2d2d]">
+                                            {item.title}
+                                            <i className="ri-arrow-down-s-line px-3 text-2xl"></i>
+                                        </p>
+                                    </AccordionHeader>
+
+
+                                    <AccordionBody>
+
+                                        <p className="text-lg font-medium text-[#2e2d2d] p-3 rounded-lg capitalize bg-blue-gray-50 text-center " dangerouslySetInnerHTML={{ __html: item.body }} />
+                                    </AccordionBody>
+
+                                </Accordion>
+                            </div>
+                        ))}
                     </div>
-                ))}
+                </div>
+
             </div>
         </Fragment>
     );
