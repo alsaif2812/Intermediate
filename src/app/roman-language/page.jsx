@@ -1,9 +1,10 @@
 import FaqQuestions from '@/components/FaqQuestions';
+import data from '@/textContent/faq/roman.json'
 
 const page = () => {
     return (
         <>
-            <FaqQuestions />
+            <FaqQuestions FAQCardData={data} />
         </>
     );
 };

@@ -2,6 +2,7 @@
 import './globals.css';
 import 'remixicon/fonts/remixicon.css'
 import { Nunito } from 'next/font/google';
+import Navbar  from '@/components/Navbar';
 
 
 
@@ -23,7 +24,7 @@ export default function RootLayout({ children }) {
 
                 <div>
 
-
+                    <Navbar />
                     {children}
 
                 </div>

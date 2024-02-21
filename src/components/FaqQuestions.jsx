@@ -1,15 +1,13 @@
 'use client';
-
 import {
     Accordion,
     AccordionBody,
     AccordionHeader,
 } from '@material-tailwind/react';
-import FAQCardData from '../textContent/faq/roman.json';
 import { Fragment } from 'react';
 import React from 'react'
 
-function AccordionAlwaysOpen() {
+function AccordionAlwaysOpen({ FAQCardData }) {
     const [open, setOpen] = React.useState({ group: null, index: null });
 
     const handleOpen = (index) => {
@@ -23,12 +21,11 @@ function AccordionAlwaysOpen() {
     return (
         <Fragment>
             <div className="py-5 px-5 md:px-0">
-
                 <h2 className='text-center md:text-5xl text-3xl my-10 font-extrabold'> Shab - e - Barat manane ka sahih tareeka Quran or Sunnat ki roshni me !</h2>
                 <div className="grid grid-cols-1 place-content-center md:p-0 py-5  md:px-20">
                     <div className="col-span-1 md:col-span-6">
-                        {FAQCardData.map((item, index) => (
-                            <div key={item.title} className="mb-4 md:mb-8 "> {/* Adjust the margin-bottom for spacing */}
+                        {FAQCardData.length > 0 && FAQCardData.map((item, index) => (
+                            <div key={index} className="mb-4 md:mb-8 "> {/* Adjust the margin-bottom for spacing */}
                                 <Accordion
                                     open={open.index === index}
                                     className="md:mb-12 "
@@ -60,3 +57,4 @@ function AccordionAlwaysOpen() {
 }
 
 export default AccordionAlwaysOpen;
+
